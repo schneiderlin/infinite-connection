@@ -1,69 +1,78 @@
-import styles from "./page.module.css";
+import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { PlatformFooter } from "@/components/PlatformFooter";
+import "./platform.css";
+
+const modules = [
+  {
+    href: "/updates",
+    icon: "📣",
+    tone: "mint",
+    name: "项目动态",
+    desc: "像刷微博一样看公益项目进展：最新动态、项目主页、志愿活动、行业活动。",
+    meta: "428 个在线项目 · 3,256 条累计动态",
+  },
+  {
+    href: "/funding",
+    icon: "💰",
+    tone: "orange",
+    name: "资金 & 物资对接",
+    desc: "基金会资助、政府购买、企业CSR、招标采购与合作共建，一网打尽申报机会。",
+    meta: "1,825 条资助征集 · 累计资助额 8.6亿+",
+  },
+  {
+    href: "/hr",
+    icon: "💼",
+    tone: "blue",
+    name: "人力 & 专家",
+    desc: "公益行业全职 / 兼职 / 实习岗位，机构入驻审核，真实可信。",
+    meta: "186 个本月新增岗位 · 92 家在招机构",
+  },
+  {
+    href: "/tools",
+    icon: "🧰",
+    tone: "purple",
+    name: "能力工具",
+    desc: "培训课程、行业沙龙、工具模板、行业报告、标准与经验文章。",
+    meta: "3,256 件能力工具 · 1,425 份工具模板",
+  },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.brand}>
-          <span className={styles.mark} aria-hidden="true">
-            ∞
-          </span>
-          <span>无限连接</span>
-        </div>
-        <span className={styles.status}>筹备中</span>
-      </header>
+    <div className="module-page">
+      <SiteHeader active="home" />
 
-      <main className={styles.main}>
-        <section className={styles.hero}>
-          <p className={styles.eyebrow}>INFINITE CONNECTION</p>
+      <main className="home-main">
+        <section className="home-hero">
+          <p className="home-eyebrow">INFINITE · CONNECTION</p>
           <h1>让公益资源，在需要的地方相遇。</h1>
-          <p className={styles.lead}>
-            一个面向公益机构、从业者与志愿者的行业信息和资源连接平台。
-            网站内容与 MVP 范围正在共同讨论中。
+          <p className="home-lead">
+            面向公益机构、从业者与志愿者的行业信息与资源连接平台。
+            项目动态、资金物资、人力资源、能力工具，一站连通。
           </p>
         </section>
 
-        <section className={styles.principles} aria-labelledby="principles-title">
-          <div className={styles.sectionHeading}>
-            <p>我们先确认什么</p>
-            <h2 id="principles-title">从真实需求出发，而不是从功能清单出发</h2>
-          </div>
-          <div className={styles.cards}>
-            <article>
-              <span>01</span>
-              <h3>可信信息</h3>
-              <p>保留来源、更新时间与审核状态，让每条内容可追溯。</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>有效连接</h3>
-              <p>优先帮助供需双方找到彼此，再逐步建设社区能力。</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>合规边界</h3>
-              <p>平台只做信息中介，不开展公开募捐，不代收款物。</p>
-            </article>
-          </div>
+        <section className="home-modules" aria-label="平台模块">
+          {modules.map((m) => (
+            <Link key={m.href} href={m.href} className="pc-card home-module">
+              <span className={`home-module-icon cover-${m.tone}`} aria-hidden="true">
+                {m.icon}
+              </span>
+              <h2>{m.name}</h2>
+              <p>{m.desc}</p>
+              <span className="home-module-meta">{m.meta}</span>
+              <span className="card-link">进入模块 →</span>
+            </Link>
+          ))}
         </section>
 
-        <section className={styles.nextStep}>
-          <p>当前阶段</p>
-          <div>
-            <strong>01</strong>
-            <span>梳理首批用户、核心内容与最小验证闭环</span>
-          </div>
-          <div>
-            <strong>02</strong>
-            <span>确认后再进入信息架构与界面设计</span>
-          </div>
-        </section>
+        <p className="home-notice">
+          平台只做信息中介：不开展公开募捐，不代收、代管任何款物。
+        </p>
       </main>
 
-      <footer className={styles.footer}>
-        <span>无限连接 · 公益行业公共服务探索</span>
-        <span>不开展公开募捐，不代收、代管任何款物</span>
-      </footer>
+      <PlatformFooter />
     </div>
   );
 }
