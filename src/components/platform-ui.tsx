@@ -93,6 +93,7 @@ export function ListMeta({
   sorts,
   activeSort,
   onSort,
+  children,
 }: {
   total: number;
   unit: string;
@@ -100,6 +101,7 @@ export function ListMeta({
   sorts: SortDef[];
   activeSort: string;
   onSort: (key: string) => void;
+  children?: ReactNode;
 }) {
   return (
     <div className="list-meta-bar">
@@ -117,6 +119,7 @@ export function ListMeta({
             {s.label}
           </button>
         ))}
+        {children}
       </span>
     </div>
   );

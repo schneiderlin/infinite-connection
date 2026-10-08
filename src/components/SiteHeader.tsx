@@ -1,13 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { label: "首页", href: "/" },
-  { label: "公益活动", href: "/updates" },
-  { label: "资金&物资对接", href: "/funding" },
-  { label: "场地供需", href: "/venues" },
-  { label: "人力&专家", href: "/hr" },
+  { label: "项目动态", href: "/updates" },
+  { label: "资金&物资", href: "/funding" },
+  { label: "人力资源", href: "/hr" },
   { label: "能力工具", href: "/tools" },
-  { label: "政策咨询", href: "/policy" },
 ];
 
 export function SiteHeader({ active }: { active: string }) {
@@ -25,14 +22,12 @@ export function SiteHeader({ active }: { active: string }) {
         </Link>
         <nav className="main-nav" aria-label="主导航">
           {navItems.map((item) => {
-            const isActive =
-              active === "home" ? item.href === "/" : item.href === `/${active}`;
-            const disabled = item.href === "/venues" || item.href === "/policy";
+            const isActive = item.href === `/${active}`;
             return (
               <Link
                 key={item.label}
-                href={disabled ? "#" : item.href}
-                className={`nav-link${isActive ? " active" : ""}${disabled ? " disabled" : ""}`}
+                href={item.href}
+                className={`nav-link${isActive ? " active" : ""}`}
               >
                 {item.label}
               </Link>

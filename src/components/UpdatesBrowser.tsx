@@ -3,14 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   updates as initialUpdates,
-  updateTabs,
   filterGroups,
   platformStats,
   hotProjects,
   type UpdateItem,
 } from "@/lib/platform-data";
 import {
-  TypeTabs,
   FilterRow,
   SearchInput,
   ListMeta,
@@ -20,15 +18,15 @@ import {
 import { PublishDialog } from "./PublishDialog";
 
 const sorts = [
-  { key: "new", label: "最新发布" },
+  { key: "new", label: "最新发布（3天内）" },
   { key: "rating", label: "评分最高" },
   { key: "hot", label: "互动最多" },
 ];
 
 const fieldTagClass: Record<string, string> = {
-  环保生态: "tag-green",
+  生态环保: "tag-green",
   乡村教育: "tag-blue",
-  残健融合: "tag-orange",
+  残障融合: "tag-orange",
   儿童保护: "tag-purple",
   老龄关怀: "tag-rose",
   医疗健康: "tag-red",
@@ -52,11 +50,11 @@ const publishFields = [
 
 export function UpdatesBrowser() {
   const [items, setItems] = useState<UpdateItem[]>(initialUpdates);
-  const [tab, setTab] = useState("全部");
   const [field, setField] = useState("全部");
   const [region, setRegion] = useState("全部");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("new");
+  const [poster, setPoster] = useState<"全部" | "机构" | "个人">("全部");
   const [liked, setLiked] = useState<Set<number>>(new Set());
   const [helped, setHelped] = useState<Set<number>>(new Set());
   const [shared, setShared] = useState<Set<number>>(new Set());
@@ -64,17 +62,20 @@ export function UpdatesBrowser() {
 
   const filtered = useMemo(() => {
     const q = search.trim();
-    const list = items.filter(
+    let list = items.filter(
       (u) =>
-        (tab === "全部" || u.kind === tab) &&
         (field === "全部" || u.field === field) &&
-        (region === "全部" || u.region === region || (region === "全国" && u.region === "全国")) &&
+        (region === "全部" || u.region === region) &&
+        (poster === "全部" || u.posterType === poster) &&
         (!q ||
           u.title.includes(q) ||
           u.org.includes(q) ||
           u.content.includes(q) ||
           u.hashtags.some((h) => h.includes(q))),
     );
+    if (sort === "new") {
+      list = list.filter((u) => u.publishedHours <= 72);
+    }
     const by = {
       new: (a: UpdateItem, b: UpdateItem) => a.publishedHours - b.publishedHours,
       rating: (a: UpdateItem, b: UpdateItem) => b.rating - a.rating,
@@ -82,7 +83,7 @@ export function UpdatesBrowser() {
         b.likes + b.comments + b.shares - (a.likes + a.comments + a.shares),
     }[sort];
     return [...list].sort(by);
-  }, [items, tab, field, region, search, sort]);
+  }, [items, field, region, search, sort, poster]);
 
   const bump = (set: Set<number>, setSet: (s: Set<number>) => void, id: number) => {
     const next = new Set(set);
@@ -92,16 +93,17 @@ export function UpdatesBrowser() {
   };
 
   const resetFilters = () => {
-    setTab("全部");
     setField("全部");
     setRegion("全部");
     setSearch("");
+    setPoster("全部");
   };
 
   const publish = (values: Record<string, string>) => {
     const item: UpdateItem = {
       id: Date.now(),
       kind: "最新动态",
+      posterType: "个人",
       field: values.field || "乡村教育",
       region: "全国",
       rating: 5.0,
@@ -130,8 +132,6 @@ export function UpdatesBrowser() {
   return (
     <div className="module-body">
       <div className="module-main">
-        <TypeTabs tabs={updateTabs} active={tab} onChange={setTab} />
-
         <div className="filter-panel">
           <div className="pc-card filter-box">
             <FilterRow label="领域" options={filterGroups.fields} active={field} onChange={setField} />
@@ -150,7 +150,22 @@ export function UpdatesBrowser() {
           sorts={sorts}
           activeSort={sort}
           onSort={setSort}
-        />
+        >
+          <button
+            type="button"
+            className={poster === "机构" ? "active" : ""}
+            onClick={() => setPoster(poster === "机构" ? "全部" : "机构")}
+          >
+            只看组织
+          </button>
+          <button
+            type="button"
+            className={poster === "个人" ? "active" : ""}
+            onClick={() => setPoster(poster === "个人" ? "全部" : "个人")}
+          >
+            只看个人
+          </button>
+        </ListMeta>
 
         {filtered.length === 0 ? (
           <EmptyState onReset={resetFilters} />

@@ -13,6 +13,7 @@ export type UpdateMedia = {
 export type UpdateItem = {
   id: number;
   kind: "最新动态" | "项目主页" | "志愿活动" | "行业活动";
+  posterType: "机构" | "个人";
   field: string;
   region: string;
   rating: number;
@@ -36,8 +37,9 @@ export const updates: UpdateItem[] = [
   {
     id: 1,
     kind: "最新动态",
-    field: "环保生态",
-    region: "西北",
+    posterType: "机构",
+    field: "生态环保",
+    region: "内蒙古自治区",
     rating: 4.8,
     publishedHours: 3,
     time: "3小时前",
@@ -58,6 +60,7 @@ export const updates: UpdateItem[] = [
   {
     id: 2,
     kind: "最新动态",
+    posterType: "机构",
     field: "乡村教育",
     region: "全国",
     rating: 4.9,
@@ -79,8 +82,9 @@ export const updates: UpdateItem[] = [
   {
     id: 3,
     kind: "项目主页",
-    field: "残健融合",
-    region: "京津冀",
+    posterType: "机构",
+    field: "残障融合",
+    region: "北京市",
     rating: 4.7,
     publishedHours: 52,
     time: "2天前",
@@ -101,8 +105,9 @@ export const updates: UpdateItem[] = [
   {
     id: 4,
     kind: "项目主页",
+    posterType: "机构",
     field: "儿童保护",
-    region: "西南",
+    region: "云南省",
     rating: 4.8,
     publishedHours: 76,
     time: "3天前",
@@ -122,8 +127,9 @@ export const updates: UpdateItem[] = [
   {
     id: 5,
     kind: "最新动态",
+    posterType: "机构",
     field: "老龄关怀",
-    region: "长三角",
+    region: "上海市",
     rating: 4.6,
     publishedHours: 120,
     time: "5天前",
@@ -143,8 +149,9 @@ export const updates: UpdateItem[] = [
   {
     id: 6,
     kind: "项目主页",
+    posterType: "机构",
     field: "医疗健康",
-    region: "西北",
+    region: "甘肃省",
     rating: 4.9,
     publishedHours: 170,
     time: "1周前",
@@ -165,8 +172,9 @@ export const updates: UpdateItem[] = [
   {
     id: 7,
     kind: "志愿活动",
-    field: "环保生态",
-    region: "珠三角",
+    posterType: "机构",
+    field: "生态环保",
+    region: "广东省",
     rating: 4.6,
     publishedHours: 10,
     time: "10小时前",
@@ -187,8 +195,9 @@ export const updates: UpdateItem[] = [
   {
     id: 8,
     kind: "志愿活动",
-    field: "残健融合",
-    region: "长三角",
+    posterType: "机构",
+    field: "残障融合",
+    region: "浙江省",
     rating: 4.8,
     publishedHours: 30,
     time: "昨天",
@@ -208,8 +217,9 @@ export const updates: UpdateItem[] = [
   {
     id: 9,
     kind: "行业活动",
+    posterType: "机构",
     field: "乡村教育",
-    region: "京津冀",
+    region: "北京市",
     rating: 4.7,
     publishedHours: 48,
     time: "2天前",
@@ -229,8 +239,9 @@ export const updates: UpdateItem[] = [
   {
     id: 10,
     kind: "志愿活动",
+    posterType: "机构",
     field: "乡村教育",
-    region: "京津冀",
+    region: "北京市",
     rating: 4.5,
     publishedHours: 96,
     time: "4天前",
@@ -484,6 +495,10 @@ export type JobItem = {
   location: string;
   salary: string;
   due: string;
+  /** 抓取来源名称（真实数据） */
+  sourceName?: string;
+  /** 原始招聘链接（真实数据），有值时“投递简历”跳原始帖子 */
+  url?: string;
 };
 
 export const jobs: JobItem[] = [
@@ -622,7 +637,8 @@ export type ToolItem = {
   id: number;
   category: string;
   field: string;
-  forms: ("线上" | "线下" | "付费" | "免费")[];
+  forms: ("综合" | "线上" | "线下" | "付费" | "免费" | "大型会议" | "沙龙" | "研讨会")[];
+  duration?: "1个月内" | "6个月内" | "6-12个月" | "1年期以上";
   priceTag: string;
   title: string;
   meta: string;
@@ -642,6 +658,7 @@ export const tools: ToolItem[] = [
     category: "培训课程",
     field: "项目管理",
     forms: ["线下", "付费"],
+    duration: "1个月内",
     priceTag: "商业付费",
     title: "公益项目设计·LFA逻辑框架实战培训",
     meta: "📅 9月29-30日 · 📍 北京·线下",
@@ -657,9 +674,9 @@ export const tools: ToolItem[] = [
   },
   {
     id: 2,
-    category: "行业沙龙",
-    field: "项目管理",
-    forms: ["线下", "免费"],
+    category: "行业沙龙会议",
+    field: "行业建设",
+    forms: ["线下", "免费", "沙龙"],
     priceTag: "免费",
     title: "公益组织透明度建设·北京月度沙龙",
     meta: "📅 9月20日 19:00 · 📍 北京·朝阳",
@@ -674,7 +691,7 @@ export const tools: ToolItem[] = [
   },
   {
     id: 3,
-    category: "工具模板",
+    category: "公益工具模板库",
     field: "项目管理",
     forms: ["免费"],
     priceTag: "免费",
@@ -708,7 +725,7 @@ export const tools: ToolItem[] = [
   },
   {
     id: 5,
-    category: "经验文章",
+    category: "同行经验文章",
     field: "财务",
     forms: ["线上", "免费"],
     priceTag: "免费",
@@ -742,7 +759,7 @@ export const tools: ToolItem[] = [
   },
   {
     id: 7,
-    category: "工具模板",
+    category: "公益工具模板库",
     field: "团队管理",
     forms: ["免费"],
     priceTag: "免费",
@@ -762,6 +779,7 @@ export const tools: ToolItem[] = [
     category: "培训课程",
     field: "筹款",
     forms: ["线上", "付费"],
+    duration: "6个月内",
     priceTag: "商业付费",
     title: "公益筹款人认证课程（PFF·春季班）",
     meta: "📅 10月18日开课 · 💻 线上直播",
@@ -777,9 +795,9 @@ export const tools: ToolItem[] = [
   },
   {
     id: 9,
-    category: "行业沙龙",
-    field: "筹款",
-    forms: ["线下", "免费"],
+    category: "行业沙龙会议",
+    field: "行业建设",
+    forms: ["线下", "免费", "沙龙"],
     priceTag: "免费",
     title: "社区基金会发展圆桌·上海站",
     meta: "📅 10月12日 14:00 · 📍 上海·静安",
@@ -792,17 +810,26 @@ export const tools: ToolItem[] = [
     rating: 4.4,
     publishedDays: 9,
   },
+  {
+    id: 10,
+    category: "国际经验",
+    field: "综合素养",
+    forms: ["线上", "免费"],
+    priceTag: "免费",
+    title: "国际人道主义项目质量标准（CHS）实践导读",
+    meta: "🌐 国际经验 · 18 分钟读完",
+    summary:
+      "介绍 CHS 核心标准在项目设计、问责与评估环节的落地做法，附中英文对照检查清单。",
+    action: "阅读全文",
+    tone: "sky",
+    icon: "🌐",
+    downloads: 156,
+    rating: 4.6,
+    publishedDays: 4,
+  },
 ];
 
 /* ---------- 筛选配置 ---------- */
-
-export const updateTabs = [
-  { label: "全部", count: "428" },
-  { label: "最新动态", count: "186" },
-  { label: "项目主页", count: "142" },
-  { label: "志愿活动", count: "85" },
-  { label: "行业活动", count: "15" },
-];
 
 export const fundingTabs = [
   { label: "最新资助", icon: "💰", count: "1,825" },
@@ -813,22 +840,78 @@ export const fundingTabs = [
 export const toolTabs = [
   { label: "全部", icon: "", count: "3,256" },
   { label: "培训课程", icon: "🎓", count: "286" },
-  { label: "行业沙龙", icon: "☕", count: "128" },
-  { label: "工具模板", icon: "📋", count: "1,425" },
+  { label: "行业沙龙会议", icon: "☕", count: "128" },
+  { label: "公益工具模板库", icon: "📋", count: "1,425" },
   { label: "行业报告", icon: "📊", count: "328" },
   { label: "行业标准", icon: "📚", count: "85" },
-  { label: "经验文章", icon: "✍️", count: "1,004" },
+  { label: "同行经验文章", icon: "✍️", count: "1,004" },
+  { label: "国际经验", icon: "🌐", count: "60" },
 ];
 
 export const filterGroups = {
-  fields: ["全部", "乡村教育", "环保生态", "残健融合", "儿童保护", "老龄关怀", "医疗健康"],
+  fields: [
+    "全部",
+    "乡村教育",
+    "生态环保",
+    "产业生计",
+    "文化传承",
+    "人才培育",
+    "残障融合",
+    "儿童保护",
+    "老龄关怀",
+    "医疗健康",
+    "心理健康",
+    "女性关怀",
+    "创新探索",
+    "社区营造",
+    "其他",
+  ],
   fundingFields: ["全部", "乡村教育", "环保生态", "儿童保护", "残健融合", "老龄关怀", "医疗健康", "社会工作"],
-  regions: ["全部", "京津冀", "长三角", "珠三角", "西南", "西北", "全国"],
+  regions: [
+    "全部",
+    "北京市",
+    "天津市",
+    "上海市",
+    "重庆市",
+    "香港特别行政区",
+    "澳门特别行政区",
+    "河北省",
+    "山西省",
+    "辽宁省",
+    "吉林省",
+    "黑龙江省",
+    "江苏省",
+    "浙江省",
+    "安徽省",
+    "福建省",
+    "江西省",
+    "山东省",
+    "河南省",
+    "湖北省",
+    "湖南省",
+    "广东省",
+    "海南省",
+    "四川省",
+    "贵州省",
+    "云南省",
+    "陕西省",
+    "甘肃省",
+    "青海省",
+    "台湾省",
+    "内蒙古自治区",
+    "广西壮族自治区",
+    "西藏自治区",
+    "宁夏回族自治区",
+    "新疆维吾尔自治区",
+  ],
   fundingTypes: ["全部类型", "基金会资助", "政府购买", "企业CSR", "招标采购", "合作共建"],
   amounts: ["不限", "10万以下", "10-50万", "50-200万", "200万以上"],
   fundingRegions: ["全部", "北京", "上海", "广东", "四川"],
   jobRoles: ["全部", "项目官员", "传播", "财务", "督导", "筹款", "研究"],
   jobCities: ["全部", "北京", "上海", "广州/深圳", "成都", "远程办公"],
-  toolFields: ["全部", "项目管理", "财务", "传播", "筹款", "团队管理"],
-  toolForms: ["全部", "线上", "线下", "付费", "免费"],
+  toolFields: ["全部", "项目管理", "财务", "传播", "筹款", "团队管理", "综合素养", "学位课程", "其他"],
+  toolForms: ["全部", "综合", "线上", "线下", "免费", "付费"],
+  toolSalonFields: ["全部", "行业建设", "乡村振兴", "儿童", "老龄", "妇女"],
+  toolSalonForms: ["全部", "大型会议", "沙龙", "研讨会"],
+  toolDurations: ["全部", "1个月内", "6个月内", "6-12个月", "1年期以上"],
 };

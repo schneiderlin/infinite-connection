@@ -1,9 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { jobs as initialJobs, filterGroups, hotJobs, jobStats, type JobItem } from "@/lib/platform-data";
+import { jobs as mockJobs, filterGroups, hotJobs, jobStats, type JobItem } from "@/lib/platform-data";
+import scrapedJobs from "@/lib/jobs-scraped.json";
 import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
 import { PublishDialog } from "./PublishDialog";
+
+// 抓取的真实职位（scripts/scrape-jobs.mjs 生成）排在 mock 数据前面
+const initialJobs: JobItem[] = [...(scrapedJobs as unknown as JobItem[]), ...mockJobs];
 
 const kindTagClass: Record<string, string> = {
   全职: "tag-green",
@@ -114,12 +118,19 @@ export function JobsBrowser() {
                   <span className="item">🏛 {j.org}</span>
                   <span className="item">📍 {j.location}</span>
                   <span className="item">💼 {j.salary}</span>
+                  {j.sourceName && <span className="item">🔗 {j.sourceName}</span>}
                 </div>
                 <div className="card-foot">
                   <span className="stat">📅 {j.due}</span>
-                  <a className="card-link" href="#">
-                    投递简历 →
-                  </a>
+                  {j.url ? (
+                    <a className="card-link" href={j.url} target="_blank" rel="noreferrer">
+                      去原站投递 →
+                    </a>
+                  ) : (
+                    <a className="card-link" href="#">
+                      投递简历 →
+                    </a>
+                  )}
                 </div>
               </article>
             ))}

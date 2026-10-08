@@ -99,11 +99,6 @@
   font-weight: 600;
 }
 
-.nav-link.disabled {
-  color: #b6c0ba;
-  cursor: default;
-}
-
 .header-actions {
   display: flex;
   align-items: center;

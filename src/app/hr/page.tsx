@@ -4,7 +4,7 @@ import { JobsBrowser } from "@/components/JobsBrowser";
 import "../platform.css";
 
 export const metadata = {
-  title: "人力&专家 · 无限连接",
+  title: "人力资源 · 无限连接",
 };
 
 export default function HrPage() {
