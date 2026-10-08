@@ -8,6 +8,7 @@
 - [`mvp-content-proposal.md`](./mvp-content-proposal.md)：初版网站内容范围建议与待讨论问题
 - [`reference-review.md`](./reference-review.md)：两版参考网页与招聘信息库的观察结论
 - [`sources.md`](./sources.md)：来源、时间与可信度说明
+- [`data-sources-and-fields.md`](./data-sources-and-fields.md)：当前采集来源、原始结构化字段与站内映射
 
 ## 原始参考材料
 
