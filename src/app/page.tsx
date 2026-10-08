@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PlatformFooter } from "@/components/PlatformFooter";
+import scrapedJobs from "@/lib/jobs-scraped.json";
 import "./platform.css";
+
+const scrapedJobCount = scrapedJobs.length;
+const scrapedOrgCount = new Set(scrapedJobs.map((job) => job.org)).size;
 
 const modules = [
   {
@@ -25,8 +29,8 @@ const modules = [
     icon: "💼",
     tone: "blue",
     name: "人力资源",
-    desc: "公益行业全职 / 兼职 / 实习岗位，机构入驻审核，真实可信。",
-    meta: "186 个本月新增岗位 · 92 家在招机构",
+    desc: "汇集公开来源的公益行业全职 / 兼职 / 实习岗位，并保留原站投递入口。",
+    meta: `${scrapedJobCount} 条当前收录岗位 · ${scrapedOrgCount} 家当前收录机构`,
   },
   {
     href: "/tools",

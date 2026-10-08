@@ -281,6 +281,8 @@ export type FundingItem = {
   id: number;
   kind: "资助" | "需求" | "物资";
   type: string;
+  supportType: "资金" | "物资";
+  duration: "6个月内" | "6-12个月" | "1-2年" | "2年以上";
   field: string;
   region: string;
   title: string;
@@ -298,7 +300,9 @@ export const fundings: FundingItem[] = [
   {
     id: 1,
     kind: "资助",
-    type: "基金会资助",
+    type: "慈善会/基金会资助",
+    supportType: "资金",
+    duration: "6-12个月",
     field: "乡村教育",
     region: "全国",
     title: "2026年南都基金会“银杏成长计划”资助项目征集",
@@ -316,8 +320,10 @@ export const fundings: FundingItem[] = [
     id: 2,
     kind: "资助",
     type: "政府购买",
-    field: "社会工作",
-    region: "北京",
+    supportType: "资金",
+    duration: "2年以上",
+    field: "社区营造",
+    region: "北京市",
     title: "北京市朝阳区2026年街道社工服务项目购买公告",
     summary:
       "朝阳区民政局面向社会工作服务机构购买43个街道社工站运营服务，预算合计1,290万元，3年合同期。",
@@ -333,7 +339,9 @@ export const fundings: FundingItem[] = [
     id: 3,
     kind: "资助",
     type: "企业CSR",
-    field: "环保生态",
+    supportType: "资金",
+    duration: "1-2年",
+    field: "生态环保",
     region: "全国",
     title: "蚂蚁集团2026年度生态保护合作伙伴招募计划",
     summary:
@@ -349,7 +357,9 @@ export const fundings: FundingItem[] = [
   {
     id: 4,
     kind: "资助",
-    type: "基金会资助",
+    type: "慈善会/基金会资助",
+    supportType: "资金",
+    duration: "1-2年",
     field: "儿童保护",
     region: "全国",
     title: "壹基金·壹乐园儿童关怀项目2026年招募",
@@ -366,9 +376,11 @@ export const fundings: FundingItem[] = [
   {
     id: 5,
     kind: "资助",
-    type: "招标采购",
+    type: "政府购买",
+    supportType: "资金",
+    duration: "6-12个月",
     field: "儿童保护",
-    region: "广东",
+    region: "广东省",
     title: "深圳市困境儿童关爱服务项目公开招标",
     summary:
       "采购全市困境儿童入户评估与个案管理服务，分3个标段，单标段预算80-120万元，需具备社工服务资质。",
@@ -384,8 +396,10 @@ export const fundings: FundingItem[] = [
     id: 6,
     kind: "资助",
     type: "合作共建",
+    supportType: "资金",
+    duration: "1-2年",
     field: "老龄关怀",
-    region: "广东",
+    region: "广东省",
     title: "万科社区营造共建计划 · 老年友好社区试点",
     summary:
       "与社区社会组织共建老年友好社区，提供场地、资金与专业支持，单个社区共建资金10-30万元。",
@@ -401,8 +415,10 @@ export const fundings: FundingItem[] = [
     id: 7,
     kind: "需求",
     type: "资助需求",
+    supportType: "资金",
+    duration: "6个月内",
     field: "乡村教育",
-    region: "四川",
+    region: "甘肃省",
     title: "甘肃会宁3所乡村小学冬季取暖资助需求",
     summary:
       "3所村小约420名学生，冬季取暖煤与电费缺口约6万元，寻求基金会或企业一对一支持，可提供执行报告。",
@@ -418,8 +434,10 @@ export const fundings: FundingItem[] = [
     id: 8,
     kind: "需求",
     type: "资助需求",
+    supportType: "资金",
+    duration: "6个月内",
     field: "医疗健康",
-    region: "四川",
+    region: "四川省",
     title: "罕见病家庭紧急医疗救助资金需求",
     summary:
       "在册罕见病家庭12户，年度自付医疗费用缺口合计约35万元，寻求医疗救助专项支持，个案资料完备。",
@@ -435,8 +453,10 @@ export const fundings: FundingItem[] = [
     id: 9,
     kind: "物资",
     type: "物资需求",
+    supportType: "物资",
+    duration: "6个月内",
     field: "乡村教育",
-    region: "全国",
+    region: "云南省",
     title: "云南山区学校课桌椅与图书角物资需求",
     summary:
       "怒江4所村小需课桌椅260套、图书角12个，可接收二手物资，物流可协调，接收后提供签收与使用反馈。",
@@ -452,8 +472,10 @@ export const fundings: FundingItem[] = [
     id: 10,
     kind: "物资",
     type: "物资供给",
-    field: "残健融合",
-    region: "上海",
+    supportType: "物资",
+    duration: "6个月内",
+    field: "残障融合",
+    region: "上海市",
     title: "企业闲置办公电脑捐赠（可供80台）",
     summary:
       "上海某互联网企业退役办公电脑80台，已格式化并检测，优先捐赠给残障就业支持与乡村教学点，需自提或到付。",
@@ -485,8 +507,10 @@ export const fundingStats = [
 
 export type JobItem = {
   id: number;
-  kind: "全职" | "兼职" | "实习";
+  category?: "人员招聘" | "志愿者招募";
+  kind: "全职" | "兼职" | "实习" | "志愿者";
   role: string;
+  servicePeriod?: "短期" | "长期";
   time: string;
   publishedDays: number;
   title: string;
@@ -500,136 +524,6 @@ export type JobItem = {
   /** 原始招聘链接（真实数据），有值时“投递简历”跳原始帖子 */
   url?: string;
 };
-
-export const jobs: JobItem[] = [
-  {
-    id: 1,
-    kind: "全职",
-    role: "项目官员",
-    time: "3天前发布",
-    publishedDays: 3,
-    title: "【招聘】教育公平项目官员 · 美丽中国",
-    summary:
-      "负责乡村教育项目的设计、执行、监测与评估。要求公益/教育/社会学等相关专业，2年以上项目经验。",
-    org: "美丽中国 Teach For China",
-    location: "北京",
-    salary: "12-18K·13薪",
-    due: "截止 2026-09-30",
-  },
-  {
-    id: 2,
-    kind: "全职",
-    role: "传播",
-    time: "昨天发布",
-    publishedDays: 1,
-    title: "【招聘】品牌传播经理 · 蚂蚁森林",
-    summary:
-      "负责蚂蚁森林品牌传播策略、内容策划、KOL合作。要求3年以上传播经验，有公益/CSR背景优先。",
-    org: "蚂蚁集团 CSR",
-    location: "杭州",
-    salary: "18-28K·14薪",
-    due: "截止 2026-09-25",
-  },
-  {
-    id: 3,
-    kind: "兼职",
-    role: "督导",
-    time: "5天前发布",
-    publishedDays: 5,
-    title: "【招聘】社工督导（兼职）· 上海某社工机构",
-    summary:
-      "面向持证中级社工师，提供一线社工督导服务，按项目周期结算。要求5年以上实务经验+督导资质。",
-    org: "上海联劝公益基金会",
-    location: "上海·多区",
-    salary: "800-1500元/天",
-    due: "长期招募",
-  },
-  {
-    id: 4,
-    kind: "实习",
-    role: "研究",
-    time: "1周前发布",
-    publishedDays: 7,
-    title: "【实习】公益行业研究员 · 中国发展简报",
-    summary:
-      "参与公益行业研究报告撰写、政策分析、案例调研。每周到岗3天以上，实习期3-6个月，提供补贴+实习证明。",
-    org: "中国发展简报",
-    location: "北京·朝阳",
-    salary: "200元/天",
-    due: "截止 2026-10-15",
-  },
-  {
-    id: 5,
-    kind: "全职",
-    role: "筹款",
-    time: "2天前发布",
-    publishedDays: 2,
-    title: "【招聘】月捐筹款经理 · 壹基金",
-    summary:
-      "负责月捐人发展与维护体系搭建，管理筹款活动与捐赠人旅程。要求2年以上筹款或用户运营经验。",
-    org: "壹基金",
-    location: "深圳",
-    salary: "15-22K·13薪",
-    due: "截止 2026-10-10",
-  },
-  {
-    id: 6,
-    kind: "兼职",
-    role: "财务",
-    time: "4天前发布",
-    publishedDays: 4,
-    title: "【招聘】兼职财务主管 · 北京某社区基金会",
-    summary:
-      "负责基金会全盘账务与年度审计对接，每周到岗2天。要求熟悉民非财务制度，持中级会计职称。",
-    org: "北京某社区基金会",
-    location: "远程办公",
-    salary: "6-8K/月",
-    due: "截止 2026-10-20",
-  },
-  {
-    id: 7,
-    kind: "实习",
-    role: "传播",
-    time: "6天前发布",
-    publishedDays: 6,
-    title: "【实习】新媒体传播实习生 · 成都公益园",
-    summary:
-      "协助公众号与短视频内容策划、活动执行。每周到岗4天，实习期3个月以上，欢迎新闻传播相关专业。",
-    org: "成都公益组织服务园",
-    location: "成都",
-    salary: "120元/天",
-    due: "截止 2026-09-28",
-  },
-  {
-    id: 8,
-    kind: "全职",
-    role: "项目官员",
-    time: "1周前发布",
-    publishedDays: 8,
-    title: "【招聘】生态保护项目官员 · 山水自然保护中心",
-    summary:
-      "负责社区保护地项目的落地执行与数据管理，每年有1/3时间在野外工作点。生态学相关专业优先。",
-    org: "山水自然保护中心",
-    location: "北京",
-    salary: "10-15K·13薪",
-    due: "截止 2026-10-05",
-  },
-];
-
-export const hotJobs = [
-  { rank: 1, title: "品牌传播经理 · 蚂蚁森林", meta: "杭州 · 18-28K" },
-  { rank: 2, title: "项目官员 · 美丽中国", meta: "北京 · 12-18K" },
-  { rank: 3, title: "社工督导（兼职）", meta: "上海 · 800-1500元/天" },
-  { rank: 4, title: "公益行业研究员（实习）", meta: "北京 · 200元/天" },
-  { rank: 5, title: "月捐筹款经理 · 壹基金", meta: "深圳 · 15-22K" },
-];
-
-export const jobStats = [
-  { label: "本月新增岗位", value: "186" },
-  { label: "在招机构", value: "92" },
-  { label: "累计投递", value: "3.4万+" },
-  { label: "远程岗位", value: "47" },
-];
 
 /* ---------- 能力工具 ---------- */
 
@@ -848,67 +742,83 @@ export const toolTabs = [
   { label: "国际经验", icon: "🌐", count: "60" },
 ];
 
+const publicInterestFields = [
+  "乡村教育",
+  "生态环保",
+  "产业生计",
+  "文化传承",
+  "人才培育",
+  "残障融合",
+  "儿童保护",
+  "老龄关怀",
+  "医疗健康",
+  "心理健康",
+  "女性关怀",
+  "创新探索",
+  "社区营造",
+  "其他",
+];
+
+const provinceOptions = [
+  "北京市",
+  "天津市",
+  "上海市",
+  "重庆市",
+  "香港特别行政区",
+  "澳门特别行政区",
+  "河北省",
+  "山西省",
+  "辽宁省",
+  "吉林省",
+  "黑龙江省",
+  "江苏省",
+  "浙江省",
+  "安徽省",
+  "福建省",
+  "江西省",
+  "山东省",
+  "河南省",
+  "湖北省",
+  "湖南省",
+  "广东省",
+  "海南省",
+  "四川省",
+  "贵州省",
+  "云南省",
+  "陕西省",
+  "甘肃省",
+  "青海省",
+  "台湾省",
+  "内蒙古自治区",
+  "广西壮族自治区",
+  "西藏自治区",
+  "宁夏回族自治区",
+  "新疆维吾尔自治区",
+];
+
 export const filterGroups = {
-  fields: [
+  fields: ["全部", ...publicInterestFields],
+  fundingResourceTypes: [
     "全部",
-    "乡村教育",
-    "生态环保",
-    "产业生计",
-    "文化传承",
-    "人才培育",
-    "残障融合",
-    "儿童保护",
-    "老龄关怀",
-    "医疗健康",
-    "心理健康",
-    "女性关怀",
-    "创新探索",
-    "社区营造",
-    "其他",
+    "慈善会/基金会资助",
+    "公益项目伙伴招募",
+    "政府购买",
+    "企业CSR",
+    "合作共建",
+    "物资资助",
   ],
-  fundingFields: ["全部", "乡村教育", "环保生态", "儿童保护", "残健融合", "老龄关怀", "医疗健康", "社会工作"],
-  regions: [
-    "全部",
-    "北京市",
-    "天津市",
-    "上海市",
-    "重庆市",
-    "香港特别行政区",
-    "澳门特别行政区",
-    "河北省",
-    "山西省",
-    "辽宁省",
-    "吉林省",
-    "黑龙江省",
-    "江苏省",
-    "浙江省",
-    "安徽省",
-    "福建省",
-    "江西省",
-    "山东省",
-    "河南省",
-    "湖北省",
-    "湖南省",
-    "广东省",
-    "海南省",
-    "四川省",
-    "贵州省",
-    "云南省",
-    "陕西省",
-    "甘肃省",
-    "青海省",
-    "台湾省",
-    "内蒙古自治区",
-    "广西壮族自治区",
-    "西藏自治区",
-    "宁夏回族自治区",
-    "新疆维吾尔自治区",
-  ],
-  fundingTypes: ["全部类型", "基金会资助", "政府购买", "企业CSR", "招标采购", "合作共建"],
-  amounts: ["不限", "10万以下", "10-50万", "50-200万", "200万以上"],
-  fundingRegions: ["全部", "北京", "上海", "广东", "四川"],
-  jobRoles: ["全部", "项目官员", "传播", "财务", "督导", "筹款", "研究"],
-  jobCities: ["全部", "北京", "上海", "广州/深圳", "成都", "远程办公"],
+  fundingSupportTypes: ["全部", "资金", "物资"],
+  fundingDurations: ["全部", "6个月内", "6-12个月", "1-2年", "2年以上"],
+  fundingFields: ["全部", ...publicInterestFields],
+  fundingRegions: ["全部", ...provinceOptions],
+  fundingOther: ["全部", "最新发布（一周内）", "只看资助", "只看需求"],
+  regions: ["全部", ...provinceOptions],
+  jobKinds: ["全部", "全职", "兼职", "实习"],
+  jobRoles: ["全部", "项目官员", "传播", "财务", "人力资源", "高级管理", "督导", "筹款", "法务", "研究"],
+  jobRegions: ["全国", ...provinceOptions],
+  volunteerPeriods: ["全部", "短期", "长期"],
+  volunteerFields: ["全部", "项目执行", "活动执行", "传播", "人力资源", "督导", "筹款", "法务", "研究", "评估", "技术开发"],
+  volunteerRegions: ["全部", "线上", ...provinceOptions],
   toolFields: ["全部", "项目管理", "财务", "传播", "筹款", "团队管理", "综合素养", "学位课程", "其他"],
   toolForms: ["全部", "综合", "线上", "线下", "免费", "付费"],
   toolSalonFields: ["全部", "行业建设", "乡村振兴", "儿童", "老龄", "妇女"],

@@ -1,40 +1,58 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { jobs as mockJobs, filterGroups, hotJobs, jobStats, type JobItem } from "@/lib/platform-data";
+import { filterGroups, type JobItem } from "@/lib/platform-data";
 import scrapedJobs from "@/lib/jobs-scraped.json";
-import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
+import { TypeTabs, FilterRow, SearchInput, EmptyState } from "./platform-ui";
 import { PublishDialog } from "./PublishDialog";
 
-// 抓取的真实职位（scripts/scrape-jobs.mjs 生成）排在 mock 数据前面
-const initialJobs: JobItem[] = [...(scrapedJobs as unknown as JobItem[]), ...mockJobs];
+const initialJobs = scrapedJobs as JobItem[];
+type JobCategory = NonNullable<JobItem["category"]>;
+
+const jobTabs = [{ label: "人员招聘" }, { label: "志愿者招募" }];
+
+const scrapedJobStats = [
+  { label: "本月新增岗位", value: "无法计算", unavailable: true },
+  { label: "当前收录机构", value: String(new Set(initialJobs.map((job) => job.org)).size) },
+  { label: "累计投递", value: "无法计算", unavailable: true },
+  { label: "当前远程岗位", value: String(initialJobs.filter((job) => job.location.includes("远程")).length) },
+];
 
 const kindTagClass: Record<string, string> = {
   全职: "tag-green",
   兼职: "tag-orange",
   实习: "tag-blue",
+  志愿者: "tag-blue",
 };
 
-function cityMatch(pill: string, location: string): boolean {
-  if (pill === "全部") return true;
-  if (pill === "广州/深圳") return location.includes("广州") || location.includes("深圳");
-  return location.includes(pill);
+function jobCategory(job: JobItem): JobCategory {
+  return job.category ?? (job.kind === "志愿者" ? "志愿者招募" : "人员招聘");
+}
+
+function regionMatch(category: JobCategory, region: string, location: string): boolean {
+  if ((category === "人员招聘" && region === "全国") || region === "全部") return true;
+  if (region === "线上") return location.includes("线上") || location.includes("远程");
+  const shortRegion = region.replace(/特别行政区|维吾尔自治区|壮族自治区|回族自治区|自治区|省|市$/, "");
+  return location.includes(region) || location.includes(shortRegion);
 }
 
 const publishFields = [
-  { key: "title", label: "岗位名称", placeholder: "如：教育公平项目官员", required: true },
-  { key: "org", label: "机构名称", placeholder: "如：美丽中国 Teach For China", required: true },
+  { key: "title", label: "岗位名称", placeholder: "请输入岗位名称", required: true },
+  { key: "org", label: "机构名称", placeholder: "请输入机构名称", required: true },
   { key: "kind", label: "用工类型", type: "select" as const, options: ["全职", "兼职", "实习"] },
   { key: "role", label: "职能", type: "select" as const, options: filterGroups.jobRoles.slice(1) },
   { key: "location", label: "工作地点", placeholder: "如：北京 / 远程办公" },
-  { key: "salary", label: "薪资", placeholder: "如：12-18K·13薪" },
+  { key: "salary", label: "薪资", placeholder: "请输入面议或薪资范围" },
   { key: "summary", label: "岗位描述", placeholder: "职责与要求…", type: "textarea" as const, required: true },
 ];
 
 export function JobsBrowser() {
   const [items, setItems] = useState<JobItem[]>(initialJobs);
+  const [category, setCategory] = useState<JobCategory>("人员招聘");
+  const [kind, setKind] = useState("全部");
   const [role, setRole] = useState("全部");
-  const [city, setCity] = useState("全部");
+  const [servicePeriod, setServicePeriod] = useState("全部");
+  const [region, setRegion] = useState("全国");
   const [search, setSearch] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -43,22 +61,34 @@ export function JobsBrowser() {
     return items
       .filter(
         (j) =>
+          jobCategory(j) === category &&
+          (category !== "人员招聘" || kind === "全部" || j.kind === kind) &&
           (role === "全部" || j.role === role) &&
-          cityMatch(city, j.location) &&
+          (category !== "志愿者招募" || servicePeriod === "全部" || j.servicePeriod === servicePeriod) &&
+          regionMatch(category, region, j.location) &&
           (!q || j.title.includes(q) || j.org.includes(q) || j.summary.includes(q)),
       )
       .sort((a, b) => a.publishedDays - b.publishedDays);
-  }, [items, role, city, search]);
+  }, [items, category, kind, role, servicePeriod, region, search]);
 
-  const resetFilters = () => {
+  const resetFilters = (nextCategory = category) => {
+    setKind("全部");
     setRole("全部");
-    setCity("全部");
+    setServicePeriod("全部");
+    setRegion(nextCategory === "人员招聘" ? "全国" : "全部");
     setSearch("");
+  };
+
+  const changeCategory = (next: string) => {
+    const nextCategory = next as JobCategory;
+    setCategory(nextCategory);
+    resetFilters(nextCategory);
   };
 
   const publish = (values: Record<string, string>) => {
     const item: JobItem = {
       id: Date.now(),
+      category: "人员招聘",
       kind: (values.kind as JobItem["kind"]) || "全职",
       role: values.role || "项目官员",
       time: "刚刚发布",
@@ -71,7 +101,8 @@ export function JobsBrowser() {
       due: "长期招募",
     };
     setItems((list) => [item, ...list]);
-    resetFilters();
+    setCategory("人员招聘");
+    resetFilters("人员招聘");
   };
 
   return (
@@ -89,19 +120,57 @@ export function JobsBrowser() {
           </button>
         </div>
 
+        <TypeTabs tabs={jobTabs} active={category} onChange={changeCategory} />
+
         <div className="filter-panel">
-          <div className="pc-card filter-box">
-            <FilterRow label="职能" options={filterGroups.jobRoles} active={role} onChange={setRole} />
-          </div>
-          <div className="pc-card filter-box">
-            <FilterRow label="地点" options={filterGroups.jobCities} active={city} onChange={setCity}>
-              <SearchInput value={search} onChange={setSearch} placeholder="搜索岗位关键词…" />
-            </FilterRow>
-          </div>
+          {category === "人员招聘" ? (
+            <>
+              <div className="pc-card filter-box">
+                <FilterRow label="类型" options={filterGroups.jobKinds} active={kind} onChange={setKind} />
+              </div>
+              <div className="pc-card filter-box">
+                <FilterRow label="职能" options={filterGroups.jobRoles} active={role} onChange={setRole} />
+              </div>
+              <div className="pc-card filter-box">
+                <FilterRow label="地域" options={filterGroups.jobRegions} active={region} onChange={setRegion}>
+                  <SearchInput value={search} onChange={setSearch} placeholder="搜索岗位关键词…" />
+                </FilterRow>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="pc-card filter-box">
+                <FilterRow
+                  label="服务周期"
+                  options={filterGroups.volunteerPeriods}
+                  active={servicePeriod}
+                  onChange={setServicePeriod}
+                />
+              </div>
+              <div className="pc-card filter-box">
+                <FilterRow
+                  label="服务领域"
+                  options={filterGroups.volunteerFields}
+                  active={role}
+                  onChange={setRole}
+                />
+              </div>
+              <div className="pc-card filter-box">
+                <FilterRow
+                  label="地域"
+                  options={filterGroups.volunteerRegions}
+                  active={region}
+                  onChange={setRegion}
+                >
+                  <SearchInput value={search} onChange={setSearch} placeholder="搜索志愿服务关键词…" />
+                </FilterRow>
+              </div>
+            </>
+          )}
         </div>
 
         {filtered.length === 0 ? (
-          <EmptyState onReset={resetFilters} />
+          <EmptyState onReset={() => resetFilters()} />
         ) : (
           <div className="card-grid-2">
             {filtered.map((j) => (
@@ -109,8 +178,6 @@ export function JobsBrowser() {
                 <div className="card-head">
                   <span className={`tag ${kindTagClass[j.kind] ?? "tag-green"}`}>{j.kind}</span>
                   <span className="tag tag-pink">{j.role}</span>
-                  <span className="spacer" />
-                  <span className="card-time">{j.time}</span>
                 </div>
                 <h3 className="card-title">{j.title}</h3>
                 <p className="card-summary">{j.summary}</p>
@@ -118,7 +185,6 @@ export function JobsBrowser() {
                   <span className="item">🏛 {j.org}</span>
                   <span className="item">📍 {j.location}</span>
                   <span className="item">💼 {j.salary}</span>
-                  {j.sourceName && <span className="item">🔗 {j.sourceName}</span>}
                 </div>
                 <div className="card-foot">
                   <span className="stat">📅 {j.due}</span>
@@ -141,26 +207,21 @@ export function JobsBrowser() {
       <aside className="module-aside">
         <div className="aside-card">
           <h2 className="aside-title">🔥 急招岗位</h2>
-          <ol className="hot-list">
-            {hotJobs.map((p) => (
-              <li key={p.rank}>
-                <span className="rank-badge">{p.rank}</span>
-                <div>
-                  <div className="hot-title">{p.title}</div>
-                  <div className="hot-meta">{p.meta}</div>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <div className="aside-placeholder">
+            <strong>无法计算</strong>
+            <span>当前来源未提供急招标记</span>
+          </div>
         </div>
 
         <div className="aside-card">
           <h2 className="aside-title">📊 招聘数据</h2>
           <div className="stat-rows">
-            {jobStats.map((s, i) => (
+            {scrapedJobStats.map((s, i) => (
               <div key={s.label} className="stat-row">
                 <span>{s.label}</span>
-                <span className={`value sv-${i % 4}`}>{s.value}</span>
+                <span className={`value ${s.unavailable ? "is-placeholder" : `sv-${i % 4}`}`}>
+                  {s.value}
+                </span>
               </div>
             ))}
           </div>

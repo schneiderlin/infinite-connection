@@ -60,17 +60,35 @@ function guessRole(text) {
   const t = text.toLowerCase();
   if (/传播|沟通|品牌|媒体|communication|media/.test(t)) return "传播";
   if (/财务|会计|finance|account/.test(t)) return "财务";
+  if (/人力|招聘|hr\b|human resource/.test(t)) return "人力资源";
+  if (/总监|主任|负责人|高级管理|director|manager/.test(t)) return "高级管理";
   if (/督导|supervisor/.test(t)) return "督导";
   if (/筹款|募捐|fundraising|donor/.test(t)) return "筹款";
+  if (/法务|法律|legal/.test(t)) return "法务";
   if (/研究|调研|research|analyst/.test(t)) return "研究";
   if (/项目|program|project|officer/.test(t)) return "项目官员";
   return "其他";
 }
 
-function guessKind(text) {
-  if (/实习|intern/i.test(text)) return "实习";
-  if (/兼职|part[\s-]?time/i.test(text)) return "兼职";
-  return "全职";
+function guessVolunteerRole(text) {
+  const t = text.toLowerCase();
+  if (/技术|开发|工程|technology|developer|engineer/.test(t)) return "技术开发";
+  if (/评估|测评|evaluation|assessment/.test(t)) return "评估";
+  if (/传播|沟通|品牌|媒体|communication|media/.test(t)) return "传播";
+  if (/人力|招聘|hr\b|human resource/.test(t)) return "人力资源";
+  if (/督导|supervisor/.test(t)) return "督导";
+  if (/筹款|募捐|fundraising|donor/.test(t)) return "筹款";
+  if (/法务|法律|legal/.test(t)) return "法务";
+  if (/研究|调研|research/.test(t)) return "研究";
+  if (/活动|event/.test(t)) return "活动执行";
+  return "项目执行";
+}
+
+function normalizeJobType(sourceType, title) {
+  if (/志愿/.test(sourceType)) return { category: "志愿者招募", kind: "志愿者" };
+  if (/实习/.test(sourceType) || /实习|intern/i.test(title)) return { category: "人员招聘", kind: "实习" };
+  if (/兼职/.test(sourceType) || /兼职|part[\s-]?time/i.test(title)) return { category: "人员招聘", kind: "兼职" };
+  return { category: "人员招聘", kind: "全职" };
 }
 
 /* ---------- 来源 1：中国发展简报 · NGO招聘 ---------- */
@@ -84,6 +102,7 @@ async function scrapeCDB() {
   if (data.code !== 200) throw new Error(`API code ${data.code}`);
   const list = data.result?.list ?? [];
   return list.slice(0, PER_SOURCE).map((j) => {
+    const jobType = normalizeJobType(j.type ?? "", j.title ?? "");
     const remote = j.jobModel === "YCBG";
     // 直辖市时 cityName 已包含省份（“北京·北京市” → “北京市”）
     const prov = (j.provinceName ?? "").replace(/[省市]$/, "");
@@ -102,14 +121,17 @@ async function scrapeCDB() {
         .filter(Boolean)
         .join("；") || "点击查看原始招聘详情。";
     return {
-      kind: ["全职", "兼职", "实习"].includes(j.type) ? j.type : guessKind(j.title),
-      role: guessRole(`${j.postName ?? ""} ${j.title}`),
+      ...jobType,
+      role:
+        jobType.category === "志愿者招募"
+          ? guessVolunteerRole(`${j.postName ?? ""} ${j.title}`)
+          : guessRole(`${j.postName ?? ""} ${j.title}`),
       ...ageOf(j.updateTime),
-      title: `【招聘】${j.title} · ${j.companyName}`,
+      title: `【${jobType.category === "志愿者招募" ? "志愿者" : "招聘"}】${j.title} · ${j.companyName}`,
       summary,
       org: j.companyName ?? "未知机构",
       location,
-      salary,
+      salary: jobType.category === "志愿者招募" && salary === "面议" ? "志愿服务" : salary,
       due: "详见原帖",
       sourceName: "中国发展简报·NGO招聘",
       url: `https://www.chinadevelopmentbrief.org.cn/jobs/detail/${j.id}.html`,

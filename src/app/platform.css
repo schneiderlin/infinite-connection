@@ -197,6 +197,20 @@
   gap: 6px;
 }
 
+.aside-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--pc-text-3);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.aside-placeholder strong {
+  color: var(--pc-text-2);
+  font-size: 14px;
+}
+
 /* ---------- 顶部类型标签栏 ---------- */
 .type-tabs {
   display: flex;
@@ -681,6 +695,12 @@
   font-size: 16px;
   font-weight: 800;
   color: var(--pc-primary);
+}
+
+.stat-row .value.is-placeholder {
+  color: var(--pc-text-3);
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* ---------- 人力资源 ---------- */

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type TabDef = { label: string; icon?: string; count: string };
+export type TabDef = { label: string; icon?: string; count?: string };
 
 export function TypeTabs({
   tabs,
@@ -22,7 +22,7 @@ export function TypeTabs({
         >
           {t.icon && <span className="tab-icon">{t.icon}</span>}
           {t.label}
-          <span className="count">{t.count}</span>
+          {t.count && <span className="count">{t.count}</span>}
         </button>
       ))}
     </div>
