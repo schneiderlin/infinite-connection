@@ -1,0 +1,177 @@
+[
+  {
+    "name": "中国发展简报（NGO信息中心 · NGO招聘）",
+    "url": "https://www.chinadevelopmentbrief.org.cn/",
+    "category": "一、公益行业垂类招聘平台"
+  },
+  {
+    "name": "社会组织人才服务和培训平台（民政部）",
+    "url": "https://px.chinanpo.mca.gov.cn/",
+    "category": "一、公益行业垂类招聘平台"
+  },
+  {
+    "name": "NGO英才网（一览英才网旗下）",
+    "url": "http://ngo.job1001.com/",
+    "category": "一、公益行业垂类招聘平台"
+  },
+  {
+    "name": "社工中国网（中国社会工作联合会）",
+    "url": "http://www.swchina.org/",
+    "category": "一、公益行业垂类招聘平台"
+  },
+  {
+    "name": "中国大学生志愿者招募网",
+    "url": "https://dxszyzzmw.com/",
+    "category": "一、志愿服务与志愿者招募平台"
+  },
+  {
+    "name": "猎聘网",
+    "url": "https://www.liepin.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "BOSS直聘",
+    "url": "https://www.zhipin.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "智联招聘",
+    "url": "https://www.zhaopin.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "前程无忧 51job",
+    "url": "https://www.51job.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "实习僧",
+    "url": "https://www.shixiseng.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "刺猬 CIWEI（刺猬实习 / 刺猬体验）",
+    "url": "https://www.ciweilive.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "青团社",
+    "url": "https://www.qingtuanshe.com/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "国聘行动平台",
+    "url": "https://iguopin.com",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "中国公共招聘网（人社部）",
+    "url": "http://job.mohrss.gov.cn/",
+    "category": "二、综合招聘平台（公益/社会组织岗位）"
+  },
+  {
+    "name": "恩派公益 NPI（公益组织发展中心）",
+    "url": "https://www.npi.org.cn/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "美丽中国支教项目（Teach For China）",
+    "url": "http://www.meilizhongguo.org/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "为中国而教",
+    "url": "http://www.21tfc.org/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "壹基金（工作机会）",
+    "url": "https://onefoundation.cn/jobs/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "中国乡村发展基金会（原中国扶贫基金会）",
+    "url": "https://www.cfpa.org.cn/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "中国青少年发展基金会（希望工程）",
+    "url": "https://www.cydf.org.cn/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "中国红十字基金会",
+    "url": "https://www.crcf.org.cn/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "中华慈善总会",
+    "url": "https://www.chinacharityfederation.org/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "联劝网",
+    "url": "https://www.lianquan.org/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "深圳市社会公益基金会",
+    "url": "https://www.szscf.org.cn/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "阿里巴巴公益（阿里巴巴公益基金会）",
+    "url": "https://www.alibabafoundation.com/",
+    "category": "三、公益行业机构招聘平台"
+  },
+  {
+    "name": "Idealist",
+    "url": "https://www.idealist.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "Devex",
+    "url": "https://www.devex.com/jobs/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "ReliefWeb（联合国 OCHA）",
+    "url": "https://reliefweb.int/jobs",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "UN Volunteers（联合国志愿人员组织）",
+    "url": "https://www.unv.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "UNjobs",
+    "url": "https://unjobs.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "DevNetJobs",
+    "url": "https://www.devnetjobs.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "DevelopmentAid",
+    "url": "https://www.developmentaid.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "Impactpool",
+    "url": "https://www.impactpool.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "CharityJob",
+    "url": "https://www.charityjob.co.uk/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  },
+  {
+    "name": "NGO Job Board（InterAction）",
+    "url": "https://ngojobsboard.org/",
+    "category": "四、国际公益 / NGO 招聘平台"
+  }
+]
