@@ -9,15 +9,16 @@
  *   4. refine-fundings.mjs  清洗资助信息
  *   5. refine-jobs.mjs      清洗招聘岗位
  *   6. refine-tools.mjs     清洗能力工具
- *   7. ai-classify.mjs      AI 辅助分类（DeepSeek，仅处理 PENDING 记录）
+ *   7. ai-classify.mjs      AI 辅助分类（DeepSeek，默认仅处理 PENDING 记录）
  *   8. export-to-excel.mjs  导出人工审核用 Excel
  *
  * 三个抓取脚本沿用各自的运行约定，带 --use-env-proxy，
  * 与 package.json 里单独执行 scrape:jobs 时的行为保持一致。
  *
- * AI 分类默认每个数据集抽样 5 条（控制成本）；如需扩大样本，
- * 设置环境变量 AI_CLASSIFY_LIMIT（1-50），例如：
+ * AI 分类默认每个数据集抽样 5 条（控制成本）；如需扩大本次总样本，
+ * 设置环境变量 AI_CLASSIFY_LIMIT（1-5000），例如：
  *   $env:AI_CLASSIFY_LIMIT=20; pnpm scrape:all
+ * 高置信度分类会自动发布，低置信度会标记为 PENDING_REVIEW 等待人工审核。
  *
  * 用法：pnpm scrape:all（等价于 node scripts/run-all.mjs）
  */
@@ -38,7 +39,7 @@ const STEPS = [
   {
     label: "AI 辅助分类",
     script: "ai-classify.mjs",
-    // 未设置时沿用脚本默认的每个数据集 5 条抽样。
+    // 未设置时沿用脚本默认的每个数据集 5 条抽样；显式设置时表示本次总条数。
     args: process.env.AI_CLASSIFY_LIMIT
       ? ["--limit", String(process.env.AI_CLASSIFY_LIMIT)]
       : [],
@@ -92,8 +93,8 @@ function main() {
   console.log(`\n🎉 全部 ${STEPS.length} 个步骤执行完成，总耗时 ${formatDuration(Date.now() - startedAt)}`);
   console.log("📦 数据快照：src/lib/{fundings-data,jobs-scraped,tools-data}.json");
   console.log(`📊 审核表格：${process.env.EXPORT_OUT_DIR || "docs/exports"}/{fundings,jobs,tools}.xlsx`);
-  console.log("🤖 AI 建议已写入 aiSuggestedCategory，人工在 Excel 的「AI建议分类」列查看。");
-  console.log("🔎 新抓取的记录默认为 PENDING，需人工审核改为 PUBLISHED 后才会在前端展示。");
+  console.log("🤖 AI 分类已直接写回分类字段：高置信度自动发布，低置信度标记 PENDING_REVIEW。");
+  console.log("🔎 新抓取的记录默认为 PENDING；AI 高置信度会发布，低置信度需人工复核。");
   console.log("📥 人工审核后运行 pnpm import:excel，把审核状态和最终发布分类写回快照。");
 }
 

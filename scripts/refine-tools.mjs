@@ -78,7 +78,7 @@ const NEWS_RELEASE_STYLE = {
 };
 
 // 抓取脚本写入的新记录为 PENDING；历史快照没有 status 时按已发布处理。
-const REVIEW_STATUSES = new Set(["PENDING", "PUBLISHED", "REJECTED"]);
+const REVIEW_STATUSES = new Set(["PENDING", "PENDING_REVIEW", "PUBLISHED", "REJECTED"]);
 
 async function main() {
   console.log("🚀 开始自动清洗能力工具数据...\n");
@@ -94,7 +94,8 @@ async function main() {
     // 已发布 / 历史无 status（视为已发布）的工具，分类和展示样式是人工审核结果，不再覆盖。
     const isReviewed = tool.status === "PUBLISHED";
     const isLegacyPublished = !tool.status;
-    const preserveStyle = isReviewed || isLegacyPublished;
+    const isAwaitingAiReview = tool.status === "PENDING_REVIEW";
+    const preserveStyle = isReviewed || isLegacyPublished || isAwaitingAiReview;
 
     let matched = null;
 

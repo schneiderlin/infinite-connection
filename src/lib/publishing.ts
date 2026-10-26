@@ -51,6 +51,14 @@ export const publishModules: Record<PublishModuleSlug, PublishModuleConfig> = {
   },
 };
 
+/** 按 Content.module 取回对应的发布配置，供审核等后台场景复用分类枚举。 */
+export const publishModuleByContentModule: Record<ContentModule, PublishModuleConfig> = {
+  UPDATE: publishModules.updates,
+  FUNDING: publishModules.funding,
+  JOB: publishModules.jobs,
+  TOOL: publishModules.tools,
+};
+
 export const publicInterestFields = [
   "教育助学",
   "乡村振兴",

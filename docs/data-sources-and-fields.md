@@ -45,10 +45,18 @@ pnpm scrape:jobs
 - 页面组件：[`src/components/JobsBrowser.tsx`](../src/components/JobsBrowser.tsx)
 - 每个来源适配器最多输出 20 条；公共招聘网的三个关键词各只请求第一页，机构官网只读取当前公开列表，RSS 只读取当前 feed。启动 `pnpm dev` 不会自动刷新。
 - 快照本身没有 `scrapedAt`、来源版本或本次采集报告等元数据。
+<<<<<<< HEAD
+- 抓取脚本写入的新记录默认带 `status: "PENDING"`；清洗脚本会保留已发布记录及其分类，历史快照没有 `status` 字段时按已发布处理。`FundingBrowser`、`JobsBrowser`、`ToolsBrowser` 只渲染已发布（`PUBLISHED` 或历史缺失 `status`）的记录，`PENDING` / `PENDING_REVIEW` / `REJECTED` 不展示。首页的岗位数量统计同样只计入已审核记录。
+- 资助模块把“申报通道是否开放”拆到 `openStatus`（`开放中` / `已截止`），`status` 只表示人工审核状态。
+- 一键执行「抓取 → 清洗 → AI 辅助分类 → 导出 Excel」：`pnpm scrape:all`（`scripts/run-all.mjs`），依次运行 3 个抓取、3 个清洗、`ai-classify.mjs` 和导出脚本；任一步失败会立即停止并返回非零退出码。AI 分类默认每个数据集抽样 5 条，可用 `AI_CLASSIFY_LIMIT`（1-5000）扩大本次总样本。AI 返回置信度：`> 0.8` 直接覆盖分类并发布；`<= 0.8` 覆盖分类但标记为 `PENDING_REVIEW`，等待人工复核。需要强制重跑全部历史数据时执行 `node scripts/ai-classify.mjs --force`。
+- 首页“人力资源”入口的当前收录岗位数和机构数也由这份快照计算。
+- 侧栏的“当前收录机构”和“当前远程岗位”由这份快照计算；来源不能支持的“急招岗位”“本月新增岗位”“累计投递”显示“无法计算”，不再使用 mock 值。
+=======
 - 抓取脚本写入的新记录默认带 `status: "PENDING"`，供管理员机器上的清洗与审核流程使用。网站只查询数据库中 `Content.status = PUBLISHED` 的记录；Browser 组件不再读取或解释快照审核状态。
 - 资助模块把“申报通道是否开放”拆到 `openStatus`（`开放中` / `已截止`），`status` 只表示人工审核状态。
 - 一键执行「抓取 → 清洗 → AI 辅助分类 → 导出 Excel」：`pnpm scrape:all`（`scripts/run-all.mjs`），依次运行 3 个抓取、3 个清洗、`ai-classify.mjs` 和导出脚本；任一步失败会立即停止并返回非零退出码。AI 分类默认每个数据集抽样 5 条，可用 `AI_CLASSIFY_LIMIT`（1-50）扩大样本。
 - 首页和各模块侧栏的当前收录数量均由数据库查询结果计算，不再使用快照或 mock 数值。
+>>>>>>> c86fef09b52dc51e9ecd55ba73e1cda6e5ca4df1
 
 ## 导出审核用 Excel
 
@@ -62,7 +70,7 @@ pnpm scrape:jobs
 
 - 脚本：[`scripts/export-to-excel.mjs`](../scripts/export-to-excel.mjs)，基于已有 `xlsx` 依赖直接写 `.xlsx`，不会出现 CSV 用 Excel 打开时的 UTF-8 乱码问题。
 - 表头为中文且列顺序固定；`tags` 等数组字段用 `, ` 拼成字符串，布尔值转成“是 / 否”。
-- 每条记录的前四列是审核列：`审核状态`、`原始分类`、`AI建议分类`、`最终发布分类`。`审核状态` 为 `PENDING`（前端不展示）或 `PUBLISHED`（前端展示）；历史快照没有 `status` 时按 `PUBLISHED` 导出。`最终发布分类` 初始等于原始分类，供运营修改。
+- 每条记录的前四列是审核列：`审核状态`、`原始分类`、`AI建议分类`、`最终发布分类`。`审核状态` 为 `PENDING` / `PENDING_REVIEW`（前端不展示）或 `PUBLISHED`（前端展示）；历史快照没有 `status` 时按 `PUBLISHED` 导出。`最终发布分类` 初始等于原始分类，供运营修改。
 - 链接列写成可点击的 Excel 超链接，并带表头筛选与列宽；JSON 出现未配置的新字段时会自动追加到表格末尾，不会静默丢数据。每个工作簿另带一个「使用说明」工作表。
 - 目标文件正被 Excel / WPS 打开时，脚本会先重试；仍然失败会提示先关闭同名文件。需要导出到其他目录（CI、临时排查）时设置 `EXPORT_OUT_DIR`，默认仍是 `docs/exports/`。
 
@@ -76,11 +84,28 @@ pnpm import:excel
 
 脚本 [`scripts/import-from-excel.mjs`](../scripts/import-from-excel.mjs) 会读取 `docs/exports/` 下的三份表格，并按记录 ID 写回对应快照：
 
-- `PUBLISHED`：用 `最终发布分类` 覆盖 JSON 中的分类字段（资助 `field`、岗位 `role`、工具 `category`）；原 `status` 为 `PENDING` / `REJECTED` 时改为 `PUBLISHED`，历史缺失 `status` 的记录已按已发布处理，不强制补写。
-- `PENDING` / `REJECTED`：同步 `status`，不覆盖分类；此时若修改了 `最终发布分类`，会打印“未应用”的警告。
+- `PUBLISHED`：用 `最终发布分类` 覆盖 JSON 中的分类字段（资助 `field`、岗位 `role`、工具 `category`）；原 `status` 为 `PENDING` / `PENDING_REVIEW` / `REJECTED` 时改为 `PUBLISHED`，历史缺失 `status` 的记录已按已发布处理，不强制补写。
+- `PENDING` / `PENDING_REVIEW` / `REJECTED`：同步 `status`，不覆盖分类；此时若修改了 `最终发布分类`，会打印“未应用”的警告。
 - `最终发布分类` 为空：保留原分类并打印警告。
 - 容错：表头改名、新增列、表头不在第一行、缺少可选列、未知记录 ID、重复 ID、无法识别的审核状态都会打印警告并尽量继续；缺少记录 ID / 审核状态 / 最终发布分类时跳过该文件，不影响其他文件。
 - `pnpm import:excel -- --dry-run` 只统计不写回；`pnpm import:excel -- --dataset jobs` 只导入招聘表；联调时可用 `--in-dir` 和 `--data-dir` 指向临时目录。
+
+## 导入 AI 待复核结果到后台
+
+AI 分类置信度 `<= 0.8` 时，快照记录会保留为 `PENDING_REVIEW`。要把这些记录放进管理后台的人工审核队列，运行：
+
+```text
+pnpm import:review
+pnpm import:review -- --dry-run
+```
+
+脚本 [`scripts/import-pending-review-to-content.mjs`](../scripts/import-pending-review-to-content.mjs) 读取 `src/lib/fundings-data.json` 和 `src/lib/jobs-scraped.json` 中所有 `PENDING_REVIEW` 记录，写入 Prisma `Content` 表：
+
+- 资助记录映射为 `FUNDING` / `资金资助`（`supportType` 含“物资”时为 `物资资助`），招聘记录按 `kind` 映射为 `JOB` / `全职|兼职|实习|志愿者`。
+- 正文包含摘要、机构、金额/薪资、地区、截止时间、来源和原文链接；原始记录、AI 建议分类与置信度保存在 `metadata.raw`、`metadata.aiSuggestedCategory`、`metadata.aiConfidence`。
+- 写入后状态仍为 `PENDING_REVIEW`，刷新 `/admin/review` 即可逐条审核。页面每次请求实时查库，无需重新构建。
+- 幂等键为 `metadata.sourceKey`（`funding:<id>` / `job:<id>`）；重复执行只跳过，不会重复插入。检查与写入在同一个 PostgreSQL advisory lock 事务中执行，多个终端同时运行也不会产生重复。
+- 作者优先取 `ADMIN_EMAILS` 中已存在的账号，其次数据库 `ADMIN`，最后回退到最早注册用户；可用 `--author-email <邮箱>` 显式指定。
 
 ## 来源： 中国发展简报·NGO 招聘
 

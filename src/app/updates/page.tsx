@@ -1,7 +1,10 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { PlatformFooter } from "@/components/PlatformFooter";
 import { UpdatesBrowser } from "@/components/UpdatesBrowser";
+import { auth } from "@/auth";
 import { prisma } from "@/lib/db";
+import { provinceNames } from "@/lib/cn-divisions";
+import { publicInterestFields } from "@/lib/publishing";
 import { formatRelativeHours, hoursSince } from "@/lib/relative-time";
 import type { UpdateItem } from "@/lib/platform-types";
 import "../platform.css";
@@ -20,15 +23,42 @@ function readMetadata(value: unknown): Record<string, unknown> {
 }
 
 export default async function UpdatesPage() {
-  const contents = await prisma.content.findMany({
-    where: { module: "UPDATE", status: "PUBLISHED" },
-    include: {
-      author: { include: { organization: true } },
-      attachments: { orderBy: { createdAt: "asc" }, take: 3 },
-    },
-    orderBy: { publishedAt: "desc" },
-    take: 50,
-  });
+  const [contents, session] = await Promise.all([
+    prisma.content.findMany({
+      where: { module: "UPDATE", status: "PUBLISHED" },
+      include: {
+        author: { include: { organization: true } },
+        attachments: {
+          select: { id: true, fileName: true },
+          orderBy: { createdAt: "asc" },
+          take: 3,
+        },
+      },
+      orderBy: { publishedAt: "desc" },
+      take: 50,
+    }),
+    auth(),
+  ]);
+
+  const userId = session?.user?.id;
+  const contentIds = contents.map((content) => content.id);
+  let likedIds = new Set<string>();
+  let helpedIds = new Set<string>();
+
+  if (userId && contentIds.length > 0) {
+    const [likes, helps] = await Promise.all([
+      prisma.like.findMany({
+        where: { userId, contentId: { in: contentIds } },
+        select: { contentId: true },
+      }),
+      prisma.help.findMany({
+        where: { userId, contentId: { in: contentIds } },
+        select: { contentId: true },
+      }),
+    ]);
+    likedIds = new Set(likes.map((like) => like.contentId));
+    helpedIds = new Set(helps.map((help) => help.contentId));
+  }
 
   const items: UpdateItem[] = contents.map((content) => {
     const publishedAt = content.publishedAt ?? content.createdAt;
@@ -43,6 +73,7 @@ export default async function UpdatesPage() {
       kind: "最新动态",
       posterType: content.author.accountType === "ORGANIZATION" ? "机构" : "个人",
       field: content.fields[0] ?? "其他",
+      fields: content.fields,
       region: content.region ?? "全国",
       rating: 0,
       publishedHours,
@@ -50,24 +81,31 @@ export default async function UpdatesPage() {
       source: "来自 项目主页",
       org: content.author.organization?.name ?? content.author.name ?? "公益伙伴",
       title: content.title,
-      content: content.summary || content.body,
+      content: content.body,
       hashtags: content.tags,
       location: [content.region, content.city].filter(Boolean).join(" · ") || "全国",
       period,
-      media: content.attachments.length > 0
-        ? { icon: "🖼️", tone: "green", caption: `${content.attachments.length}张现场图` }
-        : undefined,
+      images: content.attachments.map((attachment) => ({
+        id: attachment.id,
+        fileName: attachment.fileName,
+      })),
       shares: 0,
-      comments: 0,
-      likes: 0,
-      helps: 0,
+      comments: content.commentsCount,
+      likes: content.likesCount,
+      helps: content.helpsCount,
+      isLiked: likedIds.has(content.id),
+      isHelped: helpedIds.has(content.id),
     };
   });
 
   return (
     <div className="module-page">
       <SiteHeader active="updates" />
-      <UpdatesBrowser items={items} />
+      <UpdatesBrowser
+        items={items}
+        fieldOptions={["全部", ...publicInterestFields]}
+        regionOptions={["全部", "全国", ...provinceNames]}
+      />
       <PlatformFooter />
     </div>
   );

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/db";
-import { createUploadUrl } from "@/lib/storage";
+import { createUploadUrl, isObjectStorageConfigured } from "@/lib/storage";
 
 const inputSchema = z.object({
   fileName: z.string().min(1).max(200),
@@ -18,6 +18,17 @@ export async function POST(request: Request) {
   const parsed = inputSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json({ error: "仅支持10MB以内的 JPG、PNG 或 WebP 图片" }, { status: 400 });
+  }
+
+  if (!isObjectStorageConfigured()) {
+    return NextResponse.json(
+      {
+        error: "对象存储尚未配置",
+        code: "STORAGE_NOT_CONFIGURED",
+        fallback: "inline",
+      },
+      { status: 503 },
+    );
   }
 
   const { fileName, mimeType, size } = parsed.data;

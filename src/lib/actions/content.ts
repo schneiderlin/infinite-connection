@@ -25,7 +25,6 @@ const contentInputSchema = z.object({
   intent: z.enum(["draft", "submit"]),
   subtype: z.string().trim(),
   title: z.string().trim().max(100, "标题最多100个字符"),
-  summary: z.string().trim().max(120, "简介最多120个字符").optional(),
   body: z.string().trim().max(5000, "正文最多5000个字符"),
   region: z.string().trim().optional(),
   city: z.string().trim().optional(),
@@ -53,7 +52,6 @@ export async function saveContent(
     intent: formData.get("intent"),
     subtype: formData.get("subtype"),
     title: formData.get("title"),
-    summary: formData.get("summary") || undefined,
     body: formData.get("body"),
     region: formData.get("region") || undefined,
     city: formData.get("city") || undefined,
@@ -83,8 +81,8 @@ export async function saveContent(
     .filter(Boolean)
     .slice(0, 10);
   const attachmentIds = [...new Set(formData.getAll("attachmentIds").map(String).filter(Boolean))];
-  // 点击“发布”直接写入 PUBLISHED，草稿仍保存为 DRAFT。
-  const nextStatus = values.intent === "submit" ? "PUBLISHED" : "DRAFT";
+  // 普通用户点击“发布”后进入待审核队列，草稿仍保存为 DRAFT。
+  const nextStatus = values.intent === "submit" ? "PENDING_REVIEW" : "DRAFT";
 
   if (attachmentIds.length > 6) return { error: "每篇内容最多上传6张图片" };
 
@@ -143,13 +141,32 @@ export async function saveContent(
     }
   }
 
+  // 防止把其他用户的图片，或已经属于其他内容的图片挂到当前内容上。
+  if (attachmentIds.length > 0) {
+    const attachments = await prisma.attachment.findMany({
+      where: { id: { in: attachmentIds } },
+      select: { id: true, ownerId: true, contentId: true },
+    });
+    if (attachments.length !== attachmentIds.length) {
+      return { error: "部分图片不存在，请重新上传" };
+    }
+    const currentContentId = values.contentId ?? null;
+    const invalidAttachment = attachments.find(
+      (attachment) =>
+        attachment.ownerId !== session.user.id
+        || (attachment.contentId !== null && attachment.contentId !== currentContentId),
+    );
+    if (invalidAttachment) return { error: "部分图片无权使用，请重新上传" };
+  }
+
   const now = new Date();
-  const isPublishing = values.intent === "submit";
+  const isSubmittingForReview = values.intent === "submit";
   const data = {
     module: config.module,
     subtype: values.subtype,
     title: values.title || "未命名草稿",
-    summary: values.summary || null,
+    // 发布表单已移除“简介”，同时清空历史内容上的旧摘要，避免前台重复展示。
+    summary: null,
     body: values.body,
     fields,
     tags,
@@ -158,25 +175,26 @@ export async function saveContent(
     metadata,
     status: nextStatus,
     rejectionReason: null,
-    submittedAt: isPublishing ? now : null,
-    reviewedAt: isPublishing ? now : null,
-    publishedAt: isPublishing ? now : null,
+    submittedAt: isSubmittingForReview ? now : null,
+    reviewedAt: null,
+    publishedAt: null,
   } as const;
 
+  const attachmentConnections = attachmentIds.map((id) => ({ id }));
+  // 在内容写入的同一次请求中同步附件关系：
+  // 新建用 connect；编辑用 set，这样用户删除的图片也会被解除关联。
   const content = values.contentId
-    ? await prisma.content.update({ where: { id: values.contentId }, data })
-    : await prisma.content.create({ data: { ...data, authorId: session.user.id } });
-
-  if (attachmentIds.length > 0) {
-    await prisma.attachment.updateMany({
-      where: {
-        id: { in: attachmentIds },
-        ownerId: session.user.id,
-        contentId: null,
-      },
-      data: { contentId: content.id },
-    });
-  }
+    ? await prisma.content.update({
+        where: { id: values.contentId },
+        data: { ...data, attachments: { set: attachmentConnections } },
+      })
+    : await prisma.content.create({
+        data: {
+          ...data,
+          authorId: session.user.id,
+          attachments: { connect: attachmentConnections },
+        },
+      });
 
   if (values.moduleSlug === "updates" && (metadata.contactPhone || metadata.contactWechat)) {
     await prisma.user.update({
@@ -188,14 +206,14 @@ export async function saveContent(
     });
   }
 
-  if (isPublishing) {
+  if (isSubmittingForReview) {
     await prisma.notification.create({
       data: {
         userId: session.user.id,
         type: "SYSTEM",
-        title: "内容已发布",
-        message: `“${content.title}”已发布到${config.label}。`,
-        href: moduleHref[config.module],
+        title: "内容已提交审核",
+        message: `“${content.title}”已提交到${config.label}，请等待管理员审核。`,
+        href: "/account/content?status=PENDING_REVIEW",
       },
     });
   }
@@ -203,10 +221,12 @@ export async function saveContent(
   revalidatePath("/account");
   revalidatePath("/account/content");
   revalidatePath(moduleHref[config.module]);
+  revalidatePath("/admin", "layout");
+  revalidatePath("/admin/review");
   return {
     success: true,
     contentId: content.id,
-    message: isPublishing ? "已发布" : "草稿已保存",
+    message: isSubmittingForReview ? "提交成功，请等待管理员审核" : "草稿已保存",
   };
 }
 

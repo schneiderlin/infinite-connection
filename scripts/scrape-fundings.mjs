@@ -26,7 +26,7 @@ import * as cheerio from "cheerio";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(ROOT, "src/lib/fundings-data.json");
-const REVIEW_STATUSES = new Set(["PENDING", "PUBLISHED", "REJECTED"]);
+const REVIEW_STATUSES = new Set(["PENDING", "PENDING_REVIEW", "PUBLISHED", "REJECTED"]);
 const UA = "InfiniteConnectionPreview/0.1 (+https://github.com/schneiderlin/infinite-connection)";
 const BROWSER_UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36";
@@ -913,12 +913,15 @@ async function main() {
       return {
         ...item,
         status,
-        // 已发布记录的领域是人工审核过的，抓取规则不能覆盖它。
-        ...(status === "PUBLISHED" && previous.field
+        // 已发布 / AI 待复核记录的领域是审核结果，抓取规则不能覆盖它。
+        ...(["PUBLISHED", "PENDING_REVIEW"].includes(status) && previous.field
           ? { field: previous.field }
           : {}),
         ...(previous.aiSuggestedCategory
           ? { aiSuggestedCategory: previous.aiSuggestedCategory }
+          : {}),
+        ...(typeof previous.aiConfidence === "number"
+          ? { aiConfidence: previous.aiConfidence }
           : {}),
       };
     })

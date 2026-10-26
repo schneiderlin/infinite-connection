@@ -31,6 +31,9 @@ model User {
   contents      Content[]
   attachments   Attachment[]
   notifications Notification[]
+  likes         Like[]
+  helps         Help[]
+  comments      Comment[]
 }
 
 enum AccountType {
@@ -107,14 +110,61 @@ model Content {
   reviewedAt      DateTime?
   publishedAt     DateTime?
   deletedAt       DateTime?
+  likesCount      Int           @default(0)
+  helpsCount      Int           @default(0)
+  commentsCount   Int           @default(0)
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
 
   author      User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
   attachments Attachment[]
+  likes       Like[]
+  helps       Help[]
+  comments    Comment[]
 
   @@index([authorId, status])
   @@index([module, status, publishedAt])
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  userId    String
+  contentId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, contentId])
+  @@index([contentId])
+}
+
+model Help {
+  id        String   @id @default(cuid())
+  userId    String
+  contentId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, contentId])
+  @@index([contentId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  contentId String
+  authorId  String
+  body      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  content Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  author  User    @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([contentId, createdAt])
+  @@index([authorId, createdAt])
 }
 
 model Attachment {
@@ -122,6 +172,9 @@ model Attachment {
   ownerId   String
   contentId String?
   objectKey String   @unique
+  // 对象存储未配置时的临时兜底：保存压缩后的 data URL（仅用于过渡）。
+  // 配置好 S3 后新图片会继续走 objectKey，历史内联图片仍可正常读取。
+  dataUrl   String?
   fileName  String
   mimeType  String
   size      Int

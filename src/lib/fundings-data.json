@@ -5,7 +5,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "广东省",
     "title": "“善企相伴·公益CP计划”一对一结对标准化项目开放招募",
     "summary": "项目简介： “善企相伴·公益CP计划”是广州市志鲲公益慈善基金会推出的公益项目，采用“1家企业+1家公益机构”结对模式，通过6个月轻量化合作（含3个月筹款期），达标后发放共建激励金，解决企业ESG需求和机构运营资金问题。 申报对象： 大湾区爱心企业 国内合法工商主体，经营正常，无失信、行政处罚、重大品牌负面舆情； 愿意开放员工、门店、客户私域开展联合劝募；无强制大额捐资门槛，小…",
@@ -16,11 +16,13 @@
     "dueDays": 0,
     "due": "长期有效",
     "publishedDays": 85,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-31",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247497407&idx=1&sn=3fb7c3e5f9b2a1ecb1ca5190bebddf62&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247497407&idx=1&sn=3fb7c3e5f9b2a1ecb1ca5190bebddf62&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.78
   },
   {
     "id": "fund-57ed8ca83eb9",
@@ -28,7 +30,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "乡村教育",
+    "field": "儿童保护",
     "region": "西藏自治区",
     "title": "中国人口福利基金会关于开放伊利奶粉申请的公告",
     "summary": "新闻动态 一、项目背景2026年是青藏铁路通车20周年，为助力健康乡村建设，延续天路“把人间的温暖送到边疆”的初心，促进当地婴幼儿健康成长，在伊利集团支持下，“妇女儿童关爱工程——50°超凡守护公益行动”拟在西藏自治区开展奶粉捐赠活动，现向有需要的单位开放申请。二、奶粉品类三、发放对象无法母乳喂养及需要加强营养的婴幼儿群体，原则上侧重脱贫不稳定户、边缘易致贫户、突发严重困难户。…",
@@ -43,7 +45,9 @@
     "openStatus": "开放中",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-07-06",
-    "url": "https://www.cpwf.org.cn/content/72351"
+    "url": "https://www.cpwf.org.cn/content/72351",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-9a2a8e8df4ac",
@@ -51,7 +55,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "乡村教育",
+    "field": "创新探索",
     "region": "全国",
     "title": "Build the Change小小创变家项目2026年第二期合作伙伴",
     "summary": "项目简介： Build the Change小小创变家项目围绕可持续发展目标和相关议题，以“在玩乐中学习和发展（Learning through Play）”为理念，在社区中为7-12岁儿童创造充满玩乐体验的活动现场，和儿童一起在玩乐中学习可持续发展议题，促进儿童的认知能力、社会能力、情绪能力、肢体能力和创造能力的发展。儿童将使用创意材料，创作出地球所面临的挑战的解决方案，呈现…",
@@ -62,11 +66,13 @@
     "dueDays": 0,
     "due": "详见原帖",
     "publishedDays": 141,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-06-05",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzM0NTEyMQ==&mid=2652081223&idx=1&sn=f28ac7630a7043587fef44e7579ed600&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzM0NTEyMQ==&mid=2652081223&idx=1&sn=f28ac7630a7043587fef44e7579ed600&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "创新探索",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-3078e5aeb64f",
@@ -74,7 +80,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "人才培育",
     "region": "全国",
     "title": "2026年齐益果合作计划开放申请",
     "summary": "项目简介： 与益是与人在2015年自主开发的指尖公益平台，2021年上线与益小程序，旨在降低青年公益参与门槛，触发公益参与体验，让青年通过指尖参与的方式也能为公益传递温暖，目前平台已聚集超过22.96万注册用户。 齐益果合作计划是与益配套的资助计划，以资助形式与由青年执行或孵化青年参与公益的项目开展合作，在与益小程序创设指尖助力活动，让参与者深度体验“行为公益\"的温度传递，感受…",
@@ -85,11 +91,13 @@
     "dueDays": 7,
     "due": "2026-10-30",
     "publishedDays": 155,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5Mjg3MTcyNA==&mid=2652030304&idx=1&sn=b0260d202e0943bb3a1e61a5077671a4&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5Mjg3MTcyNA==&mid=2652030304&idx=1&sn=b0260d202e0943bb3a1e61a5077671a4&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "人才培育",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-8a08e60f64c2",
@@ -97,7 +105,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6-12个月",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "广东省",
     "title": "志鲲基金会“行业赋能计划”招募联合劝募与执行机构",
     "summary": "项目简介： 广州市志鲲公益慈善基金会依托公募资质与专业服务能力，长期面向全国招募优质公益项目联合劝募伙伴及优质执行机构，以公募支持、传播赋能、项目督导、资源链接等全方位服务，助力公益项目提质增效、稳健成长。 联合劝募招募 项目招募方向： 乡村振兴、教育帮扶、生态环境保护、困境群体关爱、应急救灾、社区赋能、医疗项目及其他符合基金会业务范围的优质公益项目。 申报要求： 申报机构：依…",
@@ -112,7 +120,9 @@
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247496760&idx=1&sn=ad15489289f8d0577d41519f404a4696&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247496760&idx=1&sn=ad15489289f8d0577d41519f404a4696&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-2feef902b350",
@@ -135,7 +145,9 @@
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-20",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA3NDgyMDUxOA==&mid=2647630321&idx=2&sn=01ea5b26954867a83a049469b04b5f0e&scene=21&click_id=24#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3NDgyMDUxOA==&mid=2647630321&idx=2&sn=01ea5b26954867a83a049469b04b5f0e&scene=21&click_id=24#wechat_redirect",
+    "aiSuggestedCategory": "乡村教育",
+    "aiConfidence": 0.93
   },
   {
     "id": "fund-873f1b69084d",
@@ -143,7 +155,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "上海市",
     "title": "议题型伙伴深度合作招募计划",
     "summary": "项目背景： 当下公益行业正走向专业化、规模化、系统化且趋向精准化的发展，为特定社会问题或人群需求提供切实的服务回应，需要我们更加聚焦特定人群、特定社会问题，深耕垂直议题，形成成熟、可落地、可验证的解决方案。 恩派基金会自 2015 年成立以来，始终以构建社区发展的支持体系为使命，秉持 “从建设小社区着手，促成平衡、信任、共治的社会” 的愿景。作为 4A 级公募基金会，深耕社区慈…",
@@ -154,11 +166,13 @@
     "dueDays": 0,
     "due": "长期有效",
     "publishedDays": 218,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-20",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493099&idx=1&sn=19b844e8a107a488c03088278bf3ade3&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493099&idx=1&sn=19b844e8a107a488c03088278bf3ade3&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-2e152b6c1e42",
@@ -166,7 +180,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "其他",
+    "field": "儿童保护",
     "region": "浙江省",
     "title": "阅见希望项目合作伙伴招募",
     "summary": "项目简介： 由千禾社区公益基金会与浙江省启信公益发展中心共同发起，通过儿童直接服务、家庭支持与社区联合行动为流动儿童营造友好的社区教育环境，探索阅读支持儿童及成人社会情感发展（简称，SEL）的实践可能。 申报对象： 本培训计划仅面向广东省内的伙伴开放招募 申报要求： 认同绘本、阅读与对话对儿童成长的价值； 关心儿童的情绪经验与生活处境，而不仅是学习结果； 有一定绘本阅读或儿童活…",
@@ -177,11 +191,13 @@
     "dueDays": 0,
     "due": "长期有效",
     "publishedDays": 253,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzYzNzIxODA2Nw==&mid=2247483805&idx=1&sn=3c25b215a1b2d6d6d39401b8bbf9ce8a&scene=21&click_id=97#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzYzNzIxODA2Nw==&mid=2247483805&idx=1&sn=3c25b215a1b2d6d6d39401b8bbf9ce8a&scene=21&click_id=97#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-4701f573ae26",
@@ -189,7 +205,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "其他",
+    "field": "社区营造",
     "region": "全国",
     "title": "和美社区计划开始申报",
     "summary": "项目简介： “和美社区计划”以顺德206个村居的社区问题和居民需求为出发点，资助教育发展、社区照顾、社区营造、公益生态共创四个领域的公益慈善项目，联动社区多元主体和资源共同参与，提升社区居民生活质量，共建和美社区、幸福家园。 教育发展 重点围绕村（居）幼儿园教育质量提升开展资助，打造“童享未来”品牌，致力于通过推动公益普惠性学前教育质量提升，让更多幼儿就近享受普惠优质的启蒙教育…",
@@ -204,7 +220,9 @@
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzIxMzk0NTU3MA==&mid=2247517607&idx=1&sn=4aad6566da529e18e336cafcc42d0c71&scene=21&click_id=79#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIxMzk0NTU3MA==&mid=2247517607&idx=1&sn=4aad6566da529e18e336cafcc42d0c71&scene=21&click_id=79#wechat_redirect",
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-ec18bf877055",
@@ -212,7 +230,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "乡村教育",
+    "field": "残障融合",
     "region": "海南省",
     "title": "海南省残疾人基金会公益伙伴招募公告",
     "summary": "项目简介： 海南省残疾人基金会是2013年12月20日经海南省民政厅批准成立的地方性公募基金会，业务主管单位是海南省残联，连续三次评为5A级基金会。为促进社会助残资源整合，完善基金会与社会组织合作机制，现公开招募公益合作伙伴，联合开展劝募和公益项目执行。 申报要求： 规范运营：具备独立法人资格，拥有健全的内部治理、财务会计及资产管理制度，保障组织运营规范有序。 信誉良好：在社会…",
@@ -227,7 +245,9 @@
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA4Njg0MTEwMg==&mid=2649700264&idx=3&sn=6029a6646228e2808e75fdd6496b16ce&scene=21&click_id=80#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA4Njg0MTEwMg==&mid=2649700264&idx=3&sn=6029a6646228e2808e75fdd6496b16ce&scene=21&click_id=80#wechat_redirect",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-ff0d376e5bd3",
@@ -235,7 +255,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "详见原帖",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "全国",
     "title": "“致敬行善者”项目征集合作伙伴",
     "summary": "项目简介： 为了更好地支持那些长期、无私帮助他人却自身陷入困境的个体行善者，让善良被看见、被支持，深圳市建辉慈善基金会现面向广东、江苏、福建、贵州、青海、宁夏各类社会组织公开招募合作伙伴，旨在于未来在各省地市建立稳固的在地支持网络，共同致敬与守护我们身边的平民英雄。 申报要求： 合作伙伴必须为中国境内合法注册的公益性社会组织、或其他专业公益服务机构，定期接受并通过政府主管部门的…",
@@ -246,11 +266,13 @@
     "dueDays": 0,
     "due": "长期有效",
     "publishedDays": 267,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "开放中",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-01-30",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI0MDYwNjg0Nw==&mid=2247499232&idx=1&sn=ac3e27ad7d047978ad79a387ef16db65&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI0MDYwNjg0Nw==&mid=2247499232&idx=1&sn=ac3e27ad7d047978ad79a387ef16db65&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-878e1e3c1c79",
@@ -273,7 +295,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-10-10",
-    "url": "https://www.cpwf.org.cn/content/72478"
+    "url": "https://www.cpwf.org.cn/content/72478",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-c40c5f1f6d4e",
@@ -296,7 +320,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NjAxNTg4NQ==&mid=2649840083&idx=1&sn=2c9cd03e3d9289b869fc8a5f10579867&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NjAxNTg4NQ==&mid=2649840083&idx=1&sn=2c9cd03e3d9289b869fc8a5f10579867&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-0e00dae5d7f5",
@@ -319,7 +345,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521879&idx=1&sn=6fcc85c55e986c15c2dc520c09665798&scene=21&click_id=1969016278#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521879&idx=1&sn=6fcc85c55e986c15c2dc520c09665798&scene=21&click_id=1969016278#wechat_redirect",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-dbc50356887f",
@@ -327,7 +355,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "儿童保护",
     "region": "云南省",
     "title": "2026“勇气少年”云南昭通专项项目合作伙伴招募",
     "summary": "项目背景： 为深入贯彻落实国家、云南省、昭通市关于加强困境儿童保障和未成年人保护工作的决策部署，切实强化困境儿童安全保护与心理健康专业支持，筑牢未成年人健康成长防线，深化沪滇协作，在昭通市民政局指导下，上海联劝公益基金会联合云南阳光社区发展中心、昭通市社会工作联合会，拟在昭通市遴选优质社会组织，共同实施2026年“勇气少年”困境儿童陪伴计划云南昭通专项项目。 2026年“勇气少…",
@@ -342,7 +370,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650017180&idx=1&sn=cb0ed127b710e75d32f03cc5eef9f845&scene=21&click_id=532382206#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650017180&idx=1&sn=cb0ed127b710e75d32f03cc5eef9f845&scene=21&click_id=532382206#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.92
   },
   {
     "id": "fund-ac9ffdda7538",
@@ -350,7 +380,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "老龄关怀",
+    "field": "社区营造",
     "region": "广东省",
     "title": "“鹏城有爱·益企向善”招募首批共建社区",
     "summary": "项目简介： 在深圳市民政局指导下，2026“鹏城有爱·益企向善”社区慈善联合行动由中国社会保障学会慈善分会、腾讯公益慈善基金会，联合深圳市慈善会、深圳壹基金公益基金会、深圳市老龄事业发展基金会等专业慈善组织共同发起。联合行动以受益人为中心，以数字关爱平台为技术支撑，连接政府部门、社区、社会组织、企业、商户、志愿者等多元力量，精准守护“一老一小”、残疾人、新就业群体、困境人群等有…",
@@ -361,11 +391,13 @@
     "dueDays": 0,
     "due": "2026-10-15",
     "publishedDays": 30,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3NzU1MjI3NQ==&mid=2247513981&idx=1&sn=6288febfd8854240cd27afdc54180a2e&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3NzU1MjI3NQ==&mid=2247513981&idx=1&sn=6288febfd8854240cd27afdc54180a2e&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-fc50e1607703",
@@ -373,7 +405,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "女性关怀",
     "region": "广东省",
     "title": "南山区妇联第十二届“簕杜鹃·幸福荟”妇儿公益民生服务项目征集启动",
     "summary": "项目简介： 南山区妇联“簕杜鹃·幸福荟”品牌深耕妇女儿童及家庭公益事业，精准对接妇女、儿童、家庭全生命周期发展需求，打造了具有南山特色的妇儿公益服务品牌。自开展以来，一个个公益项目在南山落地生根、一场场惠民服务走进妇儿家庭，累计支持105个公益项目落地、开展各类主题活动超1500场、累计惠及妇儿群众约8万人次。 申报要求： 在民政部门依法登记的基金会、社会团体、民办非企业等单位…",
@@ -388,7 +420,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYxNDgwNg==&mid=2247493980&idx=1&sn=4fbab9674a3e203d24834032370dec9d&scene=21&click_id=2088585940#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYxNDgwNg==&mid=2247493980&idx=1&sn=4fbab9674a3e203d24834032370dec9d&scene=21&click_id=2088585940#wechat_redirect",
+    "aiSuggestedCategory": "女性关怀",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-9813a0480f3e",
@@ -396,7 +430,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "创新探索",
     "region": "全国",
     "title": "张家港市2026年度社会组织公益创投创新类项目专场活动启动",
     "summary": "机构简介： 为进一步引导支持社会组织创新服务模式、拓展服务场景，充分发挥社会组织在民生改善、社会建设、基层治理中的专业优势与补位赋能作用，鼓励立足群众现实需求，丰富公益服务供给，破解传统服务同质化难题，助力张家港市社会服务高质量发展，定于近期举办张家港市2026年度社会组织公益创投创新类项目专场活动。 申报项目类别： 本专场重点围绕创新类项目进行征集，鼓励社会组织聚焦新兴领域…",
@@ -411,7 +445,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-11",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzIxODY1MDg2OA==&mid=2247504493&idx=1&sn=3c2d37dcc4f8744c9633c5c690ce17b7&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIxODY1MDg2OA==&mid=2247504493&idx=1&sn=3c2d37dcc4f8744c9633c5c690ce17b7&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "创新探索",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-dc33a6907133",
@@ -419,7 +455,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "医疗健康",
+    "field": "社会组织支持",
     "region": "全国",
     "title": "2026年益盒项目征集开启",
     "summary": "项目简介： 作为“有效公益”研究和咨询机构，益盒致力于通过严谨的研究和项目评估，帮助捐赠者（企业、基金会及个人）发现有证据支持、能够改善和挽救更多生命的公益项目，并为ta们提供捐赠决策建议。 今年，益盒与合作的捐赠伙伴一起，继续关注健康、教育两大领域，希望以“公开项目征集”的方式，发现一批值得支持的公益项目。 申报条件： 在中国境内合法注册的公益组织、社会企业、高校/研究团队等…",
@@ -430,11 +466,13 @@
     "dueDays": 0,
     "due": "2026-09-29",
     "publishedDays": 43,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-11",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTU4ODc5Nw==&mid=2247508706&idx=1&sn=1f938a30cbc32083fbc8d20de9c4ac57&scene=21&click_id=952391068#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTU4ODc5Nw==&mid=2247508706&idx=1&sn=1f938a30cbc32083fbc8d20de9c4ac57&scene=21&click_id=952391068#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-99254d0fd31e",
@@ -442,7 +480,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "医疗健康",
+    "field": "社会组织支持",
     "region": "四川省",
     "title": "第七届四川省总工会联系引导劳动领域社会组织公益创投活动开始",
     "summary": "项目简介： 为认真贯彻落实《中华全国总工会关于工会购买社会组织服务的意见》《中华全国总工会关于工会联系引导社会组织为职工提供专业化服务的指导意见》等文件精神，更好发挥工会联系引导劳动领域社会组织服务职工作用，推动工会联系引导社会组织工作高质量发展，力争为职工群众提供专业化服务，四川省总工会将举办第七届四川省总工会联系引导劳动领域社会组织公益创投活动，面向全省劳动领域社会组织公开…",
@@ -457,7 +495,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-09-11",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NDk2OQ==&mid=2652054756&idx=1&sn=de6cbb3e68deff942205a93e462734d6&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NDk2OQ==&mid=2652054756&idx=1&sn=de6cbb3e68deff942205a93e462734d6&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-0278eec0d565",
@@ -465,7 +505,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社区营造",
     "region": "广东省",
     "title": "“和美社区计划”2026年第二季资助开启",
     "summary": "项目简介： 德胜基金会成立于2017年，定位为资助型、支持性的社区基金会，具有公益性捐赠税前扣除资格和非营利组织免税资格，是广东省5A级慈善组织。基金会秉持务实、尊重、诚信、创新的价值理念，关注顺德的社区发展和公益慈善事业，努力成为社会问题的回应者、慈善资源的联动者和公益生态的共建者，促进顺德建设成为更具人文性和富有吸引力的美好社区。 “和美社区计划”以顺德206个村居的社区问…",
@@ -476,12 +516,13 @@
     "dueDays": 0,
     "due": "2026-08-30",
     "publishedDays": 57,
-    "status": "PENDING",
+    "status": "PUBLISHED",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-08-28",
     "url": "https://mp.weixin.qq.com/s?__biz=MzIxMzk0NTU3MA==&mid=2247518404&idx=1&sn=9b19cbca041959f8e31db270d89bf4d7&scene=21#wechat_redirect",
-    "aiSuggestedCategory": "社区营造"
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-d019c6a22b50",
@@ -489,7 +530,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "全国",
     "title": "2026年塔什库尔干县微创投社会服务项目开始征集",
     "summary": "项目简介： 为践行以人民为中心的发展思想，精准回应各族群众的急难愁盼，做实做细基层民生服务，依托深圳市委社会工作部（支持单位）支持的2026 年深圳社会工作服务支持新疆塔县“圳援行动”项目，联合塔什库尔干塔吉克自治县县委社会工作部开展专业社工帮扶，健全本土社会工作服务体系，提升县域社工专业服务能力。 申报主体： 塔什库尔干塔吉克自治县辖区备案社区社会组织、本土志愿服务团队。个人…",
@@ -500,11 +541,13 @@
     "dueDays": 0,
     "due": "2026-08-26",
     "publishedDays": 64,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-08-21",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4MjU3Njk4Mg==&mid=2248015240&idx=5&sn=558ae64272f6026b4cf6b31b798fed0b&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4MjU3Njk4Mg==&mid=2248015240&idx=5&sn=558ae64272f6026b4cf6b31b798fed0b&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-1004a42c8547",
@@ -527,7 +570,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-08-21",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI4NDc4NjUzMg==&mid=2247513146&idx=1&sn=31898fe8eae087553170fc92e8d54aa9&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI4NDc4NjUzMg==&mid=2247513146&idx=1&sn=31898fe8eae087553170fc92e8d54aa9&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-2a15c3e339a7",
@@ -535,7 +580,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "社区营造",
     "region": "全国",
     "title": "关于资助“开展新型婚育文化特色街道/社区建设项目”的公告",
     "summary": "新闻动态 为缓解青年人婚育焦虑，引导树立积极婚恋观，计划支持一家非营利机构开展新型婚育文化特色街道/社区建设，通过建设宣传阵地、开展主题宣传活动，推动生育友好型社会建设。一、主要内容（一）宣传阵地建设打造1个新型婚育文化特色打卡宣传阵地，通过文化浸润和体验式互动场景，营造生育友好社会氛围。（二）主题宣传活动围绕“积极婚恋观”“安心孕育”“科学育儿指导”“青少年成长支持”“祖孙隔…",
@@ -546,11 +591,13 @@
     "dueDays": 0,
     "due": "2026-08-11",
     "publishedDays": 79,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-08-06",
-    "url": "https://www.cpwf.org.cn/content/72400"
+    "url": "https://www.cpwf.org.cn/content/72400",
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-42f8c35644a4",
@@ -558,7 +605,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "医疗健康",
     "region": "北京市",
     "title": "2026年“婴幼儿呼吸道健康科普”项目科普宣传活动资助公告",
     "summary": "新闻动态 一、项目背景为持续贯彻落实国家卫生健康委《“儿科和精神卫生服务年”行动方案（2025-2027年）》有关部署，进一步提升基层儿科医疗服务质量与科普宣教水平，中国人口福利基金会在总结“2025年婴幼儿呼吸道健康科普项目”阶段性成效的基础上，拟于2026年延续开展该专项公益行动。项目旨在通过深化“专业赋能驱动行为改变”的战略路径，助力构建医防融合的儿童呼吸道健康保障体系。…",
@@ -573,7 +620,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-07-31",
-    "url": "https://www.cpwf.org.cn/content/72391"
+    "url": "https://www.cpwf.org.cn/content/72391",
+    "aiSuggestedCategory": "医疗健康",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-7b962d750026",
@@ -581,7 +630,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "湖北省",
     "title": "2026年鄂州市社会组织“鄂创有我·益心为民 ”公益创投大赛项目申报开始",
     "summary": "项目简介： 为深入贯彻落实党的二十大和二十届四中全会精神，促进鄂州市社会组织高质量发展，激发社会组织活力，发挥社会组织在服务群众、参与社会治理中的重要作用，鄂州市民政局拟举办2026年社会组织公益创投大赛，以“鄂创有我·益心为民”为主题，通过项目化运作、专业化指导、品牌化打造，全面提升社会组织服务能力，不断增强人民群众的获得感、幸福感、安全感，为加快推进鄂州“两区一枢纽”建设凝…",
@@ -596,7 +645,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTM4NjAzMw==&mid=2247505534&idx=1&sn=02df7848a44db9dc88375c27019c691c&scene=21&click_id=145820598#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTM4NjAzMw==&mid=2247505534&idx=1&sn=02df7848a44db9dc88375c27019c691c&scene=21&click_id=145820598#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-03d5ee7056b4",
@@ -619,7 +670,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-24",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI2NTM5MDQ1Nw==&mid=2247525834&idx=1&sn=4bf86161f8a7c1a64af18c8a2ccc3a49&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI2NTM5MDQ1Nw==&mid=2247525834&idx=1&sn=4bf86161f8a7c1a64af18c8a2ccc3a49&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.93
   },
   {
     "id": "fund-826542bd2567",
@@ -627,7 +680,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "人才培育",
+    "field": "社会组织支持",
     "region": "北京市",
     "title": "共“益”计划招募启动",
     "summary": "项目简介： 为进一步推动公益资源精准配置，支持优质公益项目可持续发展，北京市戈友公益援助基金会联合深圳国际公益学院，共同发起共“益”计划。 本计划秉持“同行、共益、共赢”理念，依托深圳国际公益学院在公益创新人才教育、组织能力建设、行业资源连接等方面的专业优势，结合北京市戈友公益援助基金会与众多知名商学院的公益资源与平台能力，构建“项目征集—专业筛选—项目评审—资源匹配—项目落地…",
@@ -638,11 +691,13 @@
     "dueDays": 0,
     "due": "2026-07-20",
     "publishedDays": 106,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-10",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI4MjE1NDU4MQ==&mid=2661829567&idx=1&sn=1ab156f0201e84be83022d7bf6bcaa37&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI4MjE1NDU4MQ==&mid=2661829567&idx=1&sn=1ab156f0201e84be83022d7bf6bcaa37&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-ccd940cf1fb1",
@@ -650,7 +705,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "青少年发展",
     "region": "全国",
     "title": "中国足球发展基金会关于公开遴选2026年社会足球青训质量提升行动计划申报",
     "summary": "项目简介： 为深入贯彻习近平总书记关于足球工作的重要指示批示精神，扎实落实《中国足球改革发展总体方案》《中国青少年足球改革发展实施意见》等文件精神和2026年政府工作报告关于“加快重塑足球青训体系”的工作部署，缓解社会青训机构多重发展困境，夯实社会青训机构U12及以上年龄段梯队建设，巩固青训体系建设成果，2026年，中国足球发展基金会继续实施“社会足球青训质量提升行动计划”公益…",
@@ -665,7 +720,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU3NTA3MjY5MQ==&mid=2247489387&idx=1&sn=71fa412ccb5fddd4d6be409b5b9f2f8c&scene=21&click_id=1196531189#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU3NTA3MjY5MQ==&mid=2247489387&idx=1&sn=71fa412ccb5fddd4d6be409b5b9f2f8c&scene=21&click_id=1196531189#wechat_redirect",
+    "aiSuggestedCategory": "青少年发展",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-22e536e5dfcb",
@@ -673,7 +730,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "江苏省",
     "title": "第三届“暖心联社·星火成炬”项目开始征集",
     "summary": "项目简介： 为进一步扶持社会组织发展，引导社会组织积极参与基层治理、民生服务等领域，持续深化“星火成炬”公益品牌，对外征集泰州市第三届“暖心联社·星火成炬”社会组织公益服务项目。 本项目坚持“党建引领、政府引导、社会参与、专业运作、绩效导向”原则，通过公益创投形式，支持社会组织围绕民生关切和基层治理需求，设计实施具有创新性、示范性和可持续性的公益服务项目，重点培育扶持一批内部治…",
@@ -688,7 +745,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA5MzkxNzU3OQ==&mid=2650907578&idx=1&sn=7ec306dbd063629d3f6aaac6a82a40ff&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA5MzkxNzU3OQ==&mid=2650907578&idx=1&sn=7ec306dbd063629d3f6aaac6a82a40ff&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.85
   },
   {
     "id": "fund-2f579813d770",
@@ -711,7 +770,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-07-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654381103&idx=1&sn=19940ac0bde99b52175b46ca3981cb19&scene=21&click_id=879078897#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654381103&idx=1&sn=19940ac0bde99b52175b46ca3981cb19&scene=21&click_id=879078897#wechat_redirect",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.93
   },
   {
     "id": "fund-9d8dae41e874",
@@ -734,7 +795,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-06-29",
-    "url": "https://www.cpwf.org.cn/content/72340"
+    "url": "https://www.cpwf.org.cn/content/72340",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-3ac28e49493a",
@@ -742,7 +805,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "老龄关怀",
+    "field": "社区营造",
     "region": "北京市",
     "title": "2026北京社区公益季启动合作伙伴招募",
     "summary": "项目简介： 北京乐予慈善基金会正式启动「乐社区 爱满京城」2026北京社区公益季，并面向全社会公开招募合作伙伴。本次活动将于6月27日至10月18日在北京全域开展，计划联动百余家社会组织、街道社区、企业及志愿团队，用100天时间集中回应社区需求多样、资源“最后一米”难打通、善意缺乏行动载体等现实问题，把零散的社区善意变成系统化、专业化、可持续的公益服务。 申报对象： 本次活动面…",
@@ -757,7 +820,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-06-18",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NTM3MjM5Mg==&mid=2652402776&idx=2&sn=403ffd845d4eac90dbdd3a27d5bc9fdc&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NTM3MjM5Mg==&mid=2652402776&idx=2&sn=403ffd845d4eac90dbdd3a27d5bc9fdc&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-696533df93fc",
@@ -780,7 +845,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-06-18",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NTA5OTM5Nw==&mid=2650353522&idx=1&sn=4dc0214b85afcbf08e8e68005ed11a2d&scene=21&click_id=625892908#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NTA5OTM5Nw==&mid=2650353522&idx=1&sn=4dc0214b85afcbf08e8e68005ed11a2d&scene=21&click_id=625892908#wechat_redirect",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-08591184d948",
@@ -803,7 +870,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-06-08",
-    "url": "https://www.cpwf.org.cn/content/72311"
+    "url": "https://www.cpwf.org.cn/content/72311",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-d95d937bfb11",
@@ -811,7 +880,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "老龄关怀",
     "region": "全国",
     "title": "2026年“溢彩星光”社区老人关爱服务项目 启动招募",
     "summary": "项目简介： “溢彩星光”项目由北京泰康溢彩公益基金会发起，支持社会组织和社区行动者开展社区为老服务，让老人在家门口享有便捷安心的服务，同时通过赋能培训，提升社区为老服务的专业性、创新力与持续性，推动老年友好社区建设。 申报主体： 在民政部门正式注册的社会服务机构/社会组织； 在社区扎根的社区社会组织、志愿者团队、居民自组织。 服务区域： 上海、杭州、武汉 专业社会组织 申请要求…",
@@ -826,7 +895,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-06-05",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493403&idx=1&sn=f7a39fb4e1d19be0976f468e465f5cdf&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493403&idx=1&sn=f7a39fb4e1d19be0976f468e465f5cdf&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-81e540d12a48",
@@ -834,7 +905,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "儿童保护",
     "region": "全国",
     "title": "“宝藏小屋”暑期营儿童公益节伙伴招募",
     "summary": "项目简介： 2026年腾讯公益携手上海联劝公益基金会发起六一儿童公益节，聚焦困境儿童议题，诚邀志同道合的公益伙伴携手同行，用专业与爱心为困境儿童撑起一片蓝天，共赴一场温暖的公益之约！ 基于此，“流动儿童的宝藏小屋”项目特设“宝藏小屋”暑期营专项，聚焦流动儿童心理成长、安全自护提升，依托腾讯公益的平台优势与资源整合能力，联动各方力量，推动公众参与，助力流动儿童成为健康、友爱、积极…",
@@ -849,7 +920,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650010392&idx=1&sn=3543497345df33d10cdfc8a5883d7ccb&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650010392&idx=1&sn=3543497345df33d10cdfc8a5883d7ccb&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-cade09bad0f3",
@@ -872,7 +945,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247520525&idx=1&sn=3e4a3324daaf8090d0d8d90b689f0a36&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247520525&idx=1&sn=3e4a3324daaf8090d0d8d90b689f0a36&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "应急救援",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-0af764b6e8ae",
@@ -895,7 +970,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA3NjA0MjcyMA==&mid=2651283386&idx=1&sn=d92f6850b2281db2e7155e25b6f7cbaa&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA3NjA0MjcyMA==&mid=2651283386&idx=1&sn=d92f6850b2281db2e7155e25b6f7cbaa&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-9615d0510723",
@@ -918,7 +995,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770425&idx=1&sn=0a0306ed5ce0e92e603b2f6ab99319e4&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770425&idx=1&sn=0a0306ed5ce0e92e603b2f6ab99319e4&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-8bfb525a2145",
@@ -926,7 +1005,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "青少年发展",
     "region": "广东省",
     "title": "2026年度“麦穗”·青公益合作伙伴计划招募",
     "summary": "项目简介： 2023年，麦田教育基金会与共青团海珠区委合作开展首届“麦穗”·青公益合作伙伴计划，旨在为服务来穗儿童及青少年的中小型社会组织/团体提供沟通交流及共创探讨的平台，促进彼此资源共享及交互的同时更凝聚彼此力量共同探讨在社区教育层面的来穗儿童及青少年融入的议题探讨，为来穗儿童及青少年群体提供高质量专业服务。 申报项目服务对象： 广州市内来穗儿童及青少年，海珠区优先； 招募…",
@@ -937,11 +1016,13 @@
     "dueDays": 0,
     "due": "2026-06-05",
     "publishedDays": 155,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5MzI0NzY2MQ==&mid=2652770652&idx=1&sn=a92b3612b7a7422a1a13486ea9652f5b&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5MzI0NzY2MQ==&mid=2652770652&idx=1&sn=a92b3612b7a7422a1a13486ea9652f5b&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "青少年发展",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-2c26bfce7bf4",
@@ -949,7 +1030,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "青少年发展",
     "region": "全国",
     "title": "2026凯德社区韧性资助计划申报正式启动",
     "summary": "项目简介： “凯德社区韧性资助计划”由凯德集团于2025年正式启动，旨在通过系统性支持帮助中国、越南、印度以及新加坡的儿童青少年掌握应对逆境的技能知识，构建社会支持体系，从而增强其适应能力，以共筑更强大的亚洲社区。在气候风险加剧和社会经济挑战的背景下，2026年项目战略升级：从泛议题资助转向聚焦城市社区议题。中国公益研究院作为项目的中国战略合作伙伴，负责本地项目评选与实施，进一…",
@@ -960,11 +1041,13 @@
     "dueDays": 0,
     "due": "2026-06-29",
     "publishedDays": 155,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-05-22",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODE2MTk5Mw==&mid=2651968847&idx=1&sn=a2ad10e2f14b3fdb3481d82df5d2ea5d&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODE2MTk5Mw==&mid=2651968847&idx=1&sn=a2ad10e2f14b3fdb3481d82df5d2ea5d&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "青少年发展",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-cdd214eaed99",
@@ -972,7 +1055,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "残障融合",
     "region": "全国",
     "title": "“共融行动”项目计划伙伴招募",
     "summary": "项目简介： 爱德基金会“共融行动”项目旨在立足残障人士的自身状况与实际需求，为其提供个性化康复，开展生活自理能力、社会适应能力及职业技能等培训，助力该群体实现就业；同时通过开展社会融合活动，为残障人士营造更友好的就业环境。 申报要求： 申请机构在民政部门依法注册登记且连续2年年检合格，业务范围涵盖残障人士服务、儿童帮扶等内容。获得社会组织评估等级3A及以上的优先。 申请机构及法…",
@@ -987,7 +1070,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-17",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654380053&idx=1&sn=4e334a28c299252e81d6b2ab3915ce57&scene=21&sessionid=#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654380053&idx=1&sn=4e334a28c299252e81d6b2ab3915ce57&scene=21&sessionid=#wechat_redirect",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.98
   },
   {
     "id": "fund-4a7ec27398a2",
@@ -995,7 +1080,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "广东省",
     "title": "2026年“百社联百村・百千万” 深汕特别合作区结对共建项目征集",
     "summary": "项目简介： 为深入贯彻落实《深圳市深入贯彻落实省“百县千镇万村高质量发展工程”促进城乡区域协调发展三年工作计划（2025—2027 年）》重点任务部署，积极响应深圳市 “6・30” 助力乡村振兴活动关于深化“百社联百村”专项行动的动员要求，深圳市民政局推动“深圳市“1+N”社会组织公益品牌建设项目”，打造“百社联百村·百千万”乡村振兴公益平台”，依托深圳市社会组织总会枢纽作用…",
@@ -1006,11 +1091,13 @@
     "dueDays": 0,
     "due": "2026-04-24",
     "publishedDays": 190,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-17",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530682&idx=1&sn=c08a638152ff04294fae3dcba7a54094&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530682&idx=1&sn=c08a638152ff04294fae3dcba7a54094&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-8d21f633687f",
@@ -1018,7 +1105,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "儿童保护",
     "region": "全国",
     "title": "2026年勇气少年困境儿童陪伴项目意向合作机构征集",
     "summary": "项目简介： 勇气少年困境儿童陪伴计划旨在保护中西部乡村地区因家庭监护缺失和监护不当的困境儿童不受伤害，陪伴儿童积极成长。 该项目以6-16岁困境儿童为服务对象，以儿童团体活动为抓手，回应儿童安全保护与心理健康需求，帮助儿童提升自我保护意识和能力、提升自信心和社交与人际关系适应能力，促进儿童成长和发展。 申报对象： 截止时间：2026年5月10日23:59",
@@ -1033,7 +1120,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-17",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650009772&idx=1&sn=a9aa0dff07e7e60d18a34e97c24dffd7&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650009772&idx=1&sn=a9aa0dff07e7e60d18a34e97c24dffd7&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-faa8403040eb",
@@ -1041,7 +1130,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社区营造",
     "region": "全国",
     "title": "“未来星社区”资助计划",
     "summary": "项目简介： “未来星社区”资助计划是由北京星巴克公益基金会2023年发起的旗舰公益项目，计划3年内投入1800万元，携手上海浦东新区恩派公益基金会，聚焦老龄友好、残障友好、动物友好、环境友好等社区议题，支持扎根社区的行动者，激发蕴藏在基层的公益能量，共同点亮社区好意之光。 申报对象： 一位普通的社区居民，对所居住的社区有真实的关切与感情； 已有行动，或已准备好行动——哪怕只是一…",
@@ -1056,7 +1145,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MDc1OTQxMQ==&mid=2247491534&idx=1&sn=96029b0a7c2f137e617a904e22d032b6&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MDc1OTQxMQ==&mid=2247491534&idx=1&sn=96029b0a7c2f137e617a904e22d032b6&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社区营造",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-d50a233e75d8",
@@ -1079,7 +1170,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA4Njg4MDIxNw==&mid=2650466268&idx=1&sn=993d6c8e43e30a7945a60d902aeeaeba&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA4Njg4MDIxNw==&mid=2650466268&idx=1&sn=993d6c8e43e30a7945a60d902aeeaeba&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.98
   },
   {
     "id": "fund-2caf7bb49893",
@@ -1087,7 +1180,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "文化传承",
+    "field": "社会组织支持",
     "region": "上海市",
     "title": "2026年远山伙伴招募",
     "summary": "项目简介： 远山公益源于2012年麦田同行计划项目，2016年于上海正式注册，至今已经为超过60家公益组织进行品牌重建，专注公益组织文化建设与形象品牌塑造。 申报条件： 申请机构没有/需要重新建立logo（必要条件）； 注册成立时间≥2年，有稳定的全职管理团队、较多的核心志愿者、良好的宣传平台（优先条件）； 因项目涉及机构核心内容，机构负责人须全程参与跟进项目，且须设置固定对接…",
@@ -1102,7 +1195,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI4Mzc4NzczNQ==&mid=2247486315&idx=1&sn=548b0b3b7dc6c7ae80cbae9f29e701c9&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI4Mzc4NzczNQ==&mid=2247486315&idx=1&sn=548b0b3b7dc6c7ae80cbae9f29e701c9&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-96a0be7e39e8",
@@ -1125,7 +1220,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-04-03",
-    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0NzIwNzc3Mw==&mid=2247552671&idx=1&sn=8665d26982e06a93013c77c69b25a4d7&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzk0NzIwNzc3Mw==&mid=2247552671&idx=1&sn=8665d26982e06a93013c77c69b25a4d7&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "乡村教育",
+    "aiConfidence": 0.93
   },
   {
     "id": "fund-b45cd28ff6b5",
@@ -1133,7 +1230,7 @@
     "type": "基金会资助",
     "supportType": "物资/课程",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "心理健康",
     "region": "全国",
     "title": "安心计划招募2026年公益合作伙伴",
     "summary": "项目简介： 安心计划聚焦6–12岁留守、流动儿童心理健康，提供标准化心理课程、绘本疗愈、师资培训、实战督导、安心包物资与全流程执行支持，已在多省份落地执行，服务儿童超2.3万人次。我们为合作机构提供课程体系、专业督导、品牌宣传与项目资金配套，降低执行成本，提升服务专业度。 以专业守护心灵，以联合放大力量。期待与你并肩，把温暖与专业送到孩子身边，共同为孩子们筑起心灵防护墙，让每一…",
@@ -1148,7 +1245,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-20",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU1NDk3ODk1Mw==&mid=2247729548&idx=1&sn=9fd385111a8372b7d369945794777349&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU1NDk3ODk1Mw==&mid=2247729548&idx=1&sn=9fd385111a8372b7d369945794777349&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "心理健康",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-6fbb0d9d71ef",
@@ -1156,7 +1255,7 @@
     "type": "其他机构资助",
     "supportType": "物资/课程",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "儿童保护",
     "region": "全国",
     "title": "活力未来亲子园招募合作伙伴",
     "summary": "项目简介： 活力未来亲子园开展亲子共同参与的课程及各项活动，影响家长改变育儿行为，形成积极良好的亲子关系，为流动和留守儿童创造有爱、接纳的早期发展环境。家长在项目中不仅增长育儿知识与自信，提升处理家庭问题的能力; 同时有机会获得职业技能培训，从受益人成长为亲子服务的提供者，以及社区家长互助网络的构建者。 项目联合愿意为0-3 岁流动、留守儿童及家庭提供儿童早期发展机会的社会组织…",
@@ -1171,7 +1270,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-20",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzAxMzMxNzY3NQ==&mid=2651301784&idx=1&sn=72531502956e9f8fe605c4856416e53c&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzAxMzMxNzY3NQ==&mid=2651301784&idx=1&sn=72531502956e9f8fe605c4856416e53c&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-4dc1bc4e6d59",
@@ -1190,11 +1291,13 @@
     "dueDays": 0,
     "due": "2026-03-23",
     "publishedDays": 221,
-    "status": "PUBLISHED",
+    "status": "PENDING_REVIEW",
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-03-17",
-    "url": "https://www.cpwf.org.cn/content/72218"
+    "url": "https://www.cpwf.org.cn/content/72218",
+    "aiSuggestedCategory": "医疗健康",
+    "aiConfidence": 0.72
   },
   {
     "id": "fund-0246efae63b8",
@@ -1217,7 +1320,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-03-16",
-    "url": "https://www.cpwf.org.cn/content/72217"
+    "url": "https://www.cpwf.org.cn/content/72217",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-06f9a1d99ad2",
@@ -1225,7 +1330,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "医疗健康",
+    "field": "人才培育",
     "region": "全国",
     "title": "善种计划招募",
     "summary": "项目简介： 自创立之初，美善基金会就将“促进公益发展，激发美好善念”写入使命。2024年，美善设立善种计划，项目聚焦公益人才培育及组织发展，计划通过系列服务帮助公益人才及组织持续成长，希望在项目的支持下，更多美善的种子在本土落地生根，促进当地公益行业健康可持续发展。 美善伙伴是美善基金会善种计划项目的核心内容之一，主要定位在愿意成长和改变的公益中坚力量。2026年，我们依然希望…",
@@ -1240,7 +1345,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-06",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU5MjgyNzEwNQ==&mid=2247516381&idx=1&sn=605b25874c9c90fbed1dc7df679e8d78&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU5MjgyNzEwNQ==&mid=2247516381&idx=1&sn=605b25874c9c90fbed1dc7df679e8d78&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "人才培育",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-d406b95b8f73",
@@ -1248,7 +1355,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "产业生计",
+    "field": "社会组织支持",
     "region": "浙江省",
     "title": "舟山市第十四届公益创投项目大赛开始申报",
     "summary": "项目简介： 以习近平新时代中国特色社会主义思想为指导，全面贯彻党的二十届四中全会精神和习近平总书记关于加强社会组织建设、推进基层治理现代化的重要论述，加大社会组织的培育扶持力度，充分激发其内在活力与创新能力。引导社会组织主动对接舟山民生发展需求，精准服务地方发展大局。优先支持面向“一老一小一弱一困”等特殊群体，重点培育扶持与舟山海岛共富、基层治理、民生改善相适配的枢纽型、专业性…",
@@ -1263,7 +1370,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-06",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzU4MjY2OTM1Mg==&mid=2247519760&idx=2&sn=c6a932f1fb3dc7ca46ad89d438e730cb&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzU4MjY2OTM1Mg==&mid=2247519760&idx=2&sn=c6a932f1fb3dc7ca46ad89d438e730cb&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.85
   },
   {
     "id": "fund-344f61f50ee1",
@@ -1286,7 +1395,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-06",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzkxNDMxODk2Mw==&mid=2247510178&idx=1&sn=ef3f9e43a86ffb182ba439e8f99d6962&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzkxNDMxODk2Mw==&mid=2247510178&idx=1&sn=ef3f9e43a86ffb182ba439e8f99d6962&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "人才培育",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-85f0bca30f91",
@@ -1294,7 +1405,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "儿童保护",
     "region": "全国",
     "title": "2026年“心+行动”0-3岁创新方案支持计划招募开启",
     "summary": "项目简介： 2026年“心+行动”0-3岁儿童早期发展创新方案是由心和公益基金会发起的公益资助项目，旨在通过资金支持和能力建设，推动低资源地区0-3岁儿童早期发展服务创新。 计划资助方案分为A类创新试点探索与B类模式推广验证，支持机构探索有效、可持续、宜推广的服务模式，联动在地资源，为0-3岁儿童及养育者提供专业、可及的科学养育支持，共筑儿童早期发展公益生态。 申报对象： 申请…",
@@ -1309,7 +1420,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-06",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzUwOTYxMjQwOQ==&mid=2247489612&idx=1&sn=7c5965036446e1ce09d4479f6307b207&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzUwOTYxMjQwOQ==&mid=2247489612&idx=1&sn=7c5965036446e1ce09d4479f6307b207&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-a886cf026099",
@@ -1317,7 +1430,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "儿童保护",
     "region": "全国",
     "title": "乐高集团“乐乐箱儿童玩乐发展支持计划”2026合作伙伴招募",
     "summary": "项目简介： 乐高集团于2019年12月在中国启动“乐乐箱困境儿童关爱计划”，2026年更名为“乐乐箱儿童玩乐发展支持计划”（以下简称“乐乐箱计划”），通过关注因身处不同困境而缺乏玩乐资源和机会的儿童群体，为他们提供一整套玩乐发展支持的解决方案，让他们在创意玩乐中学习和发展，为未来种下无限可能。 2021年起，乐高集团与南都公益基金会携手，通过好公益平台项目的开放共享机制招募合作…",
@@ -1332,7 +1445,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-03-06",
-    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODM4NzM5Mg==&mid=2651953731&idx=1&sn=7eea2cd37db3e3b8a72edc6fc6280dff&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MjM5ODM4NzM5Mg==&mid=2651953731&idx=1&sn=7eea2cd37db3e3b8a72edc6fc6280dff&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-3fb4bd20042e",
@@ -1340,7 +1455,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "浙江省",
     "title": "“四明乐善，万象共益” 2026年余姚市社会组织公益创投活动项目",
     "summary": "项目简介： 为进一步鼓励和支持社会组织聚焦民生需求、创新服务形式，推动公益慈善事业与社区治理深度融合，结合2026年慈善事业数字化、社区化、精准化发展趋势，依据《关于促进社会组织高质量发展助力共同富裕先行地建设的实施意见》（余党办〔2023〕10号）文件精神，我们将着力引导社会组织积极参与基层治理，推动公益慈善资源下沉社区，构建以镇（街）社会工作站、社会组织服务中心为实施主阵地…",
@@ -1355,7 +1470,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzI0NDg4MDE3NQ==&mid=2247542814&idx=1&sn=45827420162b8eacc59ddf6e1bbb528e&scene=21&click_id=95#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI0NDg4MDE3NQ==&mid=2247542814&idx=1&sn=45827420162b8eacc59ddf6e1bbb528e&scene=21&click_id=95#wechat_redirect",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-25404c6a12c6",
@@ -1363,7 +1480,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "青少年发展",
     "region": "广东省",
     "title": "2026年粤港澳大湾区青少年公益行动项目征集",
     "summary": "项目简介： 为进一步贯彻《粤港澳大湾区发展规划纲要》，加强粤港澳大湾区青少公益交流合作，促进粤港澳青少年交往交流交融，中国宋庆龄基金会联合广东省宋庆龄基金会、香港宋庆龄基金、澳门基金会共同主办2026年粤港澳大湾区青少年公益行动（简称公益行动）。 本届公益行动以“公益促进交往交流交融”为宗旨，以“爱融湾区 智绘未来”为主题，贯穿全年开展各类项目，为服务青少年成长成才搭建广阔舞台…",
@@ -1378,7 +1495,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530386&idx=2&sn=bfa57a8b15d30024fb205d4cfca0c4a0&scene=21&click_id=76#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530386&idx=2&sn=bfa57a8b15d30024fb205d4cfca0c4a0&scene=21&click_id=76#wechat_redirect",
+    "aiSuggestedCategory": "青少年发展",
+    "aiConfidence": 0.85
   },
   {
     "id": "fund-5a59fc8f7153",
@@ -1386,7 +1505,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "儿童保护",
     "region": "全国",
     "title": "童伴小屋项目招募",
     "summary": "项目简介： 北京韩红爱心慈善基金会于2023年3月正式启动“童伴小屋”项目北京试点工作，希望通过资助行业内长期开展流动儿童服务的社会组织，聚焦身体健康教育、全面性教育、防灾减灾教育，提升流动儿童的健康福祉。为孩子们提供安静的、不打扰的陪伴，在孩子们所处的每一个陌生的城市，建立一所健康小屋。 校园科普项目 致力于在流动/留守儿童所在的学校内举办大型嘉年华活动、主题活动，并为其中的…",
@@ -1401,7 +1520,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-02-13",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA4OTU3MDUyNg==&mid=2652224097&idx=1&sn=dc052d75cd16d84692e9fc862bcf7e81&scene=21&click_id=75#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA4OTU3MDUyNg==&mid=2652224097&idx=1&sn=dc052d75cd16d84692e9fc862bcf7e81&scene=21&click_id=75#wechat_redirect",
+    "aiSuggestedCategory": "儿童保护",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-069ab24de567",
@@ -1409,7 +1530,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "湖南省",
     "title": "“喝上干净水”乡村水源地守护资助计划正式启动",
     "summary": "项目简介： 饮用水水源是社会经济发展及人民生产生活的基础性资源，水源保护工作一直备受重视。湖南省出台了《湖南省饮用水源保护条例》等法规，明确各级政府和部门的职责，为水源地保护提供法律依据。 与此同时，省内已划定4763处集中式水源保护区，覆盖县级及以上、乡镇级和农村千人以上水源地。各地通过设立标识标牌、隔离防护设施等，明确保护区范围，对水源地的监管与治理有显著成效。但水源地尤其…",
@@ -1424,7 +1545,9 @@
     "openStatus": "已截止",
     "sourceName": "中国慈展会·资源直通车",
     "publishedDate": "2026-01-16",
-    "url": "https://mp.weixin.qq.com/s?__biz=MzA4NDUxMTQxMQ==&mid=2652679179&idx=1&sn=d8981adc8df9d8cfbbb554e360663414&scene=21#wechat_redirect"
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA4NDUxMTQxMQ==&mid=2652679179&idx=1&sn=d8981adc8df9d8cfbbb554e360663414&scene=21#wechat_redirect",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.92
   },
   {
     "id": "fund-c35b92f0c5de",
@@ -1432,7 +1555,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "心理健康",
     "region": "全国",
     "title": "中国人口福利基金会关于资助开展“珀爱妈妈”公益行活动的公告",
     "summary": "新闻动态 为响应健康中国行动号召，营造生育友好型社会环境，中国人口福利基金会开展健康中国行动—健康家庭促进计划“珀爱妈妈”公益行活动，旨在整合社会资源，聚焦“新手妈妈”群体的心理健康与综合支持，通过专业赋能、知识普及与实物关爱相结合的方式，为其提供系统化、有温度的社会支持。现计划资助符合条件的专业机构开展活动，具体事项公告如下：一、项目背景“新手妈妈”阶段是女性身心健康的关键期…",
@@ -1447,7 +1570,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2026-01-12",
-    "url": "https://www.cpwf.org.cn/content/72173"
+    "url": "https://www.cpwf.org.cn/content/72173",
+    "aiSuggestedCategory": "心理健康",
+    "aiConfidence": 0.85
   },
   {
     "id": "fund-789145ef97d0",
@@ -1470,7 +1595,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2025-12-24",
-    "url": "https://www.cpwf.org.cn/content/72152"
+    "url": "https://www.cpwf.org.cn/content/72152",
+    "aiSuggestedCategory": "女性关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-81a5fa7b8a67",
@@ -1478,7 +1605,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "医疗健康",
     "region": "北京市",
     "title": "关于开展“糖尿病相关慢性肾脏病筛查与健康教育行动”资助的公告",
     "summary": "新闻动态 慢性肾病与2型糖尿病在我国已构成双重公共卫生挑战。为积极响应《健康中国行动（2019—2030年）》，中国人口福利基金会发计划开展“健康中国行动——糖尿病相关慢性肾脏病早期筛查与健康教育行动”项目，目的是通过线上线下联动的科普与宣传教育提高公众对于糖尿病的认知和对患者的理解与接纳。工作包括但不限于：线上患教直播、线下社区活动、糖尿病相关慢性肾脏病早期公益筛查等。现公告…",
@@ -1493,7 +1620,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2025-09-29",
-    "url": "https://www.cpwf.org.cn/content/72078"
+    "url": "https://www.cpwf.org.cn/content/72078",
+    "aiSuggestedCategory": "医疗健康",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-7a189b41e845",
@@ -1516,7 +1645,9 @@
     "openStatus": "已截止",
     "sourceName": "中国人口福利基金会",
     "publishedDate": "2025-09-17",
-    "url": "https://www.cpwf.org.cn/content/72070"
+    "url": "https://www.cpwf.org.cn/content/72070",
+    "aiSuggestedCategory": "女性关怀",
+    "aiConfidence": 0.92
   },
   {
     "id": "fund-8dcf0f3d85fe",
@@ -1524,7 +1655,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "全国",
     "title": "气候韧性社区研究及建设（RCLA）项目征集说明",
     "summary": "气候韧性社区研究及建设（RCLA）项目由可持续发展合作研究所（美国）北京代表处（ISC）与北京绿色阳光环保公益基金会双方整合国际资源和本土经验携手推出的为期三年的项目。计划通过资助15-18家致力于推动女性参与气候适应工作的社区基层组织，提供资金及能力建设支持，助力其在社区气候韧性建设以及女性参与中发挥更大作用。项目旨在支持中国在2060年前实现碳中和目标，并在地方层面推动气候…",
@@ -1539,7 +1670,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·资讯",
     "publishedDate": "2025-07-24",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/66307.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/66307.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-8fb615c2b3af",
@@ -1562,7 +1695,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2024-09-18",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16426.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16426.html",
+    "aiSuggestedCategory": "残障融合",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-f3333730815c",
@@ -1570,7 +1705,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "老龄关怀",
     "region": "北京市",
     "title": "资助启事 | 公益1+1之溢彩星光社区老人关爱服务项目三期资助启事",
     "summary": "溢彩星光是“公益1+1”资助行动框架下聚焦社区困难老人服务议题的资助项目。在北京市社会组织管理中心和市民政局养老工作处指导下，由北京泰康溢彩公益基金会（以下简称：泰康溢彩基金会）和北京市协作者社会工作发展中心（以下简称：北京协作者）联合发起。溢彩星光项目自 2021 年启动以来，资助 19 家社会服务机构开展了 22 个为老服务项目，服务失独及伤残家庭、失能失智、重症肌无力、心…",
@@ -1585,7 +1720,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2024-06-18",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16385.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16385.html",
+    "aiSuggestedCategory": "老龄关怀",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-985b70dee2fc",
@@ -1593,7 +1730,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "1-2年",
-    "field": "其他",
+    "field": "生态环保",
     "region": "山西省",
     "title": "小额资助|“山河晋谣”II期项目传播团队招募通知公告",
     "summary": "一、传播团队招募背景“山河晋谣——山西省绿色低碳传播能力提升项目”（以下简称“山河晋谣”）于2023年由山西科城能源环境创新研究院与能源基金会共同发起。山西，自古被称为表里山河，具有独特的生态环境和社会文化，山河晋谣以“讲好山西低碳转型故事”为目标，通过建立气候变化与区域社会、经济、文化发展紧密联系的叙事体系，提升山西省绿色低碳传播主体的气候传播能力，推动地区绿色低碳转型。“山…",
@@ -1608,7 +1745,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-09-30",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16440.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16440.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.92
   },
   {
     "id": "fund-08f78288a06b",
@@ -1616,7 +1755,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "北京市",
     "title": "招募 | 2023蓝天力计划项目启动",
     "summary": "进入“十四五”以来，我国继续深入打好污染防治攻坚战，努力践行减污降碳、协同增效，在“双碳”目标的引领下推动源头治理，减少能源、工业和交通领域的大气污染物和温室气体排放。当前阶段，高耗能行业实现低碳转型有哪些重点推动方向？本土环保公益机构如何参与其中，更有效地实现保护蓝天的目标呢？欢迎来参加2023蓝天力工作坊，我们共同寻找答案！什么是蓝天力计划？蓝天力计划是亚洲清洁空气中心（简…",
@@ -1631,7 +1770,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-06-15",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10391.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10391.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.95
   },
   {
     "id": "fund-cd078b9b2e9b",
@@ -1639,7 +1780,7 @@
     "type": "政府购买服务",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "北京市",
     "title": "招募 ｜ 支持本土公益力量，应对气候变化",
     "summary": "2023年3月20日，联合国政府间气候变化专门委员会（IPCC）发布第六次评估报告《综合报告》。报告显示，一个多世纪以来，全球温升比工业化前水平高出1.1℃。这不仅造成了更频繁和更强烈的极端天气事件，也给世界每个地区的自然和人类带来了越来越危险的影响.报告还显示，随着全球温升加剧，气候韧性发展变得越来越具有挑战性。实现气候韧性发展，需要将适应气候变化的措施与减少温室气体排放的行…",
@@ -1654,7 +1795,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-06-03",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10386.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10386.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.92
   },
   {
     "id": "fund-eab8ba92778f",
@@ -1662,7 +1805,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "全国",
     "title": "招募 | 活水计划2023年合作伙伴招募启动",
     "summary": "针对欠发达地区社会组织发展薄弱、资源动员不足的问题，中国乡村发展基金会于2020年发起活水计划。活水计划通过机构赋能和资源平台搭建，专项支持欠发达地区社会组织发展以及社会资源引入，助力欠发达地区发挥第三次分配作用，建立起社会力量参与巩固拓展脱贫攻坚成果和全面推进乡村振兴的长效机制。2022 年，我会联合腾讯公益慈善基金会发起“活水计划一乡村振兴重点帮扶县基层社会组织赋能行动”…",
@@ -1677,7 +1820,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-05-10",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10372.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10372.html",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.88
   },
   {
     "id": "fund-57955a352be8",
@@ -1685,7 +1830,7 @@
     "type": "其他机构资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "全国",
     "title": "资助 | 2023助力“碳中和”公益传播同行者资助预告",
     "summary": "我国“3060”目标的提出，为以中国智慧和中国方案积极应对气候变化和参与气候治理提供了方向指引和更高的要求，更是助力我国由全球气候治理的“参与者”“贡献者”向“引领者”转变。中国社会组织作为连接各方的纽带和参与气候治理的重要利益相关方，在普及和传播科学、大众化的“双碳”目标知识、引导绿色消费和气候适应型生活方式等方面，扮演着积极且重要的角色。在这一过程中，气候传播作为一个不可或…",
@@ -1700,7 +1845,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-05-01",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10364.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10364.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.93
   },
   {
     "id": "fund-ce981598c9ef",
@@ -1708,7 +1855,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6-12个月",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "全国",
     "title": "招募｜文雅种子基金项目持续招募中！",
     "summary": "我国现有社会组织已超90万家，是改革开放初期的150倍、十年前的2倍；全社会公益捐赠量也从2007年500亿，增长到近两年1500亿左右。社会组织在表达多元价值立场，卷入社会力量参与，参与社会问题解决，构建社会资本方面价值凸显。然而，公益行业的资源分布与组织发展水平却很不平衡。活水计划对中西部县域社会组织进行了调研：约3成组织没有专职工作人员，仅35%左右的组织有稳定资金来源的…",
@@ -1723,7 +1870,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-04-14",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10358.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10358.html",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-20ee0e4e443e",
@@ -1731,7 +1880,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "乡村教育",
+    "field": "女性关怀",
     "region": "全国",
     "title": "资助 | “撒开脚丫” 项目2023年招募开始啦！",
     "summary": "2022年耐克与中国乡村发展基金会共同发起“撒开脚丫”第二期项目，好公益平台作为行业合作伙伴共同参与，通过联合社会组织伙伴、大学生志愿者等，为女孩建立运动榜样，已累计惠及约六万名女孩，让她们快乐地加入运动、享受运动，助力女孩运动成长。我们始终相信，运动不仅可以强健孩子的身体，缓解孩子的学习压力，还能塑造孩子更健康的人格。然而，因为世俗观念、生长发育、榜样缺乏等因素，女孩的运动活…",
@@ -1746,7 +1895,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-03-08",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10332.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10332.html",
+    "aiSuggestedCategory": "女性关怀",
+    "aiConfidence": 0.85
   },
   {
     "id": "fund-d90a28163dfc",
@@ -1754,7 +1905,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "社会组织支持",
     "region": "西藏自治区",
     "title": "招募 | 阿里公益「行为公益合作计划」发布！百万激励资金助力机构发展！",
     "summary": "阿里公益行为公益合作计划发布！百万激励资金助力机构发展！为了更好的助力公益行业伙伴，阿里巴巴公益“人人3小时”平台推出2023「行为公益合作计划」，首期寻找100个希望在公众倡导上突破的公益项目，在「3.5学雷锋主题月」，动员公众在线参与行为公益，兑捐“益起守护专项”百万激励金，支持项目和机构发展！期待更多公益组织加入！行为公益合作伙伴招募1、行为公益合作计划协助你解决 社群活…",
@@ -1769,7 +1920,9 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-01-13",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10313.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10313.html",
+    "aiSuggestedCategory": "社会组织支持",
+    "aiConfidence": 0.82
   },
   {
     "id": "fund-d9e1f29d018f",
@@ -1777,7 +1930,7 @@
     "type": "基金会资助",
     "supportType": "资金",
     "duration": "6个月内",
-    "field": "其他",
+    "field": "生态环保",
     "region": "北京市",
     "title": "资助 | 2023年创绿家资助计划开始招募！",
     "summary": "感谢创绿家伙伴“熊悟空自然绘本工作室”绘图一年又一年，随着2022年创绿家评审进入尾声，转眼又到了新一季创绿家伙伴招募的日子。本季申报日期截止3月31日，欢迎大家大力推荐、踊跃报名！/什么是“创绿家资助计划”/2012年，北京市企业家环保基金会将“天使投资” 引入环保领域，发起 “创绿家资助计划” ，专门支持初创期的环保公益组织，协助那些关心环境和家园、富有创业家精神的环保公益…",
@@ -1792,6 +1945,8 @@
     "openStatus": "已截止",
     "sourceName": "中国发展简报·公益资助",
     "publishedDate": "2023-01-09",
-    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10335.html"
+    "url": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10335.html",
+    "aiSuggestedCategory": "生态环保",
+    "aiConfidence": 0.95
   }
 ]

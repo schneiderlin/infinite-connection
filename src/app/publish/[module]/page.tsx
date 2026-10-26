@@ -69,7 +69,6 @@ export default async function PublishPage({
             id: content.id,
             subtype: content.subtype,
             title: content.title,
-            summary: content.summary ?? "",
             body: content.body,
             fields: content.fields,
             tags: content.tags,

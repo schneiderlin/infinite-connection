@@ -5,6 +5,15 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 export const USER_CONTENT_BUCKET = "user-content";
 
+export function isObjectStorageConfigured() {
+  return Boolean(
+    process.env.AWS_ENDPOINT_URL_S3
+      && process.env.AWS_REGION
+      && process.env.AWS_ACCESS_KEY_ID
+      && process.env.AWS_SECRET_ACCESS_KEY,
+  );
+}
+
 function storageClient() {
   const endpoint = process.env.AWS_ENDPOINT_URL_S3;
   const region = process.env.AWS_REGION;

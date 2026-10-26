@@ -41,7 +41,7 @@ async function writeWorkbook(workbook, outputPath) {
 // 人工审核表的列配置：显式声明列顺序与中文表头，避免 JSON 字段顺序变化影响表格。
 // 未在 columns 中声明、也不在 omit 里的字段会自动追加到末尾，保证不丢数据。
 // 每条记录都有四个审核列：
-//   审核状态     PENDING（前端不展示）/ PUBLISHED（前端展示）
+//   审核状态     PENDING / PENDING_REVIEW（前端不展示）/ PUBLISHED（前端展示）
 //   原始分类     抓取/清洗后的分类，只读对照
 //   AI建议分类   DeepSeek 建议，可能为空
 //   最终发布分类 初始等于原始分类，运营修改后由 import-from-excel.mjs 覆盖 JSON

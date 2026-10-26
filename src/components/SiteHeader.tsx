@@ -41,7 +41,7 @@ export async function SiteHeader({ active }: { active: string }) {
         </nav>
         <div className="header-actions">
           {session?.user ? (
-            <UserMenu name={displayName} />
+            <UserMenu name={displayName} isAdmin={session.user.role === "ADMIN"} />
           ) : (
             <>
               <Link href="/login" className="btn-ghost">

@@ -6,7 +6,7 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DATA_FILE = path.join(ROOT, "src", "lib", "jobs-scraped.json");
 
 const PROVINCES = ["北京市","天津市","上海市","重庆市","河北省","山西省","辽宁省","吉林省","黑龙江省","江苏省","浙江省","安徽省","福建省","江西省","山东省","河南省","湖北省","湖南省","广东省","海南省","四川省","贵州省","云南省","陕西省","甘肃省","青海省","台湾省","内蒙古自治区","广西壮族自治区","西藏自治区","宁夏回族自治区","新疆维吾尔自治区"];
-const REVIEW_STATUSES = new Set(["PENDING", "PUBLISHED", "REJECTED"]);
+const REVIEW_STATUSES = new Set(["PENDING", "PENDING_REVIEW", "PUBLISHED", "REJECTED"]);
 
 // 必须包含这些字眼，才认为是公益行业的招聘
 const NGO_KEYWORDS = /基金会|公益|慈善|协会|社会服务|社会工作|NGO|红十字会|志愿服务|社工|恩派|壹基金/i;
@@ -29,7 +29,14 @@ async function main() {
 
   // 1. 强制过滤：只过滤新的待审记录；已发布/已拒绝/历史记录不因关键词规则被删除
   jobs = jobs.filter((item) => {
-    if (item.status === "PUBLISHED" || item.status === "REJECTED" || !item.status) return true;
+    if (
+      item.status === "PUBLISHED" ||
+      item.status === "PENDING_REVIEW" ||
+      item.status === "REJECTED" ||
+      !item.status
+    ) {
+      return true;
+    }
     const text = `${item.org} ${item.title} ${item.summary}`;
     return NGO_KEYWORDS.test(text);
   });
@@ -40,7 +47,8 @@ async function main() {
     // 已发布 / 历史无 status（视为已发布）的岗位，岗位类别是人工审核结果，不再覆盖。
     const isReviewed = item.status === "PUBLISHED";
     const isLegacyPublished = !item.status;
-    const preserveRole = isReviewed || isLegacyPublished;
+    const isAwaitingAiReview = item.status === "PENDING_REVIEW";
+    const preserveRole = isReviewed || isLegacyPublished || isAwaitingAiReview;
 
     if (/志愿者|志愿|义工/i.test(text)) {
       item.category = "志愿者招募";

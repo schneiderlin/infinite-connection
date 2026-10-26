@@ -12,7 +12,8 @@
     "scrape:all": "node scripts/run-all.mjs",
     "classify:ai": "node scripts/ai-classify.mjs",
     "export:excel": "node scripts/export-to-excel.mjs",
-    "import:excel": "node scripts/import-from-excel.mjs"
+    "import:excel": "node scripts/import-from-excel.mjs",
+    "import:review": "node scripts/import-pending-review-to-content.mjs"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.3",

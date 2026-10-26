@@ -3,7 +3,7 @@
     "id": 10001,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "筹款",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】发展部经理 · 上海联劝公益基金会",
@@ -14,13 +14,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67299.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10002,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】发展部专员 · 上海联劝公益基金会",
@@ -31,8 +33,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67121.html",
-    "status": "PENDING",
-    "aiSuggestedCategory": "筹款"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10003,
@@ -49,7 +52,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67058.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.3
   },
   {
     "id": 10004,
@@ -66,7 +71,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66965.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.88
   },
   {
     "id": 10005,
@@ -83,13 +90,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67276.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10006,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】可持续发展与绿色转型项目官员/项目助理招聘 · 北京合一绿色公益基金会",
@@ -100,13 +109,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67253.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10008,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】活动运营实习生招募 · 融合中国",
@@ -117,7 +128,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67316.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10009,
@@ -134,13 +147,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67278.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10010,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "传播",
+    "role": "高级管理",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】传播筹款总监 · 融合中国",
@@ -151,7 +166,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67212.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10011,
@@ -168,13 +185,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67211.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.85
   },
   {
     "id": 10012,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】公益项目实习生 · 上海市静闲公益基金会",
@@ -185,14 +204,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67334.html",
-    "status": "PENDING",
-    "aiSuggestedCategory": "项目官员"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10014,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】招募海外烧伤整形外科医生- 无国界医生 · 无国界医生组织（香港）有限公司广州代表处",
@@ -203,7 +223,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66724.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.88
   },
   {
     "id": 10015,
@@ -220,7 +242,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66629.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "人力资源",
+    "aiConfidence": 0.88
   },
   {
     "id": 10016,
@@ -237,7 +261,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66628.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.95
   },
   {
     "id": 10017,
@@ -254,13 +280,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66607.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10018,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "财务",
+    "role": "国际项目",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】招募海外前线人力资源及财务经理 - 无国界医生 · 无国界医生组织（香港）有限公司广州代表处",
@@ -271,7 +299,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66606.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.72
   },
   {
     "id": 10019,
@@ -288,13 +318,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67128.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10020,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "其他",
+    "role": "项目执行",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】病房学校实习生（深圳、苏州、厦门） · 北京新阳光慈善基金会",
@@ -305,7 +337,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67127.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10021,
@@ -322,13 +356,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67122.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10022,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "社工",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】个案管理师-骨髓增生异常综合征随访项目（全国） · 北京新阳光慈善基金会",
@@ -339,13 +375,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67094.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.82
   },
   {
     "id": 10023,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "社工",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】个案管理师-肥厚型心肌病随访项目（北京、上海、南京、成都） · 北京新阳光慈善基金会",
@@ -356,7 +394,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67091.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.82
   },
   {
     "id": 10024,
@@ -373,13 +413,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67090.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10025,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "项目执行",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】个案回访专员 · 北京新阳光慈善基金会",
@@ -390,7 +432,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67085.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10026,
@@ -407,7 +451,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67177.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.35
   },
   {
     "id": 10027,
@@ -424,7 +470,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67176.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10028,
@@ -441,13 +489,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67175.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10029,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "筹款",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】对外合作官员/经理（医药） · 北京新阳光慈善基金会",
@@ -458,7 +508,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67174.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10030,
@@ -475,7 +527,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67173.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.85
   },
   {
     "id": 10031,
@@ -492,7 +546,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67168.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.85
   },
   {
     "id": 10032,
@@ -509,7 +565,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67129.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10033,
@@ -526,7 +584,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67325.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10034,
@@ -543,7 +603,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67324.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.88
   },
   {
     "id": 10035,
@@ -560,7 +622,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67323.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10036,
@@ -577,7 +641,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67322.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10037,
@@ -594,7 +660,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67321.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10038,
@@ -611,13 +679,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67282.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "人力资源",
+    "aiConfidence": 0.95
   },
   {
     "id": 10039,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "研究",
+    "role": "高级管理",
     "publishedDays": 1,
     "time": "昨天发布",
     "title": "【招聘】卫生技术评估中心高级经理 · 北京新阳光慈善基金会",
@@ -628,7 +698,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67218.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.55
   },
   {
     "id": 10040,
@@ -645,7 +717,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67184.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.95
   },
   {
     "id": 10041,
@@ -662,7 +736,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67180.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10042,
@@ -679,13 +755,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67178.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10043,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 2,
     "time": "2天前发布",
     "title": "【招聘】Market Development Officer， FSC · FSC森林管理委员会",
@@ -696,7 +774,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67329.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10044,
@@ -713,13 +793,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66652.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.92
   },
   {
     "id": 10045,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 2,
     "time": "2天前发布",
     "title": "【招聘】国际发展经理 · 四川海惠助贫服务中心",
@@ -730,7 +812,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67330.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.85
   },
   {
     "id": 10046,
@@ -747,14 +831,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66299.html",
-    "status": "PENDING",
-    "aiSuggestedCategory": "传播"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.97
   },
   {
     "id": 10047,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "传播",
+    "role": "项目官员",
     "publishedDays": 2,
     "time": "2天前发布",
     "title": "【招聘】招聘｜罕见病社群服务项目主管（筹资传播方向）-济南 · 北京病痛挑战公益基金会",
@@ -765,13 +850,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/39285.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.82
   },
   {
     "id": 10048,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 2,
     "time": "2天前发布",
     "title": "【招聘】招聘｜合作发展总监/主管-北京 · 北京病痛挑战公益基金会",
@@ -782,13 +869,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/33631.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10049,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【招聘】区域经理（上海） · 上海浦东新区田字格志愿服务社",
@@ -799,7 +888,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67310.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10050,
@@ -816,13 +907,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67197.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10051,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【招聘】推动专员（贵州） · 上海浦东新区田字格志愿服务社",
@@ -833,13 +926,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65590.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10052,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【招聘】区域经理（贵州） · 上海浦东新区田字格志愿服务社",
@@ -850,13 +945,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/40103.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10053,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "国际项目",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【招聘】Vacancy: Officer (Membership and Partnership) 招聘职位：会员和伙伴关系专员 · 宜可城-地方可持续发展协会(ICLEI)",
@@ -867,7 +964,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67326.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.72
   },
   {
     "id": 10054,
@@ -884,7 +983,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67262.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10055,
@@ -901,13 +1002,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67244.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.98
   },
   {
     "id": 10056,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "传播",
+    "role": "筹款",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【招聘】互联网平台运营筹资专员 · 北京春苗慈善基金会",
@@ -918,7 +1021,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66966.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.88
   },
   {
     "id": 10057,
@@ -935,7 +1040,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66687.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10058,
@@ -952,13 +1059,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66563.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.93
   },
   {
     "id": 10059,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目执行",
+    "role": "志愿者管理",
     "publishedDays": 3,
     "time": "3天前发布",
     "title": "【志愿者】档案整理志愿者/实习生 · 北京春苗慈善基金会",
@@ -969,7 +1078,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66496.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "志愿者管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10064,
@@ -986,7 +1097,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66887.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10067,
@@ -1003,7 +1116,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66237.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.85
   },
   {
     "id": 10068,
@@ -1020,7 +1135,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66696.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10069,
@@ -1037,13 +1154,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38977.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.95
   },
   {
     "id": 10070,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 8,
     "time": "1周前发布",
     "title": "【招聘】急招| 公益项目设计实习生（线上协作） · 广东省日慈公益基金会",
@@ -1054,7 +1173,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67239.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10071,
@@ -1071,7 +1192,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67328.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10072,
@@ -1088,13 +1211,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66062.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10073,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 10,
     "time": "1周前发布",
     "title": "【招聘】项目助理 · 北京市西城区常青藤可持续发展研究所",
@@ -1105,13 +1230,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67259.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.88
   },
   {
     "id": 10074,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 10,
     "time": "1周前发布",
     "title": "【招聘】0--3早期教育项目执行主管 · 北京市西城区常青藤可持续发展研究所",
@@ -1122,7 +1249,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67258.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.85
   },
   {
     "id": 10075,
@@ -1139,7 +1268,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38368.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10076,
@@ -1156,13 +1287,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66722.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10077,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "研究",
     "publishedDays": 11,
     "time": "1周前发布",
     "title": "【招聘】国际清洁交通委员会招聘｜非道路项目实习生（研究与活动支持方向） · 国际清洁交通委员会（美国）北京代表处",
@@ -1173,13 +1306,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67254.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.72
   },
   {
     "id": 10078,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "国际项目",
     "publishedDays": 11,
     "time": "1周前发布",
     "title": "【招聘】国际清洁交通委员会招聘｜重型车项目实习生 · 国际清洁交通委员会（美国）北京代表处",
@@ -1190,13 +1325,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66979.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.85
   },
   {
     "id": 10079,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "国际项目",
     "publishedDays": 11,
     "time": "1周前发布",
     "title": "【招聘】国际清洁交通委员会招聘｜绿色货运项目实习生 · 国际清洁交通委员会（美国）北京代表处",
@@ -1207,7 +1344,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67255.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.72
   },
   {
     "id": 10080,
@@ -1224,7 +1363,9 @@
     "due": "详见原帖",
     "sourceName": "NGO Job Board",
     "url": "https://ngojobboard.org/post/co-area-director-for-southern-central-africa-nigeria-scan/",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.88
   },
   {
     "id": 10081,
@@ -1241,7 +1382,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/40105.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10082,
@@ -1258,7 +1401,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67319.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.92
   },
   {
     "id": 10083,
@@ -1275,13 +1420,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67301.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.88
   },
   {
     "id": 10084,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "传播",
+    "role": "筹款",
     "publishedDays": 14,
     "time": "2周前发布",
     "title": "【招聘】合作发展一部/合作发展实习生 · 深圳壹基金公益基金会",
@@ -1292,13 +1439,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67291.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10085,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 14,
     "time": "2周前发布",
     "title": "【招聘】儿童发展部/项目管理实习生 · 深圳壹基金公益基金会",
@@ -1309,7 +1458,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66951.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10086,
@@ -1326,7 +1477,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67318.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10087,
@@ -1343,13 +1496,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67317.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.86
   },
   {
     "id": 10088,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 15,
     "time": "2周前发布",
     "title": "【招聘】项目运营实习生（长期） · 上海真爱梦想公益基金会",
@@ -1360,7 +1515,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67008.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10089,
@@ -1377,7 +1534,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66871.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10090,
@@ -1394,7 +1553,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66335.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.95
   },
   {
     "id": 10091,
@@ -1411,13 +1572,15 @@
     "due": "详见原帖",
     "sourceName": "NGO Job Board",
     "url": "https://ngojobboard.org/post/head-of-philanthropy-2/",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10092,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "高级管理",
+    "role": "筹款",
     "publishedDays": 24,
     "time": "3周前发布",
     "title": "【招聘】Development Manager, NRDC China Office · 自然资源保护协会 (NRDC)",
@@ -1428,7 +1591,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67265.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10093,
@@ -1445,13 +1610,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67163.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10094,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "传播",
+    "role": "筹款",
     "publishedDays": 26,
     "time": "3周前发布",
     "title": "【招聘】筹款传播经理 · 佰特公益",
@@ -1462,13 +1629,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67162.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.85
   },
   {
     "id": 10095,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 26,
     "time": "3周前发布",
     "title": "【招聘】项目实习生 · 佰特公益",
@@ -1479,7 +1648,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38688.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10096,
@@ -1496,7 +1667,9 @@
     "due": "详见原帖",
     "sourceName": "NGO Job Board",
     "url": "https://ngojobboard.org/post/hr-worker-care-manager-2/",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "人力资源",
+    "aiConfidence": 0.95
   },
   {
     "id": 10097,
@@ -1513,7 +1686,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67312.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.95
   },
   {
     "id": 10098,
@@ -1530,13 +1705,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67012.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10099,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目执行",
+    "role": "志愿者管理",
     "publishedDays": 31,
     "time": "1个月前发布",
     "title": "【志愿者】志愿者招募 | 共创清洁空气，迈向碳中和 · 清洁空气政策伙伴关系CCAPP",
@@ -1547,7 +1724,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66941.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "志愿者管理",
+    "aiConfidence": 0.85
   },
   {
     "id": 10100,
@@ -1564,13 +1743,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66940.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10101,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "研究",
     "publishedDays": 32,
     "time": "1个月前发布",
     "title": "【招聘】招聘｜陆桥生态中心 野生动物调查项目负责人（3 名）｜投身野外科研，助力野生动物资源监测保护 · 北京市海淀区陆桥生态中心",
@@ -1581,13 +1762,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67302.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.85
   },
   {
     "id": 10102,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "高级管理",
+    "role": "项目官员",
     "publishedDays": 33,
     "time": "1个月前发布",
     "title": "【招聘】项目运营经理（项目办公室负责人） · 美丽中国支教",
@@ -1598,13 +1781,15 @@
     "due": "详见原帖",
     "sourceName": "美丽中国支教·成为员工",
     "url": "http://www.meilizhongguo.org/blog/1bb997ab863",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10103,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "高级管理",
+    "role": "项目官员",
     "publishedDays": 34,
     "time": "1个月前发布",
     "title": "【招聘】项目运营经理（广州/昆明）（项目办公室负责人） · 美丽中国支教项目",
@@ -1615,7 +1800,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67305.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10104,
@@ -1632,7 +1819,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67195.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.88
   },
   {
     "id": 10105,
@@ -1649,13 +1838,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67047.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.88
   },
   {
     "id": 10106,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "其他",
+    "role": "筹款",
     "publishedDays": 34,
     "time": "1个月前发布",
     "title": "【招聘】合作发展专员（运维） · 美丽中国支教项目",
@@ -1666,13 +1857,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66961.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.72
   },
   {
     "id": 10107,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "财务",
+    "role": "其他",
     "publishedDays": 34,
     "time": "1个月前发布",
     "title": "【招聘】TRAFFIC 中国 招聘运营经理 · 国际野生物贸易研究组织（英国）北京代表处",
@@ -1683,7 +1876,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67304.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10108,
@@ -1700,13 +1895,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67020.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10109,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "筹款",
     "publishedDays": 38,
     "time": "1个月前发布",
     "title": "【招聘】灾害救援捐赠服务岗 · 中国乡村发展基金会（原中国扶贫基金会）",
@@ -1717,13 +1914,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66958.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.62
   },
   {
     "id": 10110,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "筹款",
     "publishedDays": 38,
     "time": "1个月前发布",
     "title": "【招聘】合作开发官员/主管--月捐发展部 · 中国乡村发展基金会（原中国扶贫基金会）",
@@ -1734,13 +1933,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66872.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10111,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "筹款",
     "publishedDays": 38,
     "time": "1个月前发布",
     "title": "【招聘】资源发展部  企业合作主管/官员 · 中国乡村发展基金会（原中国扶贫基金会）",
@@ -1751,7 +1952,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38369.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.88
   },
   {
     "id": 10112,
@@ -1768,13 +1971,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67002.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10113,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 43,
     "time": "1个月前发布",
     "title": "【招聘】心理公益项目运营实习生 · 广东省日慈公益基金会",
@@ -1785,13 +1990,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67267.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10114,
     "category": "人员招聘",
     "kind": "兼职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 43,
     "time": "1个月前发布",
     "title": "【招聘】校长及学校发展中心-培训项目执行（兼职） · 上海真爱梦想公益基金会",
@@ -1802,7 +2009,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66793.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.88
   },
   {
     "id": 10115,
@@ -1819,7 +2028,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67292.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10116,
@@ -1836,7 +2047,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67035.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10117,
@@ -1853,13 +2066,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67289.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10118,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "其他",
+    "role": "财务",
     "publishedDays": 46,
     "time": "1个月前发布",
     "title": "【招聘】综合管理岗（出纳兼行政） · 北京归元健康服务发展中心",
@@ -1870,13 +2085,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67288.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.82
   },
   {
     "id": 10119,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 46,
     "time": "1个月前发布",
     "title": "【招聘】区域协调员 · 福建省担当者行动教育基金会",
@@ -1887,13 +2104,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/4958.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.62
   },
   {
     "id": 10120,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "人力资源",
+    "role": "其他",
     "publishedDays": 50,
     "time": "1个月前发布",
     "title": "【招聘】北京国家中医药博物馆事业发展基金会 2026年招聘公告 · 北京国家中医药博物馆事业发展基金会",
@@ -1904,7 +2123,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67260.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.3
   },
   {
     "id": 10121,
@@ -1921,7 +2142,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67281.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10122,
@@ -1938,7 +2161,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67114.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10123,
@@ -1955,13 +2180,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67132.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.45
   },
   {
     "id": 10124,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "技术开发",
     "publishedDays": 52,
     "time": "1个月前发布",
     "title": "【招聘】高级产品经理 · 北京阳光未来艺术教育基金会",
@@ -1972,13 +2199,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67131.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "技术开发",
+    "aiConfidence": 0.85
   },
   {
     "id": 10125,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "筹款",
     "publishedDays": 58,
     "time": "1个月前发布",
     "title": "【招聘】合作发展专员（运维） · 美丽中国支教",
@@ -1989,7 +2218,9 @@
     "due": "详见原帖",
     "sourceName": "美丽中国支教·成为员工",
     "url": "http://www.meilizhongguo.org/blog/3088424fc72",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.82
   },
   {
     "id": 10126,
@@ -2006,13 +2237,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67257.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.98
   },
   {
     "id": 10127,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 61,
     "time": "2个月前发布",
     "title": "【招聘】【招聘｜项目总监/高级顾问】深耕低碳转型 搭建供需双轨研究体系 · 北京绿色阳光环保公益基金会",
@@ -2023,7 +2256,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67256.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.86
   },
   {
     "id": 10128,
@@ -2040,7 +2275,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67248.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10129,
@@ -2057,7 +2294,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65545.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.35
   },
   {
     "id": 10130,
@@ -2074,7 +2313,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65886.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10131,
@@ -2091,7 +2332,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38255.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10132,
@@ -2108,7 +2351,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37831.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10133,
@@ -2125,13 +2370,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37830.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10134,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 71,
     "time": "2个月前发布",
     "title": "【招聘】生物多样性保护（国际）网络项目专员 · 天合公益基金会",
@@ -2142,13 +2389,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37829.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.85
   },
   {
     "id": 10135,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 71,
     "time": "2个月前发布",
     "title": "【招聘】生物多样性保护（国际）网络项目经理 · 天合公益基金会",
@@ -2159,13 +2408,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37828.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.85
   },
   {
     "id": 10136,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 71,
     "time": "2个月前发布",
     "title": "【招聘】滨海生态系统保护（国际）合作项目专员 · 天合公益基金会",
@@ -2176,13 +2427,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37713.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.85
   },
   {
     "id": 10137,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "国际项目",
     "publishedDays": 71,
     "time": "2个月前发布",
     "title": "【招聘】滨海生态系统保护（国际）合作项目经理 · 天合公益基金会",
@@ -2193,13 +2446,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37712.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "国际项目",
+    "aiConfidence": 0.88
   },
   {
     "id": 10138,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 74,
     "time": "2个月前发布",
     "title": "【招聘】急招丨公益项目「心盛计划」社群运营实习生 · 广东省日慈公益基金会",
@@ -2210,13 +2465,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67230.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10139,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 87,
     "time": "2个月前发布",
     "title": "【招聘】【基金会论坛】长青文献图书馆项目实习生 · 北京基业长青社会组织服务中心",
@@ -2227,13 +2484,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66200.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10140,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 87,
     "time": "2个月前发布",
     "title": "【招聘】【基金会论坛】能力建设实习生 · 北京基业长青社会组织服务中心",
@@ -2244,7 +2503,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66199.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10141,
@@ -2261,7 +2522,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66198.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.88
   },
   {
     "id": 10142,
@@ -2278,7 +2541,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66197.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.88
   },
   {
     "id": 10143,
@@ -2295,7 +2560,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67045.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "研究",
+    "aiConfidence": 0.95
   },
   {
     "id": 10144,
@@ -2312,13 +2579,15 @@
     "due": "详见原帖",
     "sourceName": "美丽中国支教·成为员工",
     "url": "http://www.meilizhongguo.org/blog/a05a7b60a61",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.88
   },
   {
     "id": 10145,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "人力资源",
+    "role": "志愿者管理",
     "publishedDays": 121,
     "time": "4个月前发布",
     "title": "【招聘】黑龙江省环境保护志愿者联合会长期招聘！ · 黑龙江省环境保护志愿者联合会",
@@ -2329,13 +2598,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67149.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "志愿者管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10146,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "其他",
     "publishedDays": 129,
     "time": "4个月前发布",
     "title": "【招聘】南昌青赣环境交流中心人才招聘公告 · 南昌青赣环境交流中心",
@@ -2346,13 +2617,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67140.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.3
   },
   {
     "id": 10147,
     "category": "人员招聘",
     "kind": "兼职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 130,
     "time": "4个月前发布",
     "title": "【招聘】郎朗艺术基金会 兼职项目成员（有机会转正） · 北京郎朗艺术基金会",
@@ -2363,13 +2636,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67136.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10148,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 138,
     "time": "4个月前发布",
     "title": "【招聘】项目运营专员（贵阳） · 上海春禾青少年发展中心",
@@ -2380,7 +2655,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67024.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10149,
@@ -2397,13 +2674,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66644.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10150,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 138,
     "time": "4个月前发布",
     "title": "【招聘】ETS大会运营专员（上海） · 上海春禾青少年发展中心",
@@ -2414,13 +2693,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66153.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10151,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "高级管理",
+    "role": "项目官员",
     "publishedDays": 150,
     "time": "5个月前发布",
     "title": "【招聘】Wetland Senior Program Manager · 保护国际基金会（美国）北京代表处",
@@ -2431,13 +2712,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67098.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10152,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "高级管理",
+    "role": "项目官员",
     "publishedDays": 150,
     "time": "5个月前发布",
     "title": "【招聘】Forestry Project Manager, CI China · 保护国际基金会（美国）北京代表处",
@@ -2448,7 +2731,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67097.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10153,
@@ -2465,7 +2750,9 @@
     "due": "详见原帖",
     "sourceName": "美丽中国支教·成为员工",
     "url": "http://www.meilizhongguo.org/blog/1a6d12f7710",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10154,
@@ -2482,7 +2769,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/39934.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.3
   },
   {
     "id": 10155,
@@ -2499,13 +2788,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/34055.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10156,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "筹款",
     "publishedDays": 162,
     "time": "5个月前发布",
     "title": "【招聘】广州公益慈善书院招聘筹款实习生 · 广州公益慈善书院",
@@ -2516,13 +2807,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66801.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10157,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "法务",
     "publishedDays": 177,
     "time": "5个月前发布",
     "title": "【招聘】北京源众招聘律师助理 · 北京市东城区源众家庭与社区发展服务中心",
@@ -2533,7 +2826,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66642.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "法务",
+    "aiConfidence": 0.88
   },
   {
     "id": 10158,
@@ -2550,7 +2845,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67028.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.92
   },
   {
     "id": 10159,
@@ -2567,13 +2864,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/29823.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10160,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 180,
     "time": "6个月前发布",
     "title": "【招聘】教培项目执行专员（贵阳） · 上海春禾青少年发展中心",
@@ -2584,7 +2883,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66150.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.92
   },
   {
     "id": 10161,
@@ -2601,13 +2902,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66808.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10162,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "社工",
     "publishedDays": 186,
     "time": "6个月前发布",
     "title": "【招聘】扎根基层服务｜和合社会工作发展中心 实习生招聘 · 北京市延庆区和合社会工作发展中心",
@@ -2618,13 +2921,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66942.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.82
   },
   {
     "id": 10163,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "项目执行",
+    "role": "志愿者管理",
     "publishedDays": 190,
     "time": "6个月前发布",
     "title": "【志愿者】基金会救灾协调会志愿者招募 · 成都合众公益发展中心",
@@ -2635,13 +2940,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/67001.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "志愿者管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10164,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 190,
     "time": "6个月前发布",
     "title": "【招聘】杭州星觉醒招聘机构副秘书长 · 杭州市上城区星觉醒社会工作服务中心",
@@ -2652,13 +2959,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66988.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.93
   },
   {
     "id": 10165,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "人力资源",
+    "role": "项目执行",
     "publishedDays": 190,
     "time": "6个月前发布",
     "title": "【招聘】杭州星觉醒招聘项目实习生 · 杭州市上城区星觉醒社会工作服务中心",
@@ -2669,7 +2978,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66590.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.72
   },
   {
     "id": 10166,
@@ -2686,13 +2997,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66928.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.72
   },
   {
     "id": 10167,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 215,
     "time": "7个月前发布",
     "title": "【招聘】加入行动派｜春天，和共益一起发芽 · 上海共益数据科技发展基金会",
@@ -2703,7 +3016,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66923.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.3
   },
   {
     "id": 10168,
@@ -2720,13 +3035,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66912.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.72
   },
   {
     "id": 10169,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "其他",
+    "role": "社工",
     "publishedDays": 221,
     "time": "7个月前发布",
     "title": "【招聘】实习生—社会工作专业 · 北京市东城区麦当劳叔叔之家患儿家庭援助中心",
@@ -2737,7 +3054,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66911.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.82
   },
   {
     "id": 10170,
@@ -2754,13 +3073,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66906.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.6
   },
   {
     "id": 10171,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 222,
     "time": "7个月前发布",
     "title": "【招聘】【基金会中心网】基金会中心网实习生 · 北京基业长青社会组织服务中心",
@@ -2771,7 +3092,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66811.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10172,
@@ -2788,7 +3111,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66875.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10173,
@@ -2805,7 +3130,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66862.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10174,
@@ -2822,7 +3149,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66861.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.85
   },
   {
     "id": 10175,
@@ -2839,13 +3168,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66904.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10176,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 233,
     "time": "7个月前发布",
     "title": "【招聘】《残障包容性灾害应对与气候适应试点项目》招聘项目主管 · 广西残疾人福利基金会",
@@ -2856,13 +3187,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66758.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.92
   },
   {
     "id": 10177,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "传播",
+    "role": "筹款",
     "publishedDays": 241,
     "time": "8个月前发布",
     "title": "【招聘】品牌筹资专员 · 福建省同心慈善基金会",
@@ -2873,7 +3206,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/36989.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.82
   },
   {
     "id": 10178,
@@ -2890,13 +3225,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/36251.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.92
   },
   {
     "id": 10179,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "筹款",
     "publishedDays": 259,
     "time": "8个月前发布",
     "title": "【招聘】合作发展主管（众筹） · 美丽中国支教",
@@ -2907,7 +3244,9 @@
     "due": "详见原帖",
     "sourceName": "美丽中国支教·成为员工",
     "url": "http://www.meilizhongguo.org/blog/60dcf86aa93",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10180,
@@ -2924,13 +3263,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66719.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10181,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 355,
     "time": "11个月前发布",
     "title": "【招聘】磐石招聘碳中和项目主任 · 北京市顺义区磐石绿色创新发展研究院",
@@ -2941,13 +3282,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66679.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10182,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 355,
     "time": "11个月前发布",
     "title": "【招聘】磐石招聘执行总裁 · 北京市顺义区磐石绿色创新发展研究院",
@@ -2958,13 +3301,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66369.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.95
   },
   {
     "id": 10183,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 380,
     "time": "12个月前发布",
     "title": "【招聘】北京源众招聘项目官员 · 北京市东城区源众家庭与社区发展服务中心",
@@ -2975,7 +3320,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37040.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.95
   },
   {
     "id": 10184,
@@ -2992,7 +3339,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/31201.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.72
   },
   {
     "id": 10185,
@@ -3009,7 +3358,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66506.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10186,
@@ -3026,7 +3377,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66457.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.88
   },
   {
     "id": 10187,
@@ -3043,13 +3396,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66456.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.88
   },
   {
     "id": 10188,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "高级管理",
     "publishedDays": 550,
     "time": "18个月前发布",
     "title": "【招聘】北京慈福公益基金会招聘副秘书长 · 北京慈福公益基金会",
@@ -3060,13 +3415,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66318.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.95
   },
   {
     "id": 10189,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 550,
     "time": "18个月前发布",
     "title": "【招聘】北京慈福公益基金会招聘公益项目专员 · 北京慈福公益基金会",
@@ -3077,7 +3434,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65934.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10190,
@@ -3094,13 +3453,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65935.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.92
   },
   {
     "id": 10191,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "其他",
     "publishedDays": 586,
     "time": "19个月前发布",
     "title": "【招聘】iD3梦想飞招聘策划---坐标杭州 · iD3梦想飞",
@@ -3111,13 +3472,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66173.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.35
   },
   {
     "id": 10192,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 586,
     "time": "19个月前发布",
     "title": "【招聘】iD3梦想飞招聘公益项目专员 · iD3梦想飞",
@@ -3128,7 +3491,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/66172.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.88
   },
   {
     "id": 10193,
@@ -3145,7 +3510,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/65946.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.98
   },
   {
     "id": 10194,
@@ -3162,13 +3529,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/39654.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "筹款",
+    "aiConfidence": 0.95
   },
   {
     "id": 10195,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "项目官员",
     "publishedDays": 1185,
     "time": "39个月前发布",
     "title": "【招聘】招聘3名公益项目专员 · 北京爱尔公益基金会",
@@ -3179,13 +3548,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/34247.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10196,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 1283,
     "time": "42个月前发布",
     "title": "【招聘】童伴艺术行动兼职（实习生）招募 · 广州市番禺区童伴公益服务中心",
@@ -3196,7 +3567,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/37334.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10197,
@@ -3213,7 +3586,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/38425.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.95
   },
   {
     "id": 10198,
@@ -3230,7 +3605,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/9645.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10199,
@@ -3247,7 +3624,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/32229.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.98
   },
   {
     "id": 10200,
@@ -3264,7 +3643,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/32246.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.92
   },
   {
     "id": 10201,
@@ -3281,13 +3662,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/32270.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "传播",
+    "aiConfidence": 0.82
   },
   {
     "id": 10202,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "高级管理",
     "publishedDays": 2356,
     "time": "78个月前发布",
     "title": "【招聘】扶贫部副部长 · 大连庄河市清水慈善中心",
@@ -3298,7 +3681,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/32271.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.72
   },
   {
     "id": 10203,
@@ -3315,7 +3700,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/31156.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.35
   },
   {
     "id": 10204,
@@ -3332,7 +3719,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/31153.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.35
   },
   {
     "id": 10205,
@@ -3349,13 +3738,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/30475.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10206,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "其他",
     "publishedDays": 2651,
     "time": "88个月前发布",
     "title": "【招聘】【实习生招募】 · 北京惠泽人公益发展中心",
@@ -3366,7 +3757,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/20358.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10207,
@@ -3383,13 +3776,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/14672.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10208,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "高级管理",
     "publishedDays": 3712,
     "time": "123个月前发布",
     "title": "【招聘】高层管理 · 杭州市上城区新阳光社会工作服务中心",
@@ -3400,7 +3795,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/13075.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "高级管理",
+    "aiConfidence": 0.95
   },
   {
     "id": 10209,
@@ -3417,13 +3814,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/15312.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10210,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "人力资源",
+    "role": "其他",
     "publishedDays": 4172,
     "time": "139个月前发布",
     "title": "【招聘】北京市朝阳区玉华残障人士康养服务中心招聘公告 · 北京市朝阳区玉华残障人士康养服务中心",
@@ -3434,7 +3833,9 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/4365.html",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.4
   },
   {
     "id": 10211,
@@ -3451,13 +3852,15 @@
     "due": "详见原帖",
     "sourceName": "中国发展简报·NGO招聘",
     "url": "https://www.chinadevelopmentbrief.org.cn/jobs/detail/2558.html",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10212,
     "category": "志愿者招募",
     "kind": "志愿者",
-    "role": "社工",
+    "role": "其他",
     "publishedDays": 36500,
     "time": "发布时间未知",
     "title": "【招聘】工勤服务辅助性岗位 · 中国共产党宣威市委员会社会工作部",
@@ -3468,7 +3871,9 @@
     "due": "详见原帖",
     "sourceName": "中国公共招聘网",
     "url": "http://job.mohrss.gov.cn/cjobs/jobinfolist/cb21/showgw?id=81606685",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10213,
@@ -3485,7 +3890,9 @@
     "due": "详见原帖",
     "sourceName": "中国公共招聘网",
     "url": "http://job.mohrss.gov.cn/cjobs/jobinfolist/cb21/showgw?id=80966024",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10214,
@@ -3502,7 +3909,9 @@
     "due": "详见原帖",
     "sourceName": "中国公共招聘网",
     "url": "http://job.mohrss.gov.cn/cjobs/jobinfolist/cb21/showgw?id=80828551",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.98
   },
   {
     "id": 10215,
@@ -3519,14 +3928,15 @@
     "due": "详见原帖",
     "sourceName": "中国公共招聘网",
     "url": "http://job.mohrss.gov.cn/cjobs/jobinfolist/cb21/showgw?id=81628119",
-    "status": "PENDING",
-    "aiSuggestedCategory": "社工"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "社工",
+    "aiConfidence": 0.95
   },
   {
     "id": 10216,
     "category": "人员招聘",
     "kind": "全职",
-    "role": "其他",
+    "role": "财务",
     "publishedDays": 36500,
     "time": "发布时间未知",
     "title": "【招聘】内审部内审岗（外派） · 壹基金",
@@ -3537,7 +3947,9 @@
     "due": "详见原帖",
     "sourceName": "壹基金·工作机会",
     "url": "https://onefoundation.cn/jobs/6aab5da56509d2d6de/",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "财务",
+    "aiConfidence": 0.88
   },
   {
     "id": 10217,
@@ -3554,7 +3966,9 @@
     "due": "详见原帖",
     "sourceName": "壹基金·工作机会",
     "url": "https://onefoundation.cn/jobs/694a4d2f6551ece200/",
-    "status": "PUBLISHED"
+    "status": "PENDING_REVIEW",
+    "aiSuggestedCategory": "其他",
+    "aiConfidence": 0.42
   },
   {
     "id": 10218,
@@ -3571,13 +3985,15 @@
     "due": "详见原帖",
     "sourceName": "壹基金·工作机会",
     "url": "https://onefoundation.cn/jobs/6ac99fbe3160834567/",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目官员",
+    "aiConfidence": 0.85
   },
   {
     "id": 10219,
     "category": "人员招聘",
     "kind": "实习",
-    "role": "项目官员",
+    "role": "项目执行",
     "publishedDays": 36500,
     "time": "发布时间未知",
     "title": "【招聘】温暖包小组-项目管理实习生 · 壹基金",
@@ -3588,7 +4004,8 @@
     "due": "详见原帖",
     "sourceName": "壹基金·工作机会",
     "url": "https://onefoundation.cn/jobs/6ad741ba90aab39d56/",
-    "status": "PENDING",
-    "aiSuggestedCategory": "项目官员"
+    "status": "PUBLISHED",
+    "aiSuggestedCategory": "项目执行",
+    "aiConfidence": 0.82
   }
 ]

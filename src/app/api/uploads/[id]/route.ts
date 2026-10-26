@@ -17,5 +17,27 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     || session?.user?.role === "ADMIN";
   if (!canRead) return new NextResponse("Forbidden", { status: 403 });
 
+  // 临时内联图片：直接从数据库解码返回，不依赖对象存储。
+  if (attachment.dataUrl) {
+    const match = /^data:([^;]+);base64,([\s\S]+)$/.exec(attachment.dataUrl);
+    if (!match) return new NextResponse("Invalid inline image", { status: 404 });
+    const mimeType = match[1];
+    const bytes = Buffer.from(match[2], "base64");
+    if (!mimeType.startsWith("image/") || bytes.length === 0) {
+      return new NextResponse("Invalid inline image", { status: 404 });
+    }
+    const isPublished = attachment.content?.status === "PUBLISHED";
+    return new NextResponse(new Uint8Array(bytes), {
+      headers: {
+        "Content-Type": mimeType,
+        "Content-Length": String(bytes.length),
+        "Content-Disposition": "inline",
+        "Cache-Control": isPublished
+          ? "public, max-age=31536000, immutable"
+          : "private, max-age=0, must-revalidate",
+      },
+    });
+  }
+
   return NextResponse.redirect(await createDownloadUrl(attachment.objectKey));
 }

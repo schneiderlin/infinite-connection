@@ -9,6 +9,7 @@ export type UpdateItem = {
   kind: "最新动态" | "项目主页" | "志愿活动" | "行业活动";
   posterType: "机构" | "个人";
   field: string;
+  fields?: string[]; // 加上这个
   region: string;
   rating: number;
   publishedHours: number;
@@ -20,11 +21,14 @@ export type UpdateItem = {
   hashtags: string[];
   location: string;
   period: string;
-  media?: UpdateMedia;
+  images?: { id: string; fileName: string }[]; // 加上这个
+  media?: { icon: string; tone: string; caption: string };
   shares: number;
   comments: number;
   likes: number;
   helps: number;
+  isLiked?: boolean; // 加上这个
+  isHelped?: boolean; // 加上这个
 };
 
 export type FundingItem = {

@@ -33,7 +33,7 @@ import { publicJobSources } from "./job-sources/public-jobs.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(ROOT, "src/lib/jobs-scraped.json");
-const REVIEW_STATUSES = new Set(["PENDING", "PUBLISHED", "REJECTED"]);
+const REVIEW_STATUSES = new Set(["PENDING", "PENDING_REVIEW", "PUBLISHED", "REJECTED"]);
 const UA = "InfiniteConnectionPreview/0.1 (+https://github.com/schneiderlin/infinite-connection)";
 const CDB_PAGE_SIZE = 500;
 const PER_SOURCE = 20;
@@ -295,8 +295,13 @@ const normalized = unique
       ...(previous?.aiSuggestedCategory
         ? { aiSuggestedCategory: previous.aiSuggestedCategory }
         : {}),
-      // 已发布岗位的类别是人工审核过的，抓取规则不能覆盖它。
-      ...(status === "PUBLISHED" && previous?.role ? { role: previous.role } : {}),
+      ...(typeof previous?.aiConfidence === "number"
+        ? { aiConfidence: previous.aiConfidence }
+        : {}),
+      // 已发布 / AI 待复核岗位的类别是审核结果，抓取规则不能覆盖它。
+      ...(["PUBLISHED", "PENDING_REVIEW"].includes(status) && previous?.role
+        ? { role: previous.role }
+        : {}),
       status,
     };
   });

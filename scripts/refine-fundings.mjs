@@ -15,7 +15,8 @@ const ECO_TITLE_REGEX = /生态|环保|绿化|低碳/;
 const COMMUNITY_TITLE_REGEX = /社区|营造|邻里|居民/;
 
 // status 只表示人工审核状态；旧快照的“开放中 / 已截止”要迁移到 openStatus。
-const REVIEW_STATUSES = new Set(["PENDING", "PUBLISHED", "REJECTED"]);
+// PENDING_REVIEW 是 AI 低置信度分类的结果，等待人工复核，不能被清洗规则覆盖。
+const REVIEW_STATUSES = new Set(["PENDING", "PENDING_REVIEW", "PUBLISHED", "REJECTED"]);
 
 async function main() {
   console.log("🚀 开始清洗资助模块数据...\n");
@@ -24,7 +25,14 @@ async function main() {
 
   // 1. 先按黑/白名单过滤（只过滤新的待审记录；已发布/已拒绝/历史记录不因关键词规则被删除）
   fundings = fundings.filter((item) => {
-    if (item.status === "PUBLISHED" || item.status === "REJECTED" || !item.status) return true;
+    if (
+      item.status === "PUBLISHED" ||
+      item.status === "PENDING_REVIEW" ||
+      item.status === "REJECTED" ||
+      !item.status
+    ) {
+      return true;
+    }
     const text = `${item.title} ${item.summary} ${item.org}`;
     if (BLACKLIST_REGEX.test(text)) return false; // 有黑名单，直接丢弃
     if (!WHITELIST_REGEX.test(text) && !item.title.includes("资助")) return false; // 没有白名单，大概率是垃圾新闻
@@ -42,7 +50,8 @@ async function main() {
 
     const isReviewed = legacyStatus === "PUBLISHED";
     const isLegacyPublished = !legacyStatus;
-    const preserveField = isReviewed || isLegacyPublished;
+    const isAwaitingAiReview = legacyStatus === "PENDING_REVIEW";
+    const preserveField = isReviewed || isLegacyPublished || isAwaitingAiReview;
     item.status = REVIEW_STATUSES.has(legacyStatus) ? legacyStatus : "PUBLISHED";
 
     const text = `${item.title} ${item.summary} ${item.org}`;

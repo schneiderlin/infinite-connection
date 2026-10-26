@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { logout } from "@/lib/actions/auth";
 
-export function UserMenu({ name }: { name: string }) {
+export function UserMenu({
+  name,
+  isAdmin = false,
+}: {
+  name: string;
+  isAdmin?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const initial = (name || "?").trim().charAt(0).toUpperCase();
@@ -42,6 +48,11 @@ export function UserMenu({ name }: { name: string }) {
           <Link href="/account/content" className="user-menu-item" role="menuitem">
             内容管理
           </Link>
+          {isAdmin && (
+            <Link href="/admin" className="user-menu-item" role="menuitem">
+              后台管理
+            </Link>
+          )}
           <form action={logout}>
             <button type="submit" className="user-menu-item" role="menuitem">
               退出登录

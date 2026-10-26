@@ -1,14 +1,10 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { UpdateItem } from "@/lib/platform-types";
-import {
-  FilterRow,
-  SearchInput,
-  EmptyState,
-  formatCount,
-} from "./platform-ui";
-
+import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
+import { ContentActions } from "./ContentActions";
 
 const sorts = [
   { key: "new", label: "最新发布" },
@@ -33,7 +29,15 @@ function avatarTone(org: string): string {
   return avatarTones[h % avatarTones.length];
 }
 
-export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
+export function UpdatesBrowser({
+  items,
+  fieldOptions: baseFieldOptions = [],
+  regionOptions: baseRegionOptions = [],
+}: {
+  items: UpdateItem[];
+  fieldOptions?: string[];
+  regionOptions?: string[];
+}) {
   const platformStats = [
     { label: "累计动态", value: String(items.length), tone: "orange" },
     { label: "活跃机构", value: String(new Set(items.map((item) => item.org)).size), tone: "blue" },
@@ -42,14 +46,14 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
   const hotProjects = [...items]
     .sort(
       (a, b) =>
-        b.likes + b.comments + b.shares + b.helps -
-        (a.likes + a.comments + a.shares + a.helps),
+        (b.likes || 0) + (b.comments || 0) + (b.shares || 0) + (b.helps || 0) -
+        ((a.likes || 0) + (a.comments || 0) + (a.shares || 0) + (a.helps || 0)),
     )
     .slice(0, 5)
     .map((item, index) => ({
       rank: index + 1,
       title: item.title,
-      meta: `互动 ${item.likes + item.comments + item.shares + item.helps} · ${item.org}`,
+      meta: `互动 ${(item.likes || 0) + (item.comments || 0) + (item.shares || 0) + (item.helps || 0)} · ${item.org}`,
     }));
 
   const [field, setField] = useState("全部");
@@ -57,51 +61,47 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("new");
   const [poster, setPoster] = useState<"全部" | "机构" | "个人">("全部");
-  const [liked, setLiked] = useState<Set<string>>(new Set());
-  const [helped, setHelped] = useState<Set<string>>(new Set());
-  const [shared, setShared] = useState<Set<string>>(new Set());
 
-  const fieldOptions = useMemo(
-    () => ["全部", ...Array.from(new Set(items.map((item) => item.field).filter(Boolean)))],
-    [items],
-  );
-  const regionOptions = useMemo(
-    () => ["全部", ...Array.from(new Set(items.map((item) => item.region).filter(Boolean)))],
-    [items],
-  );
+  // 动态生成筛选词
+  const fieldOptions = useMemo(() => {
+    const set = new Set<string>(["全部"]);
+    items.forEach(item => {
+      if (item.fields && item.fields.length > 0) item.fields.forEach(f => set.add(f));
+      else if (item.field) set.add(item.field);
+    });
+    return Array.from(set);
+  }, [items]);
+
+  const regionOptions = useMemo(() => {
+    const set = new Set<string>(["全部"]);
+    items.forEach(item => { if (item.region) set.add(item.region); });
+    return Array.from(set);
+  }, [items]);
 
   const filtered = useMemo(() => {
     const q = search.trim();
     let list = items.filter(
       (u) =>
-        (field === "全部" || u.field === field) &&
+        (field === "全部" || (u.fields?.length ? u.fields.includes(field) : u.field === field)) &&
         (region === "全部" || u.region === region) &&
         (poster === "全部" || u.posterType === poster) &&
         (!q ||
           u.title.includes(q) ||
           u.org.includes(q) ||
           u.content.includes(q) ||
-          u.hashtags.some((h) => h.includes(q))),
+          (u.hashtags || []).some((h) => h.includes(q))),
     );
     if (sort === "new") {
-      // 数据库内容可能有较久之前发布的，这里只调整顺序，不做时间过滤，避免老内容被隐藏。
-      list = [...list].sort((a, b) => a.publishedHours - b.publishedHours);
-      return list;
+      return [...list].sort((a, b) => (a.publishedHours || 0) - (b.publishedHours || 0));
     }
     const by = {
-      rating: (a: UpdateItem, b: UpdateItem) => b.rating - a.rating,
+      rating: (a: UpdateItem, b: UpdateItem) => (b.rating || 0) - (a.rating || 0),
       hot: (a: UpdateItem, b: UpdateItem) =>
-        b.likes + b.comments + b.shares - (a.likes + a.comments + a.shares),
-    }[sort];
+        (b.likes || 0) + (b.comments || 0) + (b.shares || 0) + (b.helps || 0)
+        - ((a.likes || 0) + (a.comments || 0) + (a.shares || 0) + (a.helps || 0)),
+    }[sort as "rating" | "hot"];
     return [...list].sort(by);
   }, [items, field, region, search, sort, poster]);
-
-  const bump = (set: Set<string>, setSet: (s: Set<string>) => void, id: string) => {
-    const next = new Set(set);
-    if (next.has(id)) next.delete(id);
-    else next.add(id);
-    setSet(next);
-  };
 
   const resetFilters = () => {
     setField("全部");
@@ -161,7 +161,11 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
             {filtered.map((u) => (
               <article key={u.id} className="pc-card feed-card">
                 <div className="card-head">
-                  <span className={`tag ${fieldTagClass[u.field] ?? "tag-green"}`}>{u.field}</span>
+                  {(u.fields?.length ? u.fields.slice(0, 2) : [u.field]).map((fieldTag, index) => (
+                    <span key={`${fieldTag}-${index}`} className={`tag ${fieldTagClass[fieldTag] ?? "tag-green"}`}>
+                      {fieldTag}
+                    </span>
+                  ))}
                   {u.rating > 0 && <span className="tag tag-rating">⭐ {u.rating.toFixed(1)}</span>}
                   <span className="spacer" />
                   <span className="card-time">{u.time}更新</span>
@@ -185,22 +189,34 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
                 <h3 className="card-title">{u.title}</h3>
                 <p className="feed-content">
                   {u.content}
-                  {u.hashtags.map((h) => (
+                  {(u.hashtags || []).map((h) => (
                     <span key={h} className="hashtag">
-                      {" "}
-                      #{h}#
+                      {" "}#{h}#
                     </span>
                   ))}
                 </p>
 
-                {u.media && (
+                {u.images && u.images.length > 0 ? (
+                  <div className={`feed-images count-${Math.min(u.images.length, 3)}`}>
+                    {u.images.map((image) => (
+                      <Image
+                        key={image.id}
+                        src={`/api/uploads/${image.id}`}
+                        width={800}
+                        height={520}
+                        unoptimized
+                        alt={image.fileName}
+                      />
+                    ))}
+                  </div>
+                ) : u.media ? (
                   <div className={`feed-media cover-${u.media.tone}`}>
                     <span className="media-icon" aria-hidden="true">
                       {u.media.icon}
                     </span>
                     <span className="media-caption">{u.media.caption}</span>
                   </div>
-                )}
+                ) : null}
 
                 <div className="card-meta feed-meta-row">
                   <span className="item">📍 {u.location}</span>
@@ -210,32 +226,19 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
                   </Link>
                 </div>
 
-                <div className="feed-actions">
-                  <button
-                    type="button"
-                    className={`feed-action${shared.has(u.id) ? " active" : ""}`}
-                    onClick={() => bump(shared, setShared, u.id)}
-                  >
-                    ↗ 分享 {formatCount(u.shares + (shared.has(u.id) ? 1 : 0))}
-                  </button>
-                  <button type="button" className="feed-action">
-                    💬 评论 {formatCount(u.comments)}
-                  </button>
-                  <button
-                    type="button"
-                    className={`feed-action${liked.has(u.id) ? " active" : ""}`}
-                    onClick={() => bump(liked, setLiked, u.id)}
-                  >
-                    👍 点赞 {formatCount(u.likes + (liked.has(u.id) ? 1 : 0))}
-                  </button>
-                  <button
-                    type="button"
-                    className={`feed-action help${helped.has(u.id) ? " active" : ""}`}
-                    onClick={() => bump(helped, setHelped, u.id)}
-                  >
-                    🤝 搭把手 {formatCount(u.helps + (helped.has(u.id) ? 1 : 0))}
-                  </button>
-                </div>
+                <ContentActions
+                  key={`${u.id}:${u.likes}:${u.isLiked}:${u.helps}:${u.isHelped}`}
+                  contentId={u.id}
+                  title={u.title}
+                  text={u.content}
+                  href={`/updates/${u.id}`}
+                  likesCount={u.likes || 0}
+                  commentsCount={u.comments || 0}
+                  shares={u.shares || 0}
+                  helpsCount={u.helps || 0}
+                  isLiked={u.isLiked || false}
+                  isHelped={u.isHelped || false}
+                />
               </article>
             ))}
           </div>
@@ -276,7 +279,6 @@ export function UpdatesBrowser({ items }: { items: UpdateItem[] }) {
           </div>
         )}
       </aside>
-
     </div>
   );
 }

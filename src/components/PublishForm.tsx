@@ -1,12 +1,12 @@
 "use client";
 
 import { startTransition, useActionState, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { saveContent, type ContentFormState } from "@/lib/actions/content";
 import {
-  publicInterestFields,
   moduleHref,
+  publicInterestFields,
   type PublishModuleConfig,
   type PublishModuleSlug,
 } from "@/lib/publishing";
@@ -23,7 +23,6 @@ type InitialContent = {
   id: string;
   subtype: string;
   title: string;
-  summary: string;
   body: string;
   fields: string[];
   tags: string[];
@@ -35,6 +34,86 @@ type InitialContent = {
 
 const initialState: ContentFormState = {};
 const MAX_IMAGES = 6;
+const INLINE_UPLOAD_MAX_BYTES = 3 * 1024 * 1024;
+
+type InlineImage = {
+  dataUrl: string;
+  mimeType: "image/jpeg" | "image/webp";
+  size: number;
+};
+
+function loadImageElement(file: File) {
+  return new Promise<HTMLImageElement>((resolve, reject) => {
+    const objectUrl = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      URL.revokeObjectURL(objectUrl);
+      resolve(image);
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(objectUrl);
+      reject(new Error("无法读取图片，请换一张试试"));
+    };
+    image.src = objectUrl;
+  });
+}
+
+/**
+ * 对象存储未配置时的兜底：缩放到最长边 1600px，必要时降低质量，
+ * 控制单张图片在 3MB 以内，再以 data URL 交给 /api/uploads/inline。
+ */
+async function compressImageForInlineUpload(file: File): Promise<InlineImage> {
+  const image = await loadImageElement(file);
+  const longestSide = Math.max(image.naturalWidth, image.naturalHeight);
+  const scale = longestSide > 1600 ? 1600 / longestSide : 1;
+  const width = Math.max(1, Math.round(image.naturalWidth * scale));
+  const height = Math.max(1, Math.round(image.naturalHeight * scale));
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const context = canvas.getContext("2d");
+  if (!context) throw new Error("当前浏览器无法压缩图片，请换一张试试");
+
+  const supportsWebp = canvas.toDataURL("image/webp").startsWith("data:image/webp");
+  const mimeType: InlineImage["mimeType"] = supportsWebp ? "image/webp" : "image/jpeg";
+  // 不支持 WebP 时会转成 JPEG，透明背景需要先铺白，避免变黑。
+  if (!supportsWebp) {
+    context.fillStyle = "#fff";
+    context.fillRect(0, 0, width, height);
+  }
+  context.drawImage(image, 0, 0, width, height);
+
+  let dataUrl = canvas.toDataURL(mimeType, 0.82);
+  for (const quality of [0.7, 0.6, 0.5]) {
+    const base64 = dataUrl.slice(dataUrl.indexOf(",") + 1);
+    if (Math.floor((base64.length * 3) / 4) <= INLINE_UPLOAD_MAX_BYTES) break;
+    dataUrl = canvas.toDataURL(mimeType, quality);
+  }
+
+  const base64 = dataUrl.slice(dataUrl.indexOf(",") + 1);
+  const size = Math.floor((base64.length * 3) / 4);
+  if (size > INLINE_UPLOAD_MAX_BYTES) {
+    throw new Error("图片压缩后仍超过3MB，请换一张更小的图片");
+  }
+  return { dataUrl, mimeType, size };
+}
+
+async function uploadInlineImage(file: File) {
+  const image = await compressImageForInlineUpload(file);
+  const response = await fetch("/api/uploads/inline", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      fileName: file.name,
+      mimeType: image.mimeType,
+      size: image.size,
+      dataUrl: image.dataUrl,
+    }),
+  });
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(result.error ?? "图片上传失败，请重试");
+  return String(result.attachmentId);
+}
 
 function TextField({
   name,
@@ -74,15 +153,18 @@ export function PublishForm({
   defaultContact: { phone: string; wechat: string };
   initial?: InitialContent;
 }) {
+  const router = useRouter();
   const [contentId, setContentId] = useState(initial?.id ?? "");
   const [state, formAction, pending] = useActionState(async (previous: ContentFormState, formData: FormData) => {
     const result = await saveContent(previous, formData);
     if (result.contentId) setContentId(result.contentId);
+    // 提交审核成功后直接回到对应模块列表，不再停留在发布表单。
+    if (result.success && formData.get("intent") === "submit") {
+      router.push(moduleHref[config.module]);
+    }
     return result;
   }, initialState);
   const formRef = useRef<HTMLFormElement>(null);
-  const router = useRouter();
-  const submittedIntent = useRef<"submit" | "draft">("submit");
   const actionWasPending = useRef(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSavingDraft, setIsSavingDraft] = useState(false);
@@ -118,13 +200,6 @@ export function PublishForm({
     setIsSavingDraft(false);
   }, [pending]);
 
-  useEffect(() => {
-    if (state.success && submittedIntent.current === "submit") {
-      router.push(moduleHref[config.module]);
-      router.refresh();
-    }
-  }, [state, router, config.module]);
-
   const showPreview = () => {
     if (!formRef.current) return;
     const values = Object.fromEntries(new FormData(formRef.current).entries());
@@ -155,7 +230,6 @@ export function PublishForm({
         return;
       }
     }
-    submittedIntent.current = intent;
     setIsSavingDraft(intent === "draft");
     setIsSubmitting(intent === "submit");
     startTransition(() => formAction(formData));
@@ -180,8 +254,17 @@ export function PublishForm({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ fileName: file.name, mimeType: file.type, size: file.size }),
         });
-        const signed = await signResponse.json();
-        if (!signResponse.ok) throw new Error(signed.error ?? "无法上传图片");
+        const signed = await signResponse.json().catch(() => ({}));
+
+        if (!signResponse.ok) {
+          if (signed.code === "STORAGE_NOT_CONFIGURED" || String(signed.error ?? "").includes("对象存储尚未配置")) {
+            const attachmentId = await uploadInlineImage(file);
+            setAttachments((items) => [...items, { id: attachmentId, fileName: file.name }]);
+            continue;
+          }
+          throw new Error(signed.error ?? "无法上传图片");
+        }
+
         const uploadResponse = await fetch(signed.uploadUrl, {
           method: "PUT",
           headers: { "Content-Type": file.type },
@@ -214,6 +297,12 @@ export function PublishForm({
         {(state.error || state.message) && (
           <p className={state.error ? "publish-message error" : "publish-message success"}>
             {state.error ?? state.message}
+            {state.success && state.message?.includes("审核") && (
+              <>
+                {" "}
+                <Link href="/account/content?status=PENDING_REVIEW">查看审核状态</Link>
+              </>
+            )}
           </p>
         )}
 
@@ -249,7 +338,6 @@ export function PublishForm({
         )}
 
         <TextField name="title" label="标题" required defaultValue={initial?.title} placeholder={`请输入${config.label}标题`} />
-        <TextField name="summary" label="简介" defaultValue={initial?.summary} placeholder="120字以内，用一句话说明重点" />
 
         <label className="publish-field">
           <span>{config.bodyLabel}<em>*</em></span>
@@ -259,7 +347,18 @@ export function PublishForm({
         <div className="publish-field">
           <span>图片{attachments.length > 0 && <small className="upload-count">（{attachments.length}/{MAX_IMAGES}）</small>}</span>
           <label className="upload-box">
-            <input type="file" accept="image/jpeg,image/png,image/webp" multiple disabled={uploading || attachments.length >= MAX_IMAGES} onChange={(event) => uploadFiles(event.target.files)} />
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              multiple
+              disabled={uploading || attachments.length >= MAX_IMAGES}
+              onChange={(event) => {
+                const input = event.currentTarget;
+                void uploadFiles(input.files).finally(() => {
+                  input.value = "";
+                });
+              }}
+            />
             <b>{uploading ? "上传中…" : "+ 添加图片"}</b>
             <small>JPG、PNG、WebP，单张不超过10MB，最多{MAX_IMAGES}张</small>
           </label>
@@ -437,7 +536,7 @@ export function PublishForm({
           <Link href="/account/content" className="btn-ghost">取消</Link>
           <button type="submit" name="intent" value="draft" className="btn-ghost" formNoValidate disabled={isSavingDraft || isSubmitting || uploading}>{isSavingDraft ? "保存中…" : "保存草稿"}</button>
           <button type="button" className="btn-ghost" onClick={showPreview}>预览</button>
-          <button type="submit" name="intent" value="submit" className="btn-primary" disabled={isSubmitting || isSavingDraft || uploading}>{isSubmitting ? "发布中…" : "发布"}</button>
+          <button type="submit" name="intent" value="submit" className="btn-primary" disabled={isSubmitting || isSavingDraft || uploading}>{isSubmitting ? "提交中…" : "提交审核"}</button>
         </div>
       </form>
 
@@ -447,7 +546,6 @@ export function PublishForm({
             <div className="modal-head"><h2>内容预览</h2><button type="button" className="modal-close" onClick={() => setPreview(null)}>✕</button></div>
             <span className="tag tag-green">{preview.subtype}</span>
             <h2>{preview.title || "未填写标题"}</h2>
-            {preview.summary && <p className="preview-summary">{preview.summary}</p>}
             <p className="preview-body">{preview.body || "未填写正文"}</p>
             <div className="card-meta">📍 {[preview.region, preview.city].filter(Boolean).join(" · ") || "全国"}</div>
           </article>
