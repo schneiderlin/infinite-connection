@@ -251,7 +251,11 @@ export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
                       ) : (
                         f.openStatus !== "开放中" && (
                           <span className="tag tag-yellow">
-                            {f.due === "长期有效" ? "长期有效" : "详见原帖"}
+                            {f.openStatus === "以原帖为准"
+                              ? "以原帖为准"
+                              : f.due === "长期有效"
+                                ? "长期有效"
+                                : "详见原帖"}
                           </span>
                         )
                       )}

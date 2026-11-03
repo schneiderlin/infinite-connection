@@ -42,7 +42,9 @@ function metadata(value: Prisma.JsonValue): Metadata {
 }
 
 function organization(content: PublishedContent): string {
-  return content.author.organization?.name ?? content.author.name ?? "平台官方";
+  // 爬虫入库的内容在 metadata 里带真实机构名；用户发布的内容取作者机构。
+  const data = metadata(content.metadata);
+  return data.org || content.author.organization?.name || content.author.name || "平台官方";
 }
 
 function summary(content: PublishedContent): string {
@@ -137,7 +139,7 @@ export class PrismaPlatformDataSource implements PlatformDataSource {
         amountWan: amountWan(amount),
         due,
         publishedDays: publishedDays(content),
-        openStatus: validDate(due) ? (due < today ? "已截止" : "开放中") : undefined,
+        openStatus: validDate(due) ? (due < today ? "已截止" : "开放中") : "以原帖为准",
         sourceName: data.sourceName || "平台发布",
         publishedDate: shanghaiDate.format(publishedDate(content)),
         url: data.applicationUrl || firstLink(data.relatedLinks || ""),

@@ -9,16 +9,18 @@
     "lint": "eslint",
     "storage:cors": "node scripts/configure-storage-cors.mjs",
     "scrape:jobs": "node --use-env-proxy scripts/scrape-jobs.mjs",
+    "scrape:fundings": "node --use-env-proxy --import tsx scripts/scrape-fundings.mts",
+    "scrape:news": "node --use-env-proxy --import tsx scripts/scrape-news.mts",
+    "scrape:tools": "node --use-env-proxy --import tsx scripts/scrape-tools.mts",
     "scrape:all": "node scripts/run-all.mjs",
-    "classify:ai": "node scripts/ai-classify.mjs",
-    "export:excel": "node scripts/export-to-excel.mjs",
-    "import:excel": "node scripts/import-from-excel.mjs",
-    "import:review": "node scripts/import-pending-review-to-content.mjs"
+    "baml:generate": "baml-cli generate",
+    "import:content": "node --import tsx scripts/import-to-content.mts"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.3",
     "@aws-sdk/client-s3": "^3.1152.0",
     "@aws-sdk/s3-request-presigner": "^3.1152.0",
+    "@boundaryml/baml": "^0.226.3",
     "@neon/config": "^1.9.1",
     "@neon/env": "^1.6.1",
     "@prisma/adapter-pg": "7.10.0",
@@ -45,6 +47,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
     "prisma": "7.10.0",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   },
   "packageManager": "pnpm@12.0.0"

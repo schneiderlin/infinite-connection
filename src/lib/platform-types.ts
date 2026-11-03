@@ -47,7 +47,7 @@ export type FundingItem = {
   amountWan: number;
   due: string;
   publishedDays: number;
-  openStatus?: "开放中" | "已截止";
+  openStatus?: "开放中" | "已截止" | "以原帖为准";
   sourceName?: string;
   publishedDate?: string;
   url?: string;

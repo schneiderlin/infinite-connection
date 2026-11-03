@@ -3,22 +3,16 @@
  * 一键全自动抓取总控脚本
  *
  * 执行顺序（任一步失败立即停止，不继续后续步骤）：
- *   1. scrape-fundings.mjs  抓取资助信息
+ *   1. scrape-fundings.mts  抓取资助信息（BAML + MiniMax 提取，需 MINIMAX_API_KEY）
  *   2. scrape-jobs.mjs      抓取招聘岗位
- *   3. scrape-tools.mjs     抓取能力工具
- *   4. refine-fundings.mjs  清洗资助信息
+ *   3. scrape-tools.mts     抓取能力工具（BAML + MiniMax 提取）
+ *   4. scrape-news.mts      抓取公益资讯（BAML + MiniMax 提取）
  *   5. refine-jobs.mjs      清洗招聘岗位
- *   6. refine-tools.mjs     清洗能力工具
- *   7. ai-classify.mjs      AI 辅助分类（DeepSeek，默认仅处理 PENDING 记录）
- *   8. export-to-excel.mjs  导出人工审核用 Excel
+ *   6. import-to-content.mts 快照统一入库（PUBLISHED，前端只读库）
  *
- * 三个抓取脚本沿用各自的运行约定，带 --use-env-proxy，
+ * 抓取脚本沿用各自的运行约定，带 --use-env-proxy，
  * 与 package.json 里单独执行 scrape:jobs 时的行为保持一致。
- *
- * AI 分类默认每个数据集抽样 5 条（控制成本）；如需扩大本次总样本，
- * 设置环境变量 AI_CLASSIFY_LIMIT（1-5000），例如：
- *   $env:AI_CLASSIFY_LIMIT=20; pnpm scrape:all
- * 高置信度分类会自动发布，低置信度会标记为 PENDING_REVIEW 等待人工审核。
+ * 资助/工具/资讯的正文提取与分类由抓取脚本内的 MiniMax 一步完成，不再单独跑 AI 分类。
  *
  * 用法：pnpm scrape:all（等价于 node scripts/run-all.mjs）
  */
@@ -30,27 +24,39 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 const STEPS = [
-  { label: "抓取资助信息", script: "scrape-fundings.mjs", useProxy: true },
-  { label: "抓取招聘岗位", script: "scrape-jobs.mjs", useProxy: true },
-  { label: "抓取能力工具", script: "scrape-tools.mjs", useProxy: true },
-  { label: "清洗资助信息", script: "refine-fundings.mjs" },
-  { label: "清洗招聘岗位", script: "refine-jobs.mjs" },
-  { label: "清洗能力工具", script: "refine-tools.mjs" },
+  // 资助抓取内置 MiniMax 提取（BAML），需要 .env 里的 MINIMAX_API_KEY。
   {
-    label: "AI 辅助分类",
-    script: "ai-classify.mjs",
-    // 未设置时沿用脚本默认的每个数据集 5 条抽样；显式设置时表示本次总条数。
-    args: process.env.AI_CLASSIFY_LIMIT
-      ? ["--limit", String(process.env.AI_CLASSIFY_LIMIT)]
-      : [],
+    label: "抓取资助信息",
+    script: "scrape-fundings.mts",
+    useProxy: true,
+    nodeArgs: ["--import", "tsx"],
   },
-  { label: "导出审核用 Excel", script: "export-to-excel.mjs" },
+  { label: "抓取招聘岗位", script: "scrape-jobs.mjs", useProxy: true },
+  {
+    label: "抓取能力工具",
+    script: "scrape-tools.mts",
+    useProxy: true,
+    nodeArgs: ["--import", "tsx"],
+  },
+  {
+    label: "抓取公益资讯",
+    script: "scrape-news.mts",
+    useProxy: true,
+    nodeArgs: ["--import", "tsx"],
+  },
+  { label: "清洗招聘岗位", script: "refine-jobs.mjs" },
+  {
+    label: "快照入库（Content 表）",
+    script: "import-to-content.mts",
+    nodeArgs: ["--import", "tsx"],
+  },
 ];
 
 function buildCommand(step) {
   const scriptPath = path.join(ROOT, "scripts", step.script);
   const parts = ["node"];
   if (step.useProxy) parts.push("--use-env-proxy");
+  for (const arg of step.nodeArgs ?? []) parts.push(arg);
   parts.push(`"${scriptPath}"`);
   for (const arg of step.args ?? []) parts.push(`"${arg}"`);
   return parts.join(" ");
