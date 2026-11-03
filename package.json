@@ -14,7 +14,8 @@
     "scrape:tools": "node --use-env-proxy --import tsx scripts/scrape-tools.mts",
     "scrape:all": "node scripts/run-all.mjs",
     "baml:generate": "baml-cli generate",
-    "import:content": "node --import tsx scripts/import-to-content.mts"
+    "import:content": "node --import tsx scripts/import-to-content.mts",
+    "quality-check": "node --import tsx scripts/quality-check.mts",
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.3",
