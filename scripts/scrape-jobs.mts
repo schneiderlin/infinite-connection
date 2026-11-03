@@ -394,6 +394,122 @@ async function scrapeReliefWeb(): Promise<Candidate[]> {
   return out;
 }
 
+/* ---------- 来源 7：民政部 · 社会组织人才服务和培训平台 ---------- */
+
+const MCA_BASE = "https://px.chinanpo.mca.gov.cn";
+const MCA_MAX = 150;
+
+// 该站 API 要求签名头：Web-Secret-Key = md5(md5("sshzPx" + yyyyMMdd))（逆向自其前端 bundle）。
+function mcaHeaders() {
+  const d = new Date();
+  const datestr = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
+  const secret = createHash("md5")
+    .update(createHash("md5").update(`sshzPx${datestr}`).digest("hex"))
+    .digest("hex");
+  return {
+    "Web-Secret-Key": secret,
+    "TOKEN-TYPE": "pc",
+    "Client-Type": "operator",
+    Referer: `${MCA_BASE}/`,
+  };
+}
+
+async function scrapeMca(): Promise<Candidate[]> {
+  const headers = mcaHeaders();
+  const today = todayISO();
+
+  // 省市代码表：省一次拿全，市按省懒加载缓存，把 yaoqiu 里的代码翻译成地名。
+  const provinceName = new Map<string, string>();
+  try {
+    const res = await request(`${MCA_BASE}/api/open/province/list`, { headers }, "民政部省份表");
+    const data = await res?.json().catch(() => null);
+    for (const row of data?.rows ?? []) provinceName.set(String(row.code), row.name);
+  } catch { /* 表拉取失败时退化为只用正文 */ }
+  const cityNameCache = new Map<string, Map<string, string>>();
+  const cityName = async (provinceCode: string, cityCode: string) => {
+    if (!cityNameCache.has(provinceCode)) {
+      const map = new Map<string, string>();
+      try {
+        const res = await request(
+          `${MCA_BASE}/api/open/city/list?provinceCode=${provinceCode}`,
+          { headers },
+          `民政部城市表 ${provinceCode}`,
+        );
+        const data = await res?.json().catch(() => null);
+        for (const row of data?.rows ?? []) map.set(String(row.code), row.name);
+      } catch { /* 忽略 */ }
+      cityNameCache.set(provinceCode, map);
+    }
+    return cityNameCache.get(provinceCode)?.get(cityCode) ?? "";
+  };
+  const placeOf = async (p: any) => {
+    const prov = provinceName.get(String(p.province ?? "")) ?? "";
+    if (!prov) return "";
+    const city = p.city ? await cityName(String(p.province), String(p.city)) : "";
+    const cityPart = city && !/直辖市|市辖区/.test(city) ? `·${city}` : "";
+    return `${prov}${cityPart}`;
+  };
+  const rows: any[] = [];
+  for (let pageNum = 1; pageNum <= 12 && rows.length < MCA_MAX; pageNum += 1) {
+    const url = `${MCA_BASE}/api/open/recruit/list?pageNum=${pageNum}&pageSize=50`;
+    const res = await request(url, { headers }, `民政部招聘 p${pageNum}`);
+    await sleep(GAP_MS);
+    if (!res) break;
+    const data = await res.json().catch(() => null);
+    const list = data?.rows ?? [];
+    if (!list.length) break;
+    for (const row of list) {
+      const eTime = String(row.eTime ?? "").slice(0, 10);
+      if (eTime && eTime < today) continue; // 已截止的不取
+      rows.push(row);
+      if (rows.length >= MCA_MAX) break;
+    }
+  }
+  console.log(`民政部平台：未截止候选 ${rows.length} 条`);
+
+  const accepted: Candidate[] = [];
+  for (const row of rows) {
+    const detail = await request(
+      `${MCA_BASE}/api/open/recruit/getInfoAndAddLookNum/${row.id}`,
+      { headers },
+      `民政部 ${row.id}`,
+    );
+    await sleep(GAP_MS);
+    if (!detail) continue;
+    const data = await detail.json().catch(() => null);
+    const info = data?.data;
+    if (!info) continue;
+
+    let positions = "";
+    try {
+      const list = JSON.parse(info.yaoqiu ?? "[]");
+      const parts = [];
+      for (const p of list) {
+        const place = await placeOf(p);
+        parts.push(
+          `岗位：${clean(p.gangwei)}（${p.zhaopin ?? "?"}人）${place ? `\n工作地点：${place}` : ""}\n${clean(p.yaoqiu)}`,
+        );
+      }
+      positions = parts.join("\n\n");
+    } catch { /* yaoqiu 解析失败时只用正文 */ }
+    const deadline = String(info.eTime ?? "").slice(0, 10);
+    const body = clean(
+      `${clean(info.content)}\n\n${positions}${deadline ? `\n\n报名截止：${deadline}` : ""}`,
+    );
+    if (body.length < 120) continue;
+    accepted.push({
+      title: clean(info.title),
+      orgHint: clean(info.partyName),
+      body,
+      publishedDate: String(info.createTime ?? "").slice(0, 10),
+      url: `${MCA_BASE}/zpxx/view/${info.id}`,
+      sourceName: "民政部社会组织人才平台",
+    });
+  }
+  console.log(`民政部平台：取得正文 ${accepted.length} 条`);
+  return accepted;
+}
+
 /* ---------- MiniMax 提取 ---------- */
 
 type AnyRecord = Record<string, any>;
@@ -499,16 +615,17 @@ async function main() {
     existing.filter((item) => item.url).map((item) => [item.url, item]),
   );
 
-  const [cdb, one, mlzg, mohrss, board, relief] = await Promise.all([
+  const [cdb, one, mlzg, mohrss, board, relief, mca] = await Promise.all([
     scrapeCDB(),
     scrapeOneFoundation(),
     scrapeMlzg(),
     scrapeMohrss(),
     scrapeNgoJobBoard(),
     scrapeReliefWeb(),
+    scrapeMca(),
   ]);
 
-  const candidates = [...cdb, ...one, ...mlzg, ...mohrss, ...board, ...relief];
+  const candidates = [...cdb, ...one, ...mlzg, ...mohrss, ...board, ...relief, ...mca];
   console.log(`\n候选合计 ${candidates.length} 条，开始 MiniMax 提取…`);
   const records = await extractAll(candidates, previousByUrl);
   if (candidates.length > 0 && records.length === 0) {
