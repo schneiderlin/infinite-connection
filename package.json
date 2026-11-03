@@ -30,6 +30,7 @@
     "cheerio": "^1.2.0",
     "cn-division": "2026.0.1",
     "iconv-lite": "^0.7.3",
+    "jszip": "^3.10.2",
     "next": "16.3.5",
     "next-auth": "5.0.0-beta.32",
     "pdfjs-dist": "^6.5.438",

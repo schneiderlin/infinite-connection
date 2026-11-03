@@ -688,7 +688,7 @@
     "category": "培训课程",
     "title": "社会创新项目设计",
     "url": "https://poa.cgpi.org.cn/course/54",
-    "summary": "深圳国际公益学院公益网校公开课，可免费学习",
+    "summary": "本课程围绕社会创新项目的设计思维与实施展开，面向希望策划和推进社会创新项目的公益从业者。课程可帮助学习者掌握项目设计思路及开展方法，但正文未说明具体授课形式、学习周期与主办机构。",
     "org": "深圳国际公益学院",
     "isFree": true,
     "priceText": "免费",
@@ -709,7 +709,20 @@
     "publishDate": "",
     "publishedDays": 0,
     "tone": "green",
-    "action": "查看课程"
+    "action": "查看课程",
+    "bodyHash": "9da9b5d429f5",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "TRAINING",
+      "domain": "PM",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": null,
+      "summary": "本课程围绕社会创新项目的设计思维与实施展开，面向希望策划和推进社会创新项目的公益从业者。课程可帮助学习者掌握项目设计思路及开展方法，但正文未说明具体授课形式、学习周期与主办机构。"
+    }
   },
   {
     "id": "tool-9eafb90df3ca",
@@ -757,8 +770,8 @@
     "category": "培训课程",
     "title": "成为有效的志愿者",
     "url": "https://poa.cgpi.org.cn/course/258",
-    "summary": "深圳国际公益学院公益网校公开课，可免费学习",
-    "org": "深圳国际公益学院",
+    "summary": "《成为有效的志愿者》由上海志领志愿服务发展中心推出，聚焦志愿服务形式化、参与者被动以及服务发起和组织者不足等问题。课程面向志愿者、志愿者骨干及公益组织团队，帮助学习者提升主动参与、发起并组织有效志愿服务的能力。",
+    "org": "上海志领志愿服务发展中心",
     "isFree": true,
     "priceText": "免费",
     "tags": [
@@ -768,7 +781,7 @@
     ],
     "icon": "🎓",
     "color": "#e8f5e9",
-    "domain": "综合素养",
+    "domain": "团队管理",
     "format": "线上",
     "period": "",
     "dateText": "",
@@ -778,7 +791,20 @@
     "publishDate": "",
     "publishedDays": 0,
     "tone": "green",
-    "action": "查看课程"
+    "action": "查看课程",
+    "bodyHash": "9afbd98fb684",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "TRAINING",
+      "domain": "TEAM",
+      "format": "ONLINE",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "上海志领志愿服务发展中心",
+      "summary": "《成为有效的志愿者》由上海志领志愿服务发展中心推出，聚焦志愿服务形式化、参与者被动以及服务发起和组织者不足等问题。课程面向志愿者、志愿者骨干及公益组织团队，帮助学习者提升主动参与、发起并组织有效志愿服务的能力。"
+    }
   },
   {
     "id": "tool-12f9d516edbf",
@@ -860,6 +886,47 @@
       "is_free": true,
       "org": "世界自然基金会（瑞士）北京代表处",
       "summary": "文章介绍2026年10月25日在厦门举办的国际熊猫日“自然向好”国际论坛，议题包括WWF《2026地球生命力报告》权威解读、物种与生态系统恢复实践、科技赋能自然保护以及社会力量协同保护生态。适合关注生物多样性保护、生态项目实践与可持续转型的公益机构从业者、企业与科研人员参考，可获得全球生态现状与行动路径研判、淡水流域治理与中华白海豚/江豚保护等在地经验，以及AI物种监测、低碳材料研发等创新路径。"
+    }
+  },
+  {
+    "id": "tool-d5e72adddfcb",
+    "category": "同行经验文章",
+    "title": "走出家门，喀什农村女性的就业与蜕变",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/67128.html",
+    "summary": "文章以新疆喀什农村女性就业为对象，梳理就近开办裁缝店、参与卫星工厂和乡村旅游、进入产业园区等就业路径，以及社工提供法律普及、心理辅导、儿童托管、普通话培训和入职适应支持等做法。适合关注女性就业、乡村振兴和员工社工服务的公益组织及一线从业者参考，可用于理解当地需求与服务介入方式。",
+    "org": "中国发展简报",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "其他",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "其他",
+    "format": "",
+    "period": "",
+    "dateText": "2026.10.21",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/67128.html",
+    "publishDate": "2026-10-21",
+    "publishedDays": 14,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "ab4b3dd4dfbe",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "OTHER",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国发展简报",
+      "summary": "文章以新疆喀什农村女性就业为对象，梳理就近开办裁缝店、参与卫星工厂和乡村旅游、进入产业园区等就业路径，以及社工提供法律普及、心理辅导、儿童托管、普通话培训和入职适应支持等做法。适合关注女性就业、乡村振兴和员工社工服务的公益组织及一线从业者参考，可用于理解当地需求与服务介入方式。"
     }
   },
   {
@@ -6354,7 +6421,7 @@
     "category": "行业沙龙会议",
     "title": "报名丨简报论坛2024：“直面挑战 抓住机遇” 公益组织如何参与气候行动",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65745.html",
-    "summary": "简报论坛2024将于2024年12月20日在北京线下举行，围绕COP29与全球气候治理、中国社会组织参与气候行动、民间气候行动及国际与本土NGO合作等议题展开分享和讨论。论坛面向境外NGO在华代表及国内公益组织从业人员，有助于参与者了解气候行动趋势与支持机制、识别行动机遇并拓展合作网络；报名费为99元/人。",
+    "summary": "简报论坛2024聚焦公益组织如何参与气候行动，涵盖全球气候治理、民间气候行动机遇，以及国际与本土NGO在适应、减缓、社区参与等领域的合作。论坛面向境外NGO在华代表和国内公益组织从业人员，可帮助参与者了解NGO参与气候行动的路径、挑战与支持机制；线下报名费为99元/人。",
     "org": "北京益行公益信息交流服务中心/中国发展简报",
     "isFree": false,
     "priceText": "付费",
@@ -6376,7 +6443,7 @@
     "publishedDays": 701,
     "tone": "orange",
     "action": "查看来源",
-    "bodyHash": "6b39f9faf306",
+    "bodyHash": "b92f0b61fe02",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -6387,7 +6454,7 @@
       "period": "UNKNOWN",
       "is_free": false,
       "org": "北京益行公益信息交流服务中心/中国发展简报",
-      "summary": "简报论坛2024将于2024年12月20日在北京线下举行，围绕COP29与全球气候治理、中国社会组织参与气候行动、民间气候行动及国际与本土NGO合作等议题展开分享和讨论。论坛面向境外NGO在华代表及国内公益组织从业人员，有助于参与者了解气候行动趋势与支持机制、识别行动机遇并拓展合作网络；报名费为99元/人。"
+      "summary": "简报论坛2024聚焦公益组织如何参与气候行动，涵盖全球气候治理、民间气候行动机遇，以及国际与本土NGO在适应、减缓、社区参与等领域的合作。论坛面向境外NGO在华代表和国内公益组织从业人员，可帮助参与者了解NGO参与气候行动的路径、挑战与支持机制；线下报名费为99元/人。"
     }
   },
   {
@@ -6596,47 +6663,6 @@
     }
   },
   {
-    "id": "tool-6b7c4a66b175",
-    "category": "行业报告",
-    "title": "ABC专栏 | 《2024年度公益行业薪酬与人才管理实践报告》出炉：透视公益行业人才管理新趋势",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65734.html",
-    "summary": "这是ABC美好社会咨询社联合银杏基金会、墨德瑞特发起并发布的《2024年度公益行业薪酬与人才管理实践报告》的解读专栏，报告基于200余家公益机构的调研数据，覆盖13个公益服务领域。文章梳理了公益行业薪酬水平与趋势、招聘需求回暖、筹款岗位招聘难、员工保留与激励、福利与职业发展路径等关键发现，并提供二维码免费获取完整报告。适合公益机构负责人及人力资源从业者参考，用于制定薪酬策略、优化人才吸引与保留机制、完善职业发展与激励机制。",
-    "org": "ABC美好社会咨询社（ABC A Better Community）、银杏基金会、墨德瑞特",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "团队管理",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "团队管理",
-    "format": "下载",
-    "period": "",
-    "dateText": "2024.11.25",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65734.html",
-    "publishDate": "2024-11-25",
-    "publishedDays": 709,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "c12b27cec3a7",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "TEAM",
-      "format": "DOWNLOAD",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "ABC美好社会咨询社（ABC A Better Community）、银杏基金会、墨德瑞特",
-      "summary": "这是ABC美好社会咨询社联合银杏基金会、墨德瑞特发起并发布的《2024年度公益行业薪酬与人才管理实践报告》的解读专栏，报告基于200余家公益机构的调研数据，覆盖13个公益服务领域。文章梳理了公益行业薪酬水平与趋势、招聘需求回暖、筹款岗位招聘难、员工保留与激励、福利与职业发展路径等关键发现，并提供二维码免费获取完整报告。适合公益机构负责人及人力资源从业者参考，用于制定薪酬策略、优化人才吸引与保留机制、完善职业发展与激励机制。"
-    }
-  },
-  {
     "id": "tool-1100fee7e53e",
     "category": "行业报告",
     "title": "发布丨基金会合规指南（2024版）",
@@ -6675,6 +6701,47 @@
       "is_free": true,
       "org": "中致社会发展促进中心",
       "summary": "《基金会合规指南（2024版）》是一份面向中国境内登记基金会的推荐性参考指南，共7章139条，涵盖内部治理、党建、人事、预算、收支、项目、投资、募捐、信息公开及监督改进等全流程合规要求。适合基金会负责人、秘书处及合规、财务、募捐等岗位人员参考，用于建立合规体系、识别业务风险并完善内部管理流程。"
+    }
+  },
+  {
+    "id": "tool-6b7c4a66b175",
+    "category": "行业报告",
+    "title": "ABC专栏 | 《2024年度公益行业薪酬与人才管理实践报告》出炉：透视公益行业人才管理新趋势",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65734.html",
+    "summary": "《2024年度公益行业薪酬与人才管理实践报告》由ABC美好社会咨询社与墨德瑞特联合发起，累计调研超200家公益机构、覆盖13个服务领域，系统呈现了公益行业薪酬水平、招聘与人员保留、福利激励与职业发展等人才管理现状与趋势。适合公益机构创始人、HR负责人及关注薪酬定级与团队建设的从业者参考，帮助其定位本机构付薪水平、了解留才与激励手段，并扫码免费获取完整报告。",
+    "org": "ABC美好社会咨询社、墨德瑞特（银杏基金会资助）",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "团队管理",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "团队管理",
+    "format": "下载",
+    "period": "",
+    "dateText": "2024.11.25",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65734.html",
+    "publishDate": "2024-11-25",
+    "publishedDays": 709,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "8e7c42567a16",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "TEAM",
+      "format": "DOWNLOAD",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "ABC美好社会咨询社、墨德瑞特（银杏基金会资助）",
+      "summary": "《2024年度公益行业薪酬与人才管理实践报告》由ABC美好社会咨询社与墨德瑞特联合发起，累计调研超200家公益机构、覆盖13个服务领域，系统呈现了公益行业薪酬水平、招聘与人员保留、福利激励与职业发展等人才管理现状与趋势。适合公益机构创始人、HR负责人及关注薪酬定级与团队建设的从业者参考，帮助其定位本机构付薪水平、了解留才与激励手段，并扫码免费获取完整报告。"
     }
   },
   {
@@ -8278,7 +8345,7 @@
     "category": "培训课程",
     "title": "招募丨“ 推动社会组织开展低碳行动 · 2024昆明工作坊 ” 等你来报名！",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65659.html",
-    "summary": "这是为期两天的线下气候行动赋能工作坊，面向云南、四川、重庆、贵州和西藏的公益组织从业者，限额30家机构参加。参与者可通过主题分享、案例讨论、气候主题桌游和参与式工作坊，理解气候变化与机构业务的关系，并探索将低碳理念纳入组织战略计划和日常行动的路径。",
+    "summary": "该工作坊面向云南、四川、重庆、贵州、西藏地区的公益组织从业者招募30家机构，于2024年10月16日至17日在昆明开展为期两天的线下气候行动赋能。参与者可通过主题分享、低碳案例、参与式桌游和行动工作坊，了解气候变化与机构服务领域的联系，并学习将低碳理念融入组织战略计划和日常行动。",
     "org": "北京益行公益信息交流服务中心",
     "isFree": true,
     "priceText": "免费",
@@ -8300,7 +8367,7 @@
     "publishedDays": 782,
     "tone": "green",
     "action": "查看课程",
-    "bodyHash": "49d4ec95dd5d",
+    "bodyHash": "280024538ac4",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -8311,7 +8378,7 @@
       "period": "M1",
       "is_free": true,
       "org": "北京益行公益信息交流服务中心",
-      "summary": "这是为期两天的线下气候行动赋能工作坊，面向云南、四川、重庆、贵州和西藏的公益组织从业者，限额30家机构参加。参与者可通过主题分享、案例讨论、气候主题桌游和参与式工作坊，理解气候变化与机构业务的关系，并探索将低碳理念纳入组织战略计划和日常行动的路径。"
+      "summary": "该工作坊面向云南、四川、重庆、贵州、西藏地区的公益组织从业者招募30家机构，于2024年10月16日至17日在昆明开展为期两天的线下气候行动赋能。参与者可通过主题分享、低碳案例、参与式桌游和行动工作坊，了解气候变化与机构服务领域的联系，并学习将低碳理念融入组织战略计划和日常行动。"
     }
   },
   {
@@ -9215,47 +9282,6 @@
     }
   },
   {
-    "id": "tool-94008a045928",
-    "category": "同行经验文章",
-    "title": "协作者专栏 | 李涛：让草根有力量，公益有希望，老人有保障",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65612.html",
-    "summary": "文章结合“公益1+1·溢彩星光”项目实践，分析社区为老服务社会组织在资金、专业能力、传播和协作方面的困境，并介绍“资助+赋能”及行动网络等支持机制。适合为老领域社会服务机构、资助型基金会及公益支持机构参考，帮助其理解可持续资助模式、组织能力建设路径与多方协作思路。",
-    "org": "北京协作者中心",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "筹款",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "筹款",
-    "format": "",
-    "period": "",
-    "dateText": "2024.07.31",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65612.html",
-    "publishDate": "2024-07-31",
-    "publishedDays": 826,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "77b8739c78a1",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "FUNDRAISE",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "北京协作者中心",
-      "summary": "文章结合“公益1+1·溢彩星光”项目实践，分析社区为老服务社会组织在资金、专业能力、传播和协作方面的困境，并介绍“资助+赋能”及行动网络等支持机制。适合为老领域社会服务机构、资助型基金会及公益支持机构参考，帮助其理解可持续资助模式、组织能力建设路径与多方协作思路。"
-    }
-  },
-  {
     "id": "tool-6fde8dfcccc1",
     "category": "同行经验文章",
     "title": "视点 | 邓国胜：99公益日再升级 助力互联网公益高质量发展",
@@ -9294,6 +9320,47 @@
       "is_free": true,
       "org": "中国慈善家杂志",
       "summary": "文章围绕2024年99公益日规则升级，分析互联网公益从规模扩张转向高质量发展的路径，重点讨论透明公信力建设、公益组织能力提升、长期捐赠人培育及项目设计创新。适合互联网公益平台、公益组织及公募机构从业者参考，帮助其把握规则导向并改进筹款运营、捐赠人服务和数字化透明能力。"
+    }
+  },
+  {
+    "id": "tool-94008a045928",
+    "category": "同行经验文章",
+    "title": "协作者专栏 | 李涛：让草根有力量，公益有希望，老人有保障",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65612.html",
+    "summary": "文章结合“公益1+1·溢彩星光”项目实践，分析社区为老服务社会组织在资金、专业能力、传播和协作方面的困境，并介绍“资助+赋能”及行动网络等支持机制。适合为老领域社会服务机构、资助型基金会及公益支持机构参考，帮助其理解可持续资助模式、组织能力建设路径与多方协作思路。",
+    "org": "北京协作者中心",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "筹款",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "筹款",
+    "format": "",
+    "period": "",
+    "dateText": "2024.07.31",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65612.html",
+    "publishDate": "2024-07-31",
+    "publishedDays": 826,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "77b8739c78a1",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "FUNDRAISE",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "北京协作者中心",
+      "summary": "文章结合“公益1+1·溢彩星光”项目实践，分析社区为老服务社会组织在资金、专业能力、传播和协作方面的困境，并介绍“资助+赋能”及行动网络等支持机制。适合为老领域社会服务机构、资助型基金会及公益支持机构参考，帮助其理解可持续资助模式、组织能力建设路径与多方协作思路。"
     }
   },
   {
@@ -9465,18 +9532,18 @@
     "category": "培训课程",
     "title": "招募丨“ 推动社会组织开展低碳行动 · 2024北京工作坊 ” 等你来报名！",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65596.html",
-    "summary": "这是为期两天的线下气候行动赋能工作坊，通过全球气候行动、行业案例、气候主题桌游和参与式传播训练，帮助社会组织将低碳理念融入战略规划与具体行动。面向京津冀地区公益组织从业者招募30家机构，学员可深入了解气候变化与自身服务领域的联系，提升参与低碳行动的组织能力与信心。",
+    "summary": "该活动为期两天的线下气候行动赋能工作坊，面向京津冀地区约30家社会组织从业者，通过专题分享、案例研讨、参与式桌游和传播工作坊，帮助公益组织理解气候变化与自身服务领域的关联。参与者可学习将低碳理念融入组织战略和行动，并提升参与气候行动及传播倡导的能力。",
     "org": "北京益行公益信息交流服务中心",
     "isFree": true,
     "priceText": "免费",
     "tags": [
       "培训课程",
-      "其他",
+      "综合素养",
       "免费"
     ],
     "icon": "🎓",
     "color": "#e8f5e9",
-    "domain": "其他",
+    "domain": "综合素养",
     "format": "线下",
     "period": "1个月内",
     "dateText": "2024.07.18",
@@ -9487,18 +9554,18 @@
     "publishedDays": 839,
     "tone": "green",
     "action": "查看课程",
-    "bodyHash": "88ab9a8d3aac",
+    "bodyHash": "3bbc72b7e8e6",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
       "reject_reason": null,
       "category": "TRAINING",
-      "domain": "OTHER",
+      "domain": "GENERAL",
       "format": "OFFLINE",
       "period": "M1",
       "is_free": true,
       "org": "北京益行公益信息交流服务中心",
-      "summary": "这是为期两天的线下气候行动赋能工作坊，通过全球气候行动、行业案例、气候主题桌游和参与式传播训练，帮助社会组织将低碳理念融入战略规划与具体行动。面向京津冀地区公益组织从业者招募30家机构，学员可深入了解气候变化与自身服务领域的联系，提升参与低碳行动的组织能力与信心。"
+      "summary": "该活动为期两天的线下气候行动赋能工作坊，面向京津冀地区约30家社会组织从业者，通过专题分享、案例研讨、参与式桌游和传播工作坊，帮助公益组织理解气候变化与自身服务领域的关联。参与者可学习将低碳理念融入组织战略和行动，并提升参与气候行动及传播倡导的能力。"
     }
   },
   {
@@ -9912,47 +9979,6 @@
     }
   },
   {
-    "id": "tool-5936c0741883",
-    "category": "同行经验文章",
-    "title": "案例｜从负债的泥沼中走出，司法社工助力社区矫正对象蝶变重生",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65556.html",
-    "summary": "文章以社区矫正对象陈某的个案为主线，完整呈现司法社工从需求评估、关系建立、情绪疏导到家庭联动和就业链接的服务过程。适合社会工作者及公益从业者参考，可学习运用ABC情绪治疗、优势视角、家访跟进、资源链接和职业指导等方法开展困难群体帮扶。",
-    "org": "江门市江海区天健社会工作综合服务中心",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "其他",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "其他",
-    "format": "",
-    "period": "",
-    "dateText": "2024.06.25",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65556.html",
-    "publishDate": "2024-06-25",
-    "publishedDays": 862,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "233eeb733978",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "OTHER",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "江门市江海区天健社会工作综合服务中心",
-      "summary": "文章以社区矫正对象陈某的个案为主线，完整呈现司法社工从需求评估、关系建立、情绪疏导到家庭联动和就业链接的服务过程。适合社会工作者及公益从业者参考，可学习运用ABC情绪治疗、优势视角、家访跟进、资源链接和职业指导等方法开展困难群体帮扶。"
-    }
-  },
-  {
     "id": "tool-40b4a33bf052",
     "category": "国际经验",
     "title": "海外视野｜Lululemon涉嫌“洗绿”被调查，或面临巨额罚款",
@@ -9991,6 +10017,47 @@
       "is_free": true,
       "org": "中国慈善家杂志",
       "summary": "文章以Lululemon因“洗绿”被加拿大竞争局调查为切入点，梳理企业绿色宣传的常见动机、碳排放范围1/2/3的核算难点，以及欧盟、英国、美国等地的监管趋势和多个行业案例。适合公益机构、基金会及负责环境议题、ESG传播与捐赠透明度的从业者参考，帮助其识别绿色声明的证据和合规风险，避免误导性传播。"
+    }
+  },
+  {
+    "id": "tool-5936c0741883",
+    "category": "同行经验文章",
+    "title": "案例｜从负债的泥沼中走出，司法社工助力社区矫正对象蝶变重生",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/65556.html",
+    "summary": "文章以社区矫正对象陈某的个案为主线，完整呈现司法社工从需求评估、关系建立、情绪疏导到家庭联动和就业链接的服务过程。适合社会工作者及公益从业者参考，可学习运用ABC情绪治疗、优势视角、家访跟进、资源链接和职业指导等方法开展困难群体帮扶。",
+    "org": "江门市江海区天健社会工作综合服务中心",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "其他",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "其他",
+    "format": "",
+    "period": "",
+    "dateText": "2024.06.25",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/65556.html",
+    "publishDate": "2024-06-25",
+    "publishedDays": 862,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "233eeb733978",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "OTHER",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "江门市江海区天健社会工作综合服务中心",
+      "summary": "文章以社区矫正对象陈某的个案为主线，完整呈现司法社工从需求评估、关系建立、情绪疏导到家庭联动和就业链接的服务过程。适合社会工作者及公益从业者参考，可学习运用ABC情绪治疗、优势视角、家访跟进、资源链接和职业指导等方法开展困难群体帮扶。"
     }
   },
   {
@@ -11305,47 +11372,6 @@
     }
   },
   {
-    "id": "tool-590e84b8f0fd",
-    "category": "行业沙龙会议",
-    "title": "直播预告 | 《气候变化中的流动人口——困境流动人口气候适应需求调查报告》线上发布会",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/25040.html",
-    "summary": "该线上直播将发布《气候变化中的流动人口——困境流动人口气候适应需求调查报告》，并邀请流动人口代表、社会工作者、资助方及专家交流气候适应服务实践。活动适合公益从业者和社会工作者参与，可了解困境流动人口的气候适应需求及相应的服务思路。",
-    "org": "北京协作者",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业沙龙会议",
-      "其他",
-      "免费"
-    ],
-    "icon": "🎤",
-    "color": "#fdf6ec",
-    "domain": "其他",
-    "format": "线上",
-    "period": "",
-    "dateText": "2024.04.10",
-    "locationText": "线上",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/25040.html",
-    "publishDate": "2024-04-10",
-    "publishedDays": 938,
-    "tone": "orange",
-    "action": "查看来源",
-    "bodyHash": "37ee1fb48cf0",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "SALON",
-      "domain": "OTHER",
-      "format": "ONLINE",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "北京协作者",
-      "summary": "该线上直播将发布《气候变化中的流动人口——困境流动人口气候适应需求调查报告》，并邀请流动人口代表、社会工作者、资助方及专家交流气候适应服务实践。活动适合公益从业者和社会工作者参与，可了解困境流动人口的气候适应需求及相应的服务思路。"
-    }
-  },
-  {
     "id": "tool-18eeea0adf17",
     "category": "国际经验",
     "title": "编译 | 能源价格飙升后的欧盟碳排放交易体系（一）",
@@ -11384,6 +11410,47 @@
       "is_free": true,
       "org": "欧洲改革中心（Centre for European Reform，CER）",
       "summary": "本文编译自欧洲改革中心的政策简报，梳理欧盟碳排放交易体系（EU ETS）的运行机制、“Fit for 55”改革、碳边境调整机制及其对能源价格、 industrial、家庭和小企业的影响。适合关注碳定价、气候治理与能源转型的公益机构从业者、环境组织及政策研究者，可帮助其理解欧盟碳市场改革方向、潜在挑战与公平支持方案。"
+    }
+  },
+  {
+    "id": "tool-590e84b8f0fd",
+    "category": "行业沙龙会议",
+    "title": "直播预告 | 《气候变化中的流动人口——困境流动人口气候适应需求调查报告》线上发布会",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/25040.html",
+    "summary": "该线上发布会将发布《气候变化中的流动人口——困境流动人口气候适应需求调查报告》，并围绕困境人群气候适应服务开展研讨交流。适合社会工作者、流动人口服务从业者、研究人员及资助方参与，可了解相关调研发现、服务经验与实践思路。",
+    "org": "协作者",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业沙龙会议",
+      "其他",
+      "免费"
+    ],
+    "icon": "🎤",
+    "color": "#fdf6ec",
+    "domain": "其他",
+    "format": "线上",
+    "period": "",
+    "dateText": "2024.04.10",
+    "locationText": "线上",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/25040.html",
+    "publishDate": "2024-04-10",
+    "publishedDays": 938,
+    "tone": "orange",
+    "action": "查看来源",
+    "bodyHash": "7725c65e6b13",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "SALON",
+      "domain": "OTHER",
+      "format": "ONLINE",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "协作者",
+      "summary": "该线上发布会将发布《气候变化中的流动人口——困境流动人口气候适应需求调查报告》，并围绕困境人群气候适应服务开展研讨交流。适合社会工作者、流动人口服务从业者、研究人员及资助方参与，可了解相关调研发现、服务经验与实践思路。"
     }
   },
   {
@@ -12864,7 +12931,7 @@
     "category": "同行经验文章",
     "title": "ABC案例 | 发现“榜样的力量”——金桔奖（中国基金会评价榜）调研是如何完成的？",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24958.html",
-    "summary": "文章以第四届金桔奖为案例，拆解中国基金会评价榜从研究计划、评价指标与问卷设计、样本库搭建、分层抽样、问卷回收、行业深访到数据分析和报告发布的完整调研流程。适合公益组织、研究及评估人员和资助方团队参考，可学习如何组织跨机构调研、控制样本代表性、核查合规风险并产出有公信力的评价榜单与资助图谱。",
+    "summary": "文章以第四届中国基金会评价榜（金桔奖）为例，完整梳理了从研究计划、指标与问卷设计、样本库搭建和分层抽样，到问卷回收、深度访谈、数据清洗及报告发布的调研流程。适合公益组织、基金会及行业研究团队的评估与项目负责人参考，可学习如何组织大规模行业调研、提升样本代表性、控制榜单公平与合规风险，并产出具有公信力的评价报告。",
     "org": "ABC美好社会咨询社",
     "isFree": true,
     "priceText": "免费",
@@ -12886,7 +12953,7 @@
     "publishedDays": 1029,
     "tone": "mint",
     "action": "阅读原文",
-    "bodyHash": "11b25973f4d1",
+    "bodyHash": "439bf09f124d",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -12897,7 +12964,7 @@
       "period": "UNKNOWN",
       "is_free": true,
       "org": "ABC美好社会咨询社",
-      "summary": "文章以第四届金桔奖为案例，拆解中国基金会评价榜从研究计划、评价指标与问卷设计、样本库搭建、分层抽样、问卷回收、行业深访到数据分析和报告发布的完整调研流程。适合公益组织、研究及评估人员和资助方团队参考，可学习如何组织跨机构调研、控制样本代表性、核查合规风险并产出有公信力的评价榜单与资助图谱。"
+      "summary": "文章以第四届中国基金会评价榜（金桔奖）为例，完整梳理了从研究计划、指标与问卷设计、样本库搭建和分层抽样，到问卷回收、深度访谈、数据清洗及报告发布的调研流程。适合公益组织、基金会及行业研究团队的评估与项目负责人参考，可学习如何组织大规模行业调研、提升样本代表性、控制榜单公平与合规风险，并产出具有公信力的评价报告。"
     }
   },
   {
@@ -13434,47 +13501,6 @@
     }
   },
   {
-    "id": "tool-64ccaf7e9ca6",
-    "category": "行业报告",
-    "title": "研究报告︱减塑的未来，始于重复使用",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24926.html",
-    "summary": "该报告基于釜山、香港、台北和东京的运营数据，比较循环杯与一次性杯系统的全生命周期环境影响，并提出减塑建议。适合关注塑料污染、循环经济与可持续消费的政策制定者、公益组织、企业及研究者，可获得生命周期评估方法、实践指标和推动重复使用系统的证据参考。",
-    "org": "绿色和平、香港科技大学、香港城市大学",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "其他",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "其他",
-    "format": "下载",
-    "period": "",
-    "dateText": "2023.12.13",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24926.html",
-    "publishDate": "2023-12-13",
-    "publishedDays": 1057,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "3e0adb27464b",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "OTHER",
-      "format": "DOWNLOAD",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "绿色和平、香港科技大学、香港城市大学",
-      "summary": "该报告基于釜山、香港、台北和东京的运营数据，比较循环杯与一次性杯系统的全生命周期环境影响，并提出减塑建议。适合关注塑料污染、循环经济与可持续消费的政策制定者、公益组织、企业及研究者，可获得生命周期评估方法、实践指标和推动重复使用系统的证据参考。"
-    }
-  },
-  {
     "id": "tool-bcd97833c80d",
     "category": "国际经验",
     "title": "编译 | 《可持续发展目标》实施7年，真正的进步在社区",
@@ -13513,6 +13539,47 @@
       "is_free": true,
       "org": "全球赠与基金会（GlobalGiving）",
       "summary": "文章结合阿根廷、喀麦隆、马来西亚等社区公益项目，介绍可持续发展目标实施七年来一线组织在教育、性别平等、环境保护和社区发展方面的实践及现实挑战。适合关注国际发展、可持续发展与社区赋能的公益从业者参考，帮助其理解SDGs的局限并借鉴社区主导的解决方案。"
+    }
+  },
+  {
+    "id": "tool-64ccaf7e9ca6",
+    "category": "行业报告",
+    "title": "研究报告︱减塑的未来，始于重复使用",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24926.html",
+    "summary": "该报告基于釜山、香港、台北和东京的运营数据，比较循环杯与一次性杯系统的全生命周期环境影响，并提出减塑建议。适合关注塑料污染、循环经济与可持续消费的政策制定者、公益组织、企业及研究者，可获得生命周期评估方法、实践指标和推动重复使用系统的证据参考。",
+    "org": "绿色和平、香港科技大学、香港城市大学",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "其他",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "其他",
+    "format": "下载",
+    "period": "",
+    "dateText": "2023.12.13",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24926.html",
+    "publishDate": "2023-12-13",
+    "publishedDays": 1057,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "3e0adb27464b",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "OTHER",
+      "format": "DOWNLOAD",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "绿色和平、香港科技大学、香港城市大学",
+      "summary": "该报告基于釜山、香港、台北和东京的运营数据，比较循环杯与一次性杯系统的全生命周期环境影响，并提出减塑建议。适合关注塑料污染、循环经济与可持续消费的政策制定者、公益组织、企业及研究者，可获得生命周期评估方法、实践指标和推动重复使用系统的证据参考。"
     }
   },
   {
@@ -13801,47 +13868,6 @@
     }
   },
   {
-    "id": "tool-38d52e7609b0",
-    "category": "同行经验文章",
-    "title": "观点 ｜ 徐永光：公益部门现在和未来要做的两件事",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24909.html",
-    "summary": "文章是徐永光在中国基金会发展论坛2023年会主论坛上的总结演讲，围绕公益部门如何重建社会信任、推动社会创新提出判断与行动方向。适合基金会及其他公益组织管理者、研究与倡导人员阅读，可了解气候变化与人工智能治理、青少年公益实践、影响力投资等议题及未来能力建设重点。",
-    "org": "中国社会组织促进会、北京基业长青社会组织服务中心",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "综合素养",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "综合素养",
-    "format": "",
-    "period": "",
-    "dateText": "2023.11.29",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24909.html",
-    "publishDate": "2023-11-29",
-    "publishedDays": 1071,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "a5defcea3955",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "GENERAL",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "中国社会组织促进会、北京基业长青社会组织服务中心",
-      "summary": "文章是徐永光在中国基金会发展论坛2023年会主论坛上的总结演讲，围绕公益部门如何重建社会信任、推动社会创新提出判断与行动方向。适合基金会及其他公益组织管理者、研究与倡导人员阅读，可了解气候变化与人工智能治理、青少年公益实践、影响力投资等议题及未来能力建设重点。"
-    }
-  },
-  {
     "id": "tool-bf0a54eee936",
     "category": "行业报告",
     "title": "ABC观察 | 养老政策及行业演变 ( 养老生态面面观第二期)",
@@ -13880,6 +13906,47 @@
       "is_free": true,
       "org": "ABC美好社会咨询社养老研究组",
       "summary": "文章在梳理60余份养老政策文件及行业报告的基础上，将我国养老政策演变划分为萌芽、转型和创新发展三个阶段，并分析政府角色、服务模式及市场发展。适合养老服务机构、社会组织及相关领域研究者了解政策趋势和行业生态，为养老服务规划、政策研究与业务决策提供参考。"
+    }
+  },
+  {
+    "id": "tool-38d52e7609b0",
+    "category": "同行经验文章",
+    "title": "观点 ｜ 徐永光：公益部门现在和未来要做的两件事",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24909.html",
+    "summary": "文章是徐永光在中国基金会发展论坛2023年会主论坛上的总结演讲，围绕公益部门如何重建社会信任、推动社会创新提出判断与行动方向。适合基金会及其他公益组织管理者、研究与倡导人员阅读，可了解气候变化与人工智能治理、青少年公益实践、影响力投资等议题及未来能力建设重点。",
+    "org": "中国社会组织促进会、北京基业长青社会组织服务中心",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "综合素养",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "综合素养",
+    "format": "",
+    "period": "",
+    "dateText": "2023.11.29",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24909.html",
+    "publishDate": "2023-11-29",
+    "publishedDays": 1071,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "a5defcea3955",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "GENERAL",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国社会组织促进会、北京基业长青社会组织服务中心",
+      "summary": "文章是徐永光在中国基金会发展论坛2023年会主论坛上的总结演讲，围绕公益部门如何重建社会信任、推动社会创新提出判断与行动方向。适合基金会及其他公益组织管理者、研究与倡导人员阅读，可了解气候变化与人工智能治理、青少年公益实践、影响力投资等议题及未来能力建设重点。"
     }
   },
   {
@@ -14129,47 +14196,6 @@
     }
   },
   {
-    "id": "tool-deb254d104fa",
-    "category": "国际经验",
-    "title": "编译 | 投资气候解决方案的五大理由",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24894.html",
-    "summary": "文章从防灾减灾、降低基础设施维护成本、提供水资源过滤、维持生态系统完整及创造绿色就业五方面，阐释企业投资自然气候解决方案的商业与公共价值。内容结合红树林恢复、绿色走廊、雨园和牡蛎礁等国际案例，适合公益组织的筹资及合作团队参考，用于设计企业资助自然保护项目的价值主张。",
-    "org": "GlobalGiving（全球赠与基金会）",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "国际经验",
-      "筹款",
-      "免费"
-    ],
-    "icon": "🌏",
-    "color": "#e8eaf6",
-    "domain": "筹款",
-    "format": "",
-    "period": "",
-    "dateText": "2023.11.13",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24894.html",
-    "publishDate": "2023-11-13",
-    "publishedDays": 1087,
-    "tone": "sand",
-    "action": "阅读原文",
-    "bodyHash": "372beef8f44c",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "INTERNATIONAL",
-      "domain": "FUNDRAISE",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "GlobalGiving（全球赠与基金会）",
-      "summary": "文章从防灾减灾、降低基础设施维护成本、提供水资源过滤、维持生态系统完整及创造绿色就业五方面，阐释企业投资自然气候解决方案的商业与公共价值。内容结合红树林恢复、绿色走廊、雨园和牡蛎礁等国际案例，适合公益组织的筹资及合作团队参考，用于设计企业资助自然保护项目的价值主张。"
-    }
-  },
-  {
     "id": "tool-0bb83c5534b9",
     "category": "同行经验文章",
     "title": "观点 | 王思斌：全面理解专业社会工作",
@@ -14208,6 +14234,47 @@
       "is_free": true,
       "org": null,
       "summary": "文章从“大社会工作”格局出发，辨析专业社会工作、非专业社会工作和社会工作人才等概念，讨论不同岗位的工作重点与方法。文章适合社会工作者、社会工作机构管理者及高校师生阅读，有助于理解专业社会工作的边界，以及专业化与本土化相结合的发展思路。"
+    }
+  },
+  {
+    "id": "tool-deb254d104fa",
+    "category": "国际经验",
+    "title": "编译 | 投资气候解决方案的五大理由",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24894.html",
+    "summary": "文章从防灾减灾、降低基础设施维护成本、提供水资源过滤、维持生态系统完整及创造绿色就业五方面，阐释企业投资自然气候解决方案的商业与公共价值。内容结合红树林恢复、绿色走廊、雨园和牡蛎礁等国际案例，适合公益组织的筹资及合作团队参考，用于设计企业资助自然保护项目的价值主张。",
+    "org": "GlobalGiving（全球赠与基金会）",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "国际经验",
+      "筹款",
+      "免费"
+    ],
+    "icon": "🌏",
+    "color": "#e8eaf6",
+    "domain": "筹款",
+    "format": "",
+    "period": "",
+    "dateText": "2023.11.13",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24894.html",
+    "publishDate": "2023-11-13",
+    "publishedDays": 1087,
+    "tone": "sand",
+    "action": "阅读原文",
+    "bodyHash": "372beef8f44c",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "INTERNATIONAL",
+      "domain": "FUNDRAISE",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "GlobalGiving（全球赠与基金会）",
+      "summary": "文章从防灾减灾、降低基础设施维护成本、提供水资源过滤、维持生态系统完整及创造绿色就业五方面，阐释企业投资自然气候解决方案的商业与公共价值。内容结合红树林恢复、绿色走廊、雨园和牡蛎礁等国际案例，适合公益组织的筹资及合作团队参考，用于设计企业资助自然保护项目的价值主张。"
     }
   },
   {
@@ -15809,47 +15876,6 @@
     }
   },
   {
-    "id": "tool-b74ddcab8b4a",
-    "category": "同行经验文章",
-    "title": "视点丨张晓青：慈善组织公信力建设",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24768.html",
-    "summary": "文章整理了中国慈善联合会副秘书长张晓青在行业沙龙中的演讲，系统阐述慈善组织公信力建设的四个圈层，包括内部治理、项目专业运作、信息公开和组织文化。适合慈善组织负责人、项目及合规管理人员参考，以完善数据保护与信息公开流程，提升组织治理、舆情应对和公信力建设能力。",
-    "org": "上海复恩社会组织法律研究与服务中心、中国慈善联合会",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "其他",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "其他",
-    "format": "",
-    "period": "",
-    "dateText": "2023.07.21",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24768.html",
-    "publishDate": "2023-07-21",
-    "publishedDays": 1202,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "40e3bbd88487",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "OTHER",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "上海复恩社会组织法律研究与服务中心、中国慈善联合会",
-      "summary": "文章整理了中国慈善联合会副秘书长张晓青在行业沙龙中的演讲，系统阐述慈善组织公信力建设的四个圈层，包括内部治理、项目专业运作、信息公开和组织文化。适合慈善组织负责人、项目及合规管理人员参考，以完善数据保护与信息公开流程，提升组织治理、舆情应对和公信力建设能力。"
-    }
-  },
-  {
     "id": "tool-a1e99cd4c254",
     "category": "行业报告",
     "title": "报告丨可降解塑料袋测评：“伪降解”产品充斥市场",
@@ -15888,6 +15914,47 @@
       "is_free": true,
       "org": "摆脱塑缚",
       "summary": "报告抽样测评三大电商平台销量领先的30款可降解塑料袋，比较其材质、价格、降解类型、产品标识及适用标准，揭示“伪降解”产品较多、标识混乱和标准执行不到位等问题。适合关注塑料污染与可持续消费的环境公益组织、公众倡导者及政策研究人员参考，可用于产品合规识别、公众教育与监管研究。"
+    }
+  },
+  {
+    "id": "tool-b74ddcab8b4a",
+    "category": "同行经验文章",
+    "title": "视点丨张晓青：慈善组织公信力建设",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24768.html",
+    "summary": "文章整理了中国慈善联合会副秘书长张晓青在行业沙龙中的演讲，系统阐述慈善组织公信力建设的四个圈层，包括内部治理、项目专业运作、信息公开和组织文化。适合慈善组织负责人、项目及合规管理人员参考，以完善数据保护与信息公开流程，提升组织治理、舆情应对和公信力建设能力。",
+    "org": "上海复恩社会组织法律研究与服务中心、中国慈善联合会",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "其他",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "其他",
+    "format": "",
+    "period": "",
+    "dateText": "2023.07.21",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24768.html",
+    "publishDate": "2023-07-21",
+    "publishedDays": 1202,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "40e3bbd88487",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "OTHER",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "上海复恩社会组织法律研究与服务中心、中国慈善联合会",
+      "summary": "文章整理了中国慈善联合会副秘书长张晓青在行业沙龙中的演讲，系统阐述慈善组织公信力建设的四个圈层，包括内部治理、项目专业运作、信息公开和组织文化。适合慈善组织负责人、项目及合规管理人员参考，以完善数据保护与信息公开流程，提升组织治理、舆情应对和公信力建设能力。"
     }
   },
   {
@@ -16218,47 +16285,6 @@
     }
   },
   {
-    "id": "tool-cede65c84166",
-    "category": "其他",
-    "title": "观点丨汤敏：我们需要尽快建设大众善业基础设施",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24748.html",
-    "summary": "文章围绕“大众善业基础设施”展开，分析当前慈善体系过度依赖精英，以及草根公益组织在登记管理、社区自组织、服务引导和扶持培育等方面面临的制度与工具短板。作者提出去精英化、去中心化、低门槛和普惠可及的建设方向。适合公益组织管理者、行业研究者和政策倡导者阅读，以获得关于公益生态与制度建设的思考框架，但文章未提供可直接使用的操作工具。",
-    "org": "中国发展简报",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "其他",
-      "综合素养",
-      "免费"
-    ],
-    "icon": "📦",
-    "color": "#f5f5f5",
-    "domain": "综合素养",
-    "format": "",
-    "period": "",
-    "dateText": "2023.07.11",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24748.html",
-    "publishDate": "2023-07-11",
-    "publishedDays": 1212,
-    "tone": "blue",
-    "action": "查看来源",
-    "bodyHash": "c35d90614f25",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "OTHER",
-      "domain": "GENERAL",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": null,
-      "summary": "文章围绕“大众善业基础设施”展开，分析当前慈善体系过度依赖精英，以及草根公益组织在登记管理、社区自组织、服务引导和扶持培育等方面面临的制度与工具短板。作者提出去精英化、去中心化、低门槛和普惠可及的建设方向。适合公益组织管理者、行业研究者和政策倡导者阅读，以获得关于公益生态与制度建设的思考框架，但文章未提供可直接使用的操作工具。"
-    }
-  },
-  {
     "id": "tool-b5d8055e2ad5",
     "category": "行业标准",
     "title": "干货丨慈善领域法律法规政策汇编2023版",
@@ -16297,6 +16323,47 @@
       "is_free": true,
       "org": "致诚社会组织与中国基金会发展论坛秘书处（注册机构为北京基业长青社会组织服务中心）",
       "summary": "《慈善领域法律法规政策汇编（2023版）》汇集了100余部适用于国内公益慈善领域的法律、行政法规、部门规章、规范性文件及党规文件，并同步收录部分征求意见稿。公益组织、基金会及慈善领域从业者可下载查阅募捐捐赠、财务税务、登记管理、监管评估、党建等方面的政策法规，用于日常合规与组织管理。"
+    }
+  },
+  {
+    "id": "tool-cede65c84166",
+    "category": "其他",
+    "title": "观点丨汤敏：我们需要尽快建设大众善业基础设施",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24748.html",
+    "summary": "文章围绕“大众善业基础设施”展开，分析当前慈善体系过度依赖精英，以及草根公益组织在登记管理、社区自组织、服务引导和扶持培育等方面面临的制度与工具短板。作者提出去精英化、去中心化、低门槛和普惠可及的建设方向。适合公益组织管理者、行业研究者和政策倡导者阅读，以获得关于公益生态与制度建设的思考框架，但文章未提供可直接使用的操作工具。",
+    "org": "中国发展简报",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "其他",
+      "综合素养",
+      "免费"
+    ],
+    "icon": "📦",
+    "color": "#f5f5f5",
+    "domain": "综合素养",
+    "format": "",
+    "period": "",
+    "dateText": "2023.07.11",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24748.html",
+    "publishDate": "2023-07-11",
+    "publishedDays": 1212,
+    "tone": "blue",
+    "action": "查看来源",
+    "bodyHash": "c35d90614f25",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "OTHER",
+      "domain": "GENERAL",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": null,
+      "summary": "文章围绕“大众善业基础设施”展开，分析当前慈善体系过度依赖精英，以及草根公益组织在登记管理、社区自组织、服务引导和扶持培育等方面面临的制度与工具短板。作者提出去精英化、去中心化、低门槛和普惠可及的建设方向。适合公益组织管理者、行业研究者和政策倡导者阅读，以获得关于公益生态与制度建设的思考框架，但文章未提供可直接使用的操作工具。"
     }
   },
   {
@@ -16382,47 +16449,6 @@
     }
   },
   {
-    "id": "tool-fa2ce5b2b15b",
-    "category": "同行经验文章",
-    "title": "干货丨公益创投中如何实现出资方资金价值最大化？",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24744.html",
-    "summary": "文章结合佛山公益创投大赛实践，探讨出资方如何通过明确资助方向、引入第三方监测评估、规范项目管理及推广优秀项目经验，实现公益资金使用效益最大化。适合基金会、公益创投主办方及其他公益出资方参考，可获得一套关于公益创投定位、项目管理与成效管理的实务方法。",
-    "org": "佛山市新里程社会工作评估中心",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "项目管理",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "项目管理",
-    "format": "",
-    "period": "",
-    "dateText": "2023.07.07",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24744.html",
-    "publishDate": "2023-07-07",
-    "publishedDays": 1216,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "f95a853e7c72",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "PM",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "佛山市新里程社会工作评估中心",
-      "summary": "文章结合佛山公益创投大赛实践，探讨出资方如何通过明确资助方向、引入第三方监测评估、规范项目管理及推广优秀项目经验，实现公益资金使用效益最大化。适合基金会、公益创投主办方及其他公益出资方参考，可获得一套关于公益创投定位、项目管理与成效管理的实务方法。"
-    }
-  },
-  {
     "id": "tool-a015cd52d9d7",
     "category": "同行经验文章",
     "title": "观察丨在流动人口社区，怎样结伴带娃？",
@@ -16461,6 +16487,47 @@
       "is_free": true,
       "org": "中国发展简报",
       "summary": "文章以流动儿童社区“儿童之家”项目为主线，介绍公益组织如何通过公共空间运营、亲子活动、非暴力沟通读书会和儿童社会情感支持，为流动儿童及照护者建立互助网络。适合儿童、家庭及社区服务领域的公益从业者参考，可了解需求评估、活动设计、志愿者培养、政社合作与资源链接等一线实务经验。"
+    }
+  },
+  {
+    "id": "tool-fa2ce5b2b15b",
+    "category": "同行经验文章",
+    "title": "干货丨公益创投中如何实现出资方资金价值最大化？",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24744.html",
+    "summary": "文章结合佛山公益创投大赛实践，探讨出资方如何通过明确资助方向、引入第三方监测评估、规范项目管理及推广优秀项目经验，实现公益资金使用效益最大化。适合基金会、公益创投主办方及其他公益出资方参考，可获得一套关于公益创投定位、项目管理与成效管理的实务方法。",
+    "org": "佛山市新里程社会工作评估中心",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "项目管理",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "项目管理",
+    "format": "",
+    "period": "",
+    "dateText": "2023.07.07",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24744.html",
+    "publishDate": "2023-07-07",
+    "publishedDays": 1216,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "f95a853e7c72",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "PM",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "佛山市新里程社会工作评估中心",
+      "summary": "文章结合佛山公益创投大赛实践，探讨出资方如何通过明确资助方向、引入第三方监测评估、规范项目管理及推广优秀项目经验，实现公益资金使用效益最大化。适合基金会、公益创投主办方及其他公益出资方参考，可获得一套关于公益创投定位、项目管理与成效管理的实务方法。"
     }
   },
   {
@@ -17817,6 +17884,47 @@
     }
   },
   {
+    "id": "tool-cea80c5da1b9",
+    "category": "行业标准",
+    "title": "关注 | 抖音发布新规治理“伪公益” 行业健康发展需自律更要各方联合",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24679.html",
+    "summary": "文章解读抖音针对“伪公益”发布的最新平台规范，梳理公益账号资质认证、公开募捐发起、直播打赏及电商销售限制等合规要求，并介绍违规内容与账号的治理措施。适合通过抖音开展短视频传播、账号运营和线上募捐的公益机构及从业者参考，用于明确内容与募捐操作的合规边界。",
+    "org": "抖音",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业标准",
+      "传播",
+      "免费"
+    ],
+    "icon": "📋",
+    "color": "#fce4ec",
+    "domain": "传播",
+    "format": "",
+    "period": "",
+    "dateText": "2023.06.07",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24679.html",
+    "publishDate": "2023-06-07",
+    "publishedDays": 1246,
+    "tone": "rose",
+    "action": "查看来源",
+    "bodyHash": "88df8c826b8f",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "STANDARD",
+      "domain": "COMMS",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "抖音",
+      "summary": "文章解读抖音针对“伪公益”发布的最新平台规范，梳理公益账号资质认证、公开募捐发起、直播打赏及电商销售限制等合规要求，并介绍违规内容与账号的治理措施。适合通过抖音开展短视频传播、账号运营和线上募捐的公益机构及从业者参考，用于明确内容与募捐操作的合规边界。"
+    }
+  },
+  {
     "id": "tool-ce9db64f9d1a",
     "category": "同行经验文章",
     "title": "对话 | 张唯佳：平台与机构有效沟通，才找到共赢的创新空间",
@@ -17896,47 +18004,6 @@
       "is_free": true,
       "org": "长青文献图书馆",
       "summary": "文章梳理了1949年以来《人民日报》关于公益慈善的报道与评论，呈现社会认知、慈善组织发展及法制建设的历史变化，并附有95份相关报道版面的查阅目录。适合公益从业者、研究人员及公共传播人员了解中国慈善事业的政策与社会环境演变，并获取历史文献线索。"
-    }
-  },
-  {
-    "id": "tool-cea80c5da1b9",
-    "category": "行业标准",
-    "title": "关注 | 抖音发布新规治理“伪公益” 行业健康发展需自律更要各方联合",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24679.html",
-    "summary": "文章解读抖音针对“伪公益”发布的最新平台规范，梳理公益账号资质认证、公开募捐发起、直播打赏及电商销售限制等合规要求，并介绍违规内容与账号的治理措施。适合通过抖音开展短视频传播、账号运营和线上募捐的公益机构及从业者参考，用于明确内容与募捐操作的合规边界。",
-    "org": "抖音",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业标准",
-      "传播",
-      "免费"
-    ],
-    "icon": "📋",
-    "color": "#fce4ec",
-    "domain": "传播",
-    "format": "",
-    "period": "",
-    "dateText": "2023.06.07",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24679.html",
-    "publishDate": "2023-06-07",
-    "publishedDays": 1246,
-    "tone": "rose",
-    "action": "查看来源",
-    "bodyHash": "88df8c826b8f",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "STANDARD",
-      "domain": "COMMS",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "抖音",
-      "summary": "文章解读抖音针对“伪公益”发布的最新平台规范，梳理公益账号资质认证、公开募捐发起、直播打赏及电商销售限制等合规要求，并介绍违规内容与账号的治理措施。适合通过抖音开展短视频传播、账号运营和线上募捐的公益机构及从业者参考，用于明确内容与募捐操作的合规边界。"
     }
   },
   {
@@ -18186,47 +18253,6 @@
     }
   },
   {
-    "id": "tool-e2efae20bf43",
-    "category": "行业报告",
-    "title": "观察丨碳市场首个履约周期：排放量显著下降，信息披露质量堪忧",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24667.html",
-    "summary": "《第一个履约周期内山东江苏煤电降碳调研和倡导报告》复盘了山东、江苏发电企业在全国碳市场首个履约周期中的降碳成效及信息披露问题，并提出提升中小企业履约能力的建议。适合环保公益机构、碳市场从业者及中小发电企业参考，以了解碳排放披露规范、履约风险和减排实践路径。",
-    "org": "自然田",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "其他",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "其他",
-    "format": "下载",
-    "period": "",
-    "dateText": "2023.06.02",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24667.html",
-    "publishDate": "2023-06-02",
-    "publishedDays": 1251,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "343b003da724",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "OTHER",
-      "format": "DOWNLOAD",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "自然田",
-      "summary": "《第一个履约周期内山东江苏煤电降碳调研和倡导报告》复盘了山东、江苏发电企业在全国碳市场首个履约周期中的降碳成效及信息披露问题，并提出提升中小企业履约能力的建议。适合环保公益机构、碳市场从业者及中小发电企业参考，以了解碳排放披露规范、履约风险和减排实践路径。"
-    }
-  },
-  {
     "id": "tool-c4a0c93ec1fb",
     "category": "同行经验文章",
     "title": "视点 | 徐家良：政府购买服务减少，社会组织如何活下来、活得好？",
@@ -18265,6 +18291,47 @@
       "is_free": true,
       "org": "上海交通大学中国公益发展研究院",
       "summary": "文章围绕政府购买社会服务支出下降后，社会组织如何调整战略并提升服务能力展开访谈，讨论资金来源多元化、部门资源拓展、招投标、第三方评估、数字化传播、人才队伍和公益资产管理等路径。适合公益组织负责人、项目负责人及第三方评估机构借鉴，以增强机构治理、政府合作、筹资传播与项目管理能力，提升组织生存与可持续发展水平。"
+    }
+  },
+  {
+    "id": "tool-e2efae20bf43",
+    "category": "行业报告",
+    "title": "观察丨碳市场首个履约周期：排放量显著下降，信息披露质量堪忧",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24667.html",
+    "summary": "《第一个履约周期内山东江苏煤电降碳调研和倡导报告》复盘了山东、江苏发电企业在全国碳市场首个履约周期中的降碳成效及信息披露问题，并提出提升中小企业履约能力的建议。适合环保公益机构、碳市场从业者及中小发电企业参考，以了解碳排放披露规范、履约风险和减排实践路径。",
+    "org": "自然田",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "其他",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "其他",
+    "format": "下载",
+    "period": "",
+    "dateText": "2023.06.02",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24667.html",
+    "publishDate": "2023-06-02",
+    "publishedDays": 1251,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "343b003da724",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "OTHER",
+      "format": "DOWNLOAD",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "自然田",
+      "summary": "《第一个履约周期内山东江苏煤电降碳调研和倡导报告》复盘了山东、江苏发电企业在全国碳市场首个履约周期中的降碳成效及信息披露问题，并提出提升中小企业履约能力的建议。适合环保公益机构、碳市场从业者及中小发电企业参考，以了解碳排放披露规范、履约风险和减排实践路径。"
     }
   },
   {
@@ -19580,47 +19647,6 @@
     }
   },
   {
-    "id": "tool-4efdc0c67cb0",
-    "category": "同行经验文章",
-    "title": "工具丨社工开展探访工作的15个注意事项",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24594.html",
-    "summary": "文章系统梳理了社工开展探访前、探访中及探访后的15项实务要点，涵盖信息准备、沟通技巧、安全分工、记录建档与资源链接。适合一线社工、实习生及项目负责人参考，帮助提升探访工作的规范性、专业性和服务跟进效果。",
-    "org": "中国发展简报",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "综合素养",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "综合素养",
-    "format": "",
-    "period": "",
-    "dateText": "2023.05.09",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24594.html",
-    "publishDate": "2023-05-09",
-    "publishedDays": 1275,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "455a42bbd816",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "GENERAL",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "中国发展简报",
-      "summary": "文章系统梳理了社工开展探访前、探访中及探访后的15项实务要点，涵盖信息准备、沟通技巧、安全分工、记录建档与资源链接。适合一线社工、实习生及项目负责人参考，帮助提升探访工作的规范性、专业性和服务跟进效果。"
-    }
-  },
-  {
     "id": "tool-b82f32926397",
     "category": "同行经验文章",
     "title": "关注丨公益基金会的平台化转型，需要注意哪些问题？",
@@ -19659,6 +19685,47 @@
       "is_free": true,
       "org": null,
       "summary": "文章围绕平台型基金会的转型条件、战略路径、组织架构与伙伴管理，梳理“铺路、搭台、构建护城河”等实践要点。适合基金会负责人及公益组织平台与生态建设从业者参考，可获得战略设计、组织协同、伙伴治理和成效管理方面的方法启发。"
+    }
+  },
+  {
+    "id": "tool-4efdc0c67cb0",
+    "category": "同行经验文章",
+    "title": "工具丨社工开展探访工作的15个注意事项",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24594.html",
+    "summary": "文章系统梳理了社工开展探访前、探访中及探访后的15项实务要点，涵盖信息准备、沟通技巧、安全分工、记录建档与资源链接。适合一线社工、实习生及项目负责人参考，帮助提升探访工作的规范性、专业性和服务跟进效果。",
+    "org": "中国发展简报",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "综合素养",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "综合素养",
+    "format": "",
+    "period": "",
+    "dateText": "2023.05.09",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24594.html",
+    "publishDate": "2023-05-09",
+    "publishedDays": 1275,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "455a42bbd816",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "GENERAL",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国发展简报",
+      "summary": "文章系统梳理了社工开展探访前、探访中及探访后的15项实务要点，涵盖信息准备、沟通技巧、安全分工、记录建档与资源链接。适合一线社工、实习生及项目负责人参考，帮助提升探访工作的规范性、专业性和服务跟进效果。"
     }
   },
   {
@@ -21999,47 +22066,6 @@
     }
   },
   {
-    "id": "tool-6ee0d8c11d7b",
-    "category": "行业沙龙会议",
-    "title": "活动 | 组织发展中的个体成长",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24200.html",
-    "summary": "“好公益平台×启发时刻”专题以管理者与团队成员对话的形式，探讨组织发展过程中个体成长，以及个人与组织之间的互动关系。公益组织管理者、团队成员及关注组织与人才协同发展的从业者可借此了解不同角色面临的压力与转型经验。",
-    "org": "好公益平台、悦享新知",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业沙龙会议",
-      "团队管理",
-      "免费"
-    ],
-    "icon": "🎤",
-    "color": "#fdf6ec",
-    "domain": "团队管理",
-    "format": "线上",
-    "period": "",
-    "dateText": "2022.12.14",
-    "locationText": "线上",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24200.html",
-    "publishDate": "2022-12-14",
-    "publishedDays": 1421,
-    "tone": "orange",
-    "action": "查看来源",
-    "bodyHash": "2cd006222a41",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "SALON",
-      "domain": "TEAM",
-      "format": "ONLINE",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "好公益平台、悦享新知",
-      "summary": "“好公益平台×启发时刻”专题以管理者与团队成员对话的形式，探讨组织发展过程中个体成长，以及个人与组织之间的互动关系。公益组织管理者、团队成员及关注组织与人才协同发展的从业者可借此了解不同角色面临的压力与转型经验。"
-    }
-  },
-  {
     "id": "tool-ca10571b4b84",
     "category": "同行经验文章",
     "title": "干货 | 基金会的财产来源（1）：财产来源的描述与作用",
@@ -22078,6 +22104,47 @@
       "is_free": true,
       "org": "中国发展简报",
       "summary": "文章系统介绍公募与非公募基金会的财产来源，并梳理公开募捐、定向募捐、限定性捐赠和非限定性捐赠等类型。适合基金会管理者及公益从业者了解募捐边界、捐赠形式与财产来源对机构持续发展的作用。"
+    }
+  },
+  {
+    "id": "tool-6ee0d8c11d7b",
+    "category": "行业沙龙会议",
+    "title": "活动 | 组织发展中的个体成长",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24200.html",
+    "summary": "“好公益平台×启发时刻”专题以管理者与团队成员对话的形式，探讨组织发展过程中个体成长，以及个人与组织之间的互动关系。公益组织管理者、团队成员及关注组织与人才协同发展的从业者可借此了解不同角色面临的压力与转型经验。",
+    "org": "好公益平台、悦享新知",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业沙龙会议",
+      "团队管理",
+      "免费"
+    ],
+    "icon": "🎤",
+    "color": "#fdf6ec",
+    "domain": "团队管理",
+    "format": "线上",
+    "period": "",
+    "dateText": "2022.12.14",
+    "locationText": "线上",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24200.html",
+    "publishDate": "2022-12-14",
+    "publishedDays": 1421,
+    "tone": "orange",
+    "action": "查看来源",
+    "bodyHash": "2cd006222a41",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "SALON",
+      "domain": "TEAM",
+      "format": "ONLINE",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "好公益平台、悦享新知",
+      "summary": "“好公益平台×启发时刻”专题以管理者与团队成员对话的形式，探讨组织发展过程中个体成长，以及个人与组织之间的互动关系。公益组织管理者、团队成员及关注组织与人才协同发展的从业者可借此了解不同角色面临的压力与转型经验。"
     }
   },
   {
@@ -23557,47 +23624,6 @@
     }
   },
   {
-    "id": "tool-71f58c7987f4",
-    "category": "行业报告",
-    "title": "发布| 第三届国家治理现代化与社会组织发展高端论坛暨《中国社会组织报告（2022）》看点扫描",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24098.html",
-    "summary": "文章梳理第三届国家治理现代化与社会组织发展高端论坛及《中国社会组织报告（2022）》系列成果，汇总社会组织规模与结构、高质量发展及参与国家治理等议题。适合公益组织负责人、研究者及关注社会组织政策的从业者参考，可了解社会组织发展数据、治理趋势、乡村振兴实践与专业化能力建设方向。",
-    "org": "中国社会科学院大学、社会科学文献出版社",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "综合素养",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "综合素养",
-    "format": "",
-    "period": "",
-    "dateText": "2022.11.15",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24098.html",
-    "publishDate": "2022-11-15",
-    "publishedDays": 1450,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "0b54f6bc8e10",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "GENERAL",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "中国社会科学院大学、社会科学文献出版社",
-      "summary": "文章梳理第三届国家治理现代化与社会组织发展高端论坛及《中国社会组织报告（2022）》系列成果，汇总社会组织规模与结构、高质量发展及参与国家治理等议题。适合公益组织负责人、研究者及关注社会组织政策的从业者参考，可了解社会组织发展数据、治理趋势、乡村振兴实践与专业化能力建设方向。"
-    }
-  },
-  {
     "id": "tool-625c9f9b3af6",
     "category": "同行经验文章",
     "title": "视点 | 高小贤：提升社会性别意识，让公益慈善更有效",
@@ -23636,6 +23662,47 @@
       "is_free": true,
       "org": "中国发展简报",
       "summary": "文章回顾社会性别意识在中国公益慈善领域的发展与边缘化趋势，分析组织战略、人员培训及项目专业性不足等问题，并提出推动社会性别主流化的系统路径。适合公益机构负责人、项目人员及社会性别议题实践者参考，可了解如何将性别分析融入机构治理、项目设计执行与效果评估，提高公益服务的针对性和有效性。"
+    }
+  },
+  {
+    "id": "tool-71f58c7987f4",
+    "category": "行业报告",
+    "title": "发布| 第三届国家治理现代化与社会组织发展高端论坛暨《中国社会组织报告（2022）》看点扫描",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/24098.html",
+    "summary": "文章梳理第三届国家治理现代化与社会组织发展高端论坛及《中国社会组织报告（2022）》系列成果，汇总社会组织规模与结构、高质量发展及参与国家治理等议题。适合公益组织负责人、研究者及关注社会组织政策的从业者参考，可了解社会组织发展数据、治理趋势、乡村振兴实践与专业化能力建设方向。",
+    "org": "中国社会科学院大学、社会科学文献出版社",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "综合素养",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "综合素养",
+    "format": "",
+    "period": "",
+    "dateText": "2022.11.15",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/24098.html",
+    "publishDate": "2022-11-15",
+    "publishedDays": 1450,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "0b54f6bc8e10",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "GENERAL",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国社会科学院大学、社会科学文献出版社",
+      "summary": "文章梳理第三届国家治理现代化与社会组织发展高端论坛及《中国社会组织报告（2022）》系列成果，汇总社会组织规模与结构、高质量发展及参与国家治理等议题。适合公益组织负责人、研究者及关注社会组织政策的从业者参考，可了解社会组织发展数据、治理趋势、乡村振兴实践与专业化能力建设方向。"
     }
   },
   {
@@ -25361,47 +25428,6 @@
     }
   },
   {
-    "id": "tool-419a3ea3526e",
-    "category": "同行经验文章",
-    "title": "创意 | 什么创意和执行策略让公益破圈传播？",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/23820.html",
-    "summary": "文章通过垃圾分类、宠物领养、循环利用和野生虎保护等公益传播案例，拆解公益破圈传播的创意手法与执行策略，包括象征叙事、视角转换、跨界联动及多渠道媒介投放。适合公益组织、品牌及传播团队参考，用于设计更易被公众理解、参与和转发的公益传播行动。",
-    "org": "中国发展简报",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "传播",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "传播",
-    "format": "",
-    "period": "",
-    "dateText": "2022.08.19",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/23820.html",
-    "publishDate": "2022-08-19",
-    "publishedDays": 1538,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "dfe9771e8f40",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "COMMS",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "中国发展简报",
-      "summary": "文章通过垃圾分类、宠物领养、循环利用和野生虎保护等公益传播案例，拆解公益破圈传播的创意手法与执行策略，包括象征叙事、视角转换、跨界联动及多渠道媒介投放。适合公益组织、品牌及传播团队参考，用于设计更易被公众理解、参与和转发的公益传播行动。"
-    }
-  },
-  {
     "id": "tool-959c4c7fbb3f",
     "category": "培训课程",
     "title": "数字·公益 | “数字公益高质量发展研修班”在京顺利举办",
@@ -25440,6 +25466,47 @@
       "is_free": true,
       "org": "中国西部人才开发基金会、腾讯公益慈善基金会",
       "summary": "“数字公益高质量发展研修班”面向全国公益慈善组织骨干开展为期5天的线下集中培训，课程涵盖社会组织治理、公益组织数字化转型、智慧公益人才发展、传播及领导力等内容。学员可通过主题讲座、案例教学和结构化研讨，提升战略视野、治理能力与数字化转型能力，并将所学用于机构实践。"
+    }
+  },
+  {
+    "id": "tool-419a3ea3526e",
+    "category": "同行经验文章",
+    "title": "创意 | 什么创意和执行策略让公益破圈传播？",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/23820.html",
+    "summary": "文章通过垃圾分类、宠物领养、循环利用和野生虎保护等公益传播案例，拆解公益破圈传播的创意手法与执行策略，包括象征叙事、视角转换、跨界联动及多渠道媒介投放。适合公益组织、品牌及传播团队参考，用于设计更易被公众理解、参与和转发的公益传播行动。",
+    "org": "中国发展简报",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "传播",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "传播",
+    "format": "",
+    "period": "",
+    "dateText": "2022.08.19",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/23820.html",
+    "publishDate": "2022-08-19",
+    "publishedDays": 1538,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "dfe9771e8f40",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "COMMS",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国发展简报",
+      "summary": "文章通过垃圾分类、宠物领养、循环利用和野生虎保护等公益传播案例，拆解公益破圈传播的创意手法与执行策略，包括象征叙事、视角转换、跨界联动及多渠道媒介投放。适合公益组织、品牌及传播团队参考，用于设计更易被公众理解、参与和转发的公益传播行动。"
     }
   },
   {
@@ -28763,8 +28830,8 @@
     "category": "同行经验文章",
     "title": "评估工具（一） | 项目方应该如何有效度过政府购买服务评估",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/22691.html",
-    "summary": "文章围绕政府购买服务中的第三方监测评估，梳理过程评估与末期评估的重点，并介绍项目方识别购买方真实期待、总结服务成效及准备评估方案的方法。适合承接政府购买服务的社会组织、项目负责人及评估相关从业者参考，以减少评估偏差并提升项目管理与迎检准备的有效性。",
-    "org": "悦享新知",
+    "summary": "文章围绕政府购买服务中的第三方监测评估，梳理过程评估与末期评估的区别，以及购买方重点关注的风险、亮点和合同履约情况，并介绍项目方迎接评估的准备方法。适合承接政府购买服务的社会组织项目经理及监测评估人员参考，可据此澄清双方期待、总结项目成效并完善评估方案。",
+    "org": "汉达社会工作服务中心",
     "isFree": true,
     "priceText": "免费",
     "tags": [
@@ -28785,7 +28852,7 @@
     "publishedDays": 2036,
     "tone": "mint",
     "action": "阅读原文",
-    "bodyHash": "82ce530944c9",
+    "bodyHash": "1e7d204d789f",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -28795,8 +28862,8 @@
       "format": null,
       "period": "UNKNOWN",
       "is_free": true,
-      "org": "悦享新知",
-      "summary": "文章围绕政府购买服务中的第三方监测评估，梳理过程评估与末期评估的重点，并介绍项目方识别购买方真实期待、总结服务成效及准备评估方案的方法。适合承接政府购买服务的社会组织、项目负责人及评估相关从业者参考，以减少评估偏差并提升项目管理与迎检准备的有效性。"
+      "org": "汉达社会工作服务中心",
+      "summary": "文章围绕政府购买服务中的第三方监测评估，梳理过程评估与末期评估的区别，以及购买方重点关注的风险、亮点和合同履约情况，并介绍项目方迎接评估的准备方法。适合承接政府购买服务的社会组织项目经理及监测评估人员参考，可据此澄清双方期待、总结项目成效并完善评估方案。"
     }
   },
   {
@@ -28964,47 +29031,6 @@
     }
   },
   {
-    "id": "tool-3b8d78643f4c",
-    "category": "同行经验文章",
-    "title": "工具 | 美好公益说明书17：适老化改造",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/22533.html",
-    "summary": "这是一期围绕居家适老化改造的公益实务文章，介绍适老化改造的概念、意义、主要内容、益处及实施难点。适合服务老年人及其家庭的公益组织、项目团队和一线从业者参考，帮助其理解居家安全风险及适老化改造方法。",
-    "org": "中国发展简报",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "其他",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "其他",
-    "format": "",
-    "period": "",
-    "dateText": "2021.02.02",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/22533.html",
-    "publishDate": "2021-02-02",
-    "publishedDays": 2101,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "e14053e42970",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "OTHER",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": null,
-      "summary": "这是一期围绕居家适老化改造的公益实务文章，介绍适老化改造的概念、意义、主要内容、益处及实施难点。适合服务老年人及其家庭的公益组织、项目团队和一线从业者参考，帮助其理解居家安全风险及适老化改造方法。"
-    }
-  },
-  {
     "id": "tool-6efb976a92e6",
     "category": "行业报告",
     "title": "工具 | 美好公益说明书18：食物银行",
@@ -29043,6 +29069,47 @@
       "is_free": true,
       "org": null,
       "summary": "这份“美好公益说明书”以通俗方式介绍食物银行的概念、存在意义，以及其在中国语境下的创新与挑战。内容适合公益组织从业者、社会创新实践者和公众阅读，可帮助读者理解食物银行的运作逻辑并了解可参与的行动方向。"
+    }
+  },
+  {
+    "id": "tool-3b8d78643f4c",
+    "category": "同行经验文章",
+    "title": "工具 | 美好公益说明书17：适老化改造",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/22533.html",
+    "summary": "这是一期围绕居家适老化改造的公益实务文章，介绍适老化改造的概念、意义、主要内容、益处及实施难点。适合服务老年人及其家庭的公益组织、项目团队和一线从业者参考，帮助其理解居家安全风险及适老化改造方法。",
+    "org": "中国发展简报",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "其他",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "其他",
+    "format": "",
+    "period": "",
+    "dateText": "2021.02.02",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/22533.html",
+    "publishDate": "2021-02-02",
+    "publishedDays": 2101,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "e14053e42970",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "OTHER",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": null,
+      "summary": "这是一期围绕居家适老化改造的公益实务文章，介绍适老化改造的概念、意义、主要内容、益处及实施难点。适合服务老年人及其家庭的公益组织、项目团队和一线从业者参考，帮助其理解居家安全风险及适老化改造方法。"
     }
   },
   {
@@ -29293,8 +29360,8 @@
     "category": "行业报告",
     "title": "中国公益组织互联网使用与传播能力调研报告（2013-2020）",
     "url": "https://www.cfforum.org.cn/Uploads/file/20201221/5fe06987cb653.zip",
-    "summary": "【伙伴成果】中国公益组织互联网使用与传播能力调研报告（2013-2020）",
-    "org": "北京基业长青社会组织服务中心",
+    "summary": "《中国公益组织互联网使用与传播能力第七次调研报告》基于2013—2020年的调研数据，分析公益组织的内部治理、技术基础、沟通渠道及互联网传播能力。适合公益组织负责人、传播人员和能力建设从业者参考，以了解行业现状、组织能力短板及互联网传播与资源获取的改进方向。",
+    "org": "深圳市图鸥公益事业发展中心",
     "isFree": true,
     "priceText": "免费",
     "tags": [
@@ -29303,8 +29370,8 @@
     ],
     "icon": "📊",
     "color": "#f3e5f5",
-    "domain": "",
-    "format": "",
+    "domain": "传播",
+    "format": "下载",
     "period": "",
     "dateText": "2020.12.21",
     "locationText": "",
@@ -29313,7 +29380,20 @@
     "publishDate": "2020-12-21",
     "publishedDays": 2144,
     "tone": "purple",
-    "action": "⬇ 查看报告"
+    "action": "⬇ 查看报告",
+    "bodyHash": "a0ea6864deda",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "COMMS",
+      "format": "DOWNLOAD",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "深圳市图鸥公益事业发展中心",
+      "summary": "《中国公益组织互联网使用与传播能力第七次调研报告》基于2013—2020年的调研数据，分析公益组织的内部治理、技术基础、沟通渠道及互联网传播能力。适合公益组织负责人、传播人员和能力建设从业者参考，以了解行业现状、组织能力短板及互联网传播与资源获取的改进方向。"
+    }
   },
   {
     "id": "tool-ae41ea84dc35",
@@ -33168,47 +33248,6 @@
     }
   },
   {
-    "id": "tool-644fae945dc4",
-    "category": "行业报告",
-    "title": "【报告解读】2019年公益保护地观察报告",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/20845.html",
-    "summary": "文章解读《2019年公益保护地观察报告》，介绍公益保护地的评定标准、年度统计结果、资金来源及治理模式，并分析保护地役权、共同治理等发展趋势。适合关注生物多样性保护、自然保护地治理的公益组织、基金会及行业从业者参考，可帮助其了解保护地认定要求、实践路径与后续发展建议。",
-    "org": "社会公益保护地联盟",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "其他",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "其他",
-    "format": "",
-    "period": "",
-    "dateText": "2019.11.28",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/20845.html",
-    "publishDate": "2019-11-28",
-    "publishedDays": 2533,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "793d5eb5c9c1",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "OTHER",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "社会公益保护地联盟",
-      "summary": "文章解读《2019年公益保护地观察报告》，介绍公益保护地的评定标准、年度统计结果、资金来源及治理模式，并分析保护地役权、共同治理等发展趋势。适合关注生物多样性保护、自然保护地治理的公益组织、基金会及行业从业者参考，可帮助其了解保护地认定要求、实践路径与后续发展建议。"
-    }
-  },
-  {
     "id": "tool-2b510056e20d",
     "category": "行业报告",
     "title": "【瑞森德专栏】《反家暴社会组织筹资现状与发展报告》发布，揭示五大看点",
@@ -33247,6 +33286,47 @@
       "is_free": true,
       "org": "北京瑞森德社会组织发展中心（亚洲基金会支持）",
       "summary": "《反家暴社会组织筹资现状与发展报告》是在亚洲基金会支持下，由北京瑞森德社会组织发展中心基于全国15个省市30家社会组织的5450份有效问卷及深度访谈形成的研究报告，聚焦反家暴社会组织的筹资规模、资金来源、筹资方式、捐赠人管理与筹资能力建设需求。报告揭示筹资规划与产品研发能力不足、过度依赖政府购买服务、捐赠人管理薄弱、行业支持机制尚未建立等五大发现。适合反家暴及其他领域社会组织、公益从业者与关注组织筹资能力建设的资助方阅读参考，可用于诊断自身筹资现状并寻找能力提升路径。"
+    }
+  },
+  {
+    "id": "tool-644fae945dc4",
+    "category": "行业报告",
+    "title": "【报告解读】2019年公益保护地观察报告",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/20845.html",
+    "summary": "文章解读《2019年公益保护地观察报告》，介绍公益保护地的评定标准、年度统计结果、资金来源及治理模式，并分析保护地役权、共同治理等发展趋势。适合关注生物多样性保护、自然保护地治理的公益组织、基金会及行业从业者参考，可帮助其了解保护地认定要求、实践路径与后续发展建议。",
+    "org": "社会公益保护地联盟",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "其他",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "其他",
+    "format": "",
+    "period": "",
+    "dateText": "2019.11.28",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/20845.html",
+    "publishDate": "2019-11-28",
+    "publishedDays": 2533,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "793d5eb5c9c1",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "OTHER",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "社会公益保护地联盟",
+      "summary": "文章解读《2019年公益保护地观察报告》，介绍公益保护地的评定标准、年度统计结果、资金来源及治理模式，并分析保护地役权、共同治理等发展趋势。适合关注生物多样性保护、自然保护地治理的公益组织、基金会及行业从业者参考，可帮助其了解保护地认定要求、实践路径与后续发展建议。"
     }
   },
   {
@@ -34275,47 +34355,6 @@
     }
   },
   {
-    "id": "tool-bce12d3be958",
-    "category": "行业报告",
-    "title": "【报告】《中国红十字事业发展规划纲要（2020-2024年）》",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/20566.html",
-    "summary": "《中国红十字事业发展规划纲要（2020—2024年）》系统提出红十字事业发展的总体要求、阶段性目标和重点任务，涵盖应急救援、人道服务、资源动员、组织建设及改革创新等方面。适合各级红十字组织、人道公益机构及其管理者参考，用于规划组织能力建设重点并制定任务分工和实施评估机制。",
-    "org": "中国红十字会总会",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "行业报告",
-      "综合素养",
-      "免费"
-    ],
-    "icon": "📊",
-    "color": "#f3e5f5",
-    "domain": "综合素养",
-    "format": "下载",
-    "period": "",
-    "dateText": "2019.09.11",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/20566.html",
-    "publishDate": "2019-09-11",
-    "publishedDays": 2611,
-    "tone": "purple",
-    "action": "⬇ 查看报告",
-    "bodyHash": "53b4669ca40e",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "REPORT",
-      "domain": "GENERAL",
-      "format": "DOWNLOAD",
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "中国红十字会总会",
-      "summary": "《中国红十字事业发展规划纲要（2020—2024年）》系统提出红十字事业发展的总体要求、阶段性目标和重点任务，涵盖应急救援、人道服务、资源动员、组织建设及改革创新等方面。适合各级红十字组织、人道公益机构及其管理者参考，用于规划组织能力建设重点并制定任务分工和实施评估机制。"
-    }
-  },
-  {
     "id": "tool-c4dd19c2b0fc",
     "category": "同行经验文章",
     "title": "【复恩专栏】什么是慈善募捐？如何规范的进行慈善募捐？",
@@ -34354,6 +34393,47 @@
       "is_free": true,
       "org": "上海复恩社会组织法律研究与服务中心",
       "summary": "本文是“十场基金会法律公开课”的第三讲，系统讲解慈善募捐的概念与类型、公开募捐资格、互联网公开募捐及法律责任等合规要点。适合基金会负责人、合规法务人员及其他公益组织从业者学习，帮助其区分慈善募捐与个人求助、网络互助，并掌握募捐备案、内部决策和信息公开等实务要求。"
+    }
+  },
+  {
+    "id": "tool-bce12d3be958",
+    "category": "行业报告",
+    "title": "【报告】《中国红十字事业发展规划纲要（2020-2024年）》",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/20566.html",
+    "summary": "《中国红十字事业发展规划纲要（2020—2024年）》系统提出红十字事业发展的总体要求、阶段性目标和重点任务，涵盖应急救援、人道服务、资源动员、组织建设及改革创新等方面。适合各级红十字组织、人道公益机构及其管理者参考，用于规划组织能力建设重点并制定任务分工和实施评估机制。",
+    "org": "中国红十字会总会",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "行业报告",
+      "综合素养",
+      "免费"
+    ],
+    "icon": "📊",
+    "color": "#f3e5f5",
+    "domain": "综合素养",
+    "format": "下载",
+    "period": "",
+    "dateText": "2019.09.11",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/20566.html",
+    "publishDate": "2019-09-11",
+    "publishedDays": 2611,
+    "tone": "purple",
+    "action": "⬇ 查看报告",
+    "bodyHash": "53b4669ca40e",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "REPORT",
+      "domain": "GENERAL",
+      "format": "DOWNLOAD",
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "中国红十字会总会",
+      "summary": "《中国红十字事业发展规划纲要（2020—2024年）》系统提出红十字事业发展的总体要求、阶段性目标和重点任务，涵盖应急救援、人道服务、资源动员、组织建设及改革创新等方面。适合各级红十字组织、人道公益机构及其管理者参考，用于规划组织能力建设重点并制定任务分工和实施评估机制。"
     }
   },
   {
@@ -35710,47 +35790,6 @@
     }
   },
   {
-    "id": "tool-5693ef0811e2",
-    "category": "同行经验文章",
-    "title": "干货|慈善捐赠红线之约定利益回报与冠名捐赠",
-    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/18797.html",
-    "summary": "文章结合《慈善法》等规定和典型案例，梳理慈善捐赠中不得约定利益回报、不得提取回扣以及冠名捐赠的合规边界。适合基金会负责人、项目及筹款人员、法务与合规人员参考，以规范捐赠协议和资金使用，降低慈善组织运营中的法律风险。",
-    "org": "易孚泽公益基金会、北京致诚社会组织矛盾调处与研究中心",
-    "isFree": true,
-    "priceText": "免费",
-    "tags": [
-      "同行经验文章",
-      "筹款",
-      "免费"
-    ],
-    "icon": "📝",
-    "color": "#e0f2f1",
-    "domain": "筹款",
-    "format": "",
-    "period": "",
-    "dateText": "2018.06.25",
-    "locationText": "",
-    "sourceName": "中国发展简报",
-    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/18797.html",
-    "publishDate": "2018-06-25",
-    "publishedDays": 3054,
-    "tone": "mint",
-    "action": "阅读原文",
-    "bodyHash": "bab50b2987f1",
-    "extractionVersion": 1,
-    "extraction": {
-      "is_relevant": true,
-      "reject_reason": null,
-      "category": "EXPERIENCE",
-      "domain": "FUNDRAISE",
-      "format": null,
-      "period": "UNKNOWN",
-      "is_free": true,
-      "org": "易孚泽公益基金会、北京致诚社会组织矛盾调处与研究中心",
-      "summary": "文章结合《慈善法》等规定和典型案例，梳理慈善捐赠中不得约定利益回报、不得提取回扣以及冠名捐赠的合规边界。适合基金会负责人、项目及筹款人员、法务与合规人员参考，以规范捐赠协议和资金使用，降低慈善组织运营中的法律风险。"
-    }
-  },
-  {
     "id": "tool-eee1880bec01",
     "category": "同行经验文章",
     "title": "黄浩明：如何践行有效管理 此书给出了解决之道",
@@ -35789,6 +35828,47 @@
       "is_free": true,
       "org": null,
       "summary": "文章以推荐《社会组织管理精要十五讲》为切入点，梳理了社会组织在使命、公信力、治理、项目管理、筹资创新、人力资源及政社合作等方面的管理思路与操作建议。适合公益机构负责人、管理者和监督者阅读，可用于提升组织的专业化治理、项目与资金管理能力，并理解如何将组织使命转化为实际成果。"
+    }
+  },
+  {
+    "id": "tool-5693ef0811e2",
+    "category": "同行经验文章",
+    "title": "干货|慈善捐赠红线之约定利益回报与冠名捐赠",
+    "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/18797.html",
+    "summary": "文章结合《慈善法》等规定和典型案例，梳理慈善捐赠中不得约定利益回报、不得提取回扣以及冠名捐赠的合规边界。适合基金会负责人、项目及筹款人员、法务与合规人员参考，以规范捐赠协议和资金使用，降低慈善组织运营中的法律风险。",
+    "org": "易孚泽公益基金会、北京致诚社会组织矛盾调处与研究中心",
+    "isFree": true,
+    "priceText": "免费",
+    "tags": [
+      "同行经验文章",
+      "筹款",
+      "免费"
+    ],
+    "icon": "📝",
+    "color": "#e0f2f1",
+    "domain": "筹款",
+    "format": "",
+    "period": "",
+    "dateText": "2018.06.25",
+    "locationText": "",
+    "sourceName": "中国发展简报",
+    "downloadUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/18797.html",
+    "publishDate": "2018-06-25",
+    "publishedDays": 3054,
+    "tone": "mint",
+    "action": "阅读原文",
+    "bodyHash": "bab50b2987f1",
+    "extractionVersion": 1,
+    "extraction": {
+      "is_relevant": true,
+      "reject_reason": null,
+      "category": "EXPERIENCE",
+      "domain": "FUNDRAISE",
+      "format": null,
+      "period": "UNKNOWN",
+      "is_free": true,
+      "org": "易孚泽公益基金会、北京致诚社会组织矛盾调处与研究中心",
+      "summary": "文章结合《慈善法》等规定和典型案例，梳理慈善捐赠中不得约定利益回报、不得提取回扣以及冠名捐赠的合规边界。适合基金会负责人、项目及筹款人员、法务与合规人员参考，以规范捐赠协议和资金使用，降低慈善组织运营中的法律风险。"
     }
   },
   {
@@ -37026,7 +37106,7 @@
     "category": "同行经验文章",
     "title": "公益组织管理提升秘笈之 筹款有道 | ABC公益专栏",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/17033.html",
-    "summary": "文章结合咨询案例与行业经验，系统梳理NGO在业务定位、项目设计、资方分析、渠道拓展及筹款机制建设方面的常见问题，并提出供需匹配模型、标准工作流程和筹款计划书框架。适合公益组织管理者、筹款人员及项目负责人参考，帮助其诊断筹款困境、匹配政府/基金会/企业/个人等资助方，并提升可持续筹款能力。",
+    "summary": "文章系统梳理公益组织筹款中的业务定位、项目设计、资方分析、渠道拓展和机制建设等问题，并提出供需匹配模型、筹款工作流程及计划书框架。适合公益机构管理者、筹款人员及项目负责人参考，以提升项目吸引力、资金渠道拓展能力和筹款工作的可持续性。",
     "org": "ABC公益研究院（ABC美好社会咨询社）",
     "isFree": true,
     "priceText": "免费",
@@ -37048,7 +37128,7 @@
     "publishedDays": 3408,
     "tone": "mint",
     "action": "阅读原文",
-    "bodyHash": "5cc11a85a59c",
+    "bodyHash": "eaf57aaafd4b",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -37059,7 +37139,7 @@
       "period": "UNKNOWN",
       "is_free": true,
       "org": "ABC公益研究院（ABC美好社会咨询社）",
-      "summary": "文章结合咨询案例与行业经验，系统梳理NGO在业务定位、项目设计、资方分析、渠道拓展及筹款机制建设方面的常见问题，并提出供需匹配模型、标准工作流程和筹款计划书框架。适合公益组织管理者、筹款人员及项目负责人参考，帮助其诊断筹款困境、匹配政府/基金会/企业/个人等资助方，并提升可持续筹款能力。"
+      "summary": "文章系统梳理公益组织筹款中的业务定位、项目设计、资方分析、渠道拓展和机制建设等问题，并提出供需匹配模型、筹款工作流程及计划书框架。适合公益机构管理者、筹款人员及项目负责人参考，以提升项目吸引力、资金渠道拓展能力和筹款工作的可持续性。"
     }
   },
   {
@@ -38215,8 +38295,8 @@
     "category": "同行经验文章",
     "title": "《公益组织管理提升秘笈之——筹款有道》下",
     "url": "https://www.chinadevelopmentbrief.org.cn/news/detail/15491.html",
-    "summary": "文章围绕公益组织筹款方法展开，提出业务定位、项目设计、资方供需匹配和筹款机制建设等实务框架，并梳理政府、基金会、企业及个人资助方的特点与筹款流程。适合公益组织管理者、项目负责人和筹款人员参考，以学习渠道分析、项目设计、机制建设及标准文档沉淀方法，并通过丰台利智、真爱梦想等案例了解实践应用。",
-    "org": "ABC美好社会咨询社",
+    "summary": "文章系统介绍了公益组织开展筹款工作的方法框架，涵盖业务定位、项目设计、资方分析、渠道拓展、筹款机制建设及供需匹配模型，并附有筹款计划书模板要点。适合公益机构管理者、项目负责人及筹款人员参考，以优化项目设计、匹配政府、基金会、企业和个人等资方，并建立标准化筹款流程。",
+    "org": "ABC美好社会咨询社（ABC公益研究院）",
     "isFree": true,
     "priceText": "免费",
     "tags": [
@@ -38237,7 +38317,7 @@
     "publishedDays": 3982,
     "tone": "mint",
     "action": "阅读原文",
-    "bodyHash": "e5d2c3cefd07",
+    "bodyHash": "71af8e0234d6",
     "extractionVersion": 1,
     "extraction": {
       "is_relevant": true,
@@ -38247,8 +38327,8 @@
       "format": null,
       "period": "UNKNOWN",
       "is_free": true,
-      "org": "ABC美好社会咨询社",
-      "summary": "文章围绕公益组织筹款方法展开，提出业务定位、项目设计、资方供需匹配和筹款机制建设等实务框架，并梳理政府、基金会、企业及个人资助方的特点与筹款流程。适合公益组织管理者、项目负责人和筹款人员参考，以学习渠道分析、项目设计、机制建设及标准文档沉淀方法，并通过丰台利智、真爱梦想等案例了解实践应用。"
+      "org": "ABC美好社会咨询社（ABC公益研究院）",
+      "summary": "文章系统介绍了公益组织开展筹款工作的方法框架，涵盖业务定位、项目设计、资方分析、渠道拓展、筹款机制建设及供需匹配模型，并附有筹款计划书模板要点。适合公益机构管理者、项目负责人及筹款人员参考，以优化项目设计、匹配政府、基金会、企业和个人等资方，并建立标准化筹款流程。"
     }
   },
   {

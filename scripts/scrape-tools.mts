@@ -478,8 +478,15 @@ async function fetchToolText(item: AnyRecord): Promise<{ body: string; publishDa
   if (!res) return null;
 
   if (item.sourceName === "北京基业长青社会组织服务中心") {
-    // CFF：直接 PDF 链接，pdfjs 提取前几页文本
-    const buf = new Uint8Array(await res.arrayBuffer());
+    // CFF：直接 PDF 链接（少数为 zip 包，取包内第一个 PDF），pdfjs 提取前几页文本
+    let buf = new Uint8Array(await res.arrayBuffer());
+    if (/\.zip($|\?)/i.test(item.url)) {
+      const { default: JSZip } = await import("jszip");
+      const zip = await JSZip.loadAsync(buf);
+      const pdfName = Object.keys(zip.files).find((n) => /\.pdf$/i.test(n));
+      if (!pdfName) return null;
+      buf = new Uint8Array(await zip.files[pdfName].async("arraybuffer"));
+    }
     const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
     const doc = await getDocument({ data: buf }).promise;
     let text = "";
@@ -497,7 +504,7 @@ async function fetchToolText(item: AnyRecord): Promise<{ body: string; publishDa
   if (item.sourceName === "公益网校") {
     // EduSoho 页面 JS 渲染，课程简介在 meta description。
     const desc = clean($("meta[name='description']").attr("content") ?? "");
-    return desc.length >= 30 ? { body: desc, publishDate: "" } : null;
+    return desc.length >= 15 ? { body: desc, publishDate: "" } : null;
   }
   if (item.sourceName === "中国慈善联合会") {
     const body = clean($(".wz_div_show").text());
@@ -530,7 +537,7 @@ async function enrichStructured(records: AnyRecord[]): Promise<AnyRecord[]> {
         console.warn(`  ! 内容获取失败: ${item.title.slice(0, 32)} (${error instanceof Error ? error.message : error})`);
       }
       await sleep(GAP_MS);
-      if (!detail || detail.body.length < 30) continue;
+      if (!detail || detail.body.length < 15) continue;
 
       const bodyHash = hashId(hashBody(detail.body));
       let extraction: ToolExtraction | undefined;
