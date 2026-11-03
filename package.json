@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "storage:cors": "node scripts/configure-storage-cors.mjs",
-    "scrape:jobs": "node --use-env-proxy scripts/scrape-jobs.mjs",
+    "scrape:jobs": "node --use-env-proxy --import tsx scripts/scrape-jobs.mts",
     "scrape:fundings": "node --use-env-proxy --import tsx scripts/scrape-fundings.mts",
     "scrape:news": "node --use-env-proxy --import tsx scripts/scrape-news.mts",
     "scrape:tools": "node --use-env-proxy --import tsx scripts/scrape-tools.mts",

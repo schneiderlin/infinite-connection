@@ -51,6 +51,10 @@ const clean = (value: unknown) =>
     .replace(/\s+/g, " ")
     .trim();
 const hashId = (value: string) => createHash("sha1").update(value).digest("hex").slice(0, 12);
+// 页面浏览计数（"浏览 1166 次"）每次访问自增，直接 hash 会导致缓存永远失效；
+// 计算 bodyHash 前先剥离这类计数。
+const hashBody = (body: string) =>
+  body.replace(/(浏览|阅读|查看|访问量|分享|收藏|点赞)\s*[:：]?\s*\d[\d,]*\s*(次|人|个|条)?/g, "");
 
 function daysSince(dateStr: string) {
   if (!dateStr) return 0;
@@ -334,7 +338,7 @@ async function extractTools(
     while (cursor < tasks.length) {
       const task = tasks[cursor];
       cursor += 1;
-      const bodyHash = hashId(task.body);
+      const bodyHash = hashId(hashBody(task.body));
 
       let extraction: ToolExtraction | undefined;
       if (
@@ -528,7 +532,7 @@ async function enrichStructured(records: AnyRecord[]): Promise<AnyRecord[]> {
       await sleep(GAP_MS);
       if (!detail || detail.body.length < 30) continue;
 
-      const bodyHash = hashId(detail.body);
+      const bodyHash = hashId(hashBody(detail.body));
       let extraction: ToolExtraction | undefined;
       if (item.bodyHash === bodyHash && item.extraction && item.extractionVersion === EXTRACTION_VERSION) {
         extraction = item.extraction as ToolExtraction;

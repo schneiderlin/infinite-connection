@@ -61,7 +61,7 @@ const rules = {
   ],
   jobs: [
     ...common,
-    ["salary 格式规范", (r) => /^(\d[\d-]*元(\/月|\/天)?|面议|详见原帖|志愿服务)$/.test(r.salary ?? "")],
+    ["salary 格式规范", (r) => /^(\d[\d,]*(-\d[\d,]*)?元(\/月|\/天)?|面议|详见原帖|志愿服务)$/.test(r.salary ?? "")],
     ["location 规范（省市或线上）", (r) => typeof r.location === "string" && r.location.length > 0 && !/http/.test(r.location)],
   ],
 };

@@ -4,11 +4,10 @@
  *
  * 执行顺序（任一步失败立即停止，不继续后续步骤）：
  *   1. scrape-fundings.mts  抓取资助信息（BAML + MiniMax 提取，需 MINIMAX_API_KEY）
- *   2. scrape-jobs.mjs      抓取招聘岗位
+ *   2. scrape-jobs.mts      抓取招聘岗位（BAML + MiniMax 提取）
  *   3. scrape-tools.mts     抓取能力工具（BAML + MiniMax 提取）
  *   4. scrape-news.mts      抓取公益资讯（BAML + MiniMax 提取）
- *   5. refine-jobs.mjs      清洗招聘岗位
- *   6. import-to-content.mts 快照统一入库（PUBLISHED，前端只读库）
+ *   5. import-to-content.mts 快照统一入库（PUBLISHED，前端只读库）
  *
  * 抓取脚本沿用各自的运行约定，带 --use-env-proxy，
  * 与 package.json 里单独执行 scrape:jobs 时的行为保持一致。
@@ -31,7 +30,12 @@ const STEPS = [
     useProxy: true,
     nodeArgs: ["--import", "tsx"],
   },
-  { label: "抓取招聘岗位", script: "scrape-jobs.mjs", useProxy: true },
+  {
+    label: "抓取招聘岗位",
+    script: "scrape-jobs.mts",
+    useProxy: true,
+    nodeArgs: ["--import", "tsx"],
+  },
   {
     label: "抓取能力工具",
     script: "scrape-tools.mts",
@@ -44,7 +48,6 @@ const STEPS = [
     useProxy: true,
     nodeArgs: ["--import", "tsx"],
   },
-  { label: "清洗招聘岗位", script: "refine-jobs.mjs" },
   {
     label: "快照入库（Content 表）",
     script: "import-to-content.mts",

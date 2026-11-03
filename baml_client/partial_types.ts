@@ -20,7 +20,7 @@ $ pnpm add @boundaryml/baml
 
 import type { Image, Audio, Pdf, Video } from "@boundaryml/baml"
 import type { Checked, Check } from "./types"
-import type {  AmountScope,  DeadlineKind,  DurationBucket,  Field,  FundingExtraction,  FundingType,  NewsExtraction,  NewsType,  SupportType,  ToolCategory,  ToolDomain,  ToolExtraction,  ToolFormat,  ToolPeriod } from "./types"
+import type {  AmountScope,  DeadlineKind,  DurationBucket,  Field,  FundingExtraction,  FundingType,  JobExtraction,  JobKind,  JobRole,  NewsExtraction,  NewsType,  SupportType,  ToolCategory,  ToolDomain,  ToolExtraction,  ToolFormat,  ToolPeriod } from "./types"
 import type * as types from "./types"
 
 /******************************************************************************
@@ -49,6 +49,17 @@ export namespace partial_types {
       field?: types.Field | null
       region?: string | null
       duration?: types.DurationBucket | null
+      summary?: string | null
+    }
+    export interface JobExtraction {
+      is_relevant?: boolean | null
+      reject_reason?: string | null
+      kind?: types.JobKind | null
+      role?: types.JobRole | null
+      org?: string | null
+      location?: string | null
+      salary?: string | null
+      deadline?: string | null
       summary?: string | null
     }
     export interface NewsExtraction {

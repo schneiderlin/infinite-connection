@@ -23,7 +23,7 @@ import { toBamlError } from "@boundaryml/baml"
 import type { Checked, Check } from "./types"
 import type { partial_types } from "./partial_types"
 import type * as types from "./types"
-import type {AmountScope, DeadlineKind, DurationBucket, Field, FundingExtraction, FundingType, NewsExtraction, NewsType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
+import type {AmountScope, DeadlineKind, DurationBucket, Field, FundingExtraction, FundingType, JobExtraction, JobKind, JobRole, NewsExtraction, NewsType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
 import type TypeBuilder from "./type_builder"
 
 export class LlmResponseParser {
@@ -48,6 +48,29 @@ export class LlmResponseParser {
         __baml_options__?.clientRegistry,
         __env__,
       ) as types.FundingExtraction
+    } catch (error) {
+      throw toBamlError(error);
+    }
+  }
+  
+  ExtractJob(
+      llmResponse: string,
+      __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry, env?: Record<string, string | undefined> }
+  ): types.JobExtraction {
+    try {
+      const __rawEnv__ = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
+      const __env__: Record<string, string> = Object.fromEntries(
+        Object.entries(__rawEnv__).filter(([_, value]) => value !== undefined) as [string, string][]
+      );
+      return this.runtime.parseLlmResponse(
+        "ExtractJob",
+        llmResponse,
+        false,
+        this.ctxManager.cloneContext(),
+        __baml_options__?.tb?.__tb(),
+        __baml_options__?.clientRegistry,
+        __env__,
+      ) as types.JobExtraction
     } catch (error) {
       throw toBamlError(error);
     }
@@ -123,6 +146,29 @@ export class LlmStreamParser {
         __baml_options__?.clientRegistry,
         __env__,
       ) as partial_types.FundingExtraction
+    } catch (error) {
+      throw toBamlError(error);
+    }
+  }
+  
+  ExtractJob(
+      llmResponse: string,
+      __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry, env?: Record<string, string | undefined> }
+  ): partial_types.JobExtraction {
+    try {
+      const __rawEnv__ = __baml_options__?.env ? { ...process.env, ...__baml_options__.env } : { ...process.env };
+      const __env__: Record<string, string> = Object.fromEntries(
+        Object.entries(__rawEnv__).filter(([_, value]) => value !== undefined) as [string, string][]
+      );
+      return this.runtime.parseLlmResponse(
+        "ExtractJob",
+        llmResponse,
+        true,
+        this.ctxManager.cloneContext(),
+        __baml_options__?.tb?.__tb(),
+        __baml_options__?.clientRegistry,
+        __env__,
+      ) as partial_types.JobExtraction
     } catch (error) {
       throw toBamlError(error);
     }

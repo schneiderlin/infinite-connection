@@ -29,6 +29,8 @@ export default class TypeBuilder {
     
     FundingExtraction: ClassViewer<'FundingExtraction', "is_relevant" | "reject_reason" | "org" | "deadline" | "deadline_kind" | "amount_wan" | "amount_scope" | "support_type" | "funding_type" | "field" | "region" | "duration" | "summary">;
     
+    JobExtraction: ClassViewer<'JobExtraction', "is_relevant" | "reject_reason" | "kind" | "role" | "org" | "location" | "salary" | "deadline" | "summary">;
+    
     NewsExtraction: ClassViewer<'NewsExtraction', "is_relevant" | "reject_reason" | "org" | "news_type" | "field" | "summary">;
     
     ToolExtraction: ClassViewer<'ToolExtraction', "is_relevant" | "reject_reason" | "category" | "domain" | "format" | "period" | "is_free" | "org" | "summary">;
@@ -43,6 +45,10 @@ export default class TypeBuilder {
     Field: EnumViewer<'Field', "RURAL_EDU" | "ECO" | "LIVELIHOOD" | "CULTURE" | "TALENT" | "DISABILITY" | "CHILD" | "YOUTH" | "ELDERLY" | "HEALTH" | "MENTAL" | "WOMEN" | "COMMUNITY" | "EMERGENCY" | "VOLUNTEER" | "ORG_SUPPORT" | "INNOVATION" | "OTHER">;
     
     FundingType: EnumViewer<'FundingType', "FOUNDATION_GRANT" | "PARTNER_RECRUITMENT" | "VENTURE" | "GOVERNMENT" | "CSR" | "ACADEMIC" | "NGO_GRANT" | "MATERIAL">;
+    
+    JobKind: EnumViewer<'JobKind', "FULLTIME" | "PARTTIME" | "INTERN" | "VOLUNTEER" | "CONSULTANT">;
+    
+    JobRole: EnumViewer<'JobRole', "PM" | "COMMS" | "FIN" | "HR" | "EXEC" | "SUPERVISOR" | "FUNDRAISE" | "LEGAL" | "RESEARCH" | "SOCIAL_WORK" | "OTHER">;
     
     NewsType: EnumViewer<'NewsType', "PROJECT_PROGRESS" | "ORGANIZATION_NEWS" | "EVENT_REPORT" | "INDUSTRY_INSIGHT" | "POLICY_RELEASE" | "RELIEF_RESPONSE" | "OTHER">;
     
@@ -60,16 +66,20 @@ export default class TypeBuilder {
     constructor() {
         this.tb = new _TypeBuilder({
           classes: new Set([
-            "FundingExtraction","NewsExtraction","ToolExtraction",
+            "FundingExtraction","JobExtraction","NewsExtraction","ToolExtraction",
           ]),
           enums: new Set([
-            "AmountScope","DeadlineKind","DurationBucket","Field","FundingType","NewsType","SupportType","ToolCategory","ToolDomain","ToolFormat","ToolPeriod",
+            "AmountScope","DeadlineKind","DurationBucket","Field","FundingType","JobKind","JobRole","NewsType","SupportType","ToolCategory","ToolDomain","ToolFormat","ToolPeriod",
           ]),
           runtime: DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_RUNTIME
         });
         
         this.FundingExtraction = this.tb.classViewer("FundingExtraction", [
           "is_relevant","reject_reason","org","deadline","deadline_kind","amount_wan","amount_scope","support_type","funding_type","field","region","duration","summary",
+        ]);
+        
+        this.JobExtraction = this.tb.classViewer("JobExtraction", [
+          "is_relevant","reject_reason","kind","role","org","location","salary","deadline","summary",
         ]);
         
         this.NewsExtraction = this.tb.classViewer("NewsExtraction", [
@@ -99,6 +109,14 @@ export default class TypeBuilder {
         
         this.FundingType = this.tb.enumViewer("FundingType", [
           "FOUNDATION_GRANT","PARTNER_RECRUITMENT","VENTURE","GOVERNMENT","CSR","ACADEMIC","NGO_GRANT","MATERIAL",
+        ]);
+        
+        this.JobKind = this.tb.enumViewer("JobKind", [
+          "FULLTIME","PARTTIME","INTERN","VOLUNTEER","CONSULTANT",
+        ]);
+        
+        this.JobRole = this.tb.enumViewer("JobRole", [
+          "PM","COMMS","FIN","HR","EXEC","SUPERVISOR","FUNDRAISE","LEGAL","RESEARCH","SOCIAL_WORK","OTHER",
         ]);
         
         this.NewsType = this.tb.enumViewer("NewsType", [

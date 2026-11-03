@@ -59,6 +59,10 @@ const clean = (value: unknown) =>
     .replace(/\s+/g, " ")
     .trim();
 const hashId = (value: string) => createHash("sha1").update(value).digest("hex").slice(0, 12);
+// 页面浏览计数（"浏览 1166 次"）每次访问自增，直接 hash 会导致缓存永远失效；
+// 计算 bodyHash 前先剥离这类计数。
+const hashBody = (body: string) =>
+  body.replace(/(浏览|阅读|查看|访问量|分享|收藏|点赞)\s*[:：]?\s*\d[\d,]*\s*(次|人|个|条)?/g, "");
 
 function daysSince(dateStr: string) {
   if (!dateStr) return 0;
@@ -182,7 +186,7 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
       const task = tasks[cursor];
       cursor += 1;
       const { candidate, previous } = task;
-      const bodyHash = hashId(candidate.body);
+      const bodyHash = hashId(hashBody(candidate.body));
 
       let extraction: NewsExtraction | undefined;
       if (previous?.bodyHash === bodyHash && previous.extraction && previous.extractionVersion === EXTRACTION_VERSION) {

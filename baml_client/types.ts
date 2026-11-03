@@ -99,6 +99,28 @@ export enum FundingType {
   MATERIAL = "MATERIAL",
 }
 
+export enum JobKind {
+  FULLTIME = "FULLTIME",
+  PARTTIME = "PARTTIME",
+  INTERN = "INTERN",
+  VOLUNTEER = "VOLUNTEER",
+  CONSULTANT = "CONSULTANT",
+}
+
+export enum JobRole {
+  PM = "PM",
+  COMMS = "COMMS",
+  FIN = "FIN",
+  HR = "HR",
+  EXEC = "EXEC",
+  SUPERVISOR = "SUPERVISOR",
+  FUNDRAISE = "FUNDRAISE",
+  LEGAL = "LEGAL",
+  RESEARCH = "RESEARCH",
+  SOCIAL_WORK = "SOCIAL_WORK",
+  OTHER = "OTHER",
+}
+
 export enum NewsType {
   PROJECT_PROGRESS = "PROJECT_PROGRESS",
   ORGANIZATION_NEWS = "ORGANIZATION_NEWS",
@@ -163,6 +185,19 @@ export interface FundingExtraction {
   field: Field
   region?: string | null
   duration: DurationBucket
+  summary: string
+  
+}
+
+export interface JobExtraction {
+  is_relevant: boolean
+  reject_reason?: string | null
+  kind: JobKind
+  role: JobRole
+  org?: string | null
+  location?: string | null
+  salary?: string | null
+  deadline?: string | null
   summary: string
   
 }
