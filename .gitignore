@@ -50,5 +50,3 @@ prisma/dev.db-journal
 *.db
 
 docs/exports/
-# BAML 生成物，用 pnpm baml:generate 重新生成
-baml_client/
