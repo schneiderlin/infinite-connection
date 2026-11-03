@@ -27,7 +27,7 @@ const prisma = new PrismaClient({
 const today = new Date().toISOString().slice(0, 10);
 const isDate = (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v);
 const isHttp = (v) => typeof v === "string" && /^https?:\/\//.test(v);
-const TEMPLATE_SUMMARY = /^(中国发展简报|恩友财务|深圳国际公益学院|中国慈善联合会|【原创成果】|CFF)/;
+const TEMPLATE_SUMMARY = /^(中国发展简报[：:]|恩友财务提供的|深圳国际公益学院公益网校公开课|中国慈善联合会培训动态[：:]|【原创成果】|CFF 长青文献图书馆资料[：:])/;
 
 const common = [
   ["有 extraction（过过 MiniMax）", (r) => !!r.extraction],
@@ -50,7 +50,8 @@ const rules = {
   ],
   tools: [
     ...common,
-    ["publishDate 是真实日期（非抓取日）", (r) => isDate(r.publishDate) && r.publishDate !== "2026-10-12"],
+    ["publishDate 是真实日期（非抓取日；课程类允许无日期）", (r) =>
+      r.publishDate === "" || r.publishDate === undefined || (isDate(r.publishDate) && r.publishDate !== "2026-10-12")],
     ["category 在八类内", (r) => ["培训课程","行业沙龙会议","公益工具模板库","行业报告","行业标准","同行经验文章","国际经验","其他"].includes(r.category)],
   ],
   news: [

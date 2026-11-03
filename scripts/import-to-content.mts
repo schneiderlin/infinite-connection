@@ -209,7 +209,7 @@ async function importDataset(dataset: any, authorId: string) {
   }
   console.log(`\n===== ${dataset.name} -> ${dataset.module}：${items.length} 条 =====`);
 
-  const rows = items.map((item: any) => ({ sourceKey: item.id as string, data: dataset.map(item) }));
+  const rows = items.map((item: any) => ({ sourceKey: item.id as string, data: dataset.map(item), item }));
   const keys = rows.map((row: { sourceKey: string }) => row.sourceKey).filter(Boolean);
 
   const existing = await prisma.content.findMany({
@@ -245,6 +245,9 @@ async function importDataset(dataset: any, authorId: string) {
       else created += 1;
       continue;
     }
+    // 一级/二级分流：有 MiniMax extraction 的才可上线（PUBLISHED），
+    // 未提取的保留在库里但不可见（UNPUBLISHED），修好后随重跑自动放行。
+    const status = row.item?.extraction ? "PUBLISHED" : "UNPUBLISHED";
     if (existingId) {
       await prisma.content.update({
         where: { id: existingId },
@@ -259,13 +262,13 @@ async function importDataset(dataset: any, authorId: string) {
           city: payload.city,
           metadata: payload.metadata,
           publishedAt: payload.publishedAt,
-          status: "PUBLISHED",
+          status,
         },
       });
       updated += 1;
     } else {
       await prisma.content.create({
-        data: { ...payload, status: "PUBLISHED", publishedAt: payload.publishedAt },
+        data: { ...payload, status, publishedAt: payload.publishedAt },
       });
       created += 1;
     }

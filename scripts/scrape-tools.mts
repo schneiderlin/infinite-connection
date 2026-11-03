@@ -156,50 +156,11 @@ function inferDomain(text: string) {
   return "综合素养";
 }
 
-const NFRIEND_PAGES = [
-  {
-    url: "http://www.nfriend.org/cwgzmb/",
-    label: "恩友财务·财务工作模板",
-    summary: "恩友财务提供的社会组织财务工作模板",
-  },
-  {
-    url: "http://www.nfriend.org/cwplmb/",
-    label: "恩友财务·披露模板",
-    summary: "恩友财务提供的公益组织财务信息披露模板",
-  },
-];
-
+// 恩友财务：列表页已迁移到 .html 且模板文件全部 404（源失效），
+// 不再抓取；历史记录由主流程移除（见 main 的 DEAD_SOURCES）。
 async function scrapeNfriend(): Promise<AnyRecord[]> {
-  const items: AnyRecord[] = [];
-  for (const page of NFRIEND_PAGES) {
-    const res = await request(page.url, page.label);
-    if (!res) continue;
-    const html = await res.text();
-    const $ = cheerio.load(html);
-    $("a").each((_, el) => {
-      const href = $(el).attr("href") ?? "";
-      if (!/\/file\/|youku\.com/i.test(href)) return;
-      const title = clean($(el).text());
-      if (!title || title.length < 2) return;
-      const url = new URL(href, page.url).href;
-      const isVideo = /youku\.com|视频/i.test(`${href} ${title}`);
-      items.push(
-        makeTool({
-          title,
-          url,
-          summary: `${page.summary}${isVideo ? "（填报指南视频）" : "（可直接下载）"}`,
-          org: "北京恩友财务",
-          category: isVideo ? "培训课程" : "公益工具模板库",
-          domain: "财务",
-          format: isVideo ? "线上" : "下载",
-          locationText: isVideo ? "线上" : "",
-          sourceName: "恩友财务",
-        }),
-      );
-    });
-    await sleep(GAP_MS);
-  }
-  return items;
+  console.log("  ! 恩友财务：源已失效（文件 404），跳过");
+  return [];
 }
 
 async function scrapeCGPI(): Promise<AnyRecord[]> {
@@ -506,6 +467,115 @@ async function incrementalCDB(knownUrls: Set<string>): Promise<AnyRecord[]> {
   return extractTools(tasks);
 }
 
+/* ---------- 结构化源富化：网校 / 中慈联 / CFF（PDF） ---------- */
+
+async function fetchToolText(item: AnyRecord): Promise<{ body: string; publishDate: string } | null> {
+  const res = await request(item.url, `富化 ${item.title.slice(0, 24)}`);
+  if (!res) return null;
+
+  if (item.sourceName === "北京基业长青社会组织服务中心") {
+    // CFF：直接 PDF 链接，pdfjs 提取前几页文本
+    const buf = new Uint8Array(await res.arrayBuffer());
+    const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
+    const doc = await getDocument({ data: buf }).promise;
+    let text = "";
+    for (let p = 1; p <= Math.min(6, doc.numPages); p += 1) {
+      const page = await doc.getPage(p);
+      const content = await page.getTextContent();
+      text += content.items.map((it: any) => ("str" in it ? it.str : "")).join(" ") + "\n";
+      if (text.length > 6000) break;
+    }
+    return { body: clean(text).slice(0, 6000), publishDate: item.publishDate || "" };
+  }
+
+  const html = await res.text();
+  const $ = cheerio.load(html);
+  if (item.sourceName === "公益网校") {
+    // EduSoho 页面 JS 渲染，课程简介在 meta description。
+    const desc = clean($("meta[name='description']").attr("content") ?? "");
+    return desc.length >= 30 ? { body: desc, publishDate: "" } : null;
+  }
+  if (item.sourceName === "中国慈善联合会") {
+    const body = clean($(".wz_div_show").text());
+    const publishDate = clean($(".wz_div_time").text()).match(/20\d{2}-\d{2}-\d{2}/)?.[0] ?? "";
+    return body.length >= 100 ? { body, publishDate } : null;
+  }
+  return null;
+}
+
+// 对结构化来源的历史记录补充 MiniMax 提取（真实摘要/分类/形式）。
+// 抓取失败的保留原样（维持 UNPUBLISHED）。
+async function enrichStructured(records: AnyRecord[]): Promise<AnyRecord[]> {
+  const targets = records.filter(
+    (item) =>
+      !item.extraction &&
+      ["公益网校", "中国慈善联合会", "北京基业长青社会组织服务中心"].includes(item.sourceName),
+  );
+  console.log(`结构化源富化：${targets.length} 条待提取`);
+  const out = new Map<string, AnyRecord>();
+
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < targets.length) {
+      const item = targets[cursor];
+      cursor += 1;
+      let detail: { body: string; publishDate: string } | null = null;
+      try {
+        detail = await fetchToolText(item);
+      } catch (error) {
+        console.warn(`  ! 内容获取失败: ${item.title.slice(0, 32)} (${error instanceof Error ? error.message : error})`);
+      }
+      await sleep(GAP_MS);
+      if (!detail || detail.body.length < 30) continue;
+
+      const bodyHash = hashId(detail.body);
+      let extraction: ToolExtraction | undefined;
+      if (item.bodyHash === bodyHash && item.extraction && item.extractionVersion === EXTRACTION_VERSION) {
+        extraction = item.extraction as ToolExtraction;
+      } else {
+        try {
+          extraction = await b.ExtractTool(item.title, detail.publishDate, detail.body);
+        } catch (error) {
+          console.warn(`  ! 提取失败: ${item.title.slice(0, 32)} (${error instanceof Error ? error.message : error})`);
+          continue;
+        }
+      }
+      if (!extraction.is_relevant) {
+        console.log(`  - 不收录（${extraction.reject_reason ?? "未说明"}）: ${item.title.slice(0, 32)}`);
+        out.set(item.id, { ...item, _drop: true });
+        continue;
+      }
+      const category = CATEGORY_ZH[extraction.category] ?? item.category;
+      const meta = CATEGORY_META[category] ?? CATEGORY_META[item.category] ?? CATEGORY_META["其他"];
+      out.set(item.id, {
+        ...item,
+        category,
+        summary: extraction.summary,
+        org: clean(extraction.org) || item.org,
+        domain: DOMAIN_ZH[extraction.domain] ?? item.domain,
+        format: extraction.format ? FORMAT_ZH[extraction.format] ?? item.format : item.format,
+        period: PERIOD_ZH[extraction.period] ?? item.period,
+        publishDate: detail.publishDate || item.publishDate,
+        publishedDays: detail.publishDate ? daysSince(detail.publishDate) : item.publishedDays,
+        dateText: (detail.publishDate || item.publishDate || "").replace(/-/g, "."),
+        icon: meta.icon,
+        color: meta.color,
+        tone: meta.tone,
+        action: meta.action,
+        bodyHash,
+        extractionVersion: EXTRACTION_VERSION,
+        extraction,
+      });
+    }
+  };
+  await Promise.all(Array.from({ length: LLM_CONCURRENCY }, worker));
+
+  const enriched = records.map((item) => out.get(item.id) ?? item).filter((item) => !item._drop);
+  const done = enriched.filter((item) => out.has(item.id)).length;
+  console.log(`结构化源富化：完成 ${done} 条`);
+  return enriched;
+}
+
 /* ---------- 历史非 CDB 记录：修 CFF 的 publishDate（URL 路径含日期） ---------- */
 
 function fixLegacyRecord(item: AnyRecord): AnyRecord {
@@ -553,9 +623,19 @@ async function main() {
   }
 
   const cdbRebuilt = await rebuildCDB(existing);
-  const legacyOthers = existing
+  // 失效源（恩友财务：模板文件全部 404）的历史记录直接移除。
+  const DEAD_SOURCES = new Set(["恩友财务"]);
+  const legacyOthersRaw = existing
     .filter((item) => item.sourceName !== "中国发展简报")
-    .map(fixLegacyRecord);
+    .map(fixLegacyRecord)
+    .filter((item) => {
+      if (DEAD_SOURCES.has(item.sourceName)) {
+        console.log(`  - 移除（源失效）：${item.title.slice(0, 36)}`);
+        return false;
+      }
+      return true;
+    });
+  const legacyOthers = await enrichStructured(legacyOthersRaw);
 
   const knownUrls = new Set(
     [...cdbRebuilt, ...legacyOthers].map((item) => normalizeUrl(item.url)).filter(Boolean),
@@ -596,11 +676,12 @@ async function main() {
   };
   for (const item of cdbRebuilt) push(item, false);
   for (const item of cdbIncremental) push(item, true);
+  // 历史记录（含富化结果）优先于结构化新源，同一 URL 保留富化版本。
+  for (const item of legacyOthers) push(item, false);
   for (const item of structured) {
-    // 结构化来源的新记录默认 PENDING；与历史记录重复时保留历史记录。
+    // 结构化来源只补充真正的新条目；与历史记录重复时保留历史记录。
     push(item, true);
   }
-  for (const item of legacyOthers) push(item, false);
 
   const final = merged.sort((a, b) => a.publishedDays - b.publishedDays);
 
