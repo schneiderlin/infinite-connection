@@ -100,11 +100,9 @@ function main() {
   }
 
   console.log(`\n🎉 全部 ${STEPS.length} 个步骤执行完成，总耗时 ${formatDuration(Date.now() - startedAt)}`);
-  console.log("📦 数据快照：src/lib/{fundings-data,jobs-scraped,tools-data}.json");
-  console.log(`📊 审核表格：${process.env.EXPORT_OUT_DIR || "docs/exports"}/{fundings,jobs,tools}.xlsx`);
-  console.log("🤖 AI 分类已直接写回分类字段：高置信度自动发布，低置信度标记 PENDING_REVIEW。");
-  console.log("🔎 新抓取的记录默认为 PENDING；AI 高置信度会发布，低置信度需人工复核。");
-  console.log("📥 人工审核后运行 pnpm import:excel，把审核状态和最终发布分类写回快照。");
+  console.log("📦 快照：src/lib/{fundings-data,jobs-scraped,tools-data,news-data}.json");
+  console.log("🗄️ 已入库 Content 表（有 MiniMax extraction 的自动 PUBLISHED，其余 UNPUBLISHED 待修）");
+  console.log("🔎 放行前请运行 pnpm quality-check 确认一级全部通过。");
 }
 
 main();

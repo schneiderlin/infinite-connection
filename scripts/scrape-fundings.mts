@@ -204,7 +204,8 @@ async function scrapeCDBFundings(): Promise<Candidate[]> {
     },
     "CDB 公益资助列表",
   );
-  const rows = json?.result?.list ?? [];
+  if (!json?.result?.list) throw new Error("CDB 公益资助列表接口失败");
+  const rows = json.result.list;
   console.log(`CDB 公益资助：接口返回 ${rows.length} 条`);
 
   const candidates = rows
@@ -311,7 +312,10 @@ async function scrapeCRCF(): Promise<Candidate[]> {
   for (let pn = 1; pn <= CRCF_MAX_PAGES; pn += 1) {
     const listUrl = `${listBase}&pn=${pn}`;
     const html = await requestText(listUrl, `CRCF 公告公示 p${pn}`);
-    if (!html) break;
+    if (!html) {
+      if (pn === 1) throw new Error("CRCF 公告公示列表抓取失败");
+      break;
+    }
     const $ = cheerio.load(html);
     let added = 0;
     $("a[href*='cid=']").each((_, el) => {
@@ -435,7 +439,10 @@ async function collectCNCFIssues() {
   for (let page = 1; page <= CNCF_MAX_LIST_PAGES; page += 1) {
     const url = `${CNCF_LIST_URL}${page > 1 ? `?page=${page}` : ""}`;
     const html = await requestText(url, `CNCF 列表 p${page}`, { "User-Agent": BROWSER_UA });
-    if (!html) break;
+    if (!html) {
+      if (page === 1) throw new Error("CNCF 列表抓取失败");
+      break;
+    }
     const $ = cheerio.load(html);
     let added = 0;
     $("a[href]").each((_, el) => {
@@ -540,7 +547,10 @@ async function scrapeCPWF(): Promise<Candidate[]> {
   for (let page = 1; page <= CPWF_MAX_PAGES; page += 1) {
     const url = `${CPWF_CATEGORY_URL}?page=${page}`;
     const html = await requestText(url, `CPWF 列表 p${page}`);
-    if (!html) break;
+    if (!html) {
+      if (page === 1) throw new Error("CPWF 列表抓取失败");
+      break;
+    }
     const $ = cheerio.load(html);
     const rows = $(".dynamic-item");
     if (!rows.length) break;
@@ -681,6 +691,12 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
       const task = tasks[cursor];
       cursor += 1;
       const { candidate, previous } = task;
+      // 失败源兜底：正文为空时整条沿用旧记录（含提取结果），不调 LLM。
+      if (!candidate.body && previous) {
+        kept.push(previous);
+        reused += 1;
+        continue;
+      }
       const bodyHash = hashId(hashBody(candidate.body));
 
       let extraction: FundingExtraction | undefined;
@@ -753,7 +769,16 @@ async function main() {
     existing.filter((item) => item.url).map((item) => [item.url, item]),
   );
 
-  const [cdbFundings, cdbNews, crcf, cncf, cpwf] = await Promise.all([
+  // 任一源关键请求失败时抛错，这里按源兜底：失败源沿用旧快照记录（含提取缓存），
+  // 避免一次网络抖动清空该来源的全部数据。
+  const SOURCE_NAMES = [
+    "中国发展简报·公益资助",
+    "中国发展简报·资讯",
+    "中国红十字基金会",
+    "中国慈展会·资源直通车",
+    "中国人口福利基金会",
+  ];
+  const results = await Promise.allSettled([
     scrapeCDBFundings(),
     scrapeCDBNews(),
     scrapeCRCF(),
@@ -761,7 +786,29 @@ async function main() {
     scrapeCPWF(),
   ]);
 
-  const candidates = [...cdbFundings, ...cdbNews, ...crcf, ...cncf, ...cpwf];
+  const candidates: Candidate[] = [];
+  results.forEach((result, index) => {
+    const sourceName = SOURCE_NAMES[index];
+    if (result.status === "fulfilled") {
+      candidates.push(...result.value);
+      return;
+    }
+    console.error(`  ✗ ${sourceName} 抓取失败：${result.reason?.message ?? result.reason}`);
+    const fallback = existing.filter((item) => item.sourceName === sourceName);
+    console.error(`    沿用旧快照 ${fallback.length} 条`);
+    for (const item of fallback) {
+      candidates.push({
+        title: item.title,
+        orgHint: item.org,
+        address: item.location ?? "",
+        beginDay: item.publishedDate ?? "",
+        endDayHint: "",
+        body: "",
+        url: item.url,
+        sourceName,
+      });
+    }
+  });
   console.log(`\n候选合计 ${candidates.length} 条，开始 MiniMax 提取…`);
   const records = await extractAll(candidates, previousByUrl);
 
