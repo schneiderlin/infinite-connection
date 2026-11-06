@@ -38,24 +38,57 @@ enum DurationBucket {
 }
 
 enum Field {
-  RURAL_EDU    @description("乡村教育")
-  ECO          @description("生态环保")
-  LIVELIHOOD   @description("产业生计")
-  CULTURE      @description("文化传承")
-  TALENT       @description("人才培育")
-  DISABILITY   @description("残障融合")
-  CHILD        @description("儿童保护")
-  YOUTH        @description("青少年发展")
-  ELDERLY      @description("老龄关怀")
-  HEALTH       @description("医疗健康")
-  MENTAL       @description("心理健康")
-  WOMEN        @description("女性关怀")
-  COMMUNITY    @description("社区营造")
-  EMERGENCY    @description("应急救援")
-  VOLUNTEER    @description("志愿服务")
-  ORG_SUPPORT  @description("社会组织支持")
-  INNOVATION   @description("创新探索")
-  OTHER        @description("其他")
+  CP     @description("儿童与青少年")
+  AG     @description("长者与残障")
+  ED     @description("教育与能力建设")
+  EN     @description("环境与气候")
+  AN     @description("动物福利")
+  CM     @description("社区发展与减贫")
+  EQ     @description("社会公平与权利")
+  CA     @description("文化艺术与体育")
+  CR     @description("企业责任与可持续")
+  SS     @description("行业支持与基础设施")
+  OTHER  @description("其他")
+}
+
+enum Issue {
+  CP01 @description("儿童保护（防虐待、防拐卖、未成年人保护）")
+  CP02 @description("困境儿童关爱（孤儿、留守儿童、大病儿童）")
+  CP03 @description("儿童教育与发展（早期发展、课后托管）")
+  CP04 @description("青少年发展（心理健康、职业规划）")
+  AG01 @description("老年服务（居家养老、社区养老、安宁疗护）")
+  AG02 @description("残障融合（心智障碍、视障听障、无障碍）")
+  AG03 @description("康复与照护（康复训练、长期照护）")
+  ED01 @description("教育公平（教育资源均衡、助学）")
+  ED02 @description("乡村教育")
+  ED03 @description("职业教育与就业能力")
+  ED04 @description("终身学习（成人扫盲、数字素养）")
+  EN01 @description("环境保护（污染防治、垃圾分类）")
+  EN02 @description("气候变化与减碳（碳中和、清洁能源）")
+  EN03 @description("自然生态保护（森林、海洋、生物多样性）")
+  AN01 @description("伴侣动物与流浪动物（领养、TNR）")
+  AN02 @description("野生动物保护")
+  AN03 @description("农场动物与实验动物福利")
+  CM01 @description("乡村振兴（产业、人才、文化、生态）")
+  CM02 @description("城市社区营造（邻里、公共空间）")
+  CM03 @description("减贫与生计（小额信贷、就业帮扶）")
+  CM04 @description("灾害救援与重建")
+  EQ01 @description("性别平等（妇女赋能、反暴力）")
+  EQ02 @description("多元包容（LGBTQ+、少数族群、DEI）")
+  EQ03 @description("劳工权益（农民工、灵活就业保障）")
+  EQ04 @description("健康与医疗可及（罕见病、公共卫生）")
+  EQ05 @description("法律救助与司法公正")
+  CA01 @description("文化艺术（美育、艺术普及）")
+  CA02 @description("文化遗产保护（非遗、古建）")
+  CA03 @description("体育公益（残障运动、乡村体育）")
+  CR01 @description("CSR（企业社会责任、企业基金会、公益慈善）")
+  CR02 @description("ESG（环境、社会、治理信息披露与合规）")
+  CR03 @description("责任投资与影响力投资（绿色金融、SRI）")
+  SS01 @description("公益行业赋能（组织能力、人才培养）")
+  SS02 @description("志愿服务（志愿者管理、时间银行）")
+  SS03 @description("公益金融与慈善信托")
+  SS04 @description("研究、倡导与行业平台")
+  OTHER @description("其他")
 }
 
 class FundingExtraction {
@@ -69,6 +102,7 @@ class FundingExtraction {
   support_type SupportType
   funding_type FundingType
   field Field
+  issue Issue @description("二级议题，归到最贴近的一个；判断不了返回 OTHER")
   region string? @description("项目实施/面向地区：全国，或省份名（如广东省）；找不到返回 null")
   duration DurationBucket @description("项目实施周期（不是申报窗口）；正文未说明时返回 UNKNOWN")
   summary string @description("2-3 句中文摘要：资助方、支持内容、对象、额度与截止时间（若正文有）")
@@ -98,6 +132,7 @@ function ExtractFunding(
       资金池总额、历年累计、项目总预算属于 TOTAL_POOL，此时 amount_wan 返回 null。
       "服务 10 万人次"之类的服务量不是金额。正文没有明确金额 → 两者都返回 null。
     - duration：指项目实施周期（如"项目周期一年"），不是申报窗口；正文未说明 → UNKNOWN。
+    - field / issue：按资助内容的服务对象和领域归类（一级领域 + 二级议题，见枚举描述）。
     - region：项目实施或面向的地区。全国性的返回"全国"，否则返回省份名（如"广东省"）。
     - summary：2-3 句中文，说明谁资助/招募、支持什么、面向谁、额度和截止时间（正文有才写）。
 

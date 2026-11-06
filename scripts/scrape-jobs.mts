@@ -41,7 +41,7 @@ const UA = "InfiniteConnectionPreview/0.1 (+https://github.com/schneiderlin/infi
 const GAP_MS = 400;
 const LLM_CONCURRENCY = 4;
 // 提取缓存版本：换模型或改 baml prompt 时 +1。
-const EXTRACTION_VERSION = 2;
+const EXTRACTION_VERSION = 3;
 const PER_SOURCE = 20;
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -114,12 +114,28 @@ function httpsGetText(url: string): Promise<string | null> {
 }
 
 const KIND_ZH: Record<string, string> = {
-  FULLTIME: "全职", PARTTIME: "兼职", INTERN: "实习", VOLUNTEER: "志愿者", CONSULTANT: "顾问",
+  FULLTIME: "全职", PARTTIME: "兼职", INTERN: "实习", VOLUNTEER: "志愿者", CONSULTANT: "兼职",
 };
-const ROLE_ZH: Record<string, string> = {
-  PM: "项目官员", COMMS: "传播", FIN: "财务", HR: "人力资源", EXEC: "高级管理",
-  SUPERVISOR: "督导", FUNDRAISE: "筹款", LEGAL: "法务", RESEARCH: "研究",
-  SOCIAL_WORK: "社工", OTHER: "其他",
+const GROUP_ZH: Record<string, string> = {
+  P: "项目与服务", R: "资源与筹资", C: "合规与ESG", S: "战略与研究", O: "运营与支持",
+};
+const SUBCATEGORY_ZH: Record<string, string> = {
+  P1: "社会工作与社区服务", P2: "公益项目执行", P3: "企业CSR", P4: "企业ESG",
+  R1: "公益筹资与拓展",
+  C1: "公益组织合规", C2: "ESG信息披露与报告", C3: "ESG评级与合规",
+  S1: "政策与倡导", S2: "行业研究与咨询", S3: "战略规划与管理",
+  O1: "传播与品牌", O2: "人力与组织发展", O3: "财务与行政", O4: "产品与技术",
+};
+const LEVEL_ZH: Record<string, string> = {
+  L1: "L1 入门执行", L2: "L2 独立执行", L3: "L3 模块主管",
+  L4: "L4 中层管理", L5: "L5 高层管理", L6: "L6 决策层",
+};
+const EDUCATION_ZH: Record<string, string> = {
+  DOCTOR: "博士", MASTER: "硕士", BACHELOR: "本科", COLLEGE: "大专", TECHNICAL: "中专/中技", ANY: "不限",
+};
+const ORGTYPE_ZH: Record<string, string> = {
+  FOUNDATION: "基金会", CHARITY_ASSOC: "慈善会", MINFEI: "民非", COMPANY: "企业",
+  SOCIAL_WORK: "社工机构", ASSOCIATION: "社会团体/协会", INTERNATIONAL: "国际NGO/国际组织", OTHER: "其他",
 };
 const PROVINCE_NAMES = [
   "北京", "天津", "上海", "重庆", "河北", "山西", "辽宁", "吉林", "黑龙江", "江苏", "浙江",
@@ -521,7 +537,12 @@ function mapRecord(candidate: Candidate, extraction: JobExtraction, bodyHash: st
     id: `job-${hashId(candidate.url)}`,
     category: kind === "志愿者" ? "志愿者招募" : "人员招聘",
     kind,
-    role: ROLE_ZH[extraction.role] ?? "其他",
+    jobGroup: GROUP_ZH[extraction.job_group] ?? "运营与支持",
+    subCategory: SUBCATEGORY_ZH[extraction.sub_category] ?? "公益项目执行",
+    level: LEVEL_ZH[extraction.level] ?? "L2 独立执行",
+    education: EDUCATION_ZH[extraction.education] ?? "不限",
+    orgType: ORGTYPE_ZH[extraction.org_type] ?? "其他",
+    role: SUBCATEGORY_ZH[extraction.sub_category] ?? "公益项目执行",
     publishedDays,
     time,
     title: candidate.title,

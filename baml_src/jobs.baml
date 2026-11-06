@@ -1,6 +1,61 @@
 // 招聘岗位正文的结构化提取（公益垂类）。
 // 字段口径与前端筛选词表一致（jobKinds / jobRoles）。
 
+enum JobGroup {
+  P @description("项目与服务：一线执行与服务交付")
+  R @description("资源与筹资：筹款、捐赠人服务、资源拓展")
+  C @description("合规与ESG：法务合规、内控、ESG披露与评级")
+  S @description("战略与研究：政策倡导、行业研究、战略规划")
+  O @description("运营与支持：传播、人力、财务行政、产品技术")
+}
+
+enum JobSubCategory {
+  P1 @description("社会工作与社区服务：一线社工、社区工作者、网格员")
+  P2 @description("公益项目执行：项目官员/经理、监测评估、志愿者管理")
+  P3 @description("企业CSR")
+  P4 @description("企业ESG：ESG专员、碳管理、环境工程")
+  R1 @description("公益筹资与拓展：筹款、月捐、捐赠人服务、资源合作")
+  C1 @description("公益组织合规：合规、法务、内控")
+  C2 @description("ESG信息披露与报告")
+  C3 @description("ESG评级与合规：评级分析、供应链审核、DEI")
+  S1 @description("政策与倡导：政策研究、政府关系、公共事务")
+  S2 @description("行业研究与咨询：行业研究、影响力评估、咨询顾问")
+  S3 @description("战略规划与管理：机构战略、秘书长/副秘书长、总干事")
+  O1 @description("传播与品牌：传播、品牌、新媒体、内容")
+  O2 @description("人力与组织发展：HR、DEI、组织发展")
+  O3 @description("财务与行政：财务、会计、出纳、行政")
+  O4 @description("产品与技术：产品经理、数据、技术开发")
+}
+
+enum JobLevel {
+  L1 @description("入门执行 0-2年：助理/干事/协助类，在指导下执行，无下属")
+  L2 @description("独立执行 2-4年：专员/分析师/Officer，独立完成单一模块，不带团队")
+  L3 @description("模块主管 4-7年：主管/项目经理/高级专员，带小团队或对模块结果负责")
+  L4 @description("中层管理 7-10年：总监/部门总监/高级经理，跨模块统筹、预算与风险")
+  L5 @description("高层管理 10-15年：秘书长/执行长/CEO/Head，机构层面运营与战略执行")
+  L6 @description("决策层 15年+：理事长/董事会主席/治理层，组织治理与重大决策")
+}
+
+enum Education {
+  DOCTOR    @description("博士")
+  MASTER    @description("硕士")
+  BACHELOR  @description("本科")
+  COLLEGE   @description("大专")
+  TECHNICAL @description("中专/中技")
+  ANY       @description("不限或未写明")
+}
+
+enum OrgType {
+  FOUNDATION    @description("基金会")
+  CHARITY_ASSOC @description("慈善会/慈善联合会/红十字会")
+  MINFEI        @description("民办非企业单位")
+  COMPANY       @description("企业（含企业基金会发起方的企业主体）")
+  SOCIAL_WORK   @description("社工机构")
+  ASSOCIATION   @description("社会团体/协会/研究会")
+  INTERNATIONAL @description("国际NGO/国际组织")
+  OTHER         @description("其他")
+}
+
 enum JobKind {
   FULLTIME   @description("全职")
   PARTTIME   @description("兼职")
@@ -27,6 +82,11 @@ class JobExtraction {
   is_relevant bool @description("招聘主体是公益组织/社会组织/基金会/社工机构/协会/国际组织/公益项目，或岗位内容明确是社会工作/志愿服务/公益项目执行")
   reject_reason string? @description("不相关时的一句话原因（如：商业公司、猎头劳务、与公益无关的行政岗）")
   kind JobKind
+  job_group JobGroup
+  sub_category JobSubCategory
+  level JobLevel
+  education Education
+  org_type OrgType
   role JobRole
   org string? @description("招聘机构全称；找不到返回 null")
   location string? @description("工作地点，规范为 省·市（如 广东省·深圳市）、直辖市（如 北京市）、线上；多地用 / 分隔；找不到返回 null")
@@ -53,8 +113,21 @@ function ExtractJob(
       行政后勤或生产岗位；申请流程说明、FAQ、面试经验等不是职位发布的页面。
 
     ## 抽取规则
-    - kind：志愿者/志愿服务 → VOLUNTEER；实习生 → INTERN；顾问 → CONSULTANT；兼职 → PARTTIME；其余 → FULLTIME。
+    - kind：志愿者/志愿服务 → VOLUNTEER；实习生 → INTERN；兼职 → PARTTIME；顾问/咨询类短期外部专家 → PARTTIME；其余 → FULLTIME。
     - role：按岗位职责归类到最接近的一类。
+    - job_group / sub_category：按岗位职责归到职业群（P/R/C/S/O）及子类。注意区分：为公益机构做财务 → O3；
+      企业的 ESG 披露岗 → C2；筹款与捐赠人维护 → R1。
+    - level 按以下决策树（从上到下，命中即停）：
+      规则0：含「理事会/董事会/治理/理事长/使命制定/资本目标/行业引领」→ L6
+      规则1：含「向董事会汇报/组织运营/战略执行/执行长/秘书长/Head of」→ L5
+      规则2：含「部门管理/跨模块/分管/总监/预算与风险/危机处理/多团队管理」→ L4
+      规则3：含「带团队/模块统筹/对结果负责/主管/项目经理/质量把控」→ L3
+      规则4：含「独立负责/独立执行/独立接案/维护/运营/撰写（无管理职责）」→ L2
+      规则5：含「协助/在指导下/整理/记录/台账」→ L1
+      兜底：关键词缺失时按标注年限归入区间中位档（0-2年→L1、2-4年→L2、4-7年→L3、7-10年→L4、
+      10-15年→L5、15年+→L6）；年限也没写 → L2。
+    - education：正文明确写了学历要求才取对应值（"本科及以上"→ BACHELOR）；没写 → ANY。
+    - org_type：按招聘主体性质归类。
     - location：规范为"省·市"或直辖市或"线上"；国外城市保留原文城市名；多地用 / 分隔。
     - salary：正文写了具体数字 → "N-M元/月"或"N元/天"；写"面议"→ 面议；志愿者无薪 → 志愿服务；没写 → null。
     - deadline：只在正文明确写出应聘/报名截止日期时返回（YYYY-MM-DD），绝不推测、绝不编造。

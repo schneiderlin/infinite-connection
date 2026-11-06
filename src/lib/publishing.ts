@@ -59,19 +59,19 @@ export const publishModuleByContentModule: Record<ContentModule, PublishModuleCo
   TOOL: publishModules.tools,
 };
 
+// 与 platform-config.ts 的 publicInterestFields 保持同一套议题分类（2026-11 新版）。
 export const publicInterestFields = [
-  "教育助学",
-  "乡村振兴",
-  "环境保护",
-  "医疗卫生",
-  "养老服务",
-  "儿童关爱",
-  "残障帮扶",
-  "社区治理",
-  "应急救援",
-  "文化传承",
-  "志愿服务",
-  "社会组织支持",
+  "儿童与青少年",
+  "长者与残障",
+  "教育与能力建设",
+  "环境与气候",
+  "动物福利",
+  "社区发展与减贫",
+  "社会公平与权利",
+  "文化艺术与体育",
+  "企业责任与可持续",
+  "行业支持与基础设施",
+  "其他",
 ];
 
 export function isPublishModuleSlug(value: string): value is PublishModuleSlug {

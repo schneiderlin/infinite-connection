@@ -23,7 +23,7 @@ import type { BamlRuntime, BamlCtxManager, Image, Audio, Pdf, Video, FunctionLog
 import { toBamlError, HTTPRequest, ClientRegistry } from "@boundaryml/baml"
 import type { Checked, Check } from "./types"
 import type * as types from "./types"
-import type {AmountScope, DeadlineKind, DurationBucket, Field, FundingExtraction, FundingType, JobExtraction, JobKind, JobRole, NewsExtraction, NewsType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
+import type {AmountScope, DeadlineKind, DurationBucket, Education, Field, FundingExtraction, FundingType, Issue, JobExtraction, JobGroup, JobKind, JobLevel, JobRole, JobSubCategory, NewsExtraction, NewsType, OrgType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
 import type TypeBuilder from "./type_builder"
 import type * as events from "./events"
 

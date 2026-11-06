@@ -79,6 +79,7 @@ function mapFunding(item: any) {
     sourceKey: item.id,
     sourceName: item.sourceName,
     type: item.type,
+    issue: item.issue,
     direction: "提供资源",
     duration: item.duration,
     amount: item.amount,
@@ -93,8 +94,8 @@ function mapFunding(item: any) {
     title: item.title,
     summary: item.summary,
     body: item.summary,
-    fields: [item.field].filter(Boolean),
-    tags: [item.type, item.field].filter(Boolean),
+    fields: [item.field, item.issue].filter(Boolean),
+    tags: [item.type, item.field, item.issue].filter(Boolean),
     region: item.region && PROVINCES.has(item.region) ? item.region : null,
     city: null,
     metadata,
@@ -107,7 +108,12 @@ function mapJob(item: any) {
   const metadata = {
     sourceKey: item.id,
     sourceName: item.sourceName,
-    role: item.role,
+    role: item.subCategory,
+    jobGroup: item.jobGroup,
+    subCategory: item.subCategory,
+    level: item.level,
+    education: item.education,
+    orgType: item.orgType,
     salary: item.salary,
     org: item.org,
     applicationLink: item.url,
@@ -119,8 +125,8 @@ function mapJob(item: any) {
     title: item.title.replace(/^【(招聘|志愿者招募)】/, ""),
     summary: item.summary,
     body: item.summary,
-    fields: [item.role].filter(Boolean),
-    tags: [item.category, item.kind, item.role].filter(Boolean),
+    fields: [item.jobGroup, item.subCategory].filter(Boolean),
+    tags: [item.category, item.kind, item.level, item.jobGroup].filter(Boolean),
     region,
     city,
     metadata,
@@ -274,11 +280,20 @@ async function importDataset(dataset: any, authorId: string) {
     }
   }
 
-  // 快照里消失的记录：只提醒，不自动下架（来源轮换可能是暂时的）。
+  // 快照里消失的记录（来源轮换/已截止）：自动下架为 UNPUBLISHED，不删除，可恢复。
   const incomingKeys = new Set(keys);
   const gone = [...existingByKey.entries()].filter(([key]) => !incomingKeys.has(key));
+  let unpublished = 0;
+  if (gone.length && !dryRun) {
+    const result = await prisma.content.updateMany({
+      where: { id: { in: gone.map(([, id]) => id) }, status: "PUBLISHED" },
+      data: { status: "UNPUBLISHED" },
+    });
+    unpublished = result.count;
+    for (const [key] of gone) console.log(`  - 下架（快照外）: ${key}`);
+  }
   console.log(`新建 ${created}，更新 ${updated}，跳过 ${skipped}` +
-    (gone.length ? `；快照外存量 ${gone.length} 条（未动）` : ""));
+    (gone.length ? `；快照外下架 ${unpublished} 条` : ""));
 }
 
 async function main() {

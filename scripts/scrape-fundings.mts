@@ -44,7 +44,7 @@ const GAP_MS = 900;
 const CUTOFF = "2023-01-01";
 const LLM_CONCURRENCY = 4;
 // 提取缓存版本：换模型或改 baml prompt 时 +1，避免复用旧口径的 extraction。
-const EXTRACTION_VERSION = 2;
+const EXTRACTION_VERSION = 3;
 
 const CNCF_LIST_URL = "https://www.cncf.org.cn/cms/node/53";
 const CNCF_MAX_LIST_PAGES = 12;
@@ -78,11 +78,22 @@ const CPWF_BLOCK_TITLE =
 /* ---------- 提取结果 → 中文字段 ---------- */
 
 const FIELD_ZH: Record<string, string> = {
-  RURAL_EDU: "乡村教育", ECO: "生态环保", LIVELIHOOD: "产业生计", CULTURE: "文化传承",
-  TALENT: "人才培育", DISABILITY: "残障融合", CHILD: "儿童保护", YOUTH: "青少年发展",
-  ELDERLY: "老龄关怀", HEALTH: "医疗健康", MENTAL: "心理健康", WOMEN: "女性关怀",
-  COMMUNITY: "社区营造", EMERGENCY: "应急救援", VOLUNTEER: "志愿服务",
-  ORG_SUPPORT: "社会组织支持", INNOVATION: "创新探索", OTHER: "其他",
+  CP: "儿童与青少年", AG: "长者与残障", ED: "教育与能力建设", EN: "环境与气候",
+  AN: "动物福利", CM: "社区发展与减贫", EQ: "社会公平与权利", CA: "文化艺术与体育",
+  CR: "企业责任与可持续", SS: "行业支持与基础设施", OTHER: "其他",
+};
+const ISSUE_ZH: Record<string, string> = {
+  CP01: "儿童保护", CP02: "困境儿童关爱", CP03: "儿童教育与发展", CP04: "青少年发展",
+  AG01: "老年服务", AG02: "残障融合", AG03: "康复与照护",
+  ED01: "教育公平", ED02: "乡村教育", ED03: "职业教育与就业能力", ED04: "终身学习",
+  EN01: "环境保护", EN02: "气候变化与减碳", EN03: "自然生态保护",
+  AN01: "伴侣动物与流浪动物", AN02: "野生动物保护", AN03: "农场动物与实验动物福利",
+  CM01: "乡村振兴", CM02: "城市社区营造", CM03: "减贫与生计", CM04: "灾害救援与重建",
+  EQ01: "性别平等", EQ02: "多元包容", EQ03: "劳工权益", EQ04: "健康与医疗可及", EQ05: "法律救助与司法公正",
+  CA01: "文化艺术", CA02: "文化遗产保护", CA03: "体育公益",
+  CR01: "CSR", CR02: "ESG", CR03: "责任投资与影响力投资",
+  SS01: "公益行业赋能", SS02: "志愿服务", SS03: "公益金融与慈善信托", SS04: "研究倡导与行业平台",
+  OTHER: "其他",
 };
 const TYPE_ZH: Record<string, string> = {
   FOUNDATION_GRANT: "慈善会/基金会资助", PARTNER_RECRUITMENT: "公益项目伙伴招募",
@@ -651,6 +662,7 @@ function mapRecord(
     supportType: extraction.support_type === "IN_KIND" ? "物资" : "资金",
     duration: DURATION_ZH[extraction.duration] ?? "详见原帖",
     field: FIELD_ZH[extraction.field] ?? "其他",
+    issue: ISSUE_ZH[extraction.issue ?? "OTHER"] ?? "其他",
     region: normalizeRegion(extraction.region),
     title: candidate.title,
     summary: extraction.summary,

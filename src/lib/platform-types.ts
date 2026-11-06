@@ -38,6 +38,7 @@ export type FundingItem = {
   supportType: "资金" | "物资";
   duration: "6个月内" | "6-12个月" | "1-2年" | "2年以上" | "详见原帖";
   field: string;
+  issue?: string;
   region: string;
   title: string;
   summary: string;
@@ -58,6 +59,12 @@ export type JobItem = {
   category?: "人员招聘" | "志愿者招募";
   kind: "全职" | "兼职" | "实习" | "志愿者" | "顾问";
   role: string;
+  // 新岗位分类标准（2026-11）：职业群 / 子类 / 职级 / 学历 / 机构性质
+  jobGroup?: string;
+  subCategory?: string;
+  level?: string;
+  education?: string;
+  orgType?: string;
   servicePeriod?: "短期" | "长期";
   time: string;
   publishedDays: number;

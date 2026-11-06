@@ -22,7 +22,7 @@ import type { BamlRuntime, FunctionResult, BamlCtxManager, Image, Audio, Pdf, Vi
 import { toBamlError, BamlAbortError, ClientRegistry, type HTTPRequest } from "@boundaryml/baml"
 import type { Checked, Check, RecursivePartialNull as MovedRecursivePartialNull } from "./types"
 import type * as types from "./types"
-import type {AmountScope, DeadlineKind, DurationBucket, Field, FundingExtraction, FundingType, JobExtraction, JobKind, JobRole, NewsExtraction, NewsType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
+import type {AmountScope, DeadlineKind, DurationBucket, Education, Field, FundingExtraction, FundingType, Issue, JobExtraction, JobGroup, JobKind, JobLevel, JobRole, JobSubCategory, NewsExtraction, NewsType, OrgType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
 import type TypeBuilder from "./type_builder"
 import { HttpRequest, HttpStreamRequest } from "./sync_request"
 import { LlmResponseParser, LlmStreamParser } from "./parser"

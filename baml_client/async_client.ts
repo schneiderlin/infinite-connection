@@ -24,7 +24,7 @@ import { toBamlError, BamlStream, BamlAbortError, Collector, ClientRegistry } fr
 import type { Checked, Check, RecursivePartialNull as MovedRecursivePartialNull } from "./types"
 import type { partial_types } from "./partial_types"
 import type * as types from "./types"
-import type {AmountScope, DeadlineKind, DurationBucket, Field, FundingExtraction, FundingType, JobExtraction, JobKind, JobRole, NewsExtraction, NewsType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
+import type {AmountScope, DeadlineKind, DurationBucket, Education, Field, FundingExtraction, FundingType, Issue, JobExtraction, JobGroup, JobKind, JobLevel, JobRole, JobSubCategory, NewsExtraction, NewsType, OrgType, SupportType, ToolCategory, ToolDomain, ToolExtraction, ToolFormat, ToolPeriod} from "./types"
 import type TypeBuilder from "./type_builder"
 import { AsyncHttpRequest, AsyncHttpStreamRequest } from "./async_request"
 import { LlmResponseParser, LlmStreamParser } from "./parser"

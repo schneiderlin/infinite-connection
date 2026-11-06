@@ -15,7 +15,8 @@ class NewsExtraction {
   reject_reason string? @description("不相关时的一句话原因（如：个人求助、商品广告、纯娱乐内容）")
   org string? @description("报道主体机构名称；找不到返回 null")
   news_type NewsType
-  field Field? @description("对应的公益领域；判断不了返回 null")
+  field Field? @description("对应的一级领域；判断不了返回 null")
+  issue Issue? @description("二级议题；判断不了返回 null")
   summary string @description("2-3 句中文摘要：发生了什么、涉及谁、有什么进展或影响")
 }
 
@@ -36,7 +37,7 @@ function ExtractNews(
 
     ## 抽取规则
     - news_type：按上面的六类归类。
-    - field：对应的公益领域（从枚举里选），判断不了就给 null。
+    - field / issue：对应的一级领域和二级议题（从枚举里选），判断不了就给 null。
     - org：报道主体机构全称。
     - summary：2-3 句中文，说明发生了什么、涉及哪些机构、有什么进展或影响。
 

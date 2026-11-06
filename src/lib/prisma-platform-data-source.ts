@@ -130,6 +130,7 @@ export class PrismaPlatformDataSource implements PlatformDataSource {
         supportType,
         duration: fundingDuration(data.duration),
         field: content.fields[0] ?? "其他",
+        issue: data.issue || undefined,
         region: content.region || "全国",
         title: content.title,
         summary: summary(content),
@@ -166,7 +167,12 @@ export class PrismaPlatformDataSource implements PlatformDataSource {
         id: content.id,
         category: kind === "志愿者" ? "志愿者招募" : "人员招聘",
         kind,
-        role: data.role || "其他",
+        role: data.role || data.subCategory || "其他",
+        jobGroup: data.jobGroup || undefined,
+        subCategory: data.subCategory || undefined,
+        level: data.level || undefined,
+        education: data.education || undefined,
+        orgType: data.orgType || undefined,
         servicePeriod: data.servicePeriod === "短期" || data.servicePeriod === "长期"
           ? data.servicePeriod
           : undefined,

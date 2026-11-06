@@ -67,24 +67,26 @@ export enum DurationBucket {
   UNKNOWN = "UNKNOWN",
 }
 
+export enum Education {
+  DOCTOR = "DOCTOR",
+  MASTER = "MASTER",
+  BACHELOR = "BACHELOR",
+  COLLEGE = "COLLEGE",
+  TECHNICAL = "TECHNICAL",
+  ANY = "ANY",
+}
+
 export enum Field {
-  RURAL_EDU = "RURAL_EDU",
-  ECO = "ECO",
-  LIVELIHOOD = "LIVELIHOOD",
-  CULTURE = "CULTURE",
-  TALENT = "TALENT",
-  DISABILITY = "DISABILITY",
-  CHILD = "CHILD",
-  YOUTH = "YOUTH",
-  ELDERLY = "ELDERLY",
-  HEALTH = "HEALTH",
-  MENTAL = "MENTAL",
-  WOMEN = "WOMEN",
-  COMMUNITY = "COMMUNITY",
-  EMERGENCY = "EMERGENCY",
-  VOLUNTEER = "VOLUNTEER",
-  ORG_SUPPORT = "ORG_SUPPORT",
-  INNOVATION = "INNOVATION",
+  CP = "CP",
+  AG = "AG",
+  ED = "ED",
+  EN = "EN",
+  AN = "AN",
+  CM = "CM",
+  EQ = "EQ",
+  CA = "CA",
+  CR = "CR",
+  SS = "SS",
   OTHER = "OTHER",
 }
 
@@ -99,12 +101,69 @@ export enum FundingType {
   MATERIAL = "MATERIAL",
 }
 
+export enum Issue {
+  CP01 = "CP01",
+  CP02 = "CP02",
+  CP03 = "CP03",
+  CP04 = "CP04",
+  AG01 = "AG01",
+  AG02 = "AG02",
+  AG03 = "AG03",
+  ED01 = "ED01",
+  ED02 = "ED02",
+  ED03 = "ED03",
+  ED04 = "ED04",
+  EN01 = "EN01",
+  EN02 = "EN02",
+  EN03 = "EN03",
+  AN01 = "AN01",
+  AN02 = "AN02",
+  AN03 = "AN03",
+  CM01 = "CM01",
+  CM02 = "CM02",
+  CM03 = "CM03",
+  CM04 = "CM04",
+  EQ01 = "EQ01",
+  EQ02 = "EQ02",
+  EQ03 = "EQ03",
+  EQ04 = "EQ04",
+  EQ05 = "EQ05",
+  CA01 = "CA01",
+  CA02 = "CA02",
+  CA03 = "CA03",
+  CR01 = "CR01",
+  CR02 = "CR02",
+  CR03 = "CR03",
+  SS01 = "SS01",
+  SS02 = "SS02",
+  SS03 = "SS03",
+  SS04 = "SS04",
+  OTHER = "OTHER",
+}
+
+export enum JobGroup {
+  P = "P",
+  R = "R",
+  C = "C",
+  S = "S",
+  O = "O",
+}
+
 export enum JobKind {
   FULLTIME = "FULLTIME",
   PARTTIME = "PARTTIME",
   INTERN = "INTERN",
   VOLUNTEER = "VOLUNTEER",
   CONSULTANT = "CONSULTANT",
+}
+
+export enum JobLevel {
+  L1 = "L1",
+  L2 = "L2",
+  L3 = "L3",
+  L4 = "L4",
+  L5 = "L5",
+  L6 = "L6",
 }
 
 export enum JobRole {
@@ -121,6 +180,24 @@ export enum JobRole {
   OTHER = "OTHER",
 }
 
+export enum JobSubCategory {
+  P1 = "P1",
+  P2 = "P2",
+  P3 = "P3",
+  P4 = "P4",
+  R1 = "R1",
+  C1 = "C1",
+  C2 = "C2",
+  C3 = "C3",
+  S1 = "S1",
+  S2 = "S2",
+  S3 = "S3",
+  O1 = "O1",
+  O2 = "O2",
+  O3 = "O3",
+  O4 = "O4",
+}
+
 export enum NewsType {
   PROJECT_PROGRESS = "PROJECT_PROGRESS",
   ORGANIZATION_NEWS = "ORGANIZATION_NEWS",
@@ -128,6 +205,17 @@ export enum NewsType {
   INDUSTRY_INSIGHT = "INDUSTRY_INSIGHT",
   POLICY_RELEASE = "POLICY_RELEASE",
   RELIEF_RESPONSE = "RELIEF_RESPONSE",
+  OTHER = "OTHER",
+}
+
+export enum OrgType {
+  FOUNDATION = "FOUNDATION",
+  CHARITY_ASSOC = "CHARITY_ASSOC",
+  MINFEI = "MINFEI",
+  COMPANY = "COMPANY",
+  SOCIAL_WORK = "SOCIAL_WORK",
+  ASSOCIATION = "ASSOCIATION",
+  INTERNATIONAL = "INTERNATIONAL",
   OTHER = "OTHER",
 }
 
@@ -183,6 +271,7 @@ export interface FundingExtraction {
   support_type: SupportType
   funding_type: FundingType
   field: Field
+  issue: Issue
   region?: string | null
   duration: DurationBucket
   summary: string
@@ -193,6 +282,11 @@ export interface JobExtraction {
   is_relevant: boolean
   reject_reason?: string | null
   kind: JobKind
+  job_group: JobGroup
+  sub_category: JobSubCategory
+  level: JobLevel
+  education: Education
+  org_type: OrgType
   role: JobRole
   org?: string | null
   location?: string | null
@@ -208,6 +302,7 @@ export interface NewsExtraction {
   org?: string | null
   news_type: NewsType
   field?: Field | null
+  issue?: Issue | null
   summary: string
   
 }

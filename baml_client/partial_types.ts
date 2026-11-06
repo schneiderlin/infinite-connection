@@ -20,7 +20,7 @@ $ pnpm add @boundaryml/baml
 
 import type { Image, Audio, Pdf, Video } from "@boundaryml/baml"
 import type { Checked, Check } from "./types"
-import type {  AmountScope,  DeadlineKind,  DurationBucket,  Field,  FundingExtraction,  FundingType,  JobExtraction,  JobKind,  JobRole,  NewsExtraction,  NewsType,  SupportType,  ToolCategory,  ToolDomain,  ToolExtraction,  ToolFormat,  ToolPeriod } from "./types"
+import type {  AmountScope,  DeadlineKind,  DurationBucket,  Education,  Field,  FundingExtraction,  FundingType,  Issue,  JobExtraction,  JobGroup,  JobKind,  JobLevel,  JobRole,  JobSubCategory,  NewsExtraction,  NewsType,  OrgType,  SupportType,  ToolCategory,  ToolDomain,  ToolExtraction,  ToolFormat,  ToolPeriod } from "./types"
 import type * as types from "./types"
 
 /******************************************************************************
@@ -47,6 +47,7 @@ export namespace partial_types {
       support_type?: types.SupportType | null
       funding_type?: types.FundingType | null
       field?: types.Field | null
+      issue?: types.Issue | null
       region?: string | null
       duration?: types.DurationBucket | null
       summary?: string | null
@@ -55,6 +56,11 @@ export namespace partial_types {
       is_relevant?: boolean | null
       reject_reason?: string | null
       kind?: types.JobKind | null
+      job_group?: types.JobGroup | null
+      sub_category?: types.JobSubCategory | null
+      level?: types.JobLevel | null
+      education?: types.Education | null
+      org_type?: types.OrgType | null
       role?: types.JobRole | null
       org?: string | null
       location?: string | null
@@ -68,6 +74,7 @@ export namespace partial_types {
       org?: string | null
       news_type?: types.NewsType | null
       field?: types.Field | null
+      issue?: types.Issue | null
       summary?: string | null
     }
     export interface ToolExtraction {
