@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-8be07c3da427",
+  "sourceName": "中国红十字基金会",
+  "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20363",
+  "canonicalUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20363",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国红十字基金会“关爱保”项目申请公告",
+  "organizationHint": "中国红十字基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-10-29",
+  "deadlineHint": "",
+  "bodyText": "2023年起，中国红十字基金会开展“关爱保”项目，助力加强基础性、普惠性、兜底性民生建设，解决群众急难愁盼问题。截至2026年10月底，项目已累计为43家单位申请的54839人提供保险保障。2026年10月，中国红十字基金会启动“关爱保”项目新一期申报工作。本期项目由社会组织申请，为困难群众投保普惠型商业补充医疗保险，为困难群众的健康保障体系注入力量。若相关单位有申报意向，可填报调研问卷（https://v.wjx.cn/vm/mBHiqpR.aspx# ），中国红十字基金会将根据申报情况、轮候顺序、资金余量予以回复和反馈。联系方式：jcfn@crcf.org.cn2026年10月29日",
+  "contentHash": "97810c16b2a6e3bb33ba2c0a632302eb7b90c645d362ae8cc761a8237642c902",
+  "modelInputHash": "71c2623a72d8adcd53eb291ee2dd86683479aff3aa9aa7ec81827e8e1299e3b5",
+  "documentHash": "c3202931c806fc43dae17a56c49526ac1406336e87316e1344fd2b7a541b098a",
+  "adapterVersion": 1
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-d822dbb30f19",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3Mzg5NjM5Mg==&mid=2247558977&idx=1&sn=fa106d4895e243752c33db4644a32ff0&scene=21&click_id=530377030#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzA3Mzg5NjM5Mg==&mid=2247558977&idx=1&sn=fa106d4895e243752c33db4644a32ff0&scene=21&click_id=530377030#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "孝行天下银龄公益影像计划开始征集",
+  "organizationHint": "中国老龄事业发展基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-07-17",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 孝行天下——银龄公益影像计划”是由中国老龄事业发展基金会主办、中国老摄影家协会支持的全国性公益摄影征集活动，旨在通过影像记录当代老年人生活，弘扬孝亲敬老文化。 申报对象： 摄影工作者、摄影爱好者及热心老龄公益事业的社会各界人士。 作品规格： 投稿的静态图片作品均为JPG格式，单个文件大小以5-10M为宜，黑白、彩色均可，对所用拍摄器材不作限制；投稿的视频作品均为MP4格式，单个文件大小以50M以内为宜，时间最多不超过5分钟，或适合自媒体传播。 投稿作品总数每人不超过6件（每幅/组/个作品为1件），组照作品每件限6幅以内，并自行拼接成一件作品投送；投稿数量超出者视为无效。 作品文件名命名规范：投稿人姓名+作品名+手机号（可随时回复联系）。文件名未按规范设置的，作品视为无效。 截止时间：2026年12月15日",
+  "contentHash": "2f136ef52fe1c784566ea9453549346e7596a69515c1e47d3c473d1bd7da4360",
+  "modelInputHash": "64d6514be5a0f360816e5040f5cc3076a96682e0da9edbfbcafe19a692fbc639",
+  "documentHash": "adf7c50d7509573e1fcd830764e7a763524c760b832a10bbb4868bba77d3f0a0",
+  "adapterVersion": 1
+}

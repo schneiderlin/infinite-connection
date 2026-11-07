@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-2caf7bb49893",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI4Mzc4NzczNQ==&mid=2247486315&idx=1&sn=548b0b3b7dc6c7ae80cbae9f29e701c9&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzI4Mzc4NzczNQ==&mid=2247486315&idx=1&sn=548b0b3b7dc6c7ae80cbae9f29e701c9&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026年远山伙伴招募",
+  "organizationHint": "中国慈展会",
+  "addressHint": "",
+  "publishedDateHint": "2026-04-03",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 远山公益源于2012年麦田同行计划项目，2016年于上海正式注册，至今已经为超过60家公益组织进行品牌重建，专注公益组织文化建设与形象品牌塑造。 申报条件： 申请机构没有/需要重新建立logo（必要条件）； 注册成立时间≥2年，有稳定的全职管理团队、较多的核心志愿者、良好的宣传平台（优先条件）； 因项目涉及机构核心内容，机构负责人须全程参与跟进项目，且须设置固定对接人1名； 有清晰的项目规划/机构发展战略及良好的执行力； 极具开放精神和改革精神，乐于接受和尝试新事物，否则新形象和组织文化改革较难推进。 申报支持： 同行计划： · 支持机构建立视觉形象系统（不止LOGO，且有实用性VI系统设计）； · 引导梳理/完善/创建组织文化系统； · 分享公益组织文化经验，提供形象建设咨询服务。 V行计划： 支持建立视觉形象系统（不止LOGO，且有实用性VI系统设计） 截止时间：2026年4月30日24:00前",
+  "contentHash": "deaa3f5bb097afcd7cdf58d6e49cf579ac38d4a6a2bff49e20ae87a7c73a3772",
+  "modelInputHash": "248f515f1b986006169724e8a435b296a42da67f0b94dce458c8e22c95069eeb",
+  "documentHash": "d508571af46e0dbac5f0db95631ae8a653b3860fdb47601bda0a787e8383257a",
+  "adapterVersion": 1
+}

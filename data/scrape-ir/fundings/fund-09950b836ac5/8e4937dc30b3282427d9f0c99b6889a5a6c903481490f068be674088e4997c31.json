@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-09950b836ac5",
+  "sourceName": "中国人口福利基金会",
+  "sourceUrl": "https://www.cpwf.org.cn/content/72226",
+  "canonicalUrl": "https://www.cpwf.org.cn/content/72226",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国人口福利基金会关于延长资助开展食品数字标签管理及推广相关项目的公告",
+  "organizationHint": "中国人口福利基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-03-30",
+  "deadlineHint": "",
+  "bodyText": "新闻动态 截止2026年3月23日17:00（北京时间），未收到符合公告需求的申请文件，现决定将本次资助的响应截止时间延长至2026年4月3日17:00（北京时间）。欢迎符合要求的单位积极参与。 更多公告信息 中国人口福利基金会关于国家开发银行支持黄手环行动专业医护人员培训申请评审结果的公告中国人口福利基金会关于“幸福在他乡项目”业务范围调整变更的公告中国人口福利基金会“英雄联盟——韧性社区建设项目”初审结果公告中国人口福利基金会关于“2025-2026年度临床诊疗技能提升培训及义诊活动”专项审计采购结果的公告中国人口福利基金会关于编辑制作公立医院高质量发展优秀经验汇编的公告关于委托开展“健康暖心社会筹资平台”疾病救助信息图册和推广活动结果的公告",
+  "contentHash": "7e57af8f505b3425b70f8bb78319af761cd358b1d8d15390ea9fe9e608bf744f",
+  "modelInputHash": "0e0b19d5e11b2a0501ace13ff438412c7432baa4e9d1e8d1c5b5228bcaf83420",
+  "documentHash": "8e4937dc30b3282427d9f0c99b6889a5a6c903481490f068be674088e4997c31",
+  "adapterVersion": 1
+}

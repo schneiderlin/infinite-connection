@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-13b189f9db1d",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAxODM2MDIyNg==&mid=2650563176&idx=1&sn=7ac2d91e259be2ddc882f9762c8ab795&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzAxODM2MDIyNg==&mid=2650563176&idx=1&sn=7ac2d91e259be2ddc882f9762c8ab795&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "上海华爱公益基金会公益伙伴招募启动",
+  "organizationHint": "上海华爱公益基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-08-28",
+  "deadlineHint": "",
+  "bodyText": "机构简介： 上海华爱公益基金会成立于2014年，本着“爱心传递，传递爱心”理念，基金会旨在以公开、透明、规范的服务，为热衷公益慈善的爱心人士、企业构筑服务他人，服务社会，造福人群的平台。 成立至今，我们的项目受助群体覆盖：医护人员、残障人士、社区长者、孤独症家庭、尿毒症患者、少数民族学子、养老院护理员、困境青少年、社区精神康复者等多类人群。 申报要求： 长三角一体化： 在长三角一体化的战略背景下，诚邀在长三角地区注册、且有相关资质的民非、社团申请项目。 专业与经验： 应具有与申请项目相关的服务经验和相应具备专业证书的工作团队，机构获规范化评估3A及以上，且在有效期内。原则上要求2024，2025年连续两年年检合格(不包括基本合格)。 创新性与公益性： 项目方案立意创新，致力于实现显著的公益性目标，并具备可操作性；项目书表述清晰规范。 可持续性与影响力： 项目已具备实施基础，实施后获得良好社会反响，并持续产生积极影响，具有较强倡导性与显著社会影响力。 截止时间：2026年8月31日24点",
+  "contentHash": "e02ae64eb1b2bfb8659bd63e3d2e1d6d558ef64498f5f3464b28744a03819e50",
+  "modelInputHash": "7d7cf1d7d15900c7a844b115dc9f13ac1969f346db8c94837e9735e05098404e",
+  "documentHash": "9309335097d45d230810101bea21c88919668bc31b2725996efd9ff37b261747",
+  "adapterVersion": 1
+}

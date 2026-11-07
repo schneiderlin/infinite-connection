@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-ecac1858d89a",
+  "sourceName": "中国红十字基金会",
+  "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20084",
+  "canonicalUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20084",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国红十字基金会“中央专项彩票公益金大病儿童救助项目” （先心病，2026年第二批）",
+  "organizationHint": "中国红十字基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-07-31",
+  "deadlineHint": "",
+  "bodyText": "2026年7月29日，中国红十字基金会“中央专项彩票公益金大病儿童救助项目”完成了2026年度第二批先心病患儿救助款的拨付工作，拨付资金共计2321万元，救助先心病儿童1268名。依据相关规定，现对救助名单进行公示。问询电话：010-855949992026年7月31日附件：“中央专项彩票公益金大病儿童救助项目”拨款公示-先心病2026年第二批.pdf",
+  "contentHash": "245ad4dccfa25d3e5b87892e09a339c662adf59d26f5d6191fe07c5ee65cd0ab",
+  "modelInputHash": "0807c3570b252628a4de17f4d46f4cb9f2c6c32ef8b117c7cce52edd65c1ff9b",
+  "documentHash": "acfddd09e4a80721a4155e3cdf8b96f1ed9a9b5372fa89ce779a58da79c18de2",
+  "adapterVersion": 1
+}

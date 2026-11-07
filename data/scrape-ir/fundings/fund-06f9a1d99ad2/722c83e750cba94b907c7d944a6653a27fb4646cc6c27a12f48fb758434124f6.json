@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-06f9a1d99ad2",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU5MjgyNzEwNQ==&mid=2247516381&idx=1&sn=605b25874c9c90fbed1dc7df679e8d78&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzU5MjgyNzEwNQ==&mid=2247516381&idx=1&sn=605b25874c9c90fbed1dc7df679e8d78&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "善种计划招募",
+  "organizationHint": "美善基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-03-06",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 自创立之初，美善基金会就将“促进公益发展，激发美好善念”写入使命。2024年，美善设立善种计划，项目聚焦公益人才培育及组织发展，计划通过系列服务帮助公益人才及组织持续成长，希望在项目的支持下，更多美善的种子在本土落地生根，促进当地公益行业健康可持续发展。 美善伙伴是美善基金会善种计划项目的核心内容之一，主要定位在愿意成长和改变的公益中坚力量。2026年，我们依然希望帮助“缺乏成长支持”的公益骨干建立自己的长效支持体系，让每一颗善意的种子都能被看见，在公益沃土中向下扎根，向上生长。 申报对象： 本项目仅面向全职公益人，适合职业规划清晰、成长需求明确、当前内外部资源支持不足的青年公益伙伴。 申报要求： 从业时间：全职从事公益行业2年以上（含2年），以公益为职业方向； 个人角色：•项目负责人、业务骨干等（独立负责某个板块的公益服务开展）；•小微公益组织的负责人（负责机构项目实务工作，团队规模10人以内）； 机构类型：所在组织形式不限，包括社会服务机构、社会团体、基金会、个体行动者均可。 截止时间：2026年03月10日中午12:00",
+  "contentHash": "dfe706a6d00f6d103ac4b3200f10cce8938bece5112438e5f963e8004a8ef0c4",
+  "modelInputHash": "758b5fc9bafbec9720ad4bcadba73938cc1b12c85157a8e71059742f6f510ee5",
+  "documentHash": "722c83e750cba94b907c7d944a6653a27fb4646cc6c27a12f48fb758434124f6",
+  "adapterVersion": 1
+}

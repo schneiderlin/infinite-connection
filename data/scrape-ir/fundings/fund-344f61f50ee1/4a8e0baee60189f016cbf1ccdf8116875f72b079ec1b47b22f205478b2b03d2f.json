@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-344f61f50ee1",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzkxNDMxODk2Mw==&mid=2247510178&idx=1&sn=ef3f9e43a86ffb182ba439e8f99d6962&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzkxNDMxODk2Mw==&mid=2247510178&idx=1&sn=ef3f9e43a86ffb182ba439e8f99d6962&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "数字新秀培育计划启动第二批项目征集工作",
+  "organizationHint": "重庆陆海国际传播公益基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-03-06",
+  "deadlineHint": "",
+  "bodyText": "项目简介： “巴渝新公益”数字新秀培育计划是在市政府新闻办、市委网信办、市民政局指导下，由重庆陆海国际传播公益基金会主办，重庆腾讯可持续发展基金会、腾讯公司西南总部支持的资助类项目。该计划旨在面向重庆及国际公益领域，征集并资助一批善于运用数字化工具、具备国际交流与对话潜能的公益应用或公益人才培育项目，助力数字工具在解决社会问题中发挥更大功能，助力重庆公益的可持续发展。 申报对象： 社会组织（包括基金会、社团、社会服务机构）；高校、研究机构、企业及其他主体需联合社会组织共同申报。 申报要求： 服务地域：为重庆全域，或以重庆为重点覆盖服务全国其他区域。 项目周期：不超过6个月（2026年4月至9月）。 申报支持： 资金支持； 专家辅导； 资源协调； 行动协同； 持续性孵化支持； 影响力传播支持。 截止时间： 2026年3月19日17:30前",
+  "contentHash": "d9b17da9bcac8cb4ca2f4407cf56f2b358ecfdfc0d4e77b2dc4c237ffb94f78a",
+  "modelInputHash": "41d08da6496de035dc6a0d678f9ea15abf47df8583b3c49c4da7a120b37a453c",
+  "documentHash": "4a8e0baee60189f016cbf1ccdf8116875f72b079ec1b47b22f205478b2b03d2f",
+  "adapterVersion": 1
+}

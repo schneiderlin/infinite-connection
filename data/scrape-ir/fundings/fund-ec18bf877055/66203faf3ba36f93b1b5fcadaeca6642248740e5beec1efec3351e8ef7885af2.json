@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-ec18bf877055",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4Njg0MTEwMg==&mid=2649700264&idx=3&sn=6029a6646228e2808e75fdd6496b16ce&scene=21&click_id=80#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzA4Njg0MTEwMg==&mid=2649700264&idx=3&sn=6029a6646228e2808e75fdd6496b16ce&scene=21&click_id=80#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "海南省残疾人基金会公益伙伴招募公告",
+  "organizationHint": "海南省残疾人基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-02-13",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 海南省残疾人基金会是2013年12月20日经海南省民政厅批准成立的地方性公募基金会，业务主管单位是海南省残联，连续三次评为5A级基金会。为促进社会助残资源整合，完善基金会与社会组织合作机制，现公开招募公益合作伙伴，联合开展劝募和公益项目执行。 申报要求： 规范运营：具备独立法人资格，拥有健全的内部治理、财务会计及资产管理制度，保障组织运营规范有序。 信誉良好：在社会上信誉佳、公信力强，无违法违规记录，秉持诚信开展助残服务。 专业过硬：积累了丰富的专业服务能力与经验，能精准对接残疾人需求，切实解决问题。 团队稳定：拥有稳定的工作团队与志愿者队伍及多元资源动员能力，确保助残服务持续、稳定开展。 申报对象： 依法在民政部门注册成立超2年，且年检合格的扶残助困慈善组织，涵盖非公募基金会、民办非企业单位、社会团体，以及海南省残疾儿童康复救助定点服务机构（相关企业）、其他开展助残活动的爱心企业。 截止时间：请咨询",
+  "contentHash": "ef9050b84c7bcde36163ee7448923ecd875ca86e061f9b46a2208b5f32d93a56",
+  "modelInputHash": "b9f346585af34683c5e083837882b6b16a2200f4d29478b4e16afc45ab63ac7c",
+  "documentHash": "66203faf3ba36f93b1b5fcadaeca6642248740e5beec1efec3351e8ef7885af2",
+  "adapterVersion": 1
+}

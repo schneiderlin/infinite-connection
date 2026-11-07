@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-9fc83e091b2f",
+  "sourceName": "中国发展简报·公益资助",
+  "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16417.html",
+  "canonicalUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16417.html",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "资助 ｜泰国朱拉隆功大学短期奖学金项目开启申请",
+  "organizationHint": "泰国朱拉隆功大学",
+  "addressHint": "泰国",
+  "publishedDateHint": "2024-07-01",
+  "deadlineHint": "2024-08-25",
+  "bodyText": "泰国，不仅是旅游胜地，也是一个研究探讨国际发展和区域合作的理想场所，大量联合国机构、国际组织和民间团体活跃在这里。JUST FUTURES MEKONG FELLOWSHIP PROGRAM由泰国朱拉隆功大学社会发展研究中心主办，该中心荣获“联合国教科文组织资源治理与未来教育教席”。 本奖学金计划旨在支持有一定学术或工作经验，且对东南亚可持续发展议题感兴趣的人士，在朱拉隆功大学的学术导师指导下，与当地可持续发展机构的工作人员结成对子，用半年时间共同工作、研究和探讨湄公河地区面临的环境社会挑战，并以一篇分析文章的形式，探讨中泰合作实现区域可持续且公正未来的可能性。 本期项目重点关注的议题涵盖：- 有机农业与农业生态- 沿海渔业社区的可持续发展- 基于社区发展的生态旅游- 气候变化，包括小农的气候适应与气候投融资 项目欢迎具有上述领域或相关背景的申请人踊跃申请。奖学金将覆盖2个月的学习培训和6个月在泰国的实习和研究。申请截止日期为2024年8月25日。 如果想了解更多信息，请访问： https://www.csds-chula.org/just-futures-mekong-fellowship-program",
+  "contentHash": "700baa42f6a3e3fdcc33aeacb525c1f59ff1ca29a477412f5027e8855860cceb",
+  "modelInputHash": "a53cd6439d3ac6ab0d96b93a5cee9d8f82925cfd755419b126a8313ae5ba9444",
+  "documentHash": "702404822d22d247f780760b56c404284a2a86969ad779ede165ccd24cd62258",
+  "adapterVersion": 1
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-8d21f633687f",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650009772&idx=1&sn=a9aa0dff07e7e60d18a34e97c24dffd7&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650009772&idx=1&sn=a9aa0dff07e7e60d18a34e97c24dffd7&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026年勇气少年困境儿童陪伴项目意向合作机构征集",
+  "organizationHint": "中国慈展会",
+  "addressHint": "",
+  "publishedDateHint": "2026-04-17",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 勇气少年困境儿童陪伴计划旨在保护中西部乡村地区因家庭监护缺失和监护不当的困境儿童不受伤害，陪伴儿童积极成长。 该项目以6-16岁困境儿童为服务对象，以儿童团体活动为抓手，回应儿童安全保护与心理健康需求，帮助儿童提升自我保护意识和能力、提升自信心和社交与人际关系适应能力，促进儿童成长和发展。 申报对象： 截止时间：2026年5月10日23:59",
+  "contentHash": "409ed912d0b9a57867905f446e474eb42224fbcfba8011d31b18713b48c456cb",
+  "modelInputHash": "d788711de14bf81e225899a37b1d5b239808d3a91889256c89c146cd756bb384",
+  "documentHash": "1ba292e167f3d4d10ba2dd8a81ce27842e9ca57dbe17388effa138332bd35f5b",
+  "adapterVersion": 1
+}

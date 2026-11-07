@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-cc5fe50745e5",
+  "sourceName": "中国人口福利基金会",
+  "sourceUrl": "https://www.cpwf.org.cn/content/72150",
+  "canonicalUrl": "https://www.cpwf.org.cn/content/72150",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国人口福利基金会关于医心守护儿童成长公益项目科普教育活动调整申请方式的通知",
+  "organizationHint": "中国人口福利基金会",
+  "addressHint": "",
+  "publishedDateHint": "2025-12-18",
+  "deadlineHint": "",
+  "bodyText": "新闻动态 附件1：医心守护儿童成长公益项目-指引手册.pdf附件2：医心守护儿童成长公益项目线下科普申请表.docx附件3：医心守护儿童成长公益项目线上科普申请表.docx附件4：医心守护儿童成长公益项目科普视频申请表.docx 更多公告信息 2018年第一批黄手环申领发放公告（八） 中国人口福利基金会关于采购防疫物资结果的公告中国人口福利基金会“资助河北地区（衡水市）医院感染类疾病诊断医疗物资”第二次结果公告关于开展第二届全国“幸福家庭”推选活动的通知中国人口福利基金会关于租赁健康暖心社会筹资平台云服务器评审的公告健康暖心社会筹资平台和中国大病社会救助平台社会动员体系运维公告",
+  "contentHash": "92f6ccc1f866f7c878945771936ece30830295238562ee7fdb69bdc06df157f3",
+  "modelInputHash": "472344f42d7ecc9d882f18f55b47b309fde1affeba1aeb14626b84288d0c5554",
+  "documentHash": "1978e51e28ef995980b99e1b77a0a4c88f56dfd0dbb3b764bcc1c7f35b712196",
+  "adapterVersion": 1
+}

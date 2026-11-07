@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-48ec8a5ff466",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MjUwMTQ1MA==&mid=2651656259&idx=1&sn=37256186e1d11e14b0558bd20250ec2f&scene=21&click_id=78#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MjUwMTQ1MA==&mid=2651656259&idx=1&sn=37256186e1d11e14b0558bd20250ec2f&scene=21&click_id=78#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026年广播电视公益广告扶持项目申报",
+  "organizationHint": "中国慈展会",
+  "addressHint": "",
+  "publishedDateHint": "2026-02-13",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 为引导和鼓励社会各界积极参与广播电视公益广告创作和传播，推动创作生产出更多高质量作品，不断提升公益广告宣传效果，广电总局决定继续实施广播电视公益广告扶持项目。 申报对象： 境内机构和个人制作的广播公益广告作品、电视公益广告作品，可申报“广播作品类”“电视作品类”扶持项目。 各级广播电视播出机构及其他对公益广告传播做出突出贡献的境内机构，可申报“传播机构类”扶持项目。 各级广播电视行政部门及其他对组织开展公益广告创作、播出、推广等工作做出突出贡献的境内机构，可申报“组织机构类”扶持项目。 申报要求： 申报“广播作品类”和“电视作品类”扶持项目的作品，一般应在2025年内制作完成。 申报“传播机构类”扶持项目的机构，应在2025年内组织开展广播电视公益广告传播工作取得显著成效。广播电视播出机构申报，应满足《广播电视广告播出管理办法》对公益广告播出的相关要求，确保播出时长和条次，注意优化排播，积极推进全媒体传播，提升传播效果。 申报“组织机构类”扶持项目的机构，应在2025年内组织开展广播电视公益广告创作引导、专项扶持、专题培训、作品征集、集中展播等工作，取得显著成效。 截止时间：2026年4月30日前",
+  "contentHash": "7964b43a24c928bf553e3934a757c28a14ddceb70ed7a0116b4a1309331942e8",
+  "modelInputHash": "6bd1fd3c7c044b256f2ee40fde0c925cd32467d8c065fd55d333f54af7bb19d4",
+  "documentHash": "f643bbda8362f53e96cbdd51fe44a3864da62738ee0eeaf664e3488e538cb23c",
+  "adapterVersion": 1
+}

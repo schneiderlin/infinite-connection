@@ -15,8 +15,8 @@
  *   4. 中国慈展会 · 资源直通车（cncf.org.cn + 微信公众号）
  *   5. 中国人口福利基金会（cpwf.org.cn）
  *
- * 提取结果的缓存：快照里每条记录保存 bodyHash 与 extraction，
- *   正文未变化的条目重跑时直接复用，不重复调用 LLM。
+ * 流水线：collect（URL → 原文 IR）→ extract（IR → MiniMax）→ materialize（JSON 快照）。
+ * 原文 IR 保存在 data/scrape-ir/fundings，可脱离来源网站反复回放同一份模型输入。
  *
  * 用法：MINIMAX_API_KEY 配置在 .env 后运行 pnpm scrape:fundings
  * 输出：src/lib/fundings-data.json
@@ -30,11 +30,17 @@ import * as cheerio from "cheerio";
 import { b } from "../baml_client/index.ts";
 import { setLogLevel } from "@boundaryml/baml";
 import type { FundingExtraction } from "../baml_client/types.ts";
+import {
+  readCurrentIR,
+  updateCurrentIR,
+  type ScrapedDocumentIR,
+} from "./lib/scrape-ir.mts";
 
 setLogLevel("ERROR");
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(ROOT, "src", "lib", "fundings-data.json");
+const IR_ROOT = path.join(ROOT, "data", "scrape-ir", "fundings");
 const UA = "InfiniteConnectionPreview/0.1 (+https://github.com/schneiderlin/infinite-connection)";
 const BROWSER_UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36";
@@ -45,6 +51,8 @@ const CUTOFF = "2023-01-01";
 const LLM_CONCURRENCY = 4;
 // 提取缓存版本：换模型或改 baml prompt 时 +1，避免复用旧口径的 extraction。
 const EXTRACTION_VERSION = 3;
+const EXTRACTION_MODEL = "MiniMax-M3.1-Flash";
+const IR_ADAPTER_VERSION = 1;
 
 const CNCF_LIST_URL = "https://www.cncf.org.cn/cms/node/53";
 const CNCF_MAX_LIST_PAGES = 12;
@@ -170,6 +178,7 @@ const clean = (value: unknown) =>
     .trim();
 
 const hashId = (value: string) => createHash("sha1").update(value).digest("hex").slice(0, 12);
+const sha256 = (value: string) => createHash("sha256").update(value).digest("hex");
 // 页面浏览计数（"浏览 1166 次"）每次访问自增，直接 hash 会导致缓存永远失效；
 // 计算 bodyHash 前先剥离这类计数。
 const hashBody = (body: string) =>
@@ -202,6 +211,70 @@ type Candidate = {
   url: string;
   sourceName: string;
 };
+
+type FundingIR = ScrapedDocumentIR & { dataset: "fundings" };
+
+function sourceKey(candidate: Candidate) {
+  return `fund-${hashId(candidate.url || `${candidate.title}-${candidate.orgHint}`)}`;
+}
+
+function modelInputHash(candidate: Candidate) {
+  return sha256(JSON.stringify([
+    candidate.title,
+    candidate.orgHint,
+    candidate.beginDay,
+    candidate.endDayHint,
+    candidate.body,
+  ]));
+}
+
+function documentHash(candidate: Candidate) {
+  return sha256(JSON.stringify([
+    candidate.title,
+    candidate.orgHint,
+    candidate.address,
+    candidate.beginDay,
+    candidate.endDayHint,
+    candidate.body,
+    candidate.url,
+    candidate.sourceName,
+  ]));
+}
+
+function candidateToIR(candidate: Candidate, fetchedAt: string): FundingIR {
+  return {
+    schemaVersion: 1,
+    dataset: "fundings",
+    sourceKey: sourceKey(candidate),
+    sourceName: candidate.sourceName,
+    sourceUrl: candidate.url,
+    canonicalUrl: candidate.url,
+    fetchedAt,
+    title: candidate.title,
+    organizationHint: candidate.orgHint,
+    addressHint: candidate.address,
+    publishedDateHint: candidate.beginDay,
+    deadlineHint: candidate.endDayHint,
+    bodyText: candidate.body,
+    contentHash: sha256(candidate.body),
+    modelInputHash: modelInputHash(candidate),
+    documentHash: documentHash(candidate),
+    adapterVersion: IR_ADAPTER_VERSION,
+  };
+}
+
+function irToCandidate(document: ScrapedDocumentIR): Candidate {
+  return {
+    title: document.title,
+    orgHint: document.organizationHint,
+    address: document.addressHint,
+    beginDay: document.publishedDateHint,
+    endDayHint: document.deadlineHint,
+    body: document.bodyText,
+    url: document.canonicalUrl,
+    sourceName: document.sourceName,
+  };
+}
 
 /* ---------- 来源 1：中国发展简报 · 公益资助 ---------- */
 
@@ -629,6 +702,8 @@ function mapRecord(
   candidate: Candidate,
   extraction: FundingExtraction,
   bodyHash: string,
+  inputHash: string,
+  extractionMeta: AnyRecord,
 ) {
   const today = todayISO();
   const kind = extraction.deadline_kind;
@@ -656,7 +731,7 @@ function mapRecord(
   }
 
   return {
-    id: `fund-${hashId(candidate.url || `${candidate.title}-${candidate.orgHint}`)}`,
+    id: sourceKey(candidate),
     kind: "资助",
     type: TYPE_ZH[extraction.funding_type] ?? "公益组织资助",
     supportType: extraction.support_type === "IN_KIND" ? "物资" : "资金",
@@ -678,15 +753,22 @@ function mapRecord(
     publishedDate: candidate.beginDay || today,
     url: candidate.url,
     bodyHash,
+    modelInputHash: inputHash,
     extractionVersion: EXTRACTION_VERSION,
+    extractionMeta,
     extraction,
   };
 }
 
 type AnyRecord = Record<string, any>;
 
-async function extractAll(candidates: Candidate[], previousByUrl: Map<string, AnyRecord>) {
+async function extractAll(
+  candidates: Candidate[],
+  previousByUrl: Map<string, AnyRecord>,
+  forceExtract = false,
+) {
   const kept: AnyRecord[] = [];
+  const outcomes: { sourceKey: string; extraction: FundingExtraction; record: AnyRecord | null }[] = [];
   let reused = 0;
   let extracted = 0;
   let rejected = 0;
@@ -710,10 +792,26 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
         continue;
       }
       const bodyHash = hashId(hashBody(candidate.body));
+      const inputHash = modelInputHash(candidate);
 
       let extraction: FundingExtraction | undefined;
-      if (previous?.bodyHash === bodyHash && previous.extraction && previous.extractionVersion === EXTRACTION_VERSION) {
+      let extractionMeta: AnyRecord;
+      const inputMatches = previous?.modelInputHash
+        ? previous.modelInputHash === inputHash
+        : previous?.bodyHash === bodyHash;
+      if (
+        !forceExtract &&
+        inputMatches &&
+        previous?.extraction &&
+        previous.extractionVersion === EXTRACTION_VERSION
+      ) {
         extraction = previous.extraction as FundingExtraction;
+        extractionMeta = previous.extractionMeta ?? {
+          inputHash,
+          extractorVersion: EXTRACTION_VERSION,
+          model: null,
+          generatedAt: null,
+        };
         reused += 1;
       } else {
         try {
@@ -724,6 +822,12 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
             candidate.endDayHint,
             candidate.body,
           );
+          extractionMeta = {
+            inputHash,
+            extractorVersion: EXTRACTION_VERSION,
+            model: EXTRACTION_MODEL,
+            generatedAt: new Date().toISOString(),
+          };
           extracted += 1;
         } catch (error) {
           console.warn(`  ! 提取失败，跳过: ${candidate.title} (${error instanceof Error ? error.message : error})`);
@@ -732,16 +836,19 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
       }
 
       if (!extraction.is_relevant) {
+        outcomes.push({ sourceKey: sourceKey(candidate), extraction, record: null });
         rejected += 1;
         console.log(`  - 不相关（${extraction.reject_reason ?? "未说明"}）: ${candidate.title.slice(0, 40)}`);
         continue;
       }
-      kept.push(mapRecord(candidate, extraction, bodyHash));
+      const record = mapRecord(candidate, extraction, bodyHash, inputHash, extractionMeta!);
+      kept.push(record);
+      outcomes.push({ sourceKey: sourceKey(candidate), extraction, record });
     }
   };
   await Promise.all(Array.from({ length: LLM_CONCURRENCY }, worker));
   console.log(`MiniMax 提取：复用 ${reused}，新提取 ${extracted}，判为不相关 ${rejected}，入库 ${kept.length}`);
-  return kept;
+  return { records: kept, outcomes };
 }
 
 /* ---------- 合并输出 ---------- */
@@ -757,8 +864,62 @@ function dedupe(items: AnyRecord[]) {
   });
 }
 
+function argumentValue(name: string) {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : null;
+}
+
+function printComparison(
+  outcomes: { sourceKey: string; extraction: FundingExtraction; record: AnyRecord | null }[],
+  previousById: Map<string, AnyRecord>,
+) {
+  const fields: (keyof FundingExtraction)[] = [
+    "is_relevant",
+    "reject_reason",
+    "org",
+    "deadline",
+    "deadline_kind",
+    "amount_wan",
+    "amount_scope",
+    "support_type",
+    "funding_type",
+    "field",
+    "issue",
+    "region",
+    "duration",
+    "summary",
+  ];
+  let changedRecords = 0;
+  for (const outcome of outcomes.sort((left, right) => left.sourceKey.localeCompare(right.sourceKey))) {
+    const previous = previousById.get(outcome.sourceKey);
+    const before = previous?.extraction as FundingExtraction | undefined;
+    const changes = fields.filter((field) => JSON.stringify(before?.[field] ?? null) !== JSON.stringify(outcome.extraction[field] ?? null));
+    if (!changes.length) continue;
+    changedRecords += 1;
+    console.log(`\n[${outcome.sourceKey}] ${previous?.title ?? outcome.record?.title ?? "未收录候选"}`);
+    for (const field of changes) {
+      console.log(`  ${field}:`);
+      console.log(`    旧: ${JSON.stringify(before?.[field] ?? null)}`);
+      console.log(`    新: ${JSON.stringify(outcome.extraction[field] ?? null)}`);
+    }
+  }
+  console.log(`\n对比完成：${outcomes.length} 条回放，${changedRecords} 条发生变化。`);
+}
+
 async function main() {
-  if (!process.env.MINIMAX_API_KEY) {
+  const mode = argumentValue("--mode") ?? "all";
+  const compare = process.argv.includes("--compare");
+  const noWrite = process.argv.includes("--no-write");
+  const forceExtract = process.argv.includes("--force");
+  const sourceKeyFilter = argumentValue("--source-key");
+  if (!["all", "collect", "extract"].includes(mode)) {
+    throw new Error(`未知 mode：${mode}（可选 all / collect / extract）`);
+  }
+  if (mode === "collect" && (compare || sourceKeyFilter)) {
+    throw new Error("collect 模式不支持 --compare 或 --source-key；请在 extract/replay 阶段使用。");
+  }
+
+  if (mode !== "collect" && !process.env.MINIMAX_API_KEY) {
     try {
       process.loadEnvFile(path.join(ROOT, ".env"));
     } catch {}
@@ -780,9 +941,10 @@ async function main() {
   const previousByUrl = new Map<string, AnyRecord>(
     existing.filter((item) => item.url).map((item) => [item.url, item]),
   );
+  const previousById = new Map<string, AnyRecord>(
+    existing.filter((item) => item.id).map((item) => [item.id, item]),
+  );
 
-  // 任一源关键请求失败时抛错，这里按源兜底：失败源沿用旧快照记录（含提取缓存），
-  // 避免一次网络抖动清空该来源的全部数据。
   const SOURCE_NAMES = [
     "中国发展简报·公益资助",
     "中国发展简报·资讯",
@@ -790,26 +952,33 @@ async function main() {
     "中国慈展会·资源直通车",
     "中国人口福利基金会",
   ];
-  const results = await Promise.allSettled([
-    scrapeCDBFundings(),
-    scrapeCDBNews(),
-    scrapeCRCF(),
-    scrapeCNCF(),
-    scrapeCPWF(),
-  ]);
+  const fallbackCandidates: Candidate[] = [];
 
-  const candidates: Candidate[] = [];
-  results.forEach((result, index) => {
-    const sourceName = SOURCE_NAMES[index];
-    if (result.status === "fulfilled") {
-      candidates.push(...result.value);
-      return;
-    }
-    console.error(`  ✗ ${sourceName} 抓取失败：${result.reason?.message ?? result.reason}`);
-    const fallback = existing.filter((item) => item.sourceName === sourceName);
-    console.error(`    沿用旧快照 ${fallback.length} 条`);
-    for (const item of fallback) {
-      candidates.push({
+  if (mode !== "extract") {
+    // 任一源关键请求失败时只保留该来源原有 manifest 指针，绝不以空正文覆盖 IR。
+    const results = await Promise.allSettled([
+      scrapeCDBFundings(),
+      scrapeCDBNews(),
+      scrapeCRCF(),
+      scrapeCNCF(),
+      scrapeCPWF(),
+    ]);
+    const collected: Candidate[] = [];
+    const refreshedSources = new Set<string>();
+    results.forEach((result, index) => {
+      const sourceName = SOURCE_NAMES[index];
+      if (result.status === "fulfilled" && result.value.length > 0) {
+        refreshedSources.add(sourceName);
+        collected.push(...result.value);
+        return;
+      }
+      const reason = result.status === "rejected"
+        ? result.reason?.message ?? result.reason
+        : "抓取结果为 0 条，疑似页面结构变化";
+      console.error(`  ✗ ${sourceName} 抓取失败：${reason}`);
+      const fallback = existing.filter((item) => item.sourceName === sourceName);
+      console.error(`    保留旧 IR；若尚无 IR，则沿用旧快照 ${fallback.length} 条`);
+      fallbackCandidates.push(...fallback.map((item) => ({
         title: item.title,
         orgHint: item.org,
         address: item.location ?? "",
@@ -818,20 +987,48 @@ async function main() {
         body: "",
         url: item.url,
         sourceName,
-      });
-    }
-  });
-  console.log(`\n候选合计 ${candidates.length} 条，开始 MiniMax 提取…`);
-  const records = await extractAll(candidates, previousByUrl);
+      })));
+    });
 
-  // 保险丝：候选非空但一条都没入库（通常是 LLM 全部调用失败），
-  // 说明提取链路出了问题，此时退出而不是用空快照覆盖线上数据。
-  if (candidates.length > 0 && records.length === 0) {
-    console.error("提取结果为空：疑似 LLM 调用全部失败，已保留原快照不做覆盖。");
-    process.exit(1);
+    const fetchedAt = new Date().toISOString();
+    const documents = collected.filter((candidate) => candidate.body).map((candidate) => candidateToIR(candidate, fetchedAt));
+    const manifestRecords = await updateCurrentIR(IR_ROOT, "fundings", documents, refreshedSources);
+    console.log(`\n原文 IR：本次写入 ${documents.length} 条，current manifest 共 ${Object.keys(manifestRecords).length} 条`);
+    if (mode === "collect") {
+      console.log(`collect 完成：${IR_ROOT}`);
+      return;
+    }
   }
 
-  const all = dedupe(records)
+  const documents = await readCurrentIR(IR_ROOT, "fundings");
+  let candidates = documents.map(irToCandidate);
+  const irUrls = new Set(candidates.map((candidate) => candidate.url));
+  candidates.push(...fallbackCandidates.filter((candidate) => !irUrls.has(candidate.url)));
+  if (sourceKeyFilter) candidates = candidates.filter((candidate) => sourceKey(candidate) === sourceKeyFilter);
+  if (!candidates.length) {
+    throw new Error(sourceKeyFilter
+      ? `IR 中找不到 ${sourceKeyFilter}`
+      : `没有可提取的 IR；请先运行 pnpm collect:fundings`);
+  }
+
+  console.log(`\n从 IR 读取 ${candidates.length} 条，开始 MiniMax 提取…`);
+  const { records, outcomes } = await extractAll(candidates, previousByUrl, forceExtract);
+  if (compare) printComparison(outcomes, previousById);
+
+  if (candidates.length > 0 && records.length === 0 && outcomes.length === 0) {
+    throw new Error("所有提取调用均失败，已保留原快照不做覆盖。");
+  }
+  if (noWrite) {
+    console.log("--no-write：未修改 fundings-data.json。");
+    return;
+  }
+
+  let outputRecords = records;
+  if (sourceKeyFilter) {
+    const selected = new Set(candidates.map(sourceKey));
+    outputRecords = [...existing.filter((item) => !selected.has(item.id)), ...records];
+  }
+  const all = dedupe(outputRecords)
     .sort((a, b) => {
       if (a.openStatus !== b.openStatus) return a.openStatus === "开放中" ? -1 : 1;
       return a.publishedDays - b.publishedDays;

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-599aad0020eb",
+  "sourceName": "中国红十字基金会",
+  "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20348",
+  "canonicalUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20348",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国红十字基金会“愈见希望-溃疡性结肠炎患者 援助项目”剩余申请名额预警公告",
+  "organizationHint": "中国红十字基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-10-23",
+  "deadlineHint": "",
+  "bodyText": "中国红十字基金会“愈见希望-溃疡性结肠炎患者援助项目”立足公益援助宗旨，旨在减轻溃疡性结肠炎患者的用药负担，改善身体状况，助力恢复日常起居生活。项目自开展以来，申请人数持续增长，当前剩余申请名额有限，即将达到预警阈值。为公平、公正地分配有限援助资源，保障已通过审核申请人的用药权益，现将有关事项提示如下：一、项目将按照申请人在【益善助】公众号平台提交预申请材料及援助申请材料的先后顺序进行审核。名额用尽后，申请系统将暂停接收新的预申请，请有申请意向、尚在准备资料的申请人尽早备齐材料并提交，避免因名额不足无法受理。二、已提交预申请资料的申请人，请于2026年11月15日前提交后续援助申请材料；逾期未提交的，项目组将进行名额释放。三、正在申领援助药品的申请人不受本次提示影响，可按项目规则正常办理后续申领。四、项目组将持续跟进名额动态，如申请通道暂停或恢复，将第一时间发布公告。如有疑问，可拨打项目热线4001682169进行咨询。愈见希望-溃疡性结肠炎患者援助项目组2026年10月23日",
+  "contentHash": "38fd3373da6e986b21a966174837e41240744af652e3fe0269bdfeb7174643f3",
+  "modelInputHash": "736d2011686042173195b055ce3a079680c2cff9f89f3f36483815971a800394",
+  "documentHash": "b26f6aad941dde5916d63d9ba73c31b7088802dc793d64fcab7d895de37bbf5d",
+  "adapterVersion": 1
+}

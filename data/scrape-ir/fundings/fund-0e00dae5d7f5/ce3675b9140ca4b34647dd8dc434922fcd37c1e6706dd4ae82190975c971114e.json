@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-0e00dae5d7f5",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521879&idx=1&sn=6fcc85c55e986c15c2dc520c09665798&scene=21&click_id=1969016278#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521879&idx=1&sn=6fcc85c55e986c15c2dc520c09665798&scene=21&click_id=1969016278#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "征集“兆易环保基金”四川省平武县（潜在 OECMs）项目实施单位",
+  "organizationHint": "中华环境保护基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-09-24",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 为加强区域生物多样性保护、提升生态监测与社区参与水平，中华环境保护基金会与兆易创新科技集团股份有限公司共同开展“兆易环保基金”四川省平武县（潜在 OECMs）项目。该项目将支持四川省平武县开展（潜在OECMs）生态保护和社区宣传教育。 申报条件： （一）在我国境内依法登记注册、具备独立法人资格的高等院校、企事业单位或其他社会组织，拥有良好的社会信誉，近三年无不良记录。 （二）申报单位需具备开展生态保护相关领域项目经验及实施能力。 （三）申报单位能够开具正规增值税发票的合法机构。 （四）能够按照基金会财务管理要求使用项目经费。 （五）具有相关项目经验。 申报具体要求： 巡护监测与科技赋能。 能力建设培训。 社区与企业宣传教育。 启动或结项仪式。 实施时间：2026年10月—2027年12月 实施地点：四川省平武县 截止时间：2026年9月28日18:00前",
+  "contentHash": "cb1f50148d43e797aa060a36d0f57453e05e8f8f0d434922561ec5965e0bbd07",
+  "modelInputHash": "3387b7fb3a271e0cea2ef998533aae966cb17abef17ee4228b9e549d70e3e489",
+  "documentHash": "ce3675b9140ca4b34647dd8dc434922fcd37c1e6706dd4ae82190975c971114e",
+  "adapterVersion": 1
+}

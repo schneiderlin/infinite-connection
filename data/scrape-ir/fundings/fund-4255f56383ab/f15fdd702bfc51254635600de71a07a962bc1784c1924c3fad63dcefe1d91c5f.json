@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-4255f56383ab",
+  "sourceName": "中国人口福利基金会",
+  "sourceUrl": "https://www.cpwf.org.cn/content/72370",
+  "canonicalUrl": "https://www.cpwf.org.cn/content/72370",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "中国人口福利基金会关于医务社工派驻活动延长申请时间的公告",
+  "organizationHint": "中国人口福利基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-07-13",
+  "deadlineHint": "",
+  "bodyText": "新闻动态 2025年9月9日，中国人口福利基金会医心守护儿童成长公益项目面向有关医院开展医务社工派驻活动。根据工作安排，现就医务社工派驻活动有关事项公告如下：1.申请时间：延长至2026年12月31日。2.申请方式：通过原公告链接下载对应申请表，在原渠道进行申请。3.公告链接：https://www.cpwf.org.cn/content/72116。特此公告。 更多公告信息 关于委托开展“冠心病患者非药物治疗相关课题研究”采购结果的公告中国人口福利基金会关于支持儿童生长发育相关项目的劝募函中国人口福利基金会关于采购B超及医用制氧机评审结果的公告关于委托开展“齐鲁地区肺癌精准诊疗大家谈”活动的公告关于营养敬老行动2025年补充营养餐食包发放资助结果的公告中国人口福利基金会关于开展“幸福工程——母亲健康帮扶行动”试点的公告",
+  "contentHash": "ddbda8331c898d45ffd00539a247d659613547ece2dde4fb390489a56cee75ee",
+  "modelInputHash": "43a129d17a556079affa59e83859fb66a31f03272412c99ab3ff8e5884f61e69",
+  "documentHash": "f15fdd702bfc51254635600de71a07a962bc1784c1924c3fad63dcefe1d91c5f",
+  "adapterVersion": 1
+}

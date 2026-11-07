@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-4209af1685c9",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494461&idx=1&sn=657378d0274c6e972aae21f032c9b0fb&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494461&idx=1&sn=657378d0274c6e972aae21f032c9b0fb&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "笃行计划项目",
+  "organizationHint": "质兰基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-04-03",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 【笃行计划项目】是指整体实施周期较长，有短期、中期及长期目标，为应对复杂的根源性问题而采取的一年以上的持续行动。 资助计划： 笃行计划项目的项目建议书通过合规审查后先进入初审环节，在这个阶段，质兰基金会将为每个申请项目组建由3-6名评审专家组成的评审小组，按照最新版《质兰基金会项目征集指南》中的评审标准进行评审。质兰基金会的资助系统按照本季度计划投入的资金总量及评审专家组的打分结果确定资助项目短名单。对于入选短名单的项目建议书，将由理事会成员和邀请的终审专家组成的终审专家组，对其评审意见进行最后审核，根据短名单中项目建议书的质量确定最终入选名单。 笃行计划项目若获得资助，合同一年一签。每一个执行年的项目活动完成后，若验收合格，被资助方不用再参加项目的公开征集，可直接申请进入项目的下一个执行年的实施并提交项目活动计划。质兰基金会将会为该项目组建专门的、由外部专家组成的评估委员会，由委员会在项目答辩后评估确定是否批准申请。若获得批准则签约实施。 笃行计划项目最长可以资助三轮，每轮包括三个执行年，每一轮项目实施结束后，经过外部评估委员会评审，将对项目实施出色获得连续资助的伙伴，授予奖励并提高新一轮可申请的资助金额。 截止时间：2026年4月30日18:00",
+  "contentHash": "1c01b3e785e8409b01f3aa5f387456e7efc30b800a28c7a9c308ca923a4dd105",
+  "modelInputHash": "4cdade6a8354a483cc5bbed536a0f56ee84e045eea67d41bbbd87daebcb64ac5",
+  "documentHash": "a8d0341a3f947feed780dae22552ce704d7d56fc9cc88a0f31f8ebac1ed16304",
+  "adapterVersion": 1
+}

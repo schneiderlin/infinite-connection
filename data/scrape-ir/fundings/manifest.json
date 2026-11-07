@@ -1,0 +1,1438 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "updatedAt": "2026-11-07T12:12:58.330Z",
+  "records": {
+    "fund-01059b91a793": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20057",
+      "title": "中国红十字基金会“抗抑郁空间-晴空舱捐建 项目（第二期）”公开招募公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "e2aae7d009a9e90cf7da992a525d35025dd8e347f83fbe60527edeb1dd0b8b28",
+      "documentHash": "d3a48e25b40083133874a70efe6f4ead82ef87985191ef4624d91b5c26ae3a1b",
+      "file": "fund-01059b91a793/d3a48e25b40083133874a70efe6f4ead82ef87985191ef4624d91b5c26ae3a1b.json"
+    },
+    "fund-0246efae63b8": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72217",
+      "title": "营养敬老行动2026年补充营养餐食包发放及重阳节活动资助公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "36411b7fffb62b69decf136ef6440350558e69a5e09db238c82e0884573f6b2f",
+      "documentHash": "b9b6a8045560347f0a98c92f2b88c8c9e2ec7e6598cb021273f00156349994bd",
+      "file": "fund-0246efae63b8/b9b6a8045560347f0a98c92f2b88c8c9e2ec7e6598cb021273f00156349994bd.json"
+    },
+    "fund-0278eec0d565": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxMzk0NTU3MA==&mid=2247518404&idx=1&sn=9b19cbca041959f8e31db270d89bf4d7&scene=21#wechat_redirect",
+      "title": "“和美社区计划”2026年第二季资助开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "229ebf9cd16283e60e859d6d51818094c989decd425705590f41900912517206",
+      "documentHash": "2e41740292a72e435d3367f2cace237adf579d19919feb06c9d970d862284572",
+      "file": "fund-0278eec0d565/2e41740292a72e435d3367f2cace237adf579d19919feb06c9d970d862284572.json"
+    },
+    "fund-03d5ee7056b4": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI2NTM5MDQ1Nw==&mid=2247525834&idx=1&sn=4bf86161f8a7c1a64af18c8a2ccc3a49&scene=21#wechat_redirect",
+      "title": "“爷爷奶奶陪伴计划·邻里小餐桌”招募合作伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "67ffcd1fb9479f0f6ddde296d99e0ccabb15fcee2aed6ccf755e163f4d18df7c",
+      "documentHash": "8c5caf5435fd402974d22d4a687ed359fbec1bbcc1c30cd47567cf6ac56346f8",
+      "file": "fund-03d5ee7056b4/8c5caf5435fd402974d22d4a687ed359fbec1bbcc1c30cd47567cf6ac56346f8.json"
+    },
+    "fund-042a8490bf14": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5NDA5ODIwNQ==&mid=2658622851&idx=3&sn=f514397862dd2f6119d0301fb031fef1&scene=21&click_id=896586055#wechat_redirect",
+      "title": "2026年“她X数字未来”创造营志愿者伙伴开始报名",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "91012d53f4457fc3a49108bcb9f20c47393623c17a4878f79f5762d57a616912",
+      "documentHash": "7c38a66e05c3d5e34e5205d683f11da3f0bad9d8cd8baf7724a081691563cef7",
+      "file": "fund-042a8490bf14/7c38a66e05c3d5e34e5205d683f11da3f0bad9d8cd8baf7724a081691563cef7.json"
+    },
+    "fund-045abf1765b7": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIyOTQyNDAzOA==&mid=2247864618&idx=1&sn=e111b6aad4521b159ca388fa362434d2&scene=21&click_id=47#wechat_redirect",
+      "title": "2026年度“公益100”公益创投项目公开征集启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d98b837ebac1db12a81326948d60555cc86f5fd4b4c9547169d00955b40f0782",
+      "documentHash": "eb9e2a01343a87fb29759cb91a20aa2e4d156a4e53c4b78be5e6ba07e3098479",
+      "file": "fund-045abf1765b7/eb9e2a01343a87fb29759cb91a20aa2e4d156a4e53c4b78be5e6ba07e3098479.json"
+    },
+    "fund-0533d7dc2638": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMjgxMDE2Nw==&mid=2247496865&idx=1&sn=57171de5afb24c4ab628bde81d293788&scene=21#wechat_redirect",
+      "title": "第十三届广州市社会组织公益创投活动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "995fe817c679e95c5b69cc12ea574cb892663337c7f4120ab4eefd7123315d72",
+      "documentHash": "cefb528670ffc78f0bbee78b9245646ab9627c237a7bd729d8994564ad06538a",
+      "file": "fund-0533d7dc2638/cefb528670ffc78f0bbee78b9245646ab9627c237a7bd729d8994564ad06538a.json"
+    },
+    "fund-056aba20d646": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NzM0NTEyMQ==&mid=2652081203&idx=1&sn=5628a8b0cb5ca277535bcd6bc690b96a&scene=21#wechat_redirect",
+      "title": "2026社区公益叙事赋能计划报名启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8bb118727b19e3f51ecf4979a816fad04966fc7f09a96c414e9f30ae215cdbbd",
+      "documentHash": "b48733448ec00621ad361d7c566f862b3f2ed8efbc8778e397d782ece82d4dda",
+      "file": "fund-056aba20d646/b48733448ec00621ad361d7c566f862b3f2ed8efbc8778e397d782ece82d4dda.json"
+    },
+    "fund-0654e517948f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5MzQxNjE5NQ==&mid=2649665862&idx=1&sn=130220c16992e4e586035d1bcbdd4c3e&scene=21#wechat_redirect",
+      "title": "2026深圳市宝安区慈善会慈善项目库正式启动申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1a575074d11cb8e0825fd01548bf08d30a1eac66ffdfa54206d00f6d664886b2",
+      "documentHash": "1c5beca17f5a6eb123cd5a2704c1d5b10fb66a1ed7444cdda9f5820bc6141e65",
+      "file": "fund-0654e517948f/1c5beca17f5a6eb123cd5a2704c1d5b10fb66a1ed7444cdda9f5820bc6141e65.json"
+    },
+    "fund-069ab24de567": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4NDUxMTQxMQ==&mid=2652679179&idx=1&sn=d8981adc8df9d8cfbbb554e360663414&scene=21#wechat_redirect",
+      "title": "“喝上干净水”乡村水源地守护资助计划正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8c53db529bab90ca52071ba3c3e0eec74aa090d433b593f00c1bd7c9c8488e43",
+      "documentHash": "e81539c002c792fc69d31c247c02be01987664d143baef4c0428b93bd263998b",
+      "file": "fund-069ab24de567/e81539c002c792fc69d31c247c02be01987664d143baef4c0428b93bd263998b.json"
+    },
+    "fund-06f9a1d99ad2": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU5MjgyNzEwNQ==&mid=2247516381&idx=1&sn=605b25874c9c90fbed1dc7df679e8d78&scene=21#wechat_redirect",
+      "title": "善种计划招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "758b5fc9bafbec9720ad4bcadba73938cc1b12c85157a8e71059742f6f510ee5",
+      "documentHash": "722c83e750cba94b907c7d944a6653a27fb4646cc6c27a12f48fb758434124f6",
+      "file": "fund-06f9a1d99ad2/722c83e750cba94b907c7d944a6653a27fb4646cc6c27a12f48fb758434124f6.json"
+    },
+    "fund-08591184d948": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72311",
+      "title": "2026年“黄手环行动”线下科普宣传活动资助公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d8d9cc0912e66c285c1a1062ff8c4d7b7aa15b283c61283062f16b28c2730b50",
+      "documentHash": "579bacbe64b8295d3ff0642fd7a758a7d30d17c34b774522fb6f943866867166",
+      "file": "fund-08591184d948/579bacbe64b8295d3ff0642fd7a758a7d30d17c34b774522fb6f943866867166.json"
+    },
+    "fund-08baf9ba13aa": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770331&idx=1&sn=6240e46d3b47398f857aa59b426acf37&scene=21#wechat_redirect",
+      "title": "2026年度 第一期1%地球税伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "ff3fddac1459b03558ab6862da2db1d544c785b1e8a57c7af7b590661b786908",
+      "documentHash": "52cd570e1514b62eca170eee226b9c4f7fe0711022c12ef428a707fef4c1f27f",
+      "file": "fund-08baf9ba13aa/52cd570e1514b62eca170eee226b9c4f7fe0711022c12ef428a707fef4c1f27f.json"
+    },
+    "fund-08f78288a06b": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10391.html",
+      "title": "招募 | 2023蓝天力计划项目启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4d73625ef7cf9aab6f14690da32888836a27371a421367f5481c0e657eef4c14",
+      "documentHash": "fafb05013b0e7974b2e66d492fe42089345d7e6cd8754a4f6dedd30eb4147d3d",
+      "file": "fund-08f78288a06b/fafb05013b0e7974b2e66d492fe42089345d7e6cd8754a4f6dedd30eb4147d3d.json"
+    },
+    "fund-09950b836ac5": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72226",
+      "title": "中国人口福利基金会关于延长资助开展食品数字标签管理及推广相关项目的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "0e0b19d5e11b2a0501ace13ff438412c7432baa4e9d1e8d1c5b5228bcaf83420",
+      "documentHash": "8e4937dc30b3282427d9f0c99b6889a5a6c903481490f068be674088e4997c31",
+      "file": "fund-09950b836ac5/8e4937dc30b3282427d9f0c99b6889a5a6c903481490f068be674088e4997c31.json"
+    },
+    "fund-0af764b6e8ae": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3NjA0MjcyMA==&mid=2651283386&idx=1&sn=d92f6850b2281db2e7155e25b6f7cbaa&scene=21#wechat_redirect",
+      "title": "“残障者支持计划”武汉地区2026年度合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "be0423c693bb174a19f11a54bba0eb8535cfbc52bbadcce3926bc5a65567741b",
+      "documentHash": "f0c7296e46ba52650aa32c003c0f57fdaf590179a78aebdd8c8de0c9b1e9e095",
+      "file": "fund-0af764b6e8ae/f0c7296e46ba52650aa32c003c0f57fdaf590179a78aebdd8c8de0c9b1e9e095.json"
+    },
+    "fund-0e00dae5d7f5": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521879&idx=1&sn=6fcc85c55e986c15c2dc520c09665798&scene=21&click_id=1969016278#wechat_redirect",
+      "title": "征集“兆易环保基金”四川省平武县（潜在 OECMs）项目实施单位",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "3387b7fb3a271e0cea2ef998533aae966cb17abef17ee4228b9e549d70e3e489",
+      "documentHash": "ce3675b9140ca4b34647dd8dc434922fcd37c1e6706dd4ae82190975c971114e",
+      "file": "fund-0e00dae5d7f5/ce3675b9140ca4b34647dd8dc434922fcd37c1e6706dd4ae82190975c971114e.json"
+    },
+    "fund-0fd4a2b87d0f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1ODkzOTQ0MQ==&mid=2247621232&idx=1&sn=98626f02d2d133c1645a665f03309f65&scene=21#wechat_redirect",
+      "title": "“茉莉芬芳·同心筑梦”助残公益项目征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "2f929ada92e9ea7344e0f3f6e8aadd5dee6171f4c341a4eb757a3e73bb39d2a9",
+      "documentHash": "003cb86cc230791d596f295d640b43f6ce6561c84db33078bddc897701de5894",
+      "file": "fund-0fd4a2b87d0f/003cb86cc230791d596f295d640b43f6ce6561c84db33078bddc897701de5894.json"
+    },
+    "fund-1004a42c8547": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI4NDc4NjUzMg==&mid=2247513146&idx=1&sn=31898fe8eae087553170fc92e8d54aa9&scene=21#wechat_redirect",
+      "title": "晓更基金会新一期伙伴招募开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1a6a3a5920e5d969a1e7900432f564182a352dda9605e17634a5a54651fccc29",
+      "documentHash": "22656edea2beb84f601e1d53dda0351f9bacc363faf33eeb48d73b84cf9ae608",
+      "file": "fund-1004a42c8547/22656edea2beb84f601e1d53dda0351f9bacc363faf33eeb48d73b84cf9ae608.json"
+    },
+    "fund-12a7c3ebcc4e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3Nzk2Njg3OQ==&mid=2247538401&idx=1&sn=34f3ea8071b6efe3c28738bfb629200a&scene=21#wechat_redirect",
+      "title": "“情暖北海·珠社有为”社会组织公益创投第二批项目开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b08fd73347b5a8f507b965ce3041a51580e9e1e86c8fbe8ac97c7358303ae8d7",
+      "documentHash": "c9a82d608c3fd2eb9c5400766e2da6bf8236857d7215696283e0976e3ab22fd9",
+      "file": "fund-12a7c3ebcc4e/c9a82d608c3fd2eb9c5400766e2da6bf8236857d7215696283e0976e3ab22fd9.json"
+    },
+    "fund-13b189f9db1d": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAxODM2MDIyNg==&mid=2650563176&idx=1&sn=7ac2d91e259be2ddc882f9762c8ab795&scene=21#wechat_redirect",
+      "title": "上海华爱公益基金会公益伙伴招募启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7d7cf1d7d15900c7a844b115dc9f13ac1969f346db8c94837e9735e05098404e",
+      "documentHash": "9309335097d45d230810101bea21c88919668bc31b2725996efd9ff37b261747",
+      "file": "fund-13b189f9db1d/9309335097d45d230810101bea21c88919668bc31b2725996efd9ff37b261747.json"
+    },
+    "fund-16ac1b02b1ae": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzkzNzQzMTIyOQ==&mid=2247498792&idx=1&sn=6192b14ba8da5121e38c80a744a40e8e&scene=21&click_id=1670850619#wechat_redirect",
+      "title": "北京千悦公益基金会议题项目库开放申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a10f899a85225fd1c8f80c68d8ec4e9737cd79bdfc3b0a2cd50fa8a7b963da63",
+      "documentHash": "1bd25405bc7106528ab5864202eb4370968ceb0b687df82a447df9e1c02c40a5",
+      "file": "fund-16ac1b02b1ae/1bd25405bc7106528ab5864202eb4370968ceb0b687df82a447df9e1c02c40a5.json"
+    },
+    "fund-19a195674fe2": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzYyNTc2OTIxNw==&mid=2247484365&idx=1&sn=88f19016d21c6251934c9deb176a7623&scene=21#wechat_redirect",
+      "title": "2026年“益暖雅安・微爱同行”雅安市公益微创投大赛项目征集开始",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "11d9d15a5cc7d26d6256b4440f53826719580d013f810e3707a31cefc1dcea11",
+      "documentHash": "048dfe5310f589d011c30fd6fcba86e726930963550a5509cd5b746039b3e5cd",
+      "file": "fund-19a195674fe2/048dfe5310f589d011c30fd6fcba86e726930963550a5509cd5b746039b3e5cd.json"
+    },
+    "fund-1e2ac231a95f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494302&idx=1&sn=664fe7d7381385977ac2bbeabb1b12a5&scene=21#wechat_redirect",
+      "title": "质兰基金会2026年第一季度项目征集正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "c25eb13d6cc0617d3f64496a4b372e9efbb88c8b111cd0cc15cbdbc2adf30ed8",
+      "documentHash": "1d7953d7837854228b377e0f4b39ed7a308ffa45feacceec2710f6860feb6dc2",
+      "file": "fund-1e2ac231a95f/1d7953d7837854228b377e0f4b39ed7a308ffa45feacceec2710f6860feb6dc2.json"
+    },
+    "fund-1fd2812f80bc": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3OTk3NTUxMw==&mid=2652195191&idx=2&sn=afe03d3b32ecd30cf70aaac6507aeff4&scene=21&click_id=259645682#wechat_redirect",
+      "title": "征集女性健康创新解决方案",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "9db4943e6b9af6c64d1ac205e75d7108dff77f38bd778ce5ef4be43cee4da554",
+      "documentHash": "c5db6302a6b5e3a2984a3a3fb3a2bde8e8f7092b9d2a032b28f7378837b145aa",
+      "file": "fund-1fd2812f80bc/c5db6302a6b5e3a2984a3a3fb3a2bde8e8f7092b9d2a032b28f7378837b145aa.json"
+    },
+    "fund-20ee0e4e443e": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10332.html",
+      "title": "资助 | “撒开脚丫” 项目2023年招募开始啦！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "41ef7781ee77d1645cc350ae356de6ad3e4385e54527bfbb5cd7d3b381128d2c",
+      "documentHash": "f886a209748f92eea2d11b2433f532c401f86fb44fbdf8c9bd8ef8442baf40db",
+      "file": "fund-20ee0e4e443e/f886a209748f92eea2d11b2433f532c401f86fb44fbdf8c9bd8ef8442baf40db.json"
+    },
+    "fund-22825ee01d9b": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247520961&idx=2&sn=8af2f92a3a7064186cb3deb2025a9fb4&scene=21#wechat_redirect",
+      "title": "关于征集振华绿色转型与可持续发展基金中国“十五五”新型能源体系建设的环境与经济社会效益评估项目执行单位",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6c720732d85a02195c5e13922433ac65cb11f1d805f6919127e3cd06094f6f60",
+      "documentHash": "5a6be8b44c292d35b8fe6a29e5e86a58887b1f3e9bca7093fdd7bc051d701428",
+      "file": "fund-22825ee01d9b/5a6be8b44c292d35b8fe6a29e5e86a58887b1f3e9bca7093fdd7bc051d701428.json"
+    },
+    "fund-22e536e5dfcb": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5MzkxNzU3OQ==&mid=2650907578&idx=1&sn=7ec306dbd063629d3f6aaac6a82a40ff&scene=21#wechat_redirect",
+      "title": "第三届“暖心联社·星火成炬”项目开始征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "3c009d71f5cfe4473aef03556e8a046f4c21384a21a98ab809edbcbca92376e6",
+      "documentHash": "6dfba0ab494d48acd9d7fd9fb76b41f713e892c01f3b15199f3a6fadff143896",
+      "file": "fund-22e536e5dfcb/6dfba0ab494d48acd9d7fd9fb76b41f713e892c01f3b15199f3a6fadff143896.json"
+    },
+    "fund-25404c6a12c6": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530386&idx=2&sn=bfa57a8b15d30024fb205d4cfca0c4a0&scene=21&click_id=76#wechat_redirect",
+      "title": "2026年粤港澳大湾区青少年公益行动项目征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "5a322dd7577c8ded6de531d421c4bac9f33f6cb1436c5ace06c4de45f9d8426e",
+      "documentHash": "7927c33715e4ea3557ec3d75efd7fca3e83955bfd07a85af313e952d092f6948",
+      "file": "fund-25404c6a12c6/7927c33715e4ea3557ec3d75efd7fca3e83955bfd07a85af313e952d092f6948.json"
+    },
+    "fund-2a15c3e339a7": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72400",
+      "title": "关于资助“开展新型婚育文化特色街道/社区建设项目”的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1131d040b0c81c83476efd92fafa787e1a063285e68eb5427e1780bc59f4ec77",
+      "documentHash": "2d84120816c9df3eb873a8bb2a1833e414bdfd3a5e2af0f02517bbd781a6801e",
+      "file": "fund-2a15c3e339a7/2d84120816c9df3eb873a8bb2a1833e414bdfd3a5e2af0f02517bbd781a6801e.json"
+    },
+    "fund-2c26bfce7bf4": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODE2MTk5Mw==&mid=2651968847&idx=1&sn=a2ad10e2f14b3fdb3481d82df5d2ea5d&scene=21#wechat_redirect",
+      "title": "2026凯德社区韧性资助计划申报正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7c5b3b5d70d7c7ba20c7be59107dcd59fe9a8c481acf7d53dcba74d3300b6cc5",
+      "documentHash": "0037ff427012be4972d2b349fd30d5207ab90dc733ec910158f959e210ae6d07",
+      "file": "fund-2c26bfce7bf4/0037ff427012be4972d2b349fd30d5207ab90dc733ec910158f959e210ae6d07.json"
+    },
+    "fund-2caf7bb49893": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI4Mzc4NzczNQ==&mid=2247486315&idx=1&sn=548b0b3b7dc6c7ae80cbae9f29e701c9&scene=21#wechat_redirect",
+      "title": "2026年远山伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "248f515f1b986006169724e8a435b296a42da67f0b94dce458c8e22c95069eeb",
+      "documentHash": "d508571af46e0dbac5f0db95631ae8a653b3860fdb47601bda0a787e8383257a",
+      "file": "fund-2caf7bb49893/d508571af46e0dbac5f0db95631ae8a653b3860fdb47601bda0a787e8383257a.json"
+    },
+    "fund-2e152b6c1e42": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzYzNzIxODA2Nw==&mid=2247483805&idx=1&sn=3c25b215a1b2d6d6d39401b8bbf9ce8a&scene=21&click_id=97#wechat_redirect",
+      "title": "阅见希望项目合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6eec883b2f9e0519ba1e27fdc0f2b0a74f6ff110a29e8ca23126aa07213fa67a",
+      "documentHash": "48f9283a66e1511e88dbad15674ea3c5637c47c8cacc3db031c725247fe00804",
+      "file": "fund-2e152b6c1e42/48f9283a66e1511e88dbad15674ea3c5637c47c8cacc3db031c725247fe00804.json"
+    },
+    "fund-2f579813d770": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654381103&idx=1&sn=19940ac0bde99b52175b46ca3981cb19&scene=21&click_id=879078897#wechat_redirect",
+      "title": "启动“公益宝贝 爸妈食堂”善行边疆专项合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a33aa8fe3ba71c0410b19b6357c4a6cbf8e8263e0a043bd93755729b1c7e0809",
+      "documentHash": "46af7b2e2660ab54df021bf86f6910e8d46e02a03ee1332c23c506123ebafb2b",
+      "file": "fund-2f579813d770/46af7b2e2660ab54df021bf86f6910e8d46e02a03ee1332c23c506123ebafb2b.json"
+    },
+    "fund-2feef902b350": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3NDgyMDUxOA==&mid=2647630321&idx=2&sn=01ea5b26954867a83a049469b04b5f0e&scene=21&click_id=24#wechat_redirect",
+      "title": "2026年童书乐捐项目点招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "44d35dea6892b385bb1c79db0d35856de1335e3a1d36ccbac953308d1dc0310a",
+      "documentHash": "c7cc98a6bfd27c37e81040b944f82d78fb2ab69e3ffa0900b3e3e92c54edb186",
+      "file": "fund-2feef902b350/c7cc98a6bfd27c37e81040b944f82d78fb2ab69e3ffa0900b3e3e92c54edb186.json"
+    },
+    "fund-3033f3ebf1d9": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU1ODAwMjQ1Ng==&mid=2247526167&idx=1&sn=23fcf6cd387a2187c966ff7e62cad115&scene=21#wechat_redirect",
+      "title": "破茧工程：2026年度残障议题行动者开放申请",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d42cc636e2710516111e83383cb1b297ddf3347479144e81acda9973d595c124",
+      "documentHash": "b8619914c48485b08fad47804589972e66b1da95267a8b2f7da5af2e1b6bd854",
+      "file": "fund-3033f3ebf1d9/b8619914c48485b08fad47804589972e66b1da95267a8b2f7da5af2e1b6bd854.json"
+    },
+    "fund-3078e5aeb64f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5Mjg3MTcyNA==&mid=2652030304&idx=1&sn=b0260d202e0943bb3a1e61a5077671a4&scene=21#wechat_redirect",
+      "title": "2026年齐益果合作计划开放申请",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "eeeb32d978ee2f8d17ba1cdb68ceebee09024b400ba907ca35621affa05ee741",
+      "documentHash": "cc9e91b74ce5de18b2c483162630264a0256f73af183887bad140fcaafd32572",
+      "file": "fund-3078e5aeb64f/cc9e91b74ce5de18b2c483162630264a0256f73af183887bad140fcaafd32572.json"
+    },
+    "fund-31ad6e785d99": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10399.html",
+      "title": "2023 公益未来·创业赋能｜高校招募开启，点击实现你们的创业梦想！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "bb196eb7f06c3340105186667acef851bc83fcc37227bb8a495de6fe1d58d397",
+      "documentHash": "41f4d5637dd5a8807a7aa74011ee4da54baa0a78ad2dccc0b9f8087eaf10d17d",
+      "file": "fund-31ad6e785d99/41f4d5637dd5a8807a7aa74011ee4da54baa0a78ad2dccc0b9f8087eaf10d17d.json"
+    },
+    "fund-344f61f50ee1": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzkxNDMxODk2Mw==&mid=2247510178&idx=1&sn=ef3f9e43a86ffb182ba439e8f99d6962&scene=21#wechat_redirect",
+      "title": "数字新秀培育计划启动第二批项目征集工作",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "41d08da6496de035dc6a0d678f9ea15abf47df8583b3c49c4da7a120b37a453c",
+      "documentHash": "4a8e0baee60189f016cbf1ccdf8116875f72b079ec1b47b22f205478b2b03d2f",
+      "file": "fund-344f61f50ee1/4a8e0baee60189f016cbf1ccdf8116875f72b079ec1b47b22f205478b2b03d2f.json"
+    },
+    "fund-36d6cd230d15": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20120",
+      "title": "中国红十字基金会“六个核桃·国民脑营养科研基金”课题征集公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8631d5d07669df416eacef4b4d67150a0b076b5448b3d6dd4410d271e81caea5",
+      "documentHash": "7951c11790e1f98fc7293c6a05fa0161c02243690a2fc1198a65cc7e5f5807d6",
+      "file": "fund-36d6cd230d15/7951c11790e1f98fc7293c6a05fa0161c02243690a2fc1198a65cc7e5f5807d6.json"
+    },
+    "fund-379d3798f568": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI5MTE3MjY1OA==&mid=2247495923&idx=1&sn=31f9c4c612120ac836923852b31b258a&scene=21#wechat_redirect",
+      "title": "2026年银杏伙伴成长计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "69089eb1a423fbc374c46eed60d1c8b418660c374a45b20bf44aa07d83fd4e9a",
+      "documentHash": "8a5737e5a8e512850757f5c28543ccf8491ad00f2312d8ff805a9ec83fc5ee86",
+      "file": "fund-379d3798f568/8a5737e5a8e512850757f5c28543ccf8491ad00f2312d8ff805a9ec83fc5ee86.json"
+    },
+    "fund-38acc4ebdf23": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72244",
+      "title": "中国人口福利基金会关于资助开展“玩乐处方”项目活动的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "05a6d39bd3c9323594d2ea0bf12eb7890aa6399cd9d0bad61d229fbf19be3a94",
+      "documentHash": "12084bb626f8c2fb53565e2c8bfe39e22f8d1b0d8a6e6a312266f742558c6e99",
+      "file": "fund-38acc4ebdf23/12084bb626f8c2fb53565e2c8bfe39e22f8d1b0d8a6e6a312266f742558c6e99.json"
+    },
+    "fund-3942bd53f660": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10384.html",
+      "title": "招募 | 鸿鹄计划2023年全新升级，持续陪伴基金会新任秘书长！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6d68154d4a4d783a8a94b3be31a943f639002e45fd6f1d685b141335f72d1d96",
+      "documentHash": "cd764d5a6a17acf8d4ab1c4feabeeb9b29a1823af07b5ad684da68489eeaad48",
+      "file": "fund-3942bd53f660/cd764d5a6a17acf8d4ab1c4feabeeb9b29a1823af07b5ad684da68489eeaad48.json"
+    },
+    "fund-3a6c33861edf": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk2NDcyNTA1MA==&mid=2247488095&idx=1&sn=82d5c1047bda720eb3496f7b4c2c9352&scene=21&click_id=1288592411#wechat_redirect",
+      "title": "“金种子计划2.0”合作机构招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "c01965b5a2c17b300e4ec75476b54fb89b9d899015f308f6c9a797158fbd2319",
+      "documentHash": "fee8d80fd7f4d6dcc0093a33a5199027c2b7cc82b0791781e2796b1909a8e42b",
+      "file": "fund-3a6c33861edf/fee8d80fd7f4d6dcc0093a33a5199027c2b7cc82b0791781e2796b1909a8e42b.json"
+    },
+    "fund-3ac28e49493a": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NTM3MjM5Mg==&mid=2652402776&idx=2&sn=403ffd845d4eac90dbdd3a27d5bc9fdc&scene=21#wechat_redirect",
+      "title": "2026北京社区公益季启动合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8b3e65ac90a20c50c42c980cfd053fb47c8e7e0b27b08c5b65fc929f6d87b4df",
+      "documentHash": "c065b648c693a4fab1efcc725ce67da87d57df98f893c9568551eda1a5908c05",
+      "file": "fund-3ac28e49493a/c065b648c693a4fab1efcc725ce67da87d57df98f893c9568551eda1a5908c05.json"
+    },
+    "fund-3fb4bd20042e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI0NDg4MDE3NQ==&mid=2247542814&idx=1&sn=45827420162b8eacc59ddf6e1bbb528e&scene=21&click_id=95#wechat_redirect",
+      "title": "“四明乐善，万象共益” 2026年余姚市社会组织公益创投活动项目",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8441cd85f57fc5b47556c059bf9196bc69a35381bf0688527a8ce5a92d74bebd",
+      "documentHash": "62a4944a6200788fd18865039aa8d06f5d2df989da37bc86e81014c2d7e451e8",
+      "file": "fund-3fb4bd20042e/62a4944a6200788fd18865039aa8d06f5d2df989da37bc86e81014c2d7e451e8.json"
+    },
+    "fund-3fe422386d26": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494889&idx=1&sn=5982118ddac1c73e245dd12e611d511b&scene=21#wechat_redirect",
+      "title": "质兰基金会2026年第三季度项目征集正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "914ff1acd631cd994447878a40ab05b2461587e304cebc3f26f5a9eef1d35462",
+      "documentHash": "7f771e6acada3bd84babd814fe5f1d980b38e27c9128ca316c2ec532ab693a59",
+      "file": "fund-3fe422386d26/7f771e6acada3bd84babd814fe5f1d980b38e27c9128ca316c2ec532ab693a59.json"
+    },
+    "fund-401bead0f764": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20257",
+      "title": "中国红十字基金会医学赋能公益专项基金 关于招募科研项目评审专家的通知",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "f7faac80ac3cae9968245b705e834355ee66031caed7e1a625420ae5164c6770",
+      "documentHash": "1311bd62c4bf7d76ba3e205aeaa70476cf617227cb52449f15df322a4e6a179b",
+      "file": "fund-401bead0f764/1311bd62c4bf7d76ba3e205aeaa70476cf617227cb52449f15df322a4e6a179b.json"
+    },
+    "fund-4209af1685c9": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494461&idx=1&sn=657378d0274c6e972aae21f032c9b0fb&scene=21#wechat_redirect",
+      "title": "笃行计划项目",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4cdade6a8354a483cc5bbed536a0f56ee84e045eea67d41bbbd87daebcb64ac5",
+      "documentHash": "a8d0341a3f947feed780dae22552ce704d7d56fc9cc88a0f31f8ebac1ed16304",
+      "file": "fund-4209af1685c9/a8d0341a3f947feed780dae22552ce704d7d56fc9cc88a0f31f8ebac1ed16304.json"
+    },
+    "fund-4255f56383ab": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72370",
+      "title": "中国人口福利基金会关于医务社工派驻活动延长申请时间的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "43a129d17a556079affa59e83859fb66a31f03272412c99ab3ff8e5884f61e69",
+      "documentHash": "f15fdd702bfc51254635600de71a07a962bc1784c1924c3fad63dcefe1d91c5f",
+      "file": "fund-4255f56383ab/f15fdd702bfc51254635600de71a07a962bc1784c1924c3fad63dcefe1d91c5f.json"
+    },
+    "fund-425a0abfc2d6": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5MzM5MTAwMg==&mid=2650600619&idx=2&sn=5f33d9c1bf691b66d77de07c069b3e3a&scene=21#wechat_redirect",
+      "title": "“2026年广州蓝马甲银龄健康乐活行动”合作伙伴的招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7fbb47f2d1297e5d3c7b4ce5774e578cf36502dab7aa98fd0f80db1543908fcc",
+      "documentHash": "029f5f5aee04df2b5085aa9dfd44996eb387d1f76ef399e6cd63fb221f74a625",
+      "file": "fund-425a0abfc2d6/029f5f5aee04df2b5085aa9dfd44996eb387d1f76ef399e6cd63fb221f74a625.json"
+    },
+    "fund-42f8c35644a4": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72391",
+      "title": "2026年“婴幼儿呼吸道健康科普”项目科普宣传活动资助公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "48eb5fbdaae20606c92606b342c9b00fe772425d55ba845f741ca26b6bb6fb87",
+      "documentHash": "37ce693cf6b560e4d4534d2becd062102b0a161c1646428452e4174b06d51ee9",
+      "file": "fund-42f8c35644a4/37ce693cf6b560e4d4534d2becd062102b0a161c1646428452e4174b06d51ee9.json"
+    },
+    "fund-453871bc0224": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10388.html",
+      "title": "招募 | 2023年腾讯公益平台北京“社区慈善”专场开始招募支持性组织啦！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "3861da66a646ebea9197aa871d4d35ec90852f3fcba225b01264dd24b722265c",
+      "documentHash": "1615e16f63ac7d0f8ec73da3f01bc52643e17bdeadf65eebae31462ecbd9780f",
+      "file": "fund-453871bc0224/1615e16f63ac7d0f8ec73da3f01bc52643e17bdeadf65eebae31462ecbd9780f.json"
+    },
+    "fund-4701f573ae26": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxMzk0NTU3MA==&mid=2247517607&idx=1&sn=4aad6566da529e18e336cafcc42d0c71&scene=21&click_id=79#wechat_redirect",
+      "title": "和美社区计划开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "96e1ab71f97c015c5a4990d8d77b5716c549f2a553e9d7ed0892d05293250800",
+      "documentHash": "77a08518cd83eb4ad7a089344b09d4a85768fda82470f5dc6b0c4480d9ed26bd",
+      "file": "fund-4701f573ae26/77a08518cd83eb4ad7a089344b09d4a85768fda82470f5dc6b0c4480d9ed26bd.json"
+    },
+    "fund-488721d45d82": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20115",
+      "title": "中国红十字基金会医学赋能公益专项基金创新药临床研究“Planting Plan”专项行动第四批通知",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "596b50548bd86684257a366e933b7d0330f8c425a20af08325412c7925c10972",
+      "documentHash": "5a30aeea893559bbd44312956b9ed08c6fed23531fc4e933f66a3d06b217a51c",
+      "file": "fund-488721d45d82/5a30aeea893559bbd44312956b9ed08c6fed23531fc4e933f66a3d06b217a51c.json"
+    },
+    "fund-48ad8b3db02a": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521232&idx=1&sn=516869c06387fcb34d091ce2613bf2b4&scene=21#wechat_redirect",
+      "title": "中华环境保护基金会U美自然项目实施单位征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "2578ab172472f98e7afb139937ee09216131261f5165184b89bfda8adcef28af",
+      "documentHash": "ee49b75976f6fc03c9f5438ebee80e3d92a5a9f757f25c85ec6a45a249283866",
+      "file": "fund-48ad8b3db02a/ee49b75976f6fc03c9f5438ebee80e3d92a5a9f757f25c85ec6a45a249283866.json"
+    },
+    "fund-48ec8a5ff466": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MjUwMTQ1MA==&mid=2651656259&idx=1&sn=37256186e1d11e14b0558bd20250ec2f&scene=21&click_id=78#wechat_redirect",
+      "title": "2026年广播电视公益广告扶持项目申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6bd1fd3c7c044b256f2ee40fde0c925cd32467d8c065fd55d333f54af7bb19d4",
+      "documentHash": "f643bbda8362f53e96cbdd51fe44a3864da62738ee0eeaf664e3488e538cb23c",
+      "file": "fund-48ec8a5ff466/f643bbda8362f53e96cbdd51fe44a3864da62738ee0eeaf664e3488e538cb23c.json"
+    },
+    "fund-4a7ec27398a2": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530682&idx=1&sn=c08a638152ff04294fae3dcba7a54094&scene=21#wechat_redirect",
+      "title": "2026年“百社联百村・百千万” 深汕特别合作区结对共建项目征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "482370bebcf6f7638c6c4b9a4a831ccd2cf5a33435ea66844b9247473194630b",
+      "documentHash": "a7faff60ba43d8b7dccdd9f93b788f1da6c413e727cfaf7e4865681e32463253",
+      "file": "fund-4a7ec27398a2/a7faff60ba43d8b7dccdd9f93b788f1da6c413e727cfaf7e4865681e32463253.json"
+    },
+    "fund-4dc1bc4e6d59": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72218",
+      "title": "中国人口福利基金会关于资助开展食品数字标签管理及推广相关项目的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "79d922b7ea2f509fd9a9168bd0006291e7690a0e3f0b0f94a84c13446f8f3900",
+      "documentHash": "3cd5db26bd7bf272a8e21697e191f8e02bdf7c774ae558859b2cab7820ee1fbc",
+      "file": "fund-4dc1bc4e6d59/3cd5db26bd7bf272a8e21697e191f8e02bdf7c774ae558859b2cab7820ee1fbc.json"
+    },
+    "fund-54e8614ee37c": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247497407&idx=1&sn=3fb7c3e5f9b2a1ecb1ca5190bebddf62&scene=21#wechat_redirect",
+      "title": "“善企相伴·公益CP计划”一对一结对标准化项目开放招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "34d47614132d7a675b2711a5252f0b89dcacbbf657e9e3a789c4b770f373bebd",
+      "documentHash": "fdcebfce80ca2f7523d7bc7a8139e1c65deaf12a1702c86b51887922257a2c45",
+      "file": "fund-54e8614ee37c/fdcebfce80ca2f7523d7bc7a8139e1c65deaf12a1702c86b51887922257a2c45.json"
+    },
+    "fund-57955a352be8": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10364.html",
+      "title": "资助 | 2023助力“碳中和”公益传播同行者资助预告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4a33040ecb041ce19e2cf4c17c128f58b1d978ee14af1c3949c3f5d1040a2b99",
+      "documentHash": "628a3f42461d964d79b7f15d78585b64d74cd3bcbb8c9ba799367d2d453ac077",
+      "file": "fund-57955a352be8/628a3f42461d964d79b7f15d78585b64d74cd3bcbb8c9ba799367d2d453ac077.json"
+    },
+    "fund-57ed8ca83eb9": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72351",
+      "title": "中国人口福利基金会关于开放伊利奶粉申请的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "f64039498906f0275d1710276d2e5ee8a1484e579a10eb48d5accdc39ebb09a8",
+      "documentHash": "d0b75ef8e7a1cd05b1e4abe19647dd5f3e2facea41aa29ef5a41f562d6048b35",
+      "file": "fund-57ed8ca83eb9/d0b75ef8e7a1cd05b1e4abe19647dd5f3e2facea41aa29ef5a41f562d6048b35.json"
+    },
+    "fund-599aad0020eb": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20348",
+      "title": "中国红十字基金会“愈见希望-溃疡性结肠炎患者 援助项目”剩余申请名额预警公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "736d2011686042173195b055ce3a079680c2cff9f89f3f36483815971a800394",
+      "documentHash": "b26f6aad941dde5916d63d9ba73c31b7088802dc793d64fcab7d895de37bbf5d",
+      "file": "fund-599aad0020eb/b26f6aad941dde5916d63d9ba73c31b7088802dc793d64fcab7d895de37bbf5d.json"
+    },
+    "fund-5a59fc8f7153": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4OTU3MDUyNg==&mid=2652224097&idx=1&sn=dc052d75cd16d84692e9fc862bcf7e81&scene=21&click_id=75#wechat_redirect",
+      "title": "童伴小屋项目招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4e4a1f9e780e313d685cb999c160d87e4486849c3953b2b266f7546d30276edf",
+      "documentHash": "9264400f255c6377ac9c6e21396a51ed223d95fd914f7cbdba8abadde7022efa",
+      "file": "fund-5a59fc8f7153/9264400f255c6377ac9c6e21396a51ed223d95fd914f7cbdba8abadde7022efa.json"
+    },
+    "fund-5a88e6d0c615": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAwNzEyMzA1Mw==&mid=2649207959&idx=3&sn=c0cc482b3c6c641cb1187eb51db003df&scene=21&click_id=675149409#wechat_redirect",
+      "title": "广州市白云区第五届社会组织公益创投活动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "02dc358ef21373e51dae10164f69e39b001076d019d63cb62e662fb9a0ce8423",
+      "documentHash": "ccead15968107341aabf875992efff5817f3db022fc90bd74b32716c821e5afe",
+      "file": "fund-5a88e6d0c615/ccead15968107341aabf875992efff5817f3db022fc90bd74b32716c821e5afe.json"
+    },
+    "fund-5b5c9c64deb3": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72178",
+      "title": "中国人口福利基金会关于医务社工派驻活动延长申请时间的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "17f0186d47c6e6c63072cc90db5f42978d0be84f563de676bb74002a37573e7d",
+      "documentHash": "35ffb3834c960e82f984a312257c663ebaa8b4a45ccade6eac9b4b74178a68bf",
+      "file": "fund-5b5c9c64deb3/35ffb3834c960e82f984a312257c663ebaa8b4a45ccade6eac9b4b74178a68bf.json"
+    },
+    "fund-5d6d9b15c788": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247519562&idx=1&sn=6700982560c5c7129705c3a8610beb1b&scene=21&click_id=54#wechat_redirect",
+      "title": "“盒聚变”规模化回收行动视觉体系及物料宣传包设计制作任务执行单位征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d079679d0c212cc6936c5d2e05222a9a914a79189beed0df0878ad5d86b5bd86",
+      "documentHash": "bc534c6eb4bdd2ec8ae6c7ed3888ac2b02b4a713f55ac04a9716bff285f13284",
+      "file": "fund-5d6d9b15c788/bc534c6eb4bdd2ec8ae6c7ed3888ac2b02b4a713f55ac04a9716bff285f13284.json"
+    },
+    "fund-5e52639822b0": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5NzkwOTI0Mg==&mid=2247485816&idx=1&sn=29489c78b8d7bf4567a78f10e314b317&scene=21#wechat_redirect",
+      "title": "“惠小泽爱阅读”项目合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4545b6de6fcaffccb44d99cbf5625afaeb2dd4f14882c24a0e78f359e06164b6",
+      "documentHash": "721b70cde6b91a0160387e3023935d6b2eaf009202ca932f0d54c40167c27729",
+      "file": "fund-5e52639822b0/721b70cde6b91a0160387e3023935d6b2eaf009202ca932f0d54c40167c27729.json"
+    },
+    "fund-64a743005726": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MjE1NzA4Mg==&mid=2650445853&idx=1&sn=3b26f90ff16e7e009b36c864e5a5d48b&scene=21#wechat_redirect",
+      "title": "广东省绿芽乡村妇女发展基金会招募「她值得一场生日会」的项目伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "57e6a624ed9646574bef15ffadfab3984d82b64d1930fbc4be353e6884715b12",
+      "documentHash": "13e6835c778ccf6a2f76cc2797110c25b000cc9389f22e58b5a4c092cfc04422",
+      "file": "fund-64a743005726/13e6835c778ccf6a2f76cc2797110c25b000cc9389f22e58b5a4c092cfc04422.json"
+    },
+    "fund-673e1033083d": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521220&idx=1&sn=7891cc7e25f0fcfe91139fb78ca40402&scene=21#wechat_redirect",
+      "title": "“迪士尼自然守护计划”2026年合作单位开始征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a20664220ad861bc0dd14ed84cbc9595e0fb970c792c515570cca0573961060d",
+      "documentHash": "9db6f3fc722d208ad4d3aa0f2fbb1ade3fa56b8d8d5b1916931e73ca06097d6e",
+      "file": "fund-673e1033083d/9db6f3fc722d208ad4d3aa0f2fbb1ade3fa56b8d8d5b1916931e73ca06097d6e.json"
+    },
+    "fund-696533df93fc": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NTA5OTM5Nw==&mid=2650353522&idx=1&sn=4dc0214b85afcbf08e8e68005ed11a2d&scene=21&click_id=625892908#wechat_redirect",
+      "title": "2026“福特汽车环保奖”生态旅游项目资助计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "ca50dd3859c4062fd434e410f0f6ad5db6528c7992a8414601a6e086e397a97e",
+      "documentHash": "c0436f0c1a9b26d95f80006957a29fe516cea2137a5d3ce0c21fdf58a21075ba",
+      "file": "fund-696533df93fc/c0436f0c1a9b26d95f80006957a29fe516cea2137a5d3ce0c21fdf58a21075ba.json"
+    },
+    "fund-6aa4d4e0402c": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg2ODc0ODIwNA==&mid=2247503854&idx=1&sn=c50762719625347862370b63fdcb5551&scene=21&click_id=51#wechat_redirect",
+      "title": "2026儿童美育议题公益节伙伴招募计划启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8829396d2a7f95a69d77fc057092180d8a4fc28ef10486e82e39b331090d0cb4",
+      "documentHash": "23942941e756a88e2b098a0fe294647649686a956ef2cbb9356377ad4ae7e299",
+      "file": "fund-6aa4d4e0402c/23942941e756a88e2b098a0fe294647649686a956ef2cbb9356377ad4ae7e299.json"
+    },
+    "fund-6fbb0d9d71ef": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAxMzMxNzY3NQ==&mid=2651301784&idx=1&sn=72531502956e9f8fe605c4856416e53c&scene=21#wechat_redirect",
+      "title": "活力未来亲子园招募合作伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "9be2b83db8648112ae81edc6a89963b69eaed114eff14ec7d122d7d60644b2ba",
+      "documentHash": "07fc897deaae0a28678c839227519f2c7d444c6e4d84361643f1013f6d579583",
+      "file": "fund-6fbb0d9d71ef/07fc897deaae0a28678c839227519f2c7d444c6e4d84361643f1013f6d579583.json"
+    },
+    "fund-7020479b103a": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20278",
+      "title": "\"愈见希望—溃疡性结肠炎患者援助项目\" 关于中秋节及国庆节期间服务安排的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "4772ca160fa227d35e3eba98c7990996c22b1252867937e1aa807b5e8049ec3c",
+      "documentHash": "f3db72f138219fa865949afb35dbd60df5fc143a680ea56ba2ebc46b87f3da7b",
+      "file": "fund-7020479b103a/f3db72f138219fa865949afb35dbd60df5fc143a680ea56ba2ebc46b87f3da7b.json"
+    },
+    "fund-723290c7cb15": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770566&idx=1&sn=98b53c67d24c219b75bd45b85284a0c5&scene=21#wechat_redirect",
+      "title": "1%地球税2026年第二期伙伴招募启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "520d23fca94f28fef36de46803883f82b5bc2a3588299a94e5dc227e0ace9435",
+      "documentHash": "df5a2de6a8a72fa85dd4d15a4b1a6723a8525588d2bd4735aefd0851b29242f6",
+      "file": "fund-723290c7cb15/df5a2de6a8a72fa85dd4d15a4b1a6723a8525588d2bd4735aefd0851b29242f6.json"
+    },
+    "fund-7494c9999e4e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4OTU3MDUyNg==&mid=2652225382&idx=1&sn=221e3526712b940fd202a8e7f9929223&scene=21#wechat_redirect",
+      "title": "记忆包裹项目招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "f19edec868464b8426ce7d90239db745742aa733049f7d16f26a4988683472c6",
+      "documentHash": "b6d0f1f0f6bf1ade58098783930084b3f1895858b9a7e613efcfb7413e6e90c4",
+      "file": "fund-7494c9999e4e/b6d0f1f0f6bf1ade58098783930084b3f1895858b9a7e613efcfb7413e6e90c4.json"
+    },
+    "fund-751305f840f3": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10371.html",
+      "title": "资助｜2023年北京市妇联公益伙伴计划暨妇女儿童家庭公益服务创新项目征集启事",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b1c61e83c3aad53a825fc2a8e15735a4a393c4305a290606d24ac49f43b3a26b",
+      "documentHash": "4e923442c132de66cbf8e392a8727cc614c67fd0eb9c8203a3174f822afad981",
+      "file": "fund-751305f840f3/4e923442c132de66cbf8e392a8727cc614c67fd0eb9c8203a3174f822afad981.json"
+    },
+    "fund-7522aab10141": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU2MzY4NjE5MQ==&mid=2247788101&idx=4&sn=656a29229b25d8545e01c99d59480f68&scene=21#wechat_redirect",
+      "title": "【“益起美莱”】2026年社区公益领袖培育计划项目启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b6e897691649ec63e9be860165603f9ede63d48b48da9fd34069920d6f6e749e",
+      "documentHash": "f0a60edb0b97e8b946c584a7af284768772b3ae8e798053bb00e37e6decb6c3c",
+      "file": "fund-7522aab10141/f0a60edb0b97e8b946c584a7af284768772b3ae8e798053bb00e37e6decb6c3c.json"
+    },
+    "fund-775e751cd768": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUzNTA3NjM1Ng==&mid=2247518623&idx=1&sn=8de7e832eac05c14434b7106f2ee754b&scene=21&click_id=800395000#wechat_redirect",
+      "title": "“启智星”计划正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "2d6874e15323d7fa766e477282e7d57837b2ab0b23c99641a37fd9afc71ff650",
+      "documentHash": "a0693a4ff04d764539ddb614a491ce880648ef19f06909ae701335bacc07eaf2",
+      "file": "fund-775e751cd768/a0693a4ff04d764539ddb614a491ce880648ef19f06909ae701335bacc07eaf2.json"
+    },
+    "fund-789145ef97d0": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72152",
+      "title": "中国人口福利基金会关于资助开展关爱女性健康公益行项目活动的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "e811956045e8b7c579391d42fff698d94ef4e6d6c0728b0ae4a6f80508937d11",
+      "documentHash": "8766aa95f9274b11fb965d9d4cebd9c63f66762568587ec9dc14ea94bf32533d",
+      "file": "fund-789145ef97d0/8766aa95f9274b11fb965d9d4cebd9c63f66762568587ec9dc14ea94bf32533d.json"
+    },
+    "fund-7b962d750026": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0OTM4NjAzMw==&mid=2247505534&idx=1&sn=02df7848a44db9dc88375c27019c691c&scene=21&click_id=145820598#wechat_redirect",
+      "title": "2026年鄂州市社会组织“鄂创有我·益心为民 ”公益创投大赛项目申报开始",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "5065ec4e18fc9c6fe7a15759a866698954b9a0551335c568684e75290a4c1eeb",
+      "documentHash": "d706618604310332da4089d4a39b2be95d41917268e7061d771b8496dc3674d8",
+      "file": "fund-7b962d750026/d706618604310332da4089d4a39b2be95d41917268e7061d771b8496dc3674d8.json"
+    },
+    "fund-7cd9f4056de0": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20191",
+      "title": "中国红十字基金会“恒爱无银——银屑病患者关爱行动” 启动公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "ae8a55bab2583bfc3f7fbd445680050b7a768d89da767af42d7279c1474bf0cc",
+      "documentHash": "9dffdcb9563722cd77bcfe1fedf48cf9bb6a815aa37032d68c72ec7bcceed487",
+      "file": "fund-7cd9f4056de0/9dffdcb9563722cd77bcfe1fedf48cf9bb6a815aa37032d68c72ec7bcceed487.json"
+    },
+    "fund-81e540d12a48": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650010392&idx=1&sn=3543497345df33d10cdfc8a5883d7ccb&scene=21#wechat_redirect",
+      "title": "“宝藏小屋”暑期营儿童公益节伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "10e6ca688157f065493afc09b66767e429b001358773ec33dd389b1e13ddeecf",
+      "documentHash": "c0ebb37cd606392de73985f994427d9d77fac9717249fb9483197234899a67c4",
+      "file": "fund-81e540d12a48/c0ebb37cd606392de73985f994427d9d77fac9717249fb9483197234899a67c4.json"
+    },
+    "fund-826542bd2567": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI4MjE1NDU4MQ==&mid=2661829567&idx=1&sn=1ab156f0201e84be83022d7bf6bcaa37&scene=21#wechat_redirect",
+      "title": "共“益”计划招募启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "edbd1efa67f275d4a04f6673eac815473a4b756f4a3e72fe204a0ca52d6c0df3",
+      "documentHash": "78ecf18e4cfc8c9c2d951696f442129f8f1dc08523535aebce8db7eb9fef40b0",
+      "file": "fund-826542bd2567/78ecf18e4cfc8c9c2d951696f442129f8f1dc08523535aebce8db7eb9fef40b0.json"
+    },
+    "fund-842d90b37037": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0NjIxMTQ2MA==&mid=2247513826&idx=2&sn=0306c73b732e52d42a401d955b345f83&scene=21#wechat_redirect",
+      "title": "“西北荒野保护伙伴计划”征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "eafe4da3388ee68fbf9298c20fc48d67825729eff8c7ce05543610818df5f554",
+      "documentHash": "ce346936dcd6c24a1779c8343722af0a581c3fbf784332071b31c81a1389da92",
+      "file": "fund-842d90b37037/ce346936dcd6c24a1779c8343722af0a581c3fbf784332071b31c81a1389da92.json"
+    },
+    "fund-848d47a9ecdc": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzkxNjUyNjc0Mw==&mid=2247490834&idx=1&sn=24671ef4fa9e06be38c92b2baab24cda&scene=21&click_id=672664577#wechat_redirect",
+      "title": "2026年美善伙伴行动资助计划启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "51f9acae14ca2d78ed04c9cee81da5784fae488bdf14eb2cbe564e77e5913d36",
+      "documentHash": "90a71474e69900367aa37f742f56441c3a43120c2c953c5212084d22d4c3f210",
+      "file": "fund-848d47a9ecdc/90a71474e69900367aa37f742f56441c3a43120c2c953c5212084d22d4c3f210.json"
+    },
+    "fund-84cbaff1f293": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU3NTA3MjY5MQ==&mid=2247489311&idx=1&sn=a0f20d0f6e6b9f17007ad7e20fe0f96d&scene=21#wechat_redirect",
+      "title": "青少年足球“关爱计划”公益项目开始征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "515d10081e54e729a32d3dd41266b4edf250682de129205ea2f80644eb8d8dcb",
+      "documentHash": "25ac491a6b7674ee1828a7b30ddc51fe0f4246fde95b47bd9d1be389f7009773",
+      "file": "fund-84cbaff1f293/25ac491a6b7674ee1828a7b30ddc51fe0f4246fde95b47bd9d1be389f7009773.json"
+    },
+    "fund-85f0bca30f91": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUwOTYxMjQwOQ==&mid=2247489612&idx=1&sn=7c5965036446e1ce09d4479f6307b207&scene=21#wechat_redirect",
+      "title": "2026年“心+行动”0-3岁创新方案支持计划招募开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1d92600564ccd0b2894f5e1cf972f26f9c9d42a9770b40ccb5d8b5e0a23388cd",
+      "documentHash": "eadb0b46bc0a0d3685f3f3b0fb25a2e0278f6ecdf1c0ea443a5ec61e9721ed68",
+      "file": "fund-85f0bca30f91/eadb0b46bc0a0d3685f3f3b0fb25a2e0278f6ecdf1c0ea443a5ec61e9721ed68.json"
+    },
+    "fund-86ca127debd5": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10363.html",
+      "title": "联合招募 | 招募热爱公益的优秀青年、青少年，成为“未来益行者”！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "9039ad0b7c36c9bece047166105c5ae7dcf0b5e3cef4aa3043a9871010cdfb72",
+      "documentHash": "0f672d3d3aff7635998c34b7d397e5d6f771ced4a93bed40481ceb5ca03c9894",
+      "file": "fund-86ca127debd5/0f672d3d3aff7635998c34b7d397e5d6f771ced4a93bed40481ceb5ca03c9894.json"
+    },
+    "fund-873f1b69084d": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493099&idx=1&sn=19b844e8a107a488c03088278bf3ade3&scene=21#wechat_redirect",
+      "title": "议题型伙伴深度合作招募计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "bd1050871fffa4ee050ba3216f51939a7663d179affaa986ed2e2f62f00ad787",
+      "documentHash": "572f36d51f3db2a6b9aeec0a47e28e0e8accf012f9e01a041a1952efe1ef8856",
+      "file": "fund-873f1b69084d/572f36d51f3db2a6b9aeec0a47e28e0e8accf012f9e01a041a1952efe1ef8856.json"
+    },
+    "fund-878e1e3c1c79": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72478",
+      "title": "关于开展“黄手环行动”科普宣传活动的资助公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "19810db8b0859f582aee4ba01453a908c3fd32bbe0c07b47ce827533dbff4ebc",
+      "documentHash": "6ed14f505ea5f4033e46e5a00698eb24239784710a841b3d2cc66c1bad0a8912",
+      "file": "fund-878e1e3c1c79/6ed14f505ea5f4033e46e5a00698eb24239784710a841b3d2cc66c1bad0a8912.json"
+    },
+    "fund-8a08e60f64c2": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxNTg3MjA4Nw==&mid=2247496760&idx=1&sn=ad15489289f8d0577d41519f404a4696&scene=21#wechat_redirect",
+      "title": "志鲲基金会“行业赋能计划”招募联合劝募与执行机构",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "3908c9e2d243f073787e57554b8d1e348ba6f8b8ddef1b527221423ff729ada8",
+      "documentHash": "2c1a31d53d37d0f912e3504cde10f85e8691e653e44392c1d7c005f52d30555a",
+      "file": "fund-8a08e60f64c2/2c1a31d53d37d0f912e3504cde10f85e8691e653e44392c1d7c005f52d30555a.json"
+    },
+    "fund-8ab86414b98b": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16416.html",
+      "title": "资助｜@准大学生，家庭经济困难不用愁，入学资助政策来了！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "baccb57bb10b149953b281945a6246a1cb02f9f50ae354f65e85f30ad93fa2b3",
+      "documentHash": "66dc589343af4cb9dd1726714faee05a3c8e202c0ccc1a879dffe4b7af771e0f",
+      "file": "fund-8ab86414b98b/66dc589343af4cb9dd1726714faee05a3c8e202c0ccc1a879dffe4b7af771e0f.json"
+    },
+    "fund-8be07c3da427": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20363",
+      "title": "中国红十字基金会“关爱保”项目申请公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "71c2623a72d8adcd53eb291ee2dd86683479aff3aa9aa7ec81827e8e1299e3b5",
+      "documentHash": "c3202931c806fc43dae17a56c49526ac1406336e87316e1344fd2b7a541b098a",
+      "file": "fund-8be07c3da427/c3202931c806fc43dae17a56c49526ac1406336e87316e1344fd2b7a541b098a.json"
+    },
+    "fund-8bfb525a2145": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MzI0NzY2MQ==&mid=2652770652&idx=1&sn=a92b3612b7a7422a1a13486ea9652f5b&scene=21#wechat_redirect",
+      "title": "2026年度“麦穗”·青公益合作伙伴计划招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "884560578dc5335dcb28083e2c64b24fc521819124f34b1f9ba61234dd5130ed",
+      "documentHash": "61c49ee04b87960b002674830e2eb0573c98df3cc1a2be6d6dfe63714f626f41",
+      "file": "fund-8bfb525a2145/61c49ee04b87960b002674830e2eb0573c98df3cc1a2be6d6dfe63714f626f41.json"
+    },
+    "fund-8d21f633687f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650009772&idx=1&sn=a9aa0dff07e7e60d18a34e97c24dffd7&scene=21#wechat_redirect",
+      "title": "2026年勇气少年困境儿童陪伴项目意向合作机构征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d788711de14bf81e225899a37b1d5b239808d3a91889256c89c146cd756bb384",
+      "documentHash": "1ba292e167f3d4d10ba2dd8a81ce27842e9ca57dbe17388effa138332bd35f5b",
+      "file": "fund-8d21f633687f/1ba292e167f3d4d10ba2dd8a81ce27842e9ca57dbe17388effa138332bd35f5b.json"
+    },
+    "fund-8dcf0f3d85fe": {
+      "sourceName": "中国发展简报·资讯",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/news/detail/66307.html",
+      "title": "气候韧性社区研究及建设（RCLA）项目征集说明",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "e97998e0ba33e4e0239781e629abc35991b315d45734b1cc50ac4241f4a3b5f4",
+      "documentHash": "48379ea470b780270c159895520279091aeac7abe50711d23e96be6d023b5bcc",
+      "file": "fund-8dcf0f3d85fe/48379ea470b780270c159895520279091aeac7abe50711d23e96be6d023b5bcc.json"
+    },
+    "fund-8fb615c2b3af": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16426.html",
+      "title": "合作招募｜“残障者支持计划”2024年第二批合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "268429faea37a674fc9e0b39ce89fd16c8b10ea0e338522a61a7e2014eab67b2",
+      "documentHash": "5fa385e0f6528dffb1b432491c999c79ce67487aaf1ce65e10eb95555824404b",
+      "file": "fund-8fb615c2b3af/5fa385e0f6528dffb1b432491c999c79ce67487aaf1ce65e10eb95555824404b.json"
+    },
+    "fund-905f7d0a79aa": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247521368&idx=1&sn=69a9230b6949f1787ab0ea261eec5601&scene=21#wechat_redirect",
+      "title": "征集振华绿色转型与可持续发展基金“气候行动与可持续发展交流及能力建设—中欧气候行动对话”项目",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8c315c6eaaf08230f622759dba2a763060d384c5539cab3626c3c48afbb4c5c6",
+      "documentHash": "3195fd762c1606156dd752dec88b293daaffcf9d5fce050ce32efbe006fb7018",
+      "file": "fund-905f7d0a79aa/3195fd762c1606156dd752dec88b293daaffcf9d5fce050ce32efbe006fb7018.json"
+    },
+    "fund-96055da7e3d0": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16392.html",
+      "title": "资助信息 | 公益人的气候变化奖学金",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "fb069636e1e183e0d1afb50a849dd95542277ad64e2256c98989c50913754ea1",
+      "documentHash": "fe11f6c5f888c2ca42c56ffa161d164ebd7ee8fee9fc4e1ab41dc0322e894cfc",
+      "file": "fund-96055da7e3d0/fe11f6c5f888c2ca42c56ffa161d164ebd7ee8fee9fc4e1ab41dc0322e894cfc.json"
+    },
+    "fund-9615d0510723": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770425&idx=1&sn=0a0306ed5ce0e92e603b2f6ab99319e4&scene=21#wechat_redirect",
+      "title": "2026「起步期一线环保创变者支持计划」招募开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "ff2394c35ad22e63f4d0990f87a94eb08796ca4c49f256f0f050ab0cb601d0be",
+      "documentHash": "9d63f7071025317fa8bb171b14e7a76d7610316c5e4214c0c49733c003429e58",
+      "file": "fund-9615d0510723/9d63f7071025317fa8bb171b14e7a76d7610316c5e4214c0c49733c003429e58.json"
+    },
+    "fund-965892b7db95": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72199",
+      "title": "中国人口福利基金会关于2025年无痛分娩公益活动延长申请时限的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "11adbe47515d81d9867ec098734956c3a558ddd8d1e14085c7c8c7540c796e28",
+      "documentHash": "2e1e6453d373cb6c2df1b19f50b71f931b42a387ddf03b8daf479cbb6f2653cd",
+      "file": "fund-965892b7db95/2e1e6453d373cb6c2df1b19f50b71f931b42a387ddf03b8daf479cbb6f2653cd.json"
+    },
+    "fund-96a0be7e39e8": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0NzIwNzc3Mw==&mid=2247552671&idx=1&sn=8665d26982e06a93013c77c69b25a4d7&scene=21#wechat_redirect",
+      "title": "“小数苗”计划第三期项目申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "953af5788b9114e766f137f3f45dc3bd57236b735366a664c88562cdc863718e",
+      "documentHash": "e99c177f10a80ad4bf0ce28ce3dc0a384aa42bc03947902b22913c5acef315ed",
+      "file": "fund-96a0be7e39e8/e99c177f10a80ad4bf0ce28ce3dc0a384aa42bc03947902b22913c5acef315ed.json"
+    },
+    "fund-96d1c9175aec": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72347",
+      "title": "关于2026年“黄手环行动”家属支持计划资助公告延长申请时限的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "afc89911f0b2f157c30b7da357c89e2ec509af1787f76d3b1568b063c08128c6",
+      "documentHash": "5995845fff014c9b0c5496dc567e0d7b68dfdbe0563aa07651427411738497d1",
+      "file": "fund-96d1c9175aec/5995845fff014c9b0c5496dc567e0d7b68dfdbe0563aa07651427411738497d1.json"
+    },
+    "fund-9813a0480f3e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxODY1MDg2OA==&mid=2247504493&idx=1&sn=3c2d37dcc4f8744c9633c5c690ce17b7&scene=21#wechat_redirect",
+      "title": "张家港市2026年度社会组织公益创投创新类项目专场活动启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "f951634da89be705cd5fe10a8f8e6236406f5ecd336172acb64c5a87156fe56c",
+      "documentHash": "d51bf1cab2f6af6134584d4d0e933f39ef76ba1344e2b46fc5f4a0592b9ed9d2",
+      "file": "fund-9813a0480f3e/d51bf1cab2f6af6134584d4d0e933f39ef76ba1344e2b46fc5f4a0592b9ed9d2.json"
+    },
+    "fund-985b70dee2fc": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16440.html",
+      "title": "小额资助|“山河晋谣”II期项目传播团队招募通知公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6deac3195e2d6f519fa5c5e550165eca0976353e5c53522a5d3d6812ebd32c86",
+      "documentHash": "6eaa63490a4d2b1377749b469eadea9ba410fe14dc7fb795165e794b612adf9b",
+      "file": "fund-985b70dee2fc/6eaa63490a4d2b1377749b469eadea9ba410fe14dc7fb795165e794b612adf9b.json"
+    },
+    "fund-98f9dd3a32c2": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAxMTcwOTk1OQ==&mid=2247487432&idx=1&sn=4ccf1950a65a1dea78b8559f39efabe7&scene=21#wechat_redirect",
+      "title": "“益治共融·善暖武昌”2026年武昌区社会组织参与基层治理创投大赛",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "c29631929ddb2069d256ba07b25918282c0c931880514d0af7125c6cf82854ce",
+      "documentHash": "060e6c06301e56d6620f345bf6597b56b8f4128a043bce77a74c3a1fada1641a",
+      "file": "fund-98f9dd3a32c2/060e6c06301e56d6620f345bf6597b56b8f4128a043bce77a74c3a1fada1641a.json"
+    },
+    "fund-99254d0fd31e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NDk2OQ==&mid=2652054756&idx=1&sn=de6cbb3e68deff942205a93e462734d6&scene=21#wechat_redirect",
+      "title": "第七届四川省总工会联系引导劳动领域社会组织公益创投活动开始",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "cd349306a0761709a36250329f46b2ef6f3c5ddc8d44390588cd6fc7ddb942da",
+      "documentHash": "4629f3f741ddf848402bd512e56a50bace49478b2aca08e8e92c8eb3f73f6d08",
+      "file": "fund-99254d0fd31e/4629f3f741ddf848402bd512e56a50bace49478b2aca08e8e92c8eb3f73f6d08.json"
+    },
+    "fund-9a2a8e8df4ac": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NzM0NTEyMQ==&mid=2652081223&idx=1&sn=f28ac7630a7043587fef44e7579ed600&scene=21#wechat_redirect",
+      "title": "Build the Change小小创变家项目2026年第二期合作伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "86827c874ab822b0b4c334e6d4920ed6bba7973455cabc49ebad2a8e6b7114a8",
+      "documentHash": "7c955f694000bfd86a74dbfbe390efb365b80ea6c4cc55b748d92850bba288f3",
+      "file": "fund-9a2a8e8df4ac/7c955f694000bfd86a74dbfbe390efb365b80ea6c4cc55b748d92850bba288f3.json"
+    },
+    "fund-9d8dae41e874": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72340",
+      "title": "2026年“黄手环行动”家属支持计划资助公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "e7910b9ed7c89cf9aaaad62433ce66e0f8ae224662cd707182ee40d583e8e3b3",
+      "documentHash": "6be4aeaef514b5433c0101f176d21b30fcc0791782004030fd5108a4e2c568eb",
+      "file": "fund-9d8dae41e874/6be4aeaef514b5433c0101f176d21b30fcc0791782004030fd5108a4e2c568eb.json"
+    },
+    "fund-9ef4d8522d94": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MzQ4MDQ4MA==&mid=2247497954&idx=1&sn=97a898b91b0ad51f7a8b7142324f10b2&scene=21#wechat_redirect",
+      "title": "增城区第一届社会组织公益创投活动开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "07e4807af00c5849f03d6dcc14c63ce382509aaf938f36bfb4a38f962bcc500e",
+      "documentHash": "f5be94d7ba63d1608d8f0f6fc988b59a83212bf8b364c62e66043049100d9a56",
+      "file": "fund-9ef4d8522d94/f5be94d7ba63d1608d8f0f6fc988b59a83212bf8b364c62e66043049100d9a56.json"
+    },
+    "fund-9fc83e091b2f": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16417.html",
+      "title": "资助 ｜泰国朱拉隆功大学短期奖学金项目开启申请",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a53cd6439d3ac6ab0d96b93a5cee9d8f82925cfd755419b126a8313ae5ba9444",
+      "documentHash": "702404822d22d247f780760b56c404284a2a86969ad779ede165ccd24cd62258",
+      "file": "fund-9fc83e091b2f/702404822d22d247f780760b56c404284a2a86969ad779ede165ccd24cd62258.json"
+    },
+    "fund-a3815e2517c4": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzY4ODE3MTIyMA==&mid=2247483687&idx=1&sn=8194197d7c9de636f8be271bf22758ff&scene=21#wechat_redirect",
+      "title": "第四届“鹏青计划”青年公益创新资助计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d124a913315651daae9d96478e62bed2438c9a9faf0046ed47321e2b23bd75fd",
+      "documentHash": "5de13e2ae6b5b7d4ce02dafcf4700924ffdafd66d90fdd11446de1e72aab2636",
+      "file": "fund-a3815e2517c4/5de13e2ae6b5b7d4ce02dafcf4700924ffdafd66d90fdd11446de1e72aab2636.json"
+    },
+    "fund-a8302f006ac7": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72433",
+      "title": "关于中国人口福利基金会资助开展“人工智能康养项目”的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6c6a66fa51142e696a1e2d8c49ab825e4ecd1296d469c60396f5c5f911834a57",
+      "documentHash": "c735004bfc75c409f83d2eeb6861a2d494feee4c67f0d01a2aad2abc5ca0bbd7",
+      "file": "fund-a8302f006ac7/c735004bfc75c409f83d2eeb6861a2d494feee4c67f0d01a2aad2abc5ca0bbd7.json"
+    },
+    "fund-a886cf026099": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODM4NzM5Mg==&mid=2651953731&idx=1&sn=7eea2cd37db3e3b8a72edc6fc6280dff&scene=21#wechat_redirect",
+      "title": "乐高集团“乐乐箱儿童玩乐发展支持计划”2026合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "c53b6f12f45752fa3afb5d5021faf3c621b8814b487bce7b51147f9a2ecb0836",
+      "documentHash": "59669426f3b14770e0f6843cd7b53408fb87b5db6a310d08f3fbf40f04a89f89",
+      "file": "fund-a886cf026099/59669426f3b14770e0f6843cd7b53408fb87b5db6a310d08f3fbf40f04a89f89.json"
+    },
+    "fund-a8be919e013c": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3ODcwMzk2MQ==&mid=2247529403&idx=1&sn=8092e6522f4dbaa3766dfb65dbd6dd01&scene=21&click_id=2074282299#wechat_redirect",
+      "title": "2026年中关村社会组织支持项目",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7388ee09fb26fffc8d7e3cd75d0a2af02db86b9c1717790e07a4b368262f5b0a",
+      "documentHash": "d8e7010add9cfb985c5689c1b04bbb2a44c64bc1e0b2ae5d87573aaa37aa6146",
+      "file": "fund-a8be919e013c/d8e7010add9cfb985c5689c1b04bbb2a44c64bc1e0b2ae5d87573aaa37aa6146.json"
+    },
+    "fund-ac9ffdda7538": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3NzU1MjI3NQ==&mid=2247513981&idx=1&sn=6288febfd8854240cd27afdc54180a2e&scene=21#wechat_redirect",
+      "title": "“鹏城有爱·益企向善”招募首批共建社区",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "049e6adb91d324a005324381e725a93abca07702faf85fbc7689b887c3a35719",
+      "documentHash": "db8f7cf012158a231a55c6aad9fafae17edc68ed7fc98d7a61ebf852ab91aabe",
+      "file": "fund-ac9ffdda7538/db8f7cf012158a231a55c6aad9fafae17edc68ed7fc98d7a61ebf852ab91aabe.json"
+    },
+    "fund-b168399af801": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5OTQ0NjE1Nw==&mid=2651744591&idx=1&sn=2865de0137fa7e6ac97d685e9fc71564&scene=21#wechat_redirect",
+      "title": "首届深圳市计生特殊家庭公益项目创投活动正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7cf91179d0fc3e4149f8ee777ecdd969a30174d9f01e9bdf669bb25e6cd6856b",
+      "documentHash": "1300cc3d2d67b10f3416a8edf37d57579a59d70d4d28e037101a20392fc1f136",
+      "file": "fund-b168399af801/1300cc3d2d67b10f3416a8edf37d57579a59d70d4d28e037101a20392fc1f136.json"
+    },
+    "fund-b39a579749c4": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAxNzE2MDQ1Ng==&mid=2652395135&idx=2&sn=ec2abd43bb3a0e1e5aa5ca82e83fbfb3&scene=21#wechat_redirect",
+      "title": "荔湾区“美荔妇联”第十二届公益创投项目",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "caa29ea4e4f6aba5f372df8c9aca292f3df227d751312ddf7d64f5b35d132532",
+      "documentHash": "20e3c1bb2ae0e00d92ec8683df52a4dbe6ef9e6416dc3e15442c4430d5d6e238",
+      "file": "fund-b39a579749c4/20e3c1bb2ae0e00d92ec8683df52a4dbe6ef9e6416dc3e15442c4430d5d6e238.json"
+    },
+    "fund-b45cd28ff6b5": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU1NDk3ODk1Mw==&mid=2247729548&idx=1&sn=9fd385111a8372b7d369945794777349&scene=21#wechat_redirect",
+      "title": "安心计划招募2026年公益合作伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "741aa6b24e121e984452f94f799507177907bd68e62bdb8cfb2501574e454f4f",
+      "documentHash": "6564e3299d6837e0c71da1486e2271be9a81a5a62c134a0775ac180f06cf7023",
+      "file": "fund-b45cd28ff6b5/6564e3299d6837e0c71da1486e2271be9a81a5a62c134a0775ac180f06cf7023.json"
+    },
+    "fund-b50b51abd29b": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg2MjEwMjk0MA==&mid=2247508783&idx=3&sn=8c25def919d0e28c03fb0a6e92aa3b9f&scene=21#wechat_redirect",
+      "title": "2026年度罗湖区社会组织公益创投暨乐龄服务项目大赛正式启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "5330b1c5e1940cfa1dc887ff8a79fb995179d8014560e8441351d2dcd8ded946",
+      "documentHash": "f34175669d970ac7c7c29448571d43edead249dd466d9c36c7a1e9a8456fa2bf",
+      "file": "fund-b50b51abd29b/f34175669d970ac7c7c29448571d43edead249dd466d9c36c7a1e9a8456fa2bf.json"
+    },
+    "fund-babbdeb1b4f1": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5MjA3NTE3Mg==&mid=2651770406&idx=1&sn=56915a6c6fbfc6169cc94e959862974d&scene=21&click_id=38#wechat_redirect",
+      "title": "2026「起步期一线环保创变者支持计划」招募开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b76a452c36abaca8df7f600dc1ff237c064888e22b37ce0744b3ff9dccadf4d0",
+      "documentHash": "34a811f964d8bf79530b09fd8a25c6d911f3f79b9e70f760a135c06035278ee2",
+      "file": "fund-babbdeb1b4f1/34a811f964d8bf79530b09fd8a25c6d911f3f79b9e70f760a135c06035278ee2.json"
+    },
+    "fund-bd1237def286": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10333.html",
+      "title": "资助 | 2023年阅林计划资助项目开放申请啦！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "70b021a3cc2b1623009c275935f9fd52a265b1b878d0e78c3ef96d52e8512c2a",
+      "documentHash": "6348227d15d2cc2d2fc410a274381041345c874e8c522b93f05195e7023eff59",
+      "file": "fund-bd1237def286/6348227d15d2cc2d2fc410a274381041345c874e8c522b93f05195e7023eff59.json"
+    },
+    "fund-c35b92f0c5de": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72173",
+      "title": "中国人口福利基金会关于资助开展“珀爱妈妈”公益行活动的公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "c7ef0ed52ab3afd9cff3e64bb6fb8ef0c59920e97a7a6018a413d41ac957d8a3",
+      "documentHash": "2fdaea9faef6ea3df9e430a4605122a9ce9c4855feecdd2544896d21cfb9b422",
+      "file": "fund-c35b92f0c5de/2fdaea9faef6ea3df9e430a4605122a9ce9c4855feecdd2544896d21cfb9b422.json"
+    },
+    "fund-c3935aaa8c30": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk3NTU5MTI5MA==&mid=2247511228&idx=3&sn=7a2824ddbdb1031d9f5632e613e14f48&scene=21#wechat_redirect",
+      "title": "“聚善中堂·为爱启航”东莞市中堂公益慈善基金会首届创投项目征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "837c7fbad30e3592621a46b45e9ad231ac902b4def2eefd34d4bfada91f8719b",
+      "documentHash": "55fd73d72f3b41f1fefadac53bcd51369578f7bcad9da447567a79c3d6ce74db",
+      "file": "fund-c3935aaa8c30/55fd73d72f3b41f1fefadac53bcd51369578f7bcad9da447567a79c3d6ce74db.json"
+    },
+    "fund-c40c5f1f6d4e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjAxNTg4NQ==&mid=2649840083&idx=1&sn=2c9cd03e3d9289b869fc8a5f10579867&scene=21#wechat_redirect",
+      "title": "心智障碍议题合作伙伴招募开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "8fc469e9f980cf5d08357dc6204fde59f6742f8f257c735f4eaf48e5510cf706",
+      "documentHash": "2aab61e31cd39973aa12831ca9760e6ef622c17b651d84cf5b7b9224eb7b9806",
+      "file": "fund-c40c5f1f6d4e/2aab61e31cd39973aa12831ca9760e6ef622c17b651d84cf5b7b9224eb7b9806.json"
+    },
+    "fund-c9659a2b84da": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzQ5Njc0Mg==&mid=2247555436&idx=1&sn=c72d2c051bb7f4ae2664e8d2ed6d580b&scene=21#wechat_redirect",
+      "title": "2026年南宁市社会组织公益创投活动开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a72ac8bf1c3f5251af07d4714df988e87b5d201105c40f509ae112a82caa8c07",
+      "documentHash": "98f7ee85f592db02e35b5cafa1780c138d413dd16792229f1daa30cc98239543",
+      "file": "fund-c9659a2b84da/98f7ee85f592db02e35b5cafa1780c138d413dd16792229f1daa30cc98239543.json"
+    },
+    "fund-cade09bad0f3": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTEwNzQ5MA==&mid=2247520525&idx=1&sn=3e4a3324daaf8090d0d8d90b689f0a36&scene=21#wechat_redirect",
+      "title": "征集“救灾及灾后生态恢复”灾后重建公益项目及其组织实施单位",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "122aee3006374edecad38749de614df6a79106df98a2b92e950e17e7825acda1",
+      "documentHash": "0d2c05d25ef03e3c26a590c2699ddfc6bab60ee09c5af6316b9b669e4402966d",
+      "file": "fund-cade09bad0f3/0d2c05d25ef03e3c26a590c2699ddfc6bab60ee09c5af6316b9b669e4402966d.json"
+    },
+    "fund-cc5fe50745e5": {
+      "sourceName": "中国人口福利基金会",
+      "sourceUrl": "https://www.cpwf.org.cn/content/72150",
+      "title": "中国人口福利基金会关于医心守护儿童成长公益项目科普教育活动调整申请方式的通知",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "472344f42d7ecc9d882f18f55b47b309fde1affeba1aeb14626b84288d0c5554",
+      "documentHash": "1978e51e28ef995980b99e1b77a0a4c88f56dfd0dbb3b764bcc1c7f35b712196",
+      "file": "fund-cc5fe50745e5/1978e51e28ef995980b99e1b77a0a4c88f56dfd0dbb3b764bcc1c7f35b712196.json"
+    },
+    "fund-ccd940cf1fb1": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU3NTA3MjY5MQ==&mid=2247489387&idx=1&sn=71fa412ccb5fddd4d6be409b5b9f2f8c&scene=21&click_id=1196531189#wechat_redirect",
+      "title": "中国足球发展基金会关于公开遴选2026年社会足球青训质量提升行动计划申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "81486246ac239087de73ed78e886f41e5b960eda94db22bce931770b56a39be4",
+      "documentHash": "bcb7cd3f52d874789f9f2d1e5aa6896edecde6658f989a205017095e5caddedd",
+      "file": "fund-ccd940cf1fb1/bcb7cd3f52d874789f9f2d1e5aa6896edecde6658f989a205017095e5caddedd.json"
+    },
+    "fund-cd078b9b2e9b": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10386.html",
+      "title": "招募 ｜ 支持本土公益力量，应对气候变化",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "7555efc240e6c8b2f40621f7c041c898b160898e75b1c0513c8ad6b415e61009",
+      "documentHash": "b70552d43c639baf3c12956d1b201e70bfca31c258411e310a88f4b335450f77",
+      "file": "fund-cd078b9b2e9b/b70552d43c639baf3c12956d1b201e70bfca31c258411e310a88f4b335450f77.json"
+    },
+    "fund-cdd214eaed99": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NzE5MjI0MA==&mid=2654380053&idx=1&sn=4e334a28c299252e81d6b2ab3915ce57&scene=21&sessionid=#wechat_redirect",
+      "title": "“共融行动”项目计划伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "0415bd162f709c551df1f964cfb0f70e2448d87d50a660bf556e90332bd030ac",
+      "documentHash": "b26dd7995794a12c6a940b8cd86daf7f61998a85b3c33544dbefe96baca6b474",
+      "file": "fund-cdd214eaed99/b26dd7995794a12c6a940b8cd86daf7f61998a85b3c33544dbefe96baca6b474.json"
+    },
+    "fund-ce981598c9ef": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10358.html",
+      "title": "招募｜文雅种子基金项目持续招募中！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "06a31a1c03bbf4e68b27c1b192a05a18d6fac3c9c4af9a9884f01f11616540b5",
+      "documentHash": "0fd747979c6cec471c9578b699a37c853d8c9e21b40aa5371d7bfadcf72f4d8c",
+      "file": "fund-ce981598c9ef/0fd747979c6cec471c9578b699a37c853d8c9e21b40aa5371d7bfadcf72f4d8c.json"
+    },
+    "fund-d019c6a22b50": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4MjU3Njk4Mg==&mid=2248015240&idx=5&sn=558ae64272f6026b4cf6b31b798fed0b&scene=21#wechat_redirect",
+      "title": "2026年塔什库尔干县微创投社会服务项目开始征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "96f00c0eb9dda56f9b94f7f74b1e27a419e2a82c7fb7788e5b50a9c3a1a9841f",
+      "documentHash": "0874d0bb8303853e208e93651d1bae049a4e8199c9e010f331bac1438efde77d",
+      "file": "fund-d019c6a22b50/0874d0bb8303853e208e93651d1bae049a4e8199c9e010f331bac1438efde77d.json"
+    },
+    "fund-d2631ae27a60": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20082",
+      "title": "中国红十字基金会“愈见希望-溃疡性结肠炎患者援助项目”申请公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b4339c25db24ee8e70dadd2553528580b37127c3bb1ca320dfacc864d083c671",
+      "documentHash": "480ff5c24b96b8208360631f427899b59ee3a00bcd665fc154d9a6e0da8f4494",
+      "file": "fund-d2631ae27a60/480ff5c24b96b8208360631f427899b59ee3a00bcd665fc154d9a6e0da8f4494.json"
+    },
+    "fund-d406b95b8f73": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU4MjY2OTM1Mg==&mid=2247519760&idx=2&sn=c6a932f1fb3dc7ca46ad89d438e730cb&scene=21#wechat_redirect",
+      "title": "舟山市第十四届公益创投项目大赛开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "488aeb25fdeeab34cf66da4b0e2e46ad26d2958fad3b4ed32d46e4244832e91b",
+      "documentHash": "61670ad7376bfde4d6c02cfccd9dbd02d87b255b4e0eceba24bc85d020b614ca",
+      "file": "fund-d406b95b8f73/61670ad7376bfde4d6c02cfccd9dbd02d87b255b4e0eceba24bc85d020b614ca.json"
+    },
+    "fund-d50a233e75d8": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4Njg4MDIxNw==&mid=2650466268&idx=1&sn=993d6c8e43e30a7945a60d902aeeaeba&scene=21#wechat_redirect",
+      "title": "长江流域生态保护慈善信托二期公益项目开放申请",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "6746d63d5e6cb0505b5d2d00da4c4ab724d77909a709ed82135b6f755d4f64b1",
+      "documentHash": "2523328c18f58a0e0bbc7430331c952611366a84890a4fd6e5f3b3e1b920b09e",
+      "file": "fund-d50a233e75d8/2523328c18f58a0e0bbc7430331c952611366a84890a4fd6e5f3b3e1b920b09e.json"
+    },
+    "fund-d757ceb77b8e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk3NTU5MTI5MA==&mid=2247510792&idx=3&sn=ef2b16ee86ba4dd7310c94f6e0416c71&scene=21#wechat_redirect",
+      "title": "“爱在黄江”第四届公益慈善创投活动启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "841dbb928d84813eff5ba66be3bf7fc740f7ccab3480125ec3d7469229c81541",
+      "documentHash": "dd92f3afc820d8fa34b2296480c597102adeead47d7b08c8d1d4f5ab6e7ed7cd",
+      "file": "fund-d757ceb77b8e/dd92f3afc820d8fa34b2296480c597102adeead47d7b08c8d1d4f5ab6e7ed7cd.json"
+    },
+    "fund-d7eb202b7df5": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzAwNjM0NjM0NA==&mid=2671713509&idx=1&sn=ab539d69cbefd45f1e9249fbf451afd3&scene=21&click_id=52#wechat_redirect",
+      "title": "环境公益“新”力量（第三期）智慧生态共建计划征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "637dd3330b6abb053c76582e3017474b180f26b5de225a8344805cefb7f78e3d",
+      "documentHash": "4255d347290d16a61126ec35e4b1ef0edfcf1695639970f2f410314de737a12b",
+      "file": "fund-d7eb202b7df5/4255d347290d16a61126ec35e4b1ef0edfcf1695639970f2f410314de737a12b.json"
+    },
+    "fund-d822dbb30f19": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3Mzg5NjM5Mg==&mid=2247558977&idx=1&sn=fa106d4895e243752c33db4644a32ff0&scene=21&click_id=530377030#wechat_redirect",
+      "title": "孝行天下银龄公益影像计划开始征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "64d6514be5a0f360816e5040f5cc3076a96682e0da9edbfbcafe19a692fbc639",
+      "documentHash": "adf7c50d7509573e1fcd830764e7a763524c760b832a10bbb4868bba77d3f0a0",
+      "file": "fund-d822dbb30f19/adf7c50d7509573e1fcd830764e7a763524c760b832a10bbb4868bba77d3f0a0.json"
+    },
+    "fund-d90a28163dfc": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10313.html",
+      "title": "招募 | 阿里公益「行为公益合作计划」发布！百万激励资金助力机构发展！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "615cb8f88cbab4d1d71b3c6b8fdac81742100d41b3bf10f8b74a3e4a24aa3a99",
+      "documentHash": "ff5d3af54be142838b070b29d760fee8f2daada36c387d56f13383b58dd8753c",
+      "file": "fund-d90a28163dfc/ff5d3af54be142838b070b29d760fee8f2daada36c387d56f13383b58dd8753c.json"
+    },
+    "fund-d95d937bfb11": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzU3ODU2MjA3NA==&mid=2247493403&idx=1&sn=f7a39fb4e1d19be0976f468e465f5cdf&scene=21#wechat_redirect",
+      "title": "2026年“溢彩星光”社区老人关爱服务项目 启动招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "12c633246bfa654d181e51493074de414e2dab0bbf7b60aac988cc22d61a4ec9",
+      "documentHash": "e356cdb6cfe5a428862b3ffa239b53584cd3e5d133009b34852bcc127090d60a",
+      "file": "fund-d95d937bfb11/e356cdb6cfe5a428862b3ffa239b53584cd3e5d133009b34852bcc127090d60a.json"
+    },
+    "fund-d9e1f29d018f": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10335.html",
+      "title": "资助 | 2023年创绿家资助计划开始招募！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "81909ba735b40b11769103e29e8faa596c6b90cdef734303aab65b5ba898858a",
+      "documentHash": "98c137d2af0c111d25c5851bd1246d1068ac212dbb1bf84a93951c7906870e69",
+      "file": "fund-d9e1f29d018f/98c137d2af0c111d25c5851bd1246d1068ac212dbb1bf84a93951c7906870e69.json"
+    },
+    "fund-dbc50356887f": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODIwNjgwMQ==&mid=2650017180&idx=1&sn=cb0ed127b710e75d32f03cc5eef9f845&scene=21&click_id=532382206#wechat_redirect",
+      "title": "2026“勇气少年”云南昭通专项项目合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "0c8230d6ec521b346a891194c8a3d9f2bba09b9826917873e319fe3a50d941c0",
+      "documentHash": "0c9f0fc324a12ce6bbfd736560552ae0a9ac790add033e8cca2a203ae7cfb056",
+      "file": "fund-dbc50356887f/0c9f0fc324a12ce6bbfd736560552ae0a9ac790add033e8cca2a203ae7cfb056.json"
+    },
+    "fund-dc33a6907133": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzE5MTU4ODc5Nw==&mid=2247508706&idx=1&sn=1f938a30cbc32083fbc8d20de9c4ac57&scene=21&click_id=952391068#wechat_redirect",
+      "title": "2026年益盒项目征集开启",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1aeebed6c98c98cacce62af22ee2f559d151ede51dee6ebc630d8c06f6ab52a0",
+      "documentHash": "32896c034a26f62495c5b4818855de6c61784bb3555b69b532c7e80486ced1a1",
+      "file": "fund-dc33a6907133/32896c034a26f62495c5b4818855de6c61784bb3555b69b532c7e80486ced1a1.json"
+    },
+    "fund-e3183cc44325": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA5MzQxNjE5NQ==&mid=2649665518&idx=1&sn=3f41320e121462c0231aada194c4ba24&scene=21&click_id=1683276935#wechat_redirect",
+      "title": "绿美广东公益创投活动启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "a935e83bf658378446f26e46e1a9ada69b275013c721c1461cb607433730ad0c",
+      "documentHash": "c1707f9c7ec4331b38cffc0ca1dc4b7a9b9a5b71fec30b1e7a8f7d59494759b0",
+      "file": "fund-e3183cc44325/c1707f9c7ec4331b38cffc0ca1dc4b7a9b9a5b71fec30b1e7a8f7d59494759b0.json"
+    },
+    "fund-e450623f7af7": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10398.html",
+      "title": "每人资助10000元，全网寻找高考励志学子！",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "9f4cfd592e10bd4ceaaa7e56120b0ac911ac719d976dd442e219c1adf7d3b7c0",
+      "documentHash": "83eb3e80453b4e79ca22e3f99b6bfa5d1225b8636e7043ff6d43ac8ef22a858c",
+      "file": "fund-e450623f7af7/83eb3e80453b4e79ca22e3f99b6bfa5d1225b8636e7043ff6d43ac8ef22a858c.json"
+    },
+    "fund-e63e9c313c5d": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg3MTkyMDUxMQ==&mid=2247495913&idx=2&sn=97beb6da07418ddc0f221816a9eb77c2&scene=21&click_id=61#wechat_redirect",
+      "title": "2026年度西城区养老服务机构视频融合监管项目征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "d610fafa4ff4ab2efb72256fe2556909dc8ad3a9335ec9023339dbeab5616f5f",
+      "documentHash": "40f3239aef7c58e3b05469048127c80b764adea9926eadde7a25cb0de303d241",
+      "file": "fund-e63e9c313c5d/40f3239aef7c58e3b05469048127c80b764adea9926eadde7a25cb0de303d241.json"
+    },
+    "fund-eab8ba92778f": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/10372.html",
+      "title": "招募 | 活水计划2023年合作伙伴招募启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "31c1d1e4780000a37a4a9fd2a58c623a0bc035e6ce3b42f70fea2ab7ef942f6b",
+      "documentHash": "b3667493f5990e65c406437f7514183679ee314bbfa98c7de4fa61f2a8e8c747",
+      "file": "fund-eab8ba92778f/b3667493f5990e65c406437f7514183679ee314bbfa98c7de4fa61f2a8e8c747.json"
+    },
+    "fund-ec18bf877055": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA4Njg0MTEwMg==&mid=2649700264&idx=3&sn=6029a6646228e2808e75fdd6496b16ce&scene=21&click_id=80#wechat_redirect",
+      "title": "海南省残疾人基金会公益伙伴招募公告",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b9f346585af34683c5e083837882b6b16a2200f4d29478b4e16afc45ab63ac7c",
+      "documentHash": "66203faf3ba36f93b1b5fcadaeca6642248740e5beec1efec3351e8ef7885af2",
+      "file": "fund-ec18bf877055/66203faf3ba36f93b1b5fcadaeca6642248740e5beec1efec3351e8ef7885af2.json"
+    },
+    "fund-ecac1858d89a": {
+      "sourceName": "中国红十字基金会",
+      "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20084",
+      "title": "中国红十字基金会“中央专项彩票公益金大病儿童救助项目” （先心病，2026年第二批）",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "0807c3570b252628a4de17f4d46f4cb9f2c6c32ef8b117c7cce52edd65c1ff9b",
+      "documentHash": "acfddd09e4a80721a4155e3cdf8b96f1ed9a9b5372fa89ce779a58da79c18de2",
+      "file": "fund-ecac1858d89a/acfddd09e4a80721a4155e3cdf8b96f1ed9a9b5372fa89ce779a58da79c18de2.json"
+    },
+    "fund-ecc4f3edfa16": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzY4OTA1OTk5Ng==&mid=2247497743&idx=1&sn=7f06daf6b58c97c91726fb12f651c948&scene=21#wechat_redirect",
+      "title": "“噢啦太阳蛋计划” 受助方征集",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "212eef3b770ea78a555e26fe7f7322fdbb7b28e65ff395363f3b0be7acac0566",
+      "documentHash": "b07e469766d9d736ddae02509052d00bcd6f9a54ed5536175f4373e6584d2f11",
+      "file": "fund-ecc4f3edfa16/b07e469766d9d736ddae02509052d00bcd6f9a54ed5536175f4373e6584d2f11.json"
+    },
+    "fund-ed5616c9232e": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3NTA3OTkyNw==&mid=2648915619&idx=1&sn=fba153756e1852060e77144f3fd47054&scene=21#wechat_redirect",
+      "title": "防跌包项目合作伙伴招募",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "1607ffc594cc07e6d76b841828300ce08b603dac417505a6cd57297d9d355406",
+      "documentHash": "3612e12e7c3304b690666ae1bd54d1bee3e037add9805280c7014416659d0b8d",
+      "file": "fund-ed5616c9232e/3612e12e7c3304b690666ae1bd54d1bee3e037add9805280c7014416659d0b8d.json"
+    },
+    "fund-ef861bb68122": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzYyMjkyNTk5Nw==&mid=2247512831&idx=1&sn=74e758d3ff7d584d06c2b59ba3f936cb&scene=21#wechat_redirect",
+      "title": "闪电资助计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "dcbe1ef26ed8d79b2bda6099417d7f93fe64e071ef9a4408cd1f08ece33e696b",
+      "documentHash": "b265d5d6ae8735dd0fe1f1a2378f6c6947126d2eeb2e37ae0ff1ba517cc297ec",
+      "file": "fund-ef861bb68122/b265d5d6ae8735dd0fe1f1a2378f6c6947126d2eeb2e37ae0ff1ba517cc297ec.json"
+    },
+    "fund-f32d61590ab4": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzcwMDI2NjA4Nw==&mid=2247483660&idx=1&sn=bc3fa058edd57a672a3a27f537882a4b&scene=21#wechat_redirect",
+      "title": "浙江钱塘江金融港湾公益基金会2026年拟资助公益项目（第二期）开始申报",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "ef91a82073ffc705ed89a503acf99c27b49db2ea6403db92af13aeb8d26154e3",
+      "documentHash": "57506efefde58ede2c2f544a99e6fa3f719a3aca7541bb61cb2f7eadb3108486",
+      "file": "fund-f32d61590ab4/57506efefde58ede2c2f544a99e6fa3f719a3aca7541bb61cb2f7eadb3108486.json"
+    },
+    "fund-f3333730815c": {
+      "sourceName": "中国发展简报·公益资助",
+      "sourceUrl": "https://www.chinadevelopmentbrief.org.cn/abutment/detail/16385.html",
+      "title": "资助启事 | 公益1+1之溢彩星光社区老人关爱服务项目三期资助启事",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b29aa3a6fe2ac7494089607649bbc4e619c241a25c380d55420877254447bd50",
+      "documentHash": "01bb261ea51b7a79910e8b92b7b4b21e2a403f81220a4582b57dd762910cf97f",
+      "file": "fund-f3333730815c/01bb261ea51b7a79910e8b92b7b4b21e2a403f81220a4582b57dd762910cf97f.json"
+    },
+    "fund-faa8403040eb": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg2MDc1OTQxMQ==&mid=2247491534&idx=1&sn=96029b0a7c2f137e617a904e22d032b6&scene=21#wechat_redirect",
+      "title": "“未来星社区”资助计划",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "113632f8f192d22150e11542b52ad0889a01c1a7017666bd88b3b46ef4898827",
+      "documentHash": "2dcc5db1f2d6c6d5ca849153bb62d8767b4afb63789e8c6570e19441e183b230",
+      "file": "fund-faa8403040eb/2dcc5db1f2d6c6d5ca849153bb62d8767b4afb63789e8c6570e19441e183b230.json"
+    },
+    "fund-fc50e1607703": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYxNDgwNg==&mid=2247493980&idx=1&sn=4fbab9674a3e203d24834032370dec9d&scene=21&click_id=2088585940#wechat_redirect",
+      "title": "南山区妇联第十二届“簕杜鹃·幸福荟”妇儿公益民生服务项目征集启动",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "0addc77d88f2a2bd21a10fe1eb14dca053586a63d25d740f0470e82075765247",
+      "documentHash": "ee5ac0e3e3e716250ecdb8af52b33f4aa8ea11adc156319e68383ec540e49209",
+      "file": "fund-fc50e1607703/ee5ac0e3e3e716250ecdb8af52b33f4aa8ea11adc156319e68383ec540e49209.json"
+    },
+    "fund-ff0d376e5bd3": {
+      "sourceName": "中国慈展会·资源直通车",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI0MDYwNjg0Nw==&mid=2247499232&idx=1&sn=ac3e27ad7d047978ad79a387ef16db65&scene=21#wechat_redirect",
+      "title": "“致敬行善者”项目征集合作伙伴",
+      "fetchedAt": "2026-11-07T12:12:58.229Z",
+      "modelInputHash": "b5f8df8872f8f12b6ca9b63e6dfc519cfb0ac0ba6c8c81c5a3e8993e679fc6fe",
+      "documentHash": "4710a48bdca4bce53c90759d8a44064362936e1bcd2605d707faba2f78a8dcbf",
+      "file": "fund-ff0d376e5bd3/4710a48bdca4bce53c90759d8a44064362936e1bcd2605d707faba2f78a8dcbf.json"
+    }
+  }
+}

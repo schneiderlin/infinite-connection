@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-2e152b6c1e42",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzYzNzIxODA2Nw==&mid=2247483805&idx=1&sn=3c25b215a1b2d6d6d39401b8bbf9ce8a&scene=21&click_id=97#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzYzNzIxODA2Nw==&mid=2247483805&idx=1&sn=3c25b215a1b2d6d6d39401b8bbf9ce8a&scene=21&click_id=97#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "阅见希望项目合作伙伴招募",
+  "organizationHint": "千禾社区公益基金会与浙江省启信公益发展中心",
+  "addressHint": "",
+  "publishedDateHint": "2026-02-13",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 由千禾社区公益基金会与浙江省启信公益发展中心共同发起，通过儿童直接服务、家庭支持与社区联合行动为流动儿童营造友好的社区教育环境，探索阅读支持儿童及成人社会情感发展（简称，SEL）的实践可能。 申报对象： 本培训计划仅面向广东省内的伙伴开放招募 申报要求： 认同绘本、阅读与对话对儿童成长的价值； 关心儿童的情绪经验与生活处境，而不仅是学习结果； 有一定绘本阅读或儿童活动经验，并愿意继续学习； 愿意在流动儿童社区中长期投入，而非一次性参与； 在流动儿童社区有可以实践的人群及场地（室内外皆可，课程实践对象：5-12岁小学生）； 承诺在项目周期内（2026年3-10月）完成 至少 8 次儿童读书会实践。 申报支持： 儿童社会情感学习 × 深度阅读的系统培训； 可直接实践的课程手册、教案与教学参考资料； 课程实践所需的图书支持（约300元）； 项目团队与往期伙伴提供的实践督导与反馈支持； 稳定的共学实践社群，有机会申请在地成人培训及亲子活动； 截止时间： 广州场：即日起至2026年3月1日 24:00 深圳场：即日起至2026年3月7日 24:00",
+  "contentHash": "33c94d6cf004b6d085f94f9c06292e102b3ee242e7abf0546181163c2035564c",
+  "modelInputHash": "6eec883b2f9e0519ba1e27fdc0f2b0a74f6ff110a29e8ca23126aa07213fa67a",
+  "documentHash": "48f9283a66e1511e88dbad15674ea3c5637c47c8cacc3db031c725247fe00804",
+  "adapterVersion": 1
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-775e751cd768",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUzNTA3NjM1Ng==&mid=2247518623&idx=1&sn=8de7e832eac05c14434b7106f2ee754b&scene=21&click_id=800395000#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzUzNTA3NjM1Ng==&mid=2247518623&idx=1&sn=8de7e832eac05c14434b7106f2ee754b&scene=21&click_id=800395000#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "“启智星”计划正式启动",
+  "organizationHint": "快手公益基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-06-18",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 为贯彻落实党的二十大报告关于“推进教育数字化”的决策部署，落实教育部办公厅印发的《关于加强中小学人工智能教育的通知》要求，快手公益基金会正式启动“启智星”计划AI赋能教育创新案例征集活动，面向全国一线教师及基层教育工作者，征集将人工智能技术应用于教育教学实践的优秀案例，挖掘和扶持一批敢于尝试、勇于创新的骨干教师，提供更多资源支持。 本次“启智星”计划AI赋能教育创新案例征集活动，将以教育创新为方向，与全国基层教育从业者共同探索未来教育的更多可能。 申报要求： 全国中小学教育工作者（义务教育阶段），在中国大陆地区合法登记注册的社会组织、基金会、社会服务机构等。 案例要求： 案例方向为结合AI开展的特色活动案例，包括AI跨学科项目式学习、素养导向教学、乡村美育与素养补弱、AI融合文化理解、情感教育校本课程等。 案例需包含实践背景、实践过程、实践效果、反思总结、个人成长故事等内容，字数不少于1500字，可搭配图片、视频等辅助材料（如AI工具使用截图、课堂实践照片等）。 截止时间：2026年8月31日",
+  "contentHash": "8fc31254f43c424679ac1d4b2bb424462ae969cf2751826cd2d79cade2425c41",
+  "modelInputHash": "2d6874e15323d7fa766e477282e7d57837b2ab0b23c99641a37fd9afc71ff650",
+  "documentHash": "a0693a4ff04d764539ddb614a491ce880648ef19f06909ae701335bacc07eaf2",
+  "adapterVersion": 1
+}

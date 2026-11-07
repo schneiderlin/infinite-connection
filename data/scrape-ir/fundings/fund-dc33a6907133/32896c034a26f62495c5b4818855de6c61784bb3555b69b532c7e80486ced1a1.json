@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-dc33a6907133",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzE5MTU4ODc5Nw==&mid=2247508706&idx=1&sn=1f938a30cbc32083fbc8d20de9c4ac57&scene=21&click_id=952391068#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzE5MTU4ODc5Nw==&mid=2247508706&idx=1&sn=1f938a30cbc32083fbc8d20de9c4ac57&scene=21&click_id=952391068#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026年益盒项目征集开启",
+  "organizationHint": "中国慈展会",
+  "addressHint": "",
+  "publishedDateHint": "2026-09-11",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 作为“有效公益”研究和咨询机构，益盒致力于通过严谨的研究和项目评估，帮助捐赠者（企业、基金会及个人）发现有证据支持、能够改善和挽救更多生命的公益项目，并为ta们提供捐赠决策建议。 今年，益盒与合作的捐赠伙伴一起，继续关注健康、教育两大领域，希望以“公开项目征集”的方式，发现一批值得支持的公益项目。 申报条件： 在中国境内合法注册的公益组织、社会企业、高校/研究团队等。 资助内容： 首轮资助：健康与教育合计3个项目，每项目10-30万元（具体金额将视评估结果、资金需求、捐赠人意愿确定）。 长期机会：对于执行效果良好、有进一步扩展空间的项目，益盒将继续向合作的企业、基金会及个人捐赠人推荐，帮助项目获得后续更大规模、更长期的资金支持。 截止时间：2026年9月29日（周二）24:00前",
+  "contentHash": "ceb0b48c6c29594c9df4441829840aa29767142e7934f1444000bea5da4b4503",
+  "modelInputHash": "1aeebed6c98c98cacce62af22ee2f559d151ede51dee6ebc630d8c06f6ab52a0",
+  "documentHash": "32896c034a26f62495c5b4818855de6c61784bb3555b69b532c7e80486ced1a1",
+  "adapterVersion": 1
+}

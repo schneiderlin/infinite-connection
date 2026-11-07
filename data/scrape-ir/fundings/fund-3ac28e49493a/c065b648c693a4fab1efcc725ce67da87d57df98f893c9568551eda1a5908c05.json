@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-3ac28e49493a",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NTM3MjM5Mg==&mid=2652402776&idx=2&sn=403ffd845d4eac90dbdd3a27d5bc9fdc&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NTM3MjM5Mg==&mid=2652402776&idx=2&sn=403ffd845d4eac90dbdd3a27d5bc9fdc&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026北京社区公益季启动合作伙伴招募",
+  "organizationHint": "北京乐予慈善基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-06-18",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 北京乐予慈善基金会正式启动「乐社区 爱满京城」2026北京社区公益季，并面向全社会公开招募合作伙伴。本次活动将于6月27日至10月18日在北京全域开展，计划联动百余家社会组织、街道社区、企业及志愿团队，用100天时间集中回应社区需求多样、资源“最后一米”难打通、善意缺乏行动载体等现实问题，把零散的社区善意变成系统化、专业化、可持续的公益服务。 申报对象： 本次活动面向所有愿意参与社区公益的组织、团体及个人开放，包括但不限于： 社会组织：公募组织、非公募组织、社会团体、社会服务机构（如社工机构、康复机构、养老机构等）； 社区及基层：街道办事处、社区居委会、社区社会组织、志愿服务团队； 高校：高校社团、校友会； 企业：企业、商户、商场； 达人：平台达人、网红博主、本地生活KOL、社区能人； 其他所有热心公益的爱心人士和团体。 申报支持： 获得资助金：完成共建包即可获得对应资助金，支持机构运营与项目执行； 获得培训与工具：免费参加“强基计划”培训，获取益码通、海报模板、SOP手册等全套工具及物料； 获得传播曝光：乐予基金会配合开展传播推广，同时将优秀素材推荐给媒体进行宣传报道； 共建首都社区公益网络：与上百家机构联动，扩大社会影响力。 截止时间：2026年6月27日",
+  "contentHash": "0fa969b3f068d99b1a8fd165f3012704c489891474fa1cab838085ac518d567e",
+  "modelInputHash": "8b3e65ac90a20c50c42c980cfd053fb47c8e7e0b27b08c5b65fc929f6d87b4df",
+  "documentHash": "c065b648c693a4fab1efcc725ce67da87d57df98f893c9568551eda1a5908c05",
+  "adapterVersion": 1
+}

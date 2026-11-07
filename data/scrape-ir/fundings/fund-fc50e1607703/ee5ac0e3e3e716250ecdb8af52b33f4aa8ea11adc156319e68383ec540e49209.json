@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-fc50e1607703",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYxNDgwNg==&mid=2247493980&idx=1&sn=4fbab9674a3e203d24834032370dec9d&scene=21&click_id=2088585940#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYxNDgwNg==&mid=2247493980&idx=1&sn=4fbab9674a3e203d24834032370dec9d&scene=21&click_id=2088585940#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "南山区妇联第十二届“簕杜鹃·幸福荟”妇儿公益民生服务项目征集启动",
+  "organizationHint": "腾讯基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-09-24",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 南山区妇联“簕杜鹃·幸福荟”品牌深耕妇女儿童及家庭公益事业，精准对接妇女、儿童、家庭全生命周期发展需求，打造了具有南山特色的妇儿公益服务品牌。自开展以来，一个个公益项目在南山落地生根、一场场惠民服务走进妇儿家庭，累计支持105个公益项目落地、开展各类主题活动超1500场、累计惠及妇儿群众约8万人次。 申报要求： 在民政部门依法登记的基金会、社会团体、民办非企业等单位，且近三年年检合格，社会信誉良好。 在工商部门依法登记的公司，无违法犯罪记录。 申报机构只能独立申请，不可联合申报。 申报类别： 服务区域： 深圳市南山区 截止时间：2026年10月15日",
+  "contentHash": "0b0b92609cd9f6033aecaeaf3ac94b52af3aed66fcbd0bf29a3a78bf4848c974",
+  "modelInputHash": "0addc77d88f2a2bd21a10fe1eb14dca053586a63d25d740f0470e82075765247",
+  "documentHash": "ee5ac0e3e3e716250ecdb8af52b33f4aa8ea11adc156319e68383ec540e49209",
+  "adapterVersion": 1
+}

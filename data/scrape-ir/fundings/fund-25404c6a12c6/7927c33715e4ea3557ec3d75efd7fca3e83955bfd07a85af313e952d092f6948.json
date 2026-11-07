@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-25404c6a12c6",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530386&idx=2&sn=bfa57a8b15d30024fb205d4cfca0c4a0&scene=21&click_id=76#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=MzIxNTAxNjEwMA==&mid=2247530386&idx=2&sn=bfa57a8b15d30024fb205d4cfca0c4a0&scene=21&click_id=76#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "2026年粤港澳大湾区青少年公益行动项目征集",
+  "organizationHint": "中国宋庆龄基金会联合广东省宋庆龄基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-02-13",
+  "deadlineHint": "",
+  "bodyText": "项目简介： 为进一步贯彻《粤港澳大湾区发展规划纲要》，加强粤港澳大湾区青少公益交流合作，促进粤港澳青少年交往交流交融，中国宋庆龄基金会联合广东省宋庆龄基金会、香港宋庆龄基金、澳门基金会共同主办2026年粤港澳大湾区青少年公益行动（简称公益行动）。 本届公益行动以“公益促进交往交流交融”为宗旨，以“爱融湾区 智绘未来”为主题，贯穿全年开展各类项目，为服务青少年成长成才搭建广阔舞台。 申报对象： 已开展或计划在2026年开展与粤港澳、青少年相关活动的机构 申报支持： 参与国家级活动提升影响力并得到对项目的书面认可。粤港澳大湾区青少年公益行动活动已被列入国家发改委粤港澳大湾区建设领导小组办公室重点工作安排。 优秀项目会有机会邀请中国宋庆龄基金会领导作为嘉宾出席项目并进行宣传。 获得荣誉的同时可以促进项目的可持续发展，与大湾区各地公益伙伴交流互动。 对具有代表性的配套项目进行评审，设立组织奖、优秀公益项目奖和特色项目奖等含活动资金支持，并颁发荣誉证书。 截止时间：2026年2月28日",
+  "contentHash": "9665d4eb1f204151cd53bc6db523e9064fcfbc34327bfd0a96cba8551368385c",
+  "modelInputHash": "5a322dd7577c8ded6de531d421c4bac9f33f6cb1436c5ace06c4de45f9d8426e",
+  "documentHash": "7927c33715e4ea3557ec3d75efd7fca3e83955bfd07a85af313e952d092f6948",
+  "adapterVersion": 1
+}

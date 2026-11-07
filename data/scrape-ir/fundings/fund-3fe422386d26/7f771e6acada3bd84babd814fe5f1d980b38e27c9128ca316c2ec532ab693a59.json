@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-3fe422386d26",
+  "sourceName": "中国慈展会·资源直通车",
+  "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494889&idx=1&sn=5982118ddac1c73e245dd12e611d511b&scene=21#wechat_redirect",
+  "canonicalUrl": "https://mp.weixin.qq.com/s?__biz=Mzg5OTA3MjU2MQ==&mid=2247494889&idx=1&sn=5982118ddac1c73e245dd12e611d511b&scene=21#wechat_redirect",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "质兰基金会2026年第三季度项目征集正式启动",
+  "organizationHint": "质兰面向",
+  "addressHint": "",
+  "publishedDateHint": "2026-07-03",
+  "deadlineHint": "",
+  "bodyText": "笃行计划项目 项目简介： 【笃行计划项目】是指整体实施周期较长，有短期、中期及长期目标，为应对复杂的根源性问题而采取的一年以上的持续行动。 紧急项目 项目简介： 【紧急项目】是指时间紧迫、需求紧急且执行周期不超过6个月，为应对突发性威胁或破坏而紧急采取的保护行动。例如：当某濒危物种的主要栖息地有可能因水电开发而被淹没，急需在工程启动之前立即开展野外种群现状调查和工程生态影响的评估。 定向项目 项目简介： 【定向项目】是指具备行业高度、前瞻性、创新性和推广性的生物多样性保护和可持续发展研究与实践工作。由质兰面向资助顾问、执行顾问、年度评估专家及支持性顾问定向邀约，可由多家机构/单位联合执行，资助金额根据项目实际需求来定。 截止时间：2026年7月31日18:00",
+  "contentHash": "5f00303a8cadf5b2a4505cd0ed462a2914aa9efd076a39d534dc056a741f31cd",
+  "modelInputHash": "914ff1acd631cd994447878a40ab05b2461587e304cebc3f26f5a9eef1d35462",
+  "documentHash": "7f771e6acada3bd84babd814fe5f1d980b38e27c9128ca316c2ec532ab693a59",
+  "adapterVersion": 1
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dataset": "fundings",
+  "sourceKey": "fund-7020479b103a",
+  "sourceName": "中国红十字基金会",
+  "sourceUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20278",
+  "canonicalUrl": "https://www.crcf.org.cn/web/article.thtml?classFlag=gggs_xinwenzhongxin&cid=20278",
+  "fetchedAt": "2026-11-07T12:12:58.229Z",
+  "title": "\"愈见希望—溃疡性结肠炎患者援助项目\" 关于中秋节及国庆节期间服务安排的公告",
+  "organizationHint": "中国红十字基金会",
+  "addressHint": "",
+  "publishedDateHint": "2026-09-21",
+  "deadlineHint": "",
+  "bodyText": "中秋、国庆假期将至，现将项目在双节期间的服务安排公告如下：一、中秋节（9月25日至27日）、国庆节（10月1日至7日）期间，项目组暂停资料审核、药品发放及热线咨询服务，节后恢复正常。二、请有资料提交需求或存在断药风险的患者，务必于假期开始前提交申请材料并完成领药。三、如有疑问，请于非节假日期间拨打项目热线：400-168-2169。四、工作时间：9:00-12:00,13:00-17:30（周一至周五为工作时间，法定节假日除外）特此公告。愈见希望 - 溃疡性结肠炎患者援助项目组2026年9月21日",
+  "contentHash": "c66c45e93d0e3b29328db2ec82c4302644eeb5e13c11ccfb4b807b2dcb5f0b12",
+  "modelInputHash": "4772ca160fa227d35e3eba98c7990996c22b1252867937e1aa807b5e8049ec3c",
+  "documentHash": "f3db72f138219fa865949afb35dbd60df5fc143a680ea56ba2ebc46b87f3da7b",
+  "adapterVersion": 1
+}
