@@ -23,6 +23,16 @@ const fieldTagClass: Record<string, string> = {
 
 const avatarTones = ["av-green", "av-blue", "av-orange", "av-purple", "av-rose", "av-teal"];
 
+const legacyFieldNames: Record<string, string> = {
+  教育助学: "教育与能力建设",
+  养老服务: "长者与残障",
+};
+
+function normalizedFields(item: UpdateItem): string[] {
+  const fields = item.fields?.length ? item.fields : [item.field];
+  return [...new Set(fields.map((field) => legacyFieldNames[field] ?? field))];
+}
+
 function avatarTone(org: string): string {
   let h = 0;
   for (const ch of org) h = (h * 31 + ch.charCodeAt(0)) % 997;
@@ -57,33 +67,27 @@ export function UpdatesBrowser({
     }));
 
   const [field, setField] = useState("全部");
-  const [region, setRegion] = useState("全部");
+  const [region, setRegion] = useState("全国");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("new");
   const [poster, setPoster] = useState<"全部" | "机构" | "个人">("全部");
 
-  // 动态生成筛选词
   const fieldOptions = useMemo(() => {
-    const set = new Set<string>(["全部"]);
-    items.forEach(item => {
-      if (item.fields && item.fields.length > 0) item.fields.forEach(f => set.add(f));
-      else if (item.field) set.add(item.field);
-    });
-    return Array.from(set);
-  }, [items]);
+    if (baseFieldOptions.length > 0) return [...new Set(baseFieldOptions)];
+    return ["全部", ...new Set(items.flatMap(normalizedFields))];
+  }, [baseFieldOptions, items]);
 
   const regionOptions = useMemo(() => {
-    const set = new Set<string>(["全部"]);
-    items.forEach(item => { if (item.region) set.add(item.region); });
-    return Array.from(set);
-  }, [items]);
+    if (baseRegionOptions.length > 0) return [...new Set(baseRegionOptions)];
+    return ["全国", ...new Set(items.map((item) => item.region).filter((itemRegion) => itemRegion !== "全国"))];
+  }, [baseRegionOptions, items]);
 
   const filtered = useMemo(() => {
     const q = search.trim();
     let list = items.filter(
       (u) =>
-        (field === "全部" || (u.fields?.length ? u.fields.includes(field) : u.field === field)) &&
-        (region === "全部" || u.region === region) &&
+        (field === "全部" || normalizedFields(u).includes(field)) &&
+        (region === "全国" || u.region === region) &&
         (poster === "全部" || u.posterType === poster) &&
         (!q ||
           u.title.includes(q) ||
@@ -105,7 +109,7 @@ export function UpdatesBrowser({
 
   const resetFilters = () => {
     setField("全部");
-    setRegion("全部");
+    setRegion("全国");
     setSearch("");
     setPoster("全部");
   };
@@ -161,7 +165,7 @@ export function UpdatesBrowser({
             {filtered.map((u) => (
               <article key={u.id} className="pc-card feed-card">
                 <div className="card-head">
-                  {(u.fields?.length ? u.fields.slice(0, 2) : [u.field]).map((fieldTag, index) => (
+                  {normalizedFields(u).slice(0, 2).map((fieldTag, index) => (
                     <span key={`${fieldTag}-${index}`} className={`tag ${fieldTagClass[fieldTag] ?? "tag-green"}`}>
                       {fieldTag}
                     </span>

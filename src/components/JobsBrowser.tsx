@@ -2,9 +2,10 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { cityDisplayName, getCities, provinceNames } from "@/lib/cn-divisions";
 import { filterGroups } from "@/lib/platform-config";
 import type { JobItem } from "@/lib/platform-types";
-import { TypeTabs, FilterRow, SearchInput, EmptyState } from "./platform-ui";
+import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
 
 function dedupeByTitle<T extends { title: string }>(items: T[]): T[] {
   const seen = new Set<string>();
@@ -17,10 +18,6 @@ function dedupeByTitle<T extends { title: string }>(items: T[]): T[] {
   });
 }
 
-type JobCategory = NonNullable<JobItem["category"]>;
-
-const jobTabs = [{ label: "人员招聘" }, { label: "志愿者招募" }];
-
 const kindTagClass: Record<string, string> = {
   全职: "tag-green",
   兼职: "tag-orange",
@@ -28,33 +25,28 @@ const kindTagClass: Record<string, string> = {
   志愿者: "tag-blue",
 };
 
-function jobCategory(job: JobItem): JobCategory {
-  return job.category ?? (job.kind === "志愿者" ? "志愿者招募" : "人员招聘");
-}
-
 function regionMatch(region: string, location: string): boolean {
   if (region === "全部") return true;
   if (region === "线上") return location.includes("线上") || location.includes("远程");
-  if (region === "其他") return !/北京|上海|广州|深圳|成都|苏州|杭州|武汉|西安|重庆|厦门|南京|线上|远程/.test(location);
   return location.includes(region) || location.includes(region.replace(/市$/, ""));
 }
 
-// 志愿者招募 tab 沿用旧的地域匹配
-function regionMatchVolunteer(region: string, location: string): boolean {
-  if (region === "全部" || region === "全国") return true;
-  if (region === "线上") return location.includes("线上") || location.includes("远程");
-  const shortRegion = region.replace(/特别行政区|维吾尔自治区|壮族自治区|回族自治区|自治区|省|市$/, "");
-  return location.includes(region) || location.includes(shortRegion);
+function kindMatch(kind: string, jobKind: string): boolean {
+  if (kind === "全部") return true;
+  if (kind === "志愿服务") return jobKind === "志愿者";
+  return jobKind === kind;
 }
 
 export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
   const items = useMemo(() => dedupeByTitle(jobs), [jobs]);
-  const [category, setCategory] = useState<JobCategory>("人员招聘");
   const [kind, setKind] = useState("全部");
-  const [role, setRole] = useState("全部");
-  const [servicePeriod, setServicePeriod] = useState("全部");
   const [region, setRegion] = useState("全部");
   const [search, setSearch] = useState("");
+  const [selectedProvince, setSelectedProvince] = useState("");
+  const [regionPickerOpen, setRegionPickerOpen] = useState(false);
+  const [regionMenuOpen, setRegionMenuOpen] = useState<"province" | "city" | null>(null);
+  const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
+  const [moreFilterMenuOpen, setMoreFilterMenuOpen] = useState<"education" | "orgType" | "recency" | null>(null);
   // 新版岗位分类筛选（2026-11 标准）
   const [group, setGroup] = useState("全部");
   const [subCategory, setSubCategory] = useState("全部");
@@ -93,28 +85,27 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
   const filtered = items
     .filter(
       (job) =>
-        jobCategory(job) === category &&
-        (category !== "人员招聘" || kind === "全部" || job.kind === kind) &&
-        (category !== "人员招聘" || group === "全部" || job.jobGroup === group) &&
-        (category !== "人员招聘" || subCategory === "全部" || job.subCategory === subCategory) &&
-        (category !== "人员招聘" || level === "全部" || job.level === level) &&
-        (category !== "人员招聘" || education === "全部" || job.education === education) &&
-        (category !== "人员招聘" || orgType === "全部" || job.orgType === orgType) &&
-        (category !== "人员招聘" || recencyMatch(job.publishedDays)) &&
-        (category !== "人员招聘" || role === "全部" || job.role === role) &&
-        (category !== "志愿者招募" || servicePeriod === "全部" || job.servicePeriod === servicePeriod) &&
-        (category !== "人员招聘" || regionMatch(region, job.location)) &&
-        (category !== "志愿者招募" || regionMatchVolunteer(region, job.location)) &&
+        kindMatch(kind, job.kind) &&
+        (group === "全部" || job.jobGroup === group) &&
+        (subCategory === "全部" || job.subCategory === subCategory) &&
+        (level === "全部" || job.level === level) &&
+        (education === "全部" || job.education === education) &&
+        (orgType === "全部" || job.orgType === orgType) &&
+        recencyMatch(job.publishedDays) &&
+        regionMatch(region, job.location) &&
         (!q || job.title.includes(q) || job.org.includes(q) || job.summary.includes(q)),
     )
     .sort((a, b) => a.publishedDays - b.publishedDays);
 
-  const resetFilters = (nextCategory = category) => {
+  const resetFilters = () => {
     setKind("全部");
-    setRole("全部");
-    setServicePeriod("全部");
     setRegion("全部");
     setSearch("");
+    setSelectedProvince("");
+    setRegionPickerOpen(false);
+    setRegionMenuOpen(null);
+    setMoreFiltersOpen(false);
+    setMoreFilterMenuOpen(null);
     setGroup("全部");
     setSubCategory("全部");
     setLevel("全部");
@@ -123,11 +114,15 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
     setRecency("全部");
   };
 
-  const changeCategory = (next: string) => {
-    const nextCategory = next as JobCategory;
-    setCategory(nextCategory);
-    resetFilters(nextCategory);
-  };
+  const quickRegions = filterGroups.jobRegions.filter((option) => option !== "其他");
+  const customRegionSelected = region !== "全部" && !quickRegions.includes(region);
+  const moreFiltersActive = education !== "全部" || orgType !== "全部" || recency !== "全部";
+  const cityOptions = selectedProvince ? getCities(selectedProvince) : [];
+  const moreFilterItems = [
+    { key: "education" as const, label: "学历", value: education, options: filterGroups.jobEducations, onChange: setEducation },
+    { key: "orgType" as const, label: "机构性质", value: orgType, options: filterGroups.jobOrgTypes, onChange: setOrgType },
+    { key: "recency" as const, label: "发布时效", value: recency, options: filterGroups.jobRecency, onChange: setRecency },
+  ];
 
   return (
     <div className="module-body">
@@ -144,73 +139,206 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
           </Link>
         </div>
 
-        <TypeTabs tabs={jobTabs} active={category} onChange={changeCategory} />
+        <div className="jobs-search-bar">
+          <SearchInput value={search} onChange={setSearch} placeholder="搜索岗位关键词…" />
+        </div>
 
         <div className="filter-panel">
-          {category === "人员招聘" ? (
-            <>
-              <div className="pc-card filter-box">
-                <FilterRow label="工作性质" options={filterGroups.jobKinds} active={kind} onChange={setKind} />
-                <FilterRow label="城市" options={filterGroups.jobRegions} active={region} onChange={setRegion} />
-                <FilterRow
-                  label="职业分类"
-                  options={filterGroups.jobGroups}
-                  active={group}
-                  onChange={(g) => {
-                    setGroup(g);
-                    setSubCategory("全部");
-                  }}
-                />
-                {group !== "全部" && filterGroups.jobSubCategories[group] && (
-                  <FilterRow
-                    label="└ 子类"
-                    options={["全部", ...filterGroups.jobSubCategories[group]]}
-                    active={subCategory}
-                    onChange={setSubCategory}
-                  />
-                )}
-                <FilterRow label="经验/职级" options={filterGroups.jobLevels} active={level} onChange={setLevel} />
-                <FilterRow label="学历" options={filterGroups.jobEducations} active={education} onChange={setEducation} />
-                <FilterRow label="机构性质" options={filterGroups.jobOrgTypes} active={orgType} onChange={setOrgType} />
-                <FilterRow label="发布时效" options={filterGroups.jobRecency} active={recency} onChange={setRecency}>
-                  <SearchInput value={search} onChange={setSearch} placeholder="搜索岗位关键词…" />
-                </FilterRow>
+          <div className="pc-card filter-box jobs-filter-box">
+            <FilterRow label="工作性质" options={filterGroups.jobKinds} active={kind} onChange={setKind} />
+            <FilterRow
+              label="城市"
+              options={quickRegions}
+              active={region}
+              onChange={(nextRegion) => {
+                setRegion(nextRegion);
+                setRegionPickerOpen(false);
+                setRegionMenuOpen(null);
+              }}
+            >
+              <button
+                type="button"
+                className={`pill${regionPickerOpen || customRegionSelected ? " active" : ""}`}
+                aria-expanded={regionPickerOpen}
+                aria-controls="jobs-region-picker"
+                onClick={() => {
+                  setRegionPickerOpen((open) => !open);
+                  setRegionMenuOpen(null);
+                }}
+              >
+                其他
+              </button>
+            </FilterRow>
+            {regionPickerOpen && (
+              <div id="jobs-region-picker" className="jobs-region-picker">
+                <div className="jobs-region-field">
+                  <span>省份 / 地区</span>
+                  <button
+                    type="button"
+                    className="jobs-region-trigger"
+                    aria-expanded={regionMenuOpen === "province"}
+                    aria-controls="jobs-province-menu"
+                    onClick={() => setRegionMenuOpen((open) => open === "province" ? null : "province")}
+                  >
+                    <span className={selectedProvince ? "" : "placeholder"}>
+                      {selectedProvince || "请选择省份 / 地区"}
+                    </span>
+                    <b aria-hidden="true">⌄</b>
+                  </button>
+                  {regionMenuOpen === "province" && (
+                    <div id="jobs-province-menu" className="jobs-region-menu" role="listbox">
+                      {provinceNames.map((province) => (
+                        <button
+                          key={province}
+                          type="button"
+                          role="option"
+                          aria-selected={selectedProvince === province}
+                          className={selectedProvince === province ? "selected" : ""}
+                          onClick={() => {
+                            setSelectedProvince(province);
+                            setRegion(province);
+                            setRegionMenuOpen(null);
+                          }}
+                        >
+                          {province}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="jobs-region-field">
+                  <span>城市</span>
+                  <button
+                    type="button"
+                    className="jobs-region-trigger"
+                    disabled={!selectedProvince}
+                    aria-expanded={regionMenuOpen === "city"}
+                    aria-controls="jobs-city-menu"
+                    onClick={() => setRegionMenuOpen((open) => open === "city" ? null : "city")}
+                  >
+                    <span className={selectedProvince ? "" : "placeholder"}>
+                      {selectedProvince && cityOptions.includes(region)
+                        ? cityDisplayName(selectedProvince, region)
+                        : selectedProvince ? "全部城市" : "请先选择省份 / 地区"}
+                    </span>
+                    <b aria-hidden="true">⌄</b>
+                  </button>
+                  {regionMenuOpen === "city" && (
+                    <div id="jobs-city-menu" className="jobs-region-menu" role="listbox">
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={region === selectedProvince}
+                        className={region === selectedProvince ? "selected" : ""}
+                        onClick={() => {
+                          setRegion(selectedProvince);
+                          setRegionMenuOpen(null);
+                        }}
+                      >
+                        全部城市
+                      </button>
+                      {cityOptions.map((city) => (
+                        <button
+                          key={city}
+                          type="button"
+                          role="option"
+                          aria-selected={region === city}
+                          className={region === city ? "selected" : ""}
+                          onClick={() => {
+                            setRegion(city);
+                            setRegionMenuOpen(null);
+                          }}
+                        >
+                          {cityDisplayName(selectedProvince, city)}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </>
-          ) : (
-            <>
-              <div className="pc-card filter-box">
-                <FilterRow
-                  label="服务周期"
-                  options={filterGroups.volunteerPeriods}
-                  active={servicePeriod}
-                  onChange={setServicePeriod}
-                />
-              </div>
-              <div className="pc-card filter-box">
-                <FilterRow
-                  label="服务领域"
-                  options={filterGroups.volunteerFields}
-                  active={role}
-                  onChange={setRole}
-                />
-              </div>
-              <div className="pc-card filter-box">
-                <FilterRow
-                  label="地域"
-                  options={filterGroups.volunteerRegions}
-                  active={region}
-                  onChange={setRegion}
-                >
-                  <SearchInput value={search} onChange={setSearch} placeholder="搜索志愿服务关键词…" />
-                </FilterRow>
-              </div>
-            </>
-          )}
+            )}
+            <FilterRow
+              label="职业分类"
+              options={filterGroups.jobGroups}
+              active={group}
+              onChange={(g) => {
+                setGroup(g);
+                setSubCategory("全部");
+              }}
+            />
+            {group !== "全部" && filterGroups.jobSubCategories[group] && (
+              <FilterRow
+                label="└ 子类"
+                options={["全部", ...filterGroups.jobSubCategories[group]]}
+                active={subCategory}
+                onChange={setSubCategory}
+              />
+            )}
+            <FilterRow label="经验/职级" options={filterGroups.jobLevels} active={level} onChange={setLevel} />
+            <div className="jobs-more-toggle-row">
+              <button
+                type="button"
+                className={`jobs-more-toggle${moreFiltersActive ? " has-selection" : ""}`}
+                aria-expanded={moreFiltersOpen}
+                aria-controls="jobs-more-filters"
+                onClick={() => {
+                  setMoreFiltersOpen((open) => !open);
+                  setMoreFilterMenuOpen(null);
+                }}
+              >
+                其他
+                {moreFiltersActive && <span aria-label="已有筛选条件">●</span>}
+                <b aria-hidden="true">{moreFiltersOpen ? "−" : "+"}</b>
+              </button>
+              {moreFiltersOpen && (
+                <div id="jobs-more-filters" className="jobs-more-filters">
+                  {moreFilterItems.map((item) => (
+                    <div key={item.key} className="jobs-more-filter">
+                      <button
+                        type="button"
+                        className={`jobs-more-category${item.value !== "全部" ? " selected" : ""}`}
+                        aria-expanded={moreFilterMenuOpen === item.key}
+                        aria-controls={`jobs-more-${item.key}-menu`}
+                        onClick={() => setMoreFilterMenuOpen((open) => open === item.key ? null : item.key)}
+                      >
+                        {item.label}
+                        {item.value !== "全部" && <span aria-label={`当前选择：${item.value}`}>●</span>}
+                        <b aria-hidden="true">⌄</b>
+                      </button>
+                      {moreFilterMenuOpen === item.key && (
+                        <div
+                          id={`jobs-more-${item.key}-menu`}
+                          className="jobs-more-menu"
+                          role="listbox"
+                          aria-label={item.label}
+                        >
+                          {item.options.map((option) => (
+                            <button
+                              key={option}
+                              type="button"
+                              role="option"
+                              aria-selected={item.value === option}
+                              className={item.value === option ? "selected" : ""}
+                              onClick={() => {
+                                item.onChange(option);
+                                setMoreFilterMenuOpen(null);
+                              }}
+                            >
+                              {option}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
 
         {filtered.length === 0 ? (
-          <EmptyState onReset={() => resetFilters()} />
+          <EmptyState onReset={resetFilters} />
         ) : (
           <div className="card-grid-2">
             {filtered.map((j) => (

@@ -104,7 +104,7 @@ export default async function UpdatesPage() {
       <UpdatesBrowser
         items={items}
         fieldOptions={["全部", ...publicInterestFields]}
-        regionOptions={["全部", "全国", ...provinceNames]}
+        regionOptions={["全国", ...provinceNames]}
       />
       <PlatformFooter />
     </div>
