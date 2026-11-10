@@ -286,6 +286,58 @@
   gap: 10px;
 }
 
+.funding-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.funding-toolbar .filter-search {
+  width: min(100%, 460px);
+  margin-left: auto;
+}
+
+.updates-issue-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 4px 44px;
+  padding: 12px;
+  border: 1px solid var(--pc-border);
+  border-radius: 12px;
+  background: var(--pc-bg);
+}
+
+.updates-issue-menu legend {
+  padding: 0 5px;
+  color: var(--pc-text-3);
+  font-size: 12px;
+}
+
+.updates-issue-menu button {
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pc-text-2);
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+}
+
+.updates-issue-menu button:hover {
+  background: var(--pc-card);
+  color: var(--pc-text);
+}
+
+.updates-issue-menu button.selected {
+  background: var(--pc-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
 .jobs-search-bar {
   display: flex;
 }
@@ -1148,6 +1200,16 @@
     display: none;
   }
 
+  .funding-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .funding-toolbar .filter-search {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .card-grid-2,
   .card-grid-3 {
     grid-template-columns: minmax(0, 1fr);
@@ -1168,6 +1230,10 @@
   }
 
   .jobs-category-menu {
+    margin-left: 0;
+  }
+
+  .updates-issue-menu {
     margin-left: 0;
   }
 }

@@ -169,7 +169,10 @@ export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
   return (
     <div className="module-body">
       <div className="module-main">
-        <TypeTabs tabs={fundingTabs} active={tab} onChange={changeTab} />
+        <div className="funding-toolbar">
+          <TypeTabs tabs={fundingTabs} active={tab} onChange={changeTab} />
+          <SearchInput value={search} onChange={setSearch} placeholder="搜索资助项目、关键词…" />
+        </div>
 
         <div className="filter-panel">
           {tab !== "物资资助" && (
@@ -198,9 +201,7 @@ export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
             <FilterRow label="领域" options={filterGroups.fundingFields} active={field} onChange={setField} />
           </div>
           <div className="pc-card filter-box">
-            <FilterRow label="省份" options={filterGroups.fundingRegions} active={region} onChange={setRegion}>
-              <SearchInput value={search} onChange={setSearch} placeholder="搜索资助项目、关键词…" />
-            </FilterRow>
+            <FilterRow label="地域" options={filterGroups.fundingRegions} active={region} onChange={setRegion} />
           </div>
           <div className="pc-card filter-box">
             <FilterRow

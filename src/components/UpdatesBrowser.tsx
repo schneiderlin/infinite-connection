@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { publicInterestIssues } from "@/lib/platform-config";
 import type { UpdateItem } from "@/lib/platform-types";
 import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
 import { ContentActions } from "./ContentActions";
@@ -67,6 +68,8 @@ export function UpdatesBrowser({
     }));
 
   const [field, setField] = useState("全部");
+  const [issue, setIssue] = useState("全部");
+  const [issueMenuOpen, setIssueMenuOpen] = useState(false);
   const [region, setRegion] = useState("全国");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("new");
@@ -84,9 +87,10 @@ export function UpdatesBrowser({
 
   const filtered = useMemo(() => {
     const q = search.trim();
-    let list = items.filter(
+    const list = items.filter(
       (u) =>
         (field === "全部" || normalizedFields(u).includes(field)) &&
+        (issue === "全部" || normalizedFields(u).includes(issue)) &&
         (region === "全国" || u.region === region) &&
         (poster === "全部" || u.posterType === poster) &&
         (!q ||
@@ -105,10 +109,12 @@ export function UpdatesBrowser({
         - ((a.likes || 0) + (a.comments || 0) + (a.shares || 0) + (a.helps || 0)),
     }[sort as "rating" | "hot"];
     return [...list].sort(by);
-  }, [items, field, region, search, sort, poster]);
+  }, [items, field, issue, region, search, sort, poster]);
 
   const resetFilters = () => {
     setField("全部");
+    setIssue("全部");
+    setIssueMenuOpen(false);
     setRegion("全国");
     setSearch("");
     setPoster("全部");
@@ -119,14 +125,48 @@ export function UpdatesBrowser({
       <div className="module-main">
         <div className="filter-panel">
           <div className="pc-card filter-box">
-            <FilterRow label="领域" options={fieldOptions} active={field} onChange={setField} />
+            <FilterRow
+              label="领域"
+              options={fieldOptions}
+              active={field}
+              onChange={(nextField) => {
+                if (nextField === "全部") {
+                  setField(nextField);
+                  setIssue("全部");
+                  setIssueMenuOpen(false);
+                  return;
+                }
+                if (nextField === field) {
+                  setIssueMenuOpen((open) => !open);
+                  return;
+                }
+                setField(nextField);
+                setIssue("全部");
+                setIssueMenuOpen(true);
+              }}
+            />
+            {field !== "全部" && issueMenuOpen && publicInterestIssues[field] && (
+              <fieldset className="updates-issue-menu">
+                <legend>{field} · 二级议题</legend>
+                {["全部", ...publicInterestIssues[field]].map((option) => (
+                  <button
+                    key={option}
+                    type="button"
+                    className={issue === option ? "selected" : ""}
+                    onClick={() => setIssue(option)}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </fieldset>
+            )}
           </div>
           <div className="pc-card filter-box">
             <FilterRow label="地域" options={regionOptions} active={region} onChange={setRegion} />
           </div>
           <div className="pc-card filter-box">
             <div className="filter-row">
-              <span className="filter-label">筛选</span>
+              <span className="filter-label">其他</span>
               <div className="feed-tabs" aria-label="动态排序与发布者筛选">
                 {sorts.map((item) => (
                   <button
