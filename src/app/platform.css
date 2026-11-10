@@ -460,55 +460,70 @@
 
 .jobs-region-trigger:focus-visible,
 .jobs-region-menu button:focus-visible,
-.jobs-more-toggle:focus-visible {
+.jobs-category-option:has(input:focus-visible) {
   outline: 2px solid var(--pc-primary);
   outline-offset: 2px;
 }
 
-.jobs-more-toggle-row {
+.jobs-category-menu {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 0;
-  min-height: 54px;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 4px 44px;
+  padding: 12px;
+  border: 1px solid var(--pc-border);
+  border-radius: 12px;
+  background: var(--pc-bg);
 }
 
-.jobs-more-toggle {
-  flex-shrink: 0;
-  min-height: 34px;
-  display: inline-flex;
+.jobs-category-menu legend {
+  padding: 0 5px;
+  color: var(--pc-text-3);
+  font-size: 12px;
+}
+
+.jobs-category-option {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
-  border: 0;
-  border-radius: 999px;
-  background: #f1f2ec;
+  gap: 9px;
+  min-height: 36px;
+  padding: 7px 10px;
+  border-radius: 8px;
   color: var(--pc-text-2);
   cursor: pointer;
   font-size: 13px;
 }
 
-.jobs-more-toggle:hover,
-.jobs-more-toggle[aria-expanded="true"],
-.jobs-more-toggle.has-selection {
-  background: var(--pc-primary);
-  color: #fff;
+.jobs-category-option:hover {
+  background: var(--pc-card);
+  color: var(--pc-text);
 }
 
-.jobs-more-toggle span {
-  font-size: 8px;
-  line-height: 1;
+.jobs-category-option input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--pc-primary);
 }
 
-.jobs-more-toggle b {
+.jobs-category-option small {
+  margin-left: auto;
+  color: var(--pc-text-3);
   font-size: 12px;
-  font-weight: 500;
+}
+
+.jobs-category-select-all {
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--pc-border);
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
 }
 
 .jobs-more-filters {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  flex: 1;
   gap: 8px;
 }
 
@@ -1149,6 +1164,10 @@
 
   .jobs-region-picker {
     grid-template-columns: minmax(0, 1fr);
+    margin-left: 0;
+  }
+
+  .jobs-category-menu {
     margin-left: 0;
   }
 }

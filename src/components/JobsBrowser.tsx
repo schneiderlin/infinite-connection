@@ -37,6 +37,15 @@ function kindMatch(kind: string, jobKind: string): boolean {
   return jobKind === kind;
 }
 
+function createDefaultSubCategorySelection(): Record<string, string[]> {
+  return Object.fromEntries(
+    Object.entries(filterGroups.jobSubCategories).map(([jobGroup, categories]) => [
+      jobGroup,
+      [...categories],
+    ]),
+  );
+}
+
 export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
   const items = useMemo(() => dedupeByTitle(jobs), [jobs]);
   const [kind, setKind] = useState("全部");
@@ -45,11 +54,13 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
   const [selectedProvince, setSelectedProvince] = useState("");
   const [regionPickerOpen, setRegionPickerOpen] = useState(false);
   const [regionMenuOpen, setRegionMenuOpen] = useState<"province" | "city" | null>(null);
-  const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
   const [moreFilterMenuOpen, setMoreFilterMenuOpen] = useState<"education" | "orgType" | "recency" | null>(null);
   // 新版岗位分类筛选（2026-11 标准）
   const [group, setGroup] = useState("全部");
-  const [subCategory, setSubCategory] = useState("全部");
+  const [jobCategoryMenuOpen, setJobCategoryMenuOpen] = useState(false);
+  const [selectedSubCategories, setSelectedSubCategories] = useState<Record<string, string[]>>(
+    createDefaultSubCategorySelection,
+  );
   const [level, setLevel] = useState("全部");
   const [education, setEducation] = useState("全部");
   const [orgType, setOrgType] = useState("全部");
@@ -82,12 +93,19 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
     (recency === "超三月" && days > 90);
 
   const q = search.trim();
+  const activeSubCategories = group === "全部" ? [] : selectedSubCategories[group] ?? [];
+  const allSubCategoriesSelected = group !== "全部" &&
+    activeSubCategories.length === filterGroups.jobSubCategories[group]?.length;
   const filtered = items
     .filter(
       (job) =>
         kindMatch(kind, job.kind) &&
-        (group === "全部" || job.jobGroup === group) &&
-        (subCategory === "全部" || job.subCategory === subCategory) &&
+        (group === "全部" || (
+          job.jobGroup === group &&
+          (allSubCategoriesSelected || (
+            job.subCategory !== undefined && activeSubCategories.includes(job.subCategory)
+          ))
+        )) &&
         (level === "全部" || job.level === level) &&
         (education === "全部" || job.education === education) &&
         (orgType === "全部" || job.orgType === orgType) &&
@@ -104,10 +122,10 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
     setSelectedProvince("");
     setRegionPickerOpen(false);
     setRegionMenuOpen(null);
-    setMoreFiltersOpen(false);
     setMoreFilterMenuOpen(null);
     setGroup("全部");
-    setSubCategory("全部");
+    setJobCategoryMenuOpen(false);
+    setSelectedSubCategories(createDefaultSubCategorySelection());
     setLevel("全部");
     setEducation("全部");
     setOrgType("全部");
@@ -116,7 +134,6 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
 
   const quickRegions = filterGroups.jobRegions.filter((option) => option !== "其他");
   const customRegionSelected = region !== "全部" && !quickRegions.includes(region);
-  const moreFiltersActive = education !== "全部" || orgType !== "全部" || recency !== "全部";
   const cityOptions = selectedProvince ? getCities(selectedProvince) : [];
   const moreFilterItems = [
     { key: "education" as const, label: "学历", value: education, options: filterGroups.jobEducations, onChange: setEducation },
@@ -261,78 +278,107 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
               label="职业分类"
               options={filterGroups.jobGroups}
               active={group}
-              onChange={(g) => {
-                setGroup(g);
-                setSubCategory("全部");
+              onChange={(nextGroup) => {
+                if (nextGroup === "全部") {
+                  setGroup(nextGroup);
+                  setJobCategoryMenuOpen(false);
+                  return;
+                }
+
+                if (nextGroup === group) {
+                  setJobCategoryMenuOpen((open) => !open);
+                  return;
+                }
+
+                setGroup(nextGroup);
+                setJobCategoryMenuOpen(true);
               }}
             />
-            {group !== "全部" && filterGroups.jobSubCategories[group] && (
-              <FilterRow
-                label="└ 子类"
-                options={["全部", ...filterGroups.jobSubCategories[group]]}
-                active={subCategory}
-                onChange={setSubCategory}
-              />
+            {group !== "全部" && jobCategoryMenuOpen && filterGroups.jobSubCategories[group] && (
+              <fieldset className="jobs-category-menu">
+                <legend>{group} · 二级分类</legend>
+                <label className="jobs-category-option jobs-category-select-all">
+                  <input
+                    type="checkbox"
+                    checked={allSubCategoriesSelected}
+                    aria-checked={
+                      activeSubCategories.length > 0 && !allSubCategoriesSelected
+                        ? "mixed"
+                        : allSubCategoriesSelected
+                    }
+                    onChange={(event) => {
+                      setSelectedSubCategories((current) => ({
+                        ...current,
+                        [group]: event.target.checked ? [...filterGroups.jobSubCategories[group]] : [],
+                      }));
+                    }}
+                  />
+                  <span>全部</span>
+                  <small>{activeSubCategories.length}/{filterGroups.jobSubCategories[group].length} 已选</small>
+                </label>
+                {filterGroups.jobSubCategories[group].map((category) => (
+                  <label key={category} className="jobs-category-option">
+                    <input
+                      type="checkbox"
+                      checked={activeSubCategories.includes(category)}
+                      onChange={(event) => {
+                        setSelectedSubCategories((current) => ({
+                          ...current,
+                          [group]: event.target.checked
+                            ? [...(current[group] ?? []), category]
+                            : (current[group] ?? []).filter((selected) => selected !== category),
+                        }));
+                      }}
+                    />
+                    <span>{category}</span>
+                  </label>
+                ))}
+              </fieldset>
             )}
             <FilterRow label="经验/职级" options={filterGroups.jobLevels} active={level} onChange={setLevel} />
-            <div className="jobs-more-toggle-row">
-              <button
-                type="button"
-                className={`jobs-more-toggle${moreFiltersActive ? " has-selection" : ""}`}
-                aria-expanded={moreFiltersOpen}
-                aria-controls="jobs-more-filters"
-                onClick={() => {
-                  setMoreFiltersOpen((open) => !open);
-                  setMoreFilterMenuOpen(null);
-                }}
-              >
-                其他
-                {moreFiltersActive && <span aria-label="已有筛选条件">●</span>}
-                <b aria-hidden="true">{moreFiltersOpen ? "−" : "+"}</b>
-              </button>
-              {moreFiltersOpen && (
-                <div id="jobs-more-filters" className="jobs-more-filters">
-                  {moreFilterItems.map((item) => (
-                    <div key={item.key} className="jobs-more-filter">
-                      <button
-                        type="button"
-                        className={`jobs-more-category${item.value !== "全部" ? " selected" : ""}`}
-                        aria-expanded={moreFilterMenuOpen === item.key}
-                        aria-controls={`jobs-more-${item.key}-menu`}
-                        onClick={() => setMoreFilterMenuOpen((open) => open === item.key ? null : item.key)}
+            <div className="filter-row">
+              <span className="filter-label">其他</span>
+              <div id="jobs-more-filters" className="jobs-more-filters">
+                {moreFilterItems.map((item) => (
+                  <div key={item.key} className="jobs-more-filter">
+                    <button
+                      type="button"
+                      className={`jobs-more-category${item.value !== "全部" ? " selected" : ""}`}
+                      aria-expanded={moreFilterMenuOpen === item.key}
+                      aria-controls={`jobs-more-${item.key}-menu`}
+                      onClick={() => setMoreFilterMenuOpen((open) => open === item.key ? null : item.key)}
+                    >
+                      {item.label}
+                      {item.value !== "全部" && <span aria-label={`当前选择：${item.value}`}>●</span>}
+                      <b aria-hidden="true">⌄</b>
+                    </button>
+                    {moreFilterMenuOpen === item.key && (
+                      <div
+                        id={`jobs-more-${item.key}-menu`}
+                        className="jobs-more-menu"
+                        role="listbox"
+                        aria-label={item.label}
                       >
-                        {item.label}
-                        {item.value !== "全部" && <span aria-label={`当前选择：${item.value}`}>●</span>}
-                        <b aria-hidden="true">⌄</b>
-                      </button>
-                      {moreFilterMenuOpen === item.key && (
-                        <div
-                          id={`jobs-more-${item.key}-menu`}
-                          className="jobs-more-menu"
-                          role="listbox"
-                          aria-label={item.label}
-                        >
-                          {item.options.map((option) => (
-                            <button
-                              key={option}
-                              type="button"
-                              role="option"
-                              aria-selected={item.value === option}
-                              className={item.value === option ? "selected" : ""}
-                              onClick={() => {
-                                item.onChange(option);
-                                setMoreFilterMenuOpen(null);
-                              }}
-                            >
-                              {option}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
+                        {item.options.map((option) => (
+                          <button
+                            key={option}
+                            type="button"
+                            role="option"
+                            aria-selected={item.value === option}
+                            className={item.value === option ? "selected" : ""}
+                            onClick={() => {
+                              item.onChange(option);
+                              setMoreFilterMenuOpen(null);
+                            }}
+                          >
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
