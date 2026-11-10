@@ -41,7 +41,7 @@ const UA = "InfiniteConnectionPreview/0.1 (+https://github.com/schneiderlin/infi
 const GAP_MS = 400;
 const LLM_CONCURRENCY = 4;
 // 提取缓存版本：换模型或改 baml prompt 时 +1。
-const EXTRACTION_VERSION = 3;
+const EXTRACTION_VERSION = 7;
 const PER_SOURCE = 20;
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -49,8 +49,20 @@ const clean = (value: unknown) =>
   String(value ?? "")
     .replace(/[\u200b-\u200d\ufeff]/g, "")
     .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#(?:39|x27);/gi, "'")
     .replace(/\s+/g, " ")
     .trim();
+
+const cleanJobTitle = (extractedTitle: string, sourceTitle: string) => {
+  const source = clean(sourceTitle);
+  return clean(extractedTitle).replace(/[（(]([^()（）]+)[）)]/g, (match, note: string) =>
+    source.includes(clean(note)) ? match : "",
+  );
+};
 const hashId = (value: string) => createHash("sha1").update(value).digest("hex").slice(0, 12);
 // 页面浏览计数（"浏览 1166 次"）每次访问自增，直接 hash 会导致缓存永远失效；
 // 计算 bodyHash 前先剥离这类计数。
@@ -545,7 +557,7 @@ function mapRecord(candidate: Candidate, extraction: JobExtraction, bodyHash: st
     role: SUBCATEGORY_ZH[extraction.sub_category] ?? "公益项目执行",
     publishedDays,
     time,
-    title: candidate.title,
+    title: cleanJobTitle(extraction.title, candidate.title) || candidate.title,
     summary: extraction.summary,
     org: clean(extraction.org) || candidate.orgHint || "机构未注明",
     location: normalizeLocation(extraction.location),

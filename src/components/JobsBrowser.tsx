@@ -392,7 +392,7 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
                 <div className="card-head">
                   <span className={`tag ${kindTagClass[j.kind] ?? "tag-green"}`}>{j.kind}</span>
                   {j.subCategory && <span className="tag tag-pink">{j.subCategory}</span>}
-                  {j.level && <span className="tag tag-blue">{j.level}</span>}
+                  {j.kind !== "兼职" && j.level && <span className="tag tag-blue">{j.level}</span>}
                 </div>
                 <h3 className="card-title">{j.title}</h3>
                 <p className="card-summary">{j.summary}</p>
@@ -405,7 +405,7 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
                   <span className="stat">📅 {j.due}</span>
                   {j.url ? (
                     <a className="card-link" href={j.url} target="_blank" rel="noreferrer">
-                      去原站投递 →
+                      查看招聘原文 →
                     </a>
                   ) : (
                     <a className="card-link" href="#">

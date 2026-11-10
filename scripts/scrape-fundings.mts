@@ -50,7 +50,7 @@ const GAP_MS = 900;
 const CUTOFF = "2023-01-01";
 const LLM_CONCURRENCY = 4;
 // 提取缓存版本：换模型或改 baml prompt 时 +1，避免复用旧口径的 extraction。
-const EXTRACTION_VERSION = 3;
+const EXTRACTION_VERSION = 5;
 const EXTRACTION_MODEL = "MiniMax-M3.1-Flash";
 const IR_ADAPTER_VERSION = 1;
 
@@ -830,7 +830,11 @@ async function extractAll(
           };
           extracted += 1;
         } catch (error) {
-          console.warn(`  ! 提取失败，跳过: ${candidate.title} (${error instanceof Error ? error.message : error})`);
+          console.warn(`  ! 提取失败: ${candidate.title} (${error instanceof Error ? error.message : error})`);
+          if (previous) {
+            console.warn("    沿用上一版记录，避免单次模型格式错误导致数据丢失");
+            kept.push(previous);
+          }
           continue;
         }
       }

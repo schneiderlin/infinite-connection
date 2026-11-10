@@ -29,7 +29,7 @@ export default class TypeBuilder {
     
     FundingExtraction: ClassViewer<'FundingExtraction', "is_relevant" | "reject_reason" | "org" | "deadline" | "deadline_kind" | "amount_wan" | "amount_scope" | "support_type" | "funding_type" | "field" | "issue" | "region" | "duration" | "summary">;
     
-    JobExtraction: ClassViewer<'JobExtraction', "is_relevant" | "reject_reason" | "kind" | "job_group" | "sub_category" | "level" | "education" | "org_type" | "role" | "org" | "location" | "salary" | "deadline" | "summary">;
+    JobExtraction: ClassViewer<'JobExtraction', "is_relevant" | "reject_reason" | "title" | "kind" | "job_group" | "sub_category" | "level" | "education" | "org_type" | "role" | "org" | "location" | "salary" | "deadline" | "summary">;
     
     NewsExtraction: ClassViewer<'NewsExtraction', "is_relevant" | "reject_reason" | "org" | "news_type" | "field" | "issue" | "summary">;
     
@@ -91,7 +91,7 @@ export default class TypeBuilder {
         ]);
         
         this.JobExtraction = this.tb.classViewer("JobExtraction", [
-          "is_relevant","reject_reason","kind","job_group","sub_category","level","education","org_type","role","org","location","salary","deadline","summary",
+          "is_relevant","reject_reason","title","kind","job_group","sub_category","level","education","org_type","role","org","location","salary","deadline","summary",
         ]);
         
         this.NewsExtraction = this.tb.classViewer("NewsExtraction", [

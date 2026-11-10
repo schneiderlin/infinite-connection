@@ -55,6 +55,7 @@ export namespace partial_types {
     export interface JobExtraction {
       is_relevant?: boolean | null
       reject_reason?: string | null
+      title?: string | null
       kind?: types.JobKind | null
       job_group?: types.JobGroup | null
       sub_category?: types.JobSubCategory | null

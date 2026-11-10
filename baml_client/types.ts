@@ -281,6 +281,7 @@ export interface FundingExtraction {
 export interface JobExtraction {
   is_relevant: boolean
   reject_reason?: string | null
+  title: string
   kind: JobKind
   job_group: JobGroup
   sub_category: JobSubCategory
