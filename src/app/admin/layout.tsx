@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ContentModule } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { requireAdminSession } from "@/lib/require-admin";
 import { AdminSidebar } from "@/components/AdminSidebar";
@@ -16,15 +17,19 @@ export default async function AdminLayout({
   // 后台所有页面统一在这里拦截；每个 page 和 Server Action 内部还会再校验一次。
   const session = await requireAdminSession();
 
-  const pendingCount = await prisma.content.count({
-    where: { status: "PENDING_REVIEW" },
-  });
+  const [pendingCount, groupedCounts] = await Promise.all([
+    prisma.content.count({ where: { status: "PENDING_REVIEW" } }),
+    prisma.content.groupBy({ by: ["module"], _count: { _all: true } }),
+  ]);
+  const moduleCounts = Object.fromEntries(
+    groupedCounts.map((item) => [item.module, item._count._all]),
+  ) as Partial<Record<ContentModule, number>>;
   const displayName =
     session.user.organizationName ?? session.user.name ?? session.user.email ?? "管理员";
 
   return (
     <div className="admin-shell">
-      <AdminSidebar name={displayName} pendingCount={pendingCount} />
+      <AdminSidebar name={displayName} pendingCount={pendingCount} moduleCounts={moduleCounts} />
       <div className="admin-content">{children}</div>
     </div>
   );

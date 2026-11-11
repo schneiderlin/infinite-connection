@@ -3,5 +3,5 @@ import { requireAdminSession } from "@/lib/require-admin";
 
 export default async function AdminIndexPage() {
   await requireAdminSession();
-  redirect("/admin/review");
+  redirect("/admin/content/updates");
 }

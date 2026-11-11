@@ -13,7 +13,8 @@
  *   - src/lib/news-data.json      -> UPDATE
  *
  * 幂等：metadata.sourceKey 唯一键；已存在的记录更新内容字段，
- * 不触碰点赞/评论等互动计数，不删除快照里消失的记录（只打印提醒）。
+ * 不触碰点赞/评论等互动计数。管理员下架和人工编辑会写入 metadata
+ * 覆盖标记，后续同步会保留下架状态，并避免覆盖人工编辑结果。
  *
  * 用法：
  *   pnpm import:content            # 全部板块
@@ -226,14 +227,12 @@ async function importDataset(dataset: any, authorId: string) {
     select: { id: true, metadata: true },
   });
   const existingByKey = new Map(
-    existing.map((row) => [
-      String(
-        row.metadata && typeof row.metadata === "object" && !Array.isArray(row.metadata)
-          ? ((row.metadata as Record<string, unknown>).sourceKey ?? "")
-          : "",
-      ),
-      row.id,
-    ]),
+    existing.map((row) => {
+      const metadata = row.metadata && typeof row.metadata === "object" && !Array.isArray(row.metadata)
+        ? row.metadata as Record<string, unknown>
+        : {};
+      return [String(metadata.sourceKey ?? ""), { id: row.id, metadata }] as const;
+    }),
   );
 
   let created = 0;
@@ -245,7 +244,8 @@ async function importDataset(dataset: any, authorId: string) {
       continue;
     }
     const payload = { ...row.data, authorId };
-    const existingId = existingByKey.get(row.sourceKey);
+    const existingRecord = existingByKey.get(row.sourceKey);
+    const existingId = existingRecord?.id;
     if (dryRun) {
       if (existingId) updated += 1;
       else created += 1;
@@ -253,8 +253,18 @@ async function importDataset(dataset: any, authorId: string) {
     }
     // 一级/二级分流：有 MiniMax extraction 的才可上线（PUBLISHED），
     // 未提取的保留在库里但不可见（UNPUBLISHED），修好后随重跑自动放行。
-    const status = row.item?.extraction ? "PUBLISHED" : "UNPUBLISHED";
+    const adminHidden = existingRecord?.metadata.adminHidden === "true";
+    const adminEdited = existingRecord?.metadata.adminEdited === "true";
+    const status = row.item?.extraction && !adminHidden ? "PUBLISHED" : "UNPUBLISHED";
     if (existingId) {
+      if (adminEdited) {
+        skipped += 1;
+        continue;
+      }
+      const metadata = {
+        ...payload.metadata,
+        ...(adminHidden ? { adminHidden: "true" } : {}),
+      };
       await prisma.content.update({
         where: { id: existingId },
         data: {
@@ -266,7 +276,7 @@ async function importDataset(dataset: any, authorId: string) {
           tags: payload.tags,
           region: payload.region,
           city: payload.city,
-          metadata: payload.metadata,
+          metadata,
           publishedAt: payload.publishedAt,
           status,
         },
@@ -286,7 +296,7 @@ async function importDataset(dataset: any, authorId: string) {
   let unpublished = 0;
   if (gone.length && !dryRun) {
     const result = await prisma.content.updateMany({
-      where: { id: { in: gone.map(([, id]) => id) }, status: "PUBLISHED" },
+      where: { id: { in: gone.map(([, record]) => record.id) }, status: "PUBLISHED" },
       data: { status: "UNPUBLISHED" },
     });
     unpublished = result.count;

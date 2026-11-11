@@ -4,6 +4,7 @@ import { startTransition, useActionState, useEffect, useRef, useState } from "re
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { saveContent, type ContentFormState } from "@/lib/actions/content";
+import { updateAdminContent } from "@/lib/actions/admin";
 import {
   moduleHref,
   publicInterestFields,
@@ -23,12 +24,14 @@ type InitialContent = {
   id: string;
   subtype: string;
   title: string;
+  summary?: string;
   body: string;
   fields: string[];
   tags: string[];
   region: string;
   city: string;
   metadata: Record<string, string>;
+  metadataJson?: string;
   attachments: { id: string; fileName: string }[];
 };
 
@@ -145,6 +148,8 @@ export function PublishForm({
   identityNote,
   defaultContact,
   initial,
+  adminMode = false,
+  returnHref = "/account/content",
 }: {
   moduleSlug: PublishModuleSlug;
   config: PublishModuleConfig;
@@ -152,15 +157,20 @@ export function PublishForm({
   identityNote: string;
   defaultContact: { phone: string; wechat: string };
   initial?: InitialContent;
+  adminMode?: boolean;
+  returnHref?: string;
 }) {
   const router = useRouter();
   const [contentId, setContentId] = useState(initial?.id ?? "");
   const [state, formAction, pending] = useActionState(async (previous: ContentFormState, formData: FormData) => {
-    const result = await saveContent(previous, formData);
+    const result = adminMode
+      ? await updateAdminContent(previous, formData)
+      : await saveContent(previous, formData);
     if (result.contentId) setContentId(result.contentId);
     // 提交审核成功后直接回到对应模块列表，不再停留在发布表单。
     if (result.success && formData.get("intent") === "submit") {
-      router.push(moduleHref[config.module]);
+      if (adminMode) router.push(returnHref);
+      else router.push(moduleHref[config.module]);
     }
     return result;
   }, initialState);
@@ -217,7 +227,7 @@ export function PublishForm({
       formData.set("intent", "submit");
     }
     const intent = formData.get("intent") === "draft" ? "draft" : "submit";
-    if (intent === "submit") {
+    if (intent === "submit" && !adminMode) {
       const region = String(formData.get("region") ?? "").trim();
       const city = String(formData.get("city") ?? "").trim();
       if (!region || !city) {
@@ -339,6 +349,10 @@ export function PublishForm({
 
         <TextField name="title" label="标题" required defaultValue={initial?.title} placeholder={`请输入${config.label}标题`} />
 
+        {adminMode && (
+          <TextField name="summary" label="列表简介" defaultValue={initial?.summary} placeholder="用于资金、招聘、工具列表的简短摘要" />
+        )}
+
         <label className="publish-field">
           <span>{config.bodyLabel}<em>*</em></span>
           <textarea name="body" rows={10} required maxLength={5000} defaultValue={initial?.body} placeholder={config.bodyPlaceholder} />
@@ -405,7 +419,7 @@ export function PublishForm({
             <select
               name="region"
               value={selectedRegion}
-              required
+              required={!adminMode}
               onChange={(event) => {
                 setSelectedRegion(event.target.value);
                 setSelectedCity("");
@@ -426,7 +440,7 @@ export function PublishForm({
             <span>城市<em>*</em></span>
             <select
               value={citySelectValue}
-              required
+              required={!adminMode}
               disabled={!selectedRegion}
               onChange={(event) => {
                 const value = event.target.value;
@@ -522,8 +536,20 @@ export function PublishForm({
             <TextField name="price" label="价格" defaultValue={metadata.price} placeholder="收费内容必须明示价格" />
             <TextField name="provider" label="作者/提供方" defaultValue={metadata.provider} />
             <TextField name="relatedLinks" label="相关链接" defaultValue={metadata.relatedLinks} placeholder="最多3条，换行分隔" />
-            <label className="publish-confirm"><input type="checkbox" name="copyrightConfirmed" value="true" defaultChecked={metadata.copyrightConfirmed === "true"} required /> 我确认拥有内容版权或已获得合法授权</label>
+            <label className="publish-confirm"><input type="checkbox" name="copyrightConfirmed" value="true" defaultChecked={metadata.copyrightConfirmed === "true"} required={!adminMode} /> 我确认拥有内容版权或已获得合法授权</label>
           </div>
+        )}
+
+        {adminMode && (
+          <label className="publish-field">
+            <span>扩展数据（JSON）<small> 高级编辑：来源、机构、薪资等前台字段</small></span>
+            <textarea
+              name="metadataJson"
+              rows={12}
+              defaultValue={initial?.metadataJson ?? JSON.stringify(metadata, null, 2)}
+              spellCheck={false}
+            />
+          </label>
         )}
 
         {state.fieldErrors && (
@@ -533,10 +559,10 @@ export function PublishForm({
         )}
 
         <div className="publish-actions">
-          <Link href="/account/content" className="btn-ghost">取消</Link>
-          <button type="submit" name="intent" value="draft" className="btn-ghost" formNoValidate disabled={isSavingDraft || isSubmitting || uploading}>{isSavingDraft ? "保存中…" : "保存草稿"}</button>
+          <Link href={returnHref} className="btn-ghost">取消</Link>
+          {!adminMode && <button type="submit" name="intent" value="draft" className="btn-ghost" formNoValidate disabled={isSavingDraft || isSubmitting || uploading}>{isSavingDraft ? "保存中…" : "保存草稿"}</button>}
           <button type="button" className="btn-ghost" onClick={showPreview}>预览</button>
-          <button type="submit" name="intent" value="submit" className="btn-primary" disabled={isSubmitting || isSavingDraft || uploading}>{isSubmitting ? "提交中…" : "提交审核"}</button>
+          <button type="submit" name="intent" value="submit" className="btn-primary" disabled={isSubmitting || isSavingDraft || uploading}>{isSubmitting ? "提交中…" : adminMode ? "保存修改" : "提交审核"}</button>
         </div>
       </form>
 

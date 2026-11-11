@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import * as XLSX from "xlsx";
 import { z } from "zod";
-import type { Prisma } from "@prisma/client";
+import type { ContentStatus, Prisma } from "@prisma/client";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/db";
 import {
@@ -41,6 +41,157 @@ export type AdminImportState = {
   warnings?: string[];
   errors?: string[];
 };
+
+export type AdminEditState = {
+  success?: boolean;
+  contentId?: string;
+  message?: string;
+  error?: string;
+  fieldErrors?: Record<string, string[]>;
+};
+
+const adminEditSchema = z.object({
+  contentId: z.string().min(1),
+  moduleSlug: z.string().trim(),
+  subtype: z.string().trim().min(1, "请选择内容类型"),
+  title: z.string().trim().min(1, "请填写标题").max(100, "标题最多 100 个字符"),
+  summary: z.string().trim().max(120, "简介最多 120 个字符").optional(),
+  body: z.string().trim().min(1, "请填写正文").max(5000, "正文最多 5000 个字符"),
+  region: z.string().trim().max(40, "地区名称过长").optional(),
+  city: z.string().trim().max(40, "城市名称过长").optional(),
+  metadataJson: z.string(),
+});
+
+const editableMetadataKeys = [
+  "direction", "amount", "currency", "validUntil", "requirements",
+  "applicationUrl", "contactName", "contactEmail", "contactPhone", "contactWechat",
+  "headcount", "workMode", "remote", "salaryMin", "salaryMax", "salaryUnit",
+  "education", "experience", "requirementsText", "benefits", "applicationEmail",
+  "applicationLink", "urgent", "deadline", "priceType", "price", "provider",
+  "relatedLinks", "periodStart", "periodEnd", "ongoing", "copyrightConfirmed",
+] as const;
+
+function revalidateContentRoutes(module: keyof typeof moduleHref) {
+  revalidatePath("/admin", "layout");
+  revalidatePath("/admin/content", "layout");
+  revalidatePath("/account/content");
+  revalidatePath(moduleHref[module]);
+}
+
+export async function updateAdminContent(
+  _previous: AdminEditState,
+  formData: FormData,
+): Promise<AdminEditState> {
+  const session = await requireAdmin();
+  const parsed = adminEditSchema.safeParse({
+    contentId: formData.get("contentId"),
+    moduleSlug: formData.get("moduleSlug"),
+    subtype: formData.get("subtype"),
+    title: formData.get("title"),
+    summary: formData.get("summary") || undefined,
+    body: formData.get("body"),
+    region: formData.get("region") || undefined,
+    city: formData.get("city") || undefined,
+    metadataJson: formData.get("metadataJson") ?? "{}",
+  });
+  if (!parsed.success) return { fieldErrors: parsed.error.flatten().fieldErrors };
+
+  const values = parsed.data;
+  if (!isPublishModuleSlug(values.moduleSlug)) return { error: "内容模块无效" };
+  const config = publishModules[values.moduleSlug];
+  const existing = await prisma.content.findUnique({
+    where: { id: values.contentId },
+    select: { id: true, module: true, subtype: true },
+  });
+  if (!existing || existing.module !== config.module) return { error: "内容不存在或模块不匹配" };
+  if (!config.subtypes.includes(values.subtype) && values.subtype !== existing.subtype) {
+    return { error: `内容类型不属于${config.label}` };
+  }
+
+  let metadata: Prisma.JsonObject;
+  try {
+    const value = JSON.parse(values.metadataJson) as unknown;
+    if (!value || Array.isArray(value) || typeof value !== "object") {
+      return { fieldErrors: { metadataJson: ["扩展数据必须是 JSON 对象"] } };
+    }
+    metadata = value as Prisma.JsonObject;
+  } catch {
+    return { fieldErrors: { metadataJson: ["扩展数据不是有效的 JSON"] } };
+  }
+
+  for (const key of editableMetadataKeys) {
+    if (!formData.has(key)) continue;
+    const value = String(formData.get(key) ?? "").trim();
+    if (value) metadata[key] = value;
+    else delete metadata[key];
+  }
+  // 爬虫下次同步时保留管理员人工修订，不用新快照覆盖。
+  metadata.adminEdited = "true";
+
+  const fields = [...new Set(
+    formData.getAll("fields").map(String).filter((field) => publicInterestFields.includes(field)),
+  )];
+  const tags = parseTags(String(formData.get("tags") ?? ""));
+  const attachmentIds = [...new Set(formData.getAll("attachmentIds").map(String).filter(Boolean))];
+  if (attachmentIds.length > 6) return { error: "每篇内容最多上传 6 张图片" };
+
+  if (attachmentIds.length > 0) {
+    const attachments = await prisma.attachment.findMany({
+      where: { id: { in: attachmentIds } },
+      select: { id: true, ownerId: true, contentId: true },
+    });
+    if (attachments.length !== attachmentIds.length) return { error: "部分图片不存在，请重新上传" };
+    const invalid = attachments.find((attachment) =>
+      attachment.contentId !== existing.id
+      && (attachment.contentId !== null || attachment.ownerId !== session.user.id),
+    );
+    if (invalid) return { error: "部分图片无权使用，请重新上传" };
+  }
+
+  await prisma.content.update({
+    where: { id: existing.id },
+    data: {
+      subtype: values.subtype,
+      title: values.title,
+      summary: values.summary || null,
+      body: values.body,
+      fields,
+      tags,
+      region: values.region || null,
+      city: values.city || null,
+      metadata,
+      attachments: { set: attachmentIds.map((id) => ({ id })) },
+    },
+  });
+  revalidateContentRoutes(existing.module);
+  return { success: true, message: "内容已更新，前台会显示最新信息。" };
+}
+
+export async function setAdminContentStatus(contentId: string, status: ContentStatus) {
+  await requireAdmin();
+  if (status !== "PUBLISHED" && status !== "UNPUBLISHED") {
+    throw new Error("不支持的内容状态");
+  }
+  const existing = await prisma.content.findUnique({
+    where: { id: contentId },
+    select: { module: true, metadata: true },
+  });
+  if (!existing) throw new Error("内容不存在");
+
+  const now = new Date();
+  const metadata = existing.metadata && typeof existing.metadata === "object" && !Array.isArray(existing.metadata)
+    ? { ...(existing.metadata as Prisma.JsonObject) }
+    : {};
+  if (status === "UNPUBLISHED") metadata.adminHidden = "true";
+  else delete metadata.adminHidden;
+  await prisma.content.update({
+    where: { id: contentId },
+    data: status === "PUBLISHED"
+      ? { status, metadata, publishedAt: now, reviewedAt: now, deletedAt: null, rejectionReason: null }
+      : { status, metadata, deletedAt: null },
+  });
+  revalidateContentRoutes(existing.module);
+}
 
 const adminContentSchema = z.object({
   moduleSlug: z.string().trim(),

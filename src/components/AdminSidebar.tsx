@@ -2,9 +2,23 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { ContentModule } from "@prisma/client";
 import { logout } from "@/lib/actions/auth";
 
-const navigation = [
+const contentNavigation: Array<{
+  href: string;
+  label: string;
+  hint: string;
+  icon: string;
+  module: ContentModule;
+}> = [
+  { href: "/admin/content/updates", label: "项目动态", hint: "项目与活动", icon: "动", module: "UPDATE" },
+  { href: "/admin/content/funding", label: "资金与物资", hint: "资助与资源", icon: "资", module: "FUNDING" },
+  { href: "/admin/content/jobs", label: "人力资源", hint: "招聘与志愿者", icon: "人", module: "JOB" },
+  { href: "/admin/content/tools", label: "能力工具", hint: "课程、报告与工具", icon: "工", module: "TOOL" },
+];
+
+const operationNavigation = [
   {
     href: "/admin/publish",
     label: "发布管理",
@@ -22,15 +36,17 @@ const navigation = [
 export function AdminSidebar({
   name,
   pendingCount,
+  moduleCounts,
 }: {
   name: string;
   pendingCount: number;
+  moduleCounts: Partial<Record<ContentModule, number>>;
 }) {
   const pathname = usePathname();
 
   return (
     <aside className="admin-sidebar">
-      <Link href="/admin/review" className="admin-brand">
+      <Link href="/admin/content/updates" className="admin-brand">
         <span className="admin-brand-mark" aria-hidden="true">
           ∞
         </span>
@@ -40,9 +56,36 @@ export function AdminSidebar({
         </span>
       </Link>
 
-      <div className="admin-sidebar-label">后台管理</div>
-      <nav className="admin-nav" aria-label="后台导航">
-        {navigation.map((item) => {
+      <div className="admin-sidebar-section">
+        <div className="admin-sidebar-label">内容数据库</div>
+        <nav className="admin-nav" aria-label="内容板块导航">
+          {contentNavigation.map((item) => {
+            const active = pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`admin-nav-link${active ? " active" : ""}`}
+                aria-current={active ? "page" : undefined}
+              >
+                <span className="admin-nav-icon" aria-hidden="true">{item.icon}</span>
+                <span className="admin-nav-text">
+                  <strong>{item.label}</strong>
+                  <small>{item.hint}</small>
+                </span>
+                <span className="admin-nav-count admin-nav-count-muted">
+                  {moduleCounts[item.module] ?? 0}
+                </span>
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+
+      <div className="admin-sidebar-section">
+        <div className="admin-sidebar-label">运营操作</div>
+        <nav className="admin-nav" aria-label="后台操作导航">
+        {operationNavigation.map((item) => {
           const active = pathname.startsWith(item.href);
           return (
             <Link
@@ -66,7 +109,8 @@ export function AdminSidebar({
             </Link>
           );
         })}
-      </nav>
+        </nav>
+      </div>
 
       <div className="admin-sidebar-footer">
         <Link href="/" className="admin-back-link">
