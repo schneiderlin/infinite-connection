@@ -1,0 +1,373 @@
+// 后台批量导入的纯逻辑：表头识别、模块/类型归一化、逐行校验。
+// 浏览器端负责把 Excel/JSON/CSV 解析成记录行，服务端负责把记录行转成入库数据，
+// 两端共用同一套规则，避免「前端能选文件、后端解析失败」的分叉。
+import {
+  isPublishModuleSlug,
+  moduleHref,
+  publicInterestFields,
+  publishModules,
+  type PublishModuleConfig,
+  type PublishModuleSlug,
+} from "@/lib/publishing";
+
+/** 一行原始记录：line 是它在表格里的行号（1 起算），用于报错定位。 */
+export type ImportEntry = {
+  line: number;
+  record: Record<string, unknown>;
+};
+
+export type ImportRowInput = {
+  authorId: string;
+  module: string;
+  subtype: string;
+  title: string;
+  summary: string | null;
+  body: string;
+  fields: string[];
+  tags: string[];
+  region: string | null;
+  city: string | null;
+  metadata: Record<string, unknown>;
+  status: "PUBLISHED";
+  submittedAt: Date;
+  reviewedAt: Date;
+  publishedAt: Date;
+};
+
+export type BuiltImport = {
+  rows: ImportRowInput[];
+  errors: string[];
+  warnings: string[];
+  touchedModules: string[];
+};
+
+export const IMPORT_ROW_CHUNK = 200;
+
+const HEADER_ALIASES = {
+  module: ["模块", "内容模块", "所属模块", "module", "contentmodule", "分类", "category"],
+  subtype: ["工作性质", "类型", "内容类型", "子类型", "资助类型", "支持类型", "subtype", "type"],
+  finalCategory: ["最终发布分类", "最终分类", "发布分类", "finalCategory", "final_category"],
+  title: ["标题", "title", "名称", "name"],
+  summary: ["摘要", "简介", "summary", "description"],
+  body: ["正文", "内容", "详情", "body", "content", "detail"],
+  fields: ["领域", "公益领域", "资助领域", "分类标签", "原始分类", "最终发布分类", "最终分类", "发布分类", "fields", "field"],
+  tags: ["标签", "tags", "tag"],
+  region: ["省份", "地区", "地点", "region", "province"],
+  city: ["城市", "city"],
+  metadata: ["元数据", "metadata"],
+} as const;
+
+type ImportField = keyof typeof HEADER_ALIASES;
+
+const MODULE_ALIASES = new Map<string, PublishModuleSlug>([
+  ["update", "updates"],
+  ["updates", "updates"],
+  ["项目动态", "updates"],
+  ["动态", "updates"],
+  ["公益项目", "updates"],
+  ["公益活动", "updates"],
+  ["funding", "funding"],
+  ["fundings", "funding"],
+  ["资金与物资", "funding"],
+  ["资金物资", "funding"],
+  ["资金", "funding"],
+  ["物资", "funding"],
+  ["资助", "funding"],
+  ["资助机会", "funding"],
+  ["资金资助", "funding"],
+  ["物资资助", "funding"],
+  ["job", "jobs"],
+  ["jobs", "jobs"],
+  ["人力资源", "jobs"],
+  ["招聘", "jobs"],
+  ["招聘岗位", "jobs"],
+  ["岗位", "jobs"],
+  ["全职", "jobs"],
+  ["兼职", "jobs"],
+  ["实习", "jobs"],
+  ["志愿者", "jobs"],
+  ["顾问", "jobs"],
+  ["tool", "tools"],
+  ["tools", "tools"],
+  ["能力工具", "tools"],
+  ["工具", "tools"],
+  ["课程", "tools"],
+  ["培训课程", "tools"],
+  ["行业沙龙会议", "tools"],
+  ["公益工具模板库", "tools"],
+  ["行业报告", "tools"],
+  ["行业标准", "tools"],
+  ["同行经验文章", "tools"],
+  ["国际经验", "tools"],
+]);
+
+const SUBTYPE_ALIASES = new Map<string, string>([
+  ["资金", "资金资助"],
+  ["资金资助", "资金资助"],
+  ["基金会资助", "资金资助"],
+  ["其他机构资助", "资金资助"],
+  ["资助", "资金资助"],
+  ["物资", "物资资助"],
+  ["物资资助", "物资资助"],
+  ["物资捐赠", "物资资助"],
+  ["人员招聘", "全职"],
+  ["项目动态", "公益项目"],
+]);
+
+export function normalizeHeader(value: string) {
+  return value.trim().toLowerCase().replace(/[\s_\-（）()/]/g, "");
+}
+
+const NORMALIZED_HEADER_ALIASES = Object.fromEntries(
+  Object.entries(HEADER_ALIASES).map(([key, aliases]) => [
+    key,
+    new Set(aliases.map((alias) => normalizeHeader(alias))),
+  ]),
+) as Record<ImportField, Set<string>>;
+
+export function normalizeRecord(record: Record<string, unknown>) {
+  const normalized: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(record)) {
+    const header = normalizeHeader(key);
+    if (header && !(header in normalized)) normalized[header] = value;
+  }
+  return normalized;
+}
+
+function valueFor(record: Record<string, unknown>, field: ImportField) {
+  for (const alias of NORMALIZED_HEADER_ALIASES[field]) {
+    const value = record[alias];
+    if (value === null || value === undefined) continue;
+    if (typeof value === "string" && value.trim() === "") continue;
+    return value;
+  }
+  return undefined;
+}
+
+export function stringValue(value: unknown) {
+  if (value === null || value === undefined) return "";
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  if (typeof value === "object") return JSON.stringify(value);
+  return String(value).trim();
+}
+
+export function stringList(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return [...new Set(value.flatMap((item) => stringList(item)))].filter(Boolean);
+  }
+  const text = stringValue(value);
+  if (!text) return [];
+  return [...new Set(
+    text
+      .split(/[,，、;\n|]/)
+      .map((item) => item.trim().replace(/^#|#$/g, ""))
+      .filter(Boolean),
+  )];
+}
+
+export function resolveModule(value: unknown, fallback: PublishModuleSlug | null) {
+  const key = normalizeHeader(stringValue(value));
+  if (!key) return fallback;
+  if (isPublishModuleSlug(key)) return key;
+  return MODULE_ALIASES.get(key) ?? null;
+}
+
+function resolveSubtype(
+  config: PublishModuleConfig,
+  rawValue: string,
+  finalCategory: string,
+) {
+  const raw = rawValue.trim();
+  if (!raw) {
+    if (finalCategory && config.subtypes.includes(finalCategory)) {
+      return finalCategory;
+    }
+    return config.subtypes[0];
+  }
+  if (config.subtypes.includes(raw)) return raw;
+  const mapped = SUBTYPE_ALIASES.get(normalizeHeader(raw));
+  if (mapped && config.subtypes.includes(mapped)) return mapped;
+  return raw;
+}
+
+function hasHeader(headers: Set<string>, field: ImportField) {
+  for (const alias of NORMALIZED_HEADER_ALIASES[field]) {
+    if (headers.has(alias)) return true;
+  }
+  return false;
+}
+
+/** 在一张表的前 20 行里找表头：至少要有「标题」，且带「正文 / 摘要 / 模块」之一。 */
+export function findHeaderRow(matrix: unknown[][]): number {
+  return matrix.slice(0, 20).findIndex((row) => {
+    if (!Array.isArray(row)) return false;
+    const headers = new Set(
+      row.map((cell) => normalizeHeader(stringValue(cell))).filter(Boolean),
+    );
+    return hasHeader(headers, "title")
+      && (hasHeader(headers, "body") || hasHeader(headers, "summary") || hasHeader(headers, "module"));
+  });
+}
+
+/** 把二维表格（第一行是表头的子表）转成带行号的记录行。 */
+export function matrixToEntries(matrix: unknown[][], headerRowIndex: number): ImportEntry[] {
+  const headerRow = matrix[headerRowIndex] ?? [];
+  const headers = headerRow.map((cell) => stringValue(cell));
+  const entries: ImportEntry[] = [];
+  for (let rowIndex = headerRowIndex + 1; rowIndex < matrix.length; rowIndex += 1) {
+    const row = matrix[rowIndex];
+    if (!Array.isArray(row)) continue;
+    if (row.every((cell) => stringValue(cell) === "")) continue;
+    const record: Record<string, unknown> = {};
+    headers.forEach((header, columnIndex) => {
+      if (header) record[header] = row[columnIndex] ?? "";
+    });
+    entries.push({ line: rowIndex + 1, record });
+  }
+  return entries;
+}
+
+/** JSON 文件：支持顶层数组，或 items / data / contents 字段。 */
+export function jsonToEntries(value: unknown): ImportEntry[] {
+  const candidate = Array.isArray(value)
+    ? value
+    : value && typeof value === "object"
+      ? (value as Record<string, unknown>).items
+        ?? (value as Record<string, unknown>).data
+        ?? (value as Record<string, unknown>).contents
+      : null;
+  if (!Array.isArray(candidate)) {
+    throw new Error("JSON 顶层必须是数组，或包含 items / data / contents 数组");
+  }
+  return candidate
+    .filter((item): item is Record<string, unknown> =>
+      Boolean(item) && typeof item === "object" && !Array.isArray(item),
+    )
+    .map((record, index) => ({ line: index + 1, record }));
+}
+
+function parseMetadata(value: unknown, fileName: string) {
+  const metadata: Record<string, unknown> = {
+    source: "admin-import",
+    fileName,
+  };
+  const parsed = typeof value === "string"
+    ? (() => {
+      try {
+        return JSON.parse(value) as unknown;
+      } catch {
+        return null;
+      }
+    })()
+    : value;
+  if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+    for (const [key, item] of Object.entries(parsed)) {
+      if (["source", "fileName"].includes(key)) continue;
+      metadata[key] = item;
+    }
+  }
+  return metadata;
+}
+
+export function buildImportRows({
+  entries,
+  defaultModule,
+  fileName,
+  authorId,
+  now,
+}: {
+  entries: ImportEntry[];
+  defaultModule: PublishModuleSlug | null;
+  fileName: string;
+  authorId: string;
+  now: Date;
+}): BuiltImport {
+  const rows: ImportRowInput[] = [];
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  const touchedModules = new Set<string>();
+
+  entries.forEach(({ line, record: rawRecord }) => {
+    const record = normalizeRecord(rawRecord);
+
+    const moduleValue = valueFor(record, "module");
+    let fieldsValue = valueFor(record, "fields");
+    let moduleSlug = resolveModule(moduleValue, defaultModule);
+
+    // 「分类」列既可能是模块，也可能是公益领域。无法识别为模块时，
+    // 如果有默认模块，就把该值当作领域处理。
+    if (!moduleSlug && defaultModule) {
+      if (moduleValue !== undefined && fieldsValue === undefined) {
+        fieldsValue = moduleValue;
+      }
+      moduleSlug = defaultModule;
+      warnings.push(`第 ${line} 行：模块「${stringValue(moduleValue)}」无法识别，已按默认模块发布`);
+    }
+    if (!moduleSlug) {
+      errors.push(`第 ${line} 行：无法识别内容模块，请增加「模块」列或选择默认模块`);
+      return;
+    }
+
+    const config = publishModules[moduleSlug];
+    const subtypeRaw = stringValue(valueFor(record, "subtype"));
+    const finalCategory = stringValue(valueFor(record, "finalCategory"));
+    const subtype = resolveSubtype(config, subtypeRaw, finalCategory);
+    if (!config.subtypes.includes(subtype)) {
+      warnings.push(`第 ${line} 行：类型「${subtype}」不在${config.label}标准类型中，已按原文导入`);
+    }
+
+    const title = stringValue(valueFor(record, "title"));
+    if (!title) {
+      errors.push(`第 ${line} 行：缺少标题`);
+      return;
+    }
+    if (title.length > 100) {
+      errors.push(`第 ${line} 行：标题超过 100 个字符`);
+      return;
+    }
+
+    const rawSummary = stringValue(valueFor(record, "summary"));
+    const rawBody = stringValue(valueFor(record, "body")) || rawSummary;
+    if (!rawBody) {
+      errors.push(`第 ${line} 行：缺少正文或摘要`);
+      return;
+    }
+    if (rawSummary.length > 120) {
+      warnings.push(`第 ${line} 行：摘要超过 120 个字符，已截断`);
+    }
+    if (rawBody.length > 5000) {
+      warnings.push(`第 ${line} 行：正文超过 5000 个字符，已截断`);
+    }
+    const summary = rawSummary.slice(0, 120) || null;
+    const body = rawBody.slice(0, 5000);
+
+    const fields = stringList(fieldsValue)
+      .filter((field) => publicInterestFields.includes(field))
+      .slice(0, 12);
+    const tags = stringList(valueFor(record, "tags")).slice(0, 10);
+    const region = stringValue(valueFor(record, "region")).slice(0, 40) || null;
+    const city = stringValue(valueFor(record, "city")).slice(0, 40) || null;
+
+    rows.push({
+      authorId,
+      module: config.module,
+      subtype,
+      title,
+      summary,
+      body,
+      fields,
+      tags,
+      region,
+      city,
+      metadata: parseMetadata(valueFor(record, "metadata"), fileName),
+      // 批量导入同样强制发布，表格里的 status 列会被忽略。
+      status: "PUBLISHED",
+      submittedAt: now,
+      reviewedAt: now,
+      publishedAt: now,
+    });
+    touchedModules.add(moduleHref[config.module]);
+  });
+
+  return { rows, errors, warnings, touchedModules: [...touchedModules] };
+}

@@ -1,12 +1,14 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useRef, useState } from "react";
+import { createAdminContent, type AdminContentState } from "@/lib/actions/admin";
 import {
-  bulkImportContent,
-  createAdminContent,
-  type AdminContentState,
-  type AdminImportState,
-} from "@/lib/actions/admin";
+  findHeaderRow,
+  IMPORT_ROW_CHUNK,
+  jsonToEntries,
+  matrixToEntries,
+  type ImportEntry,
+} from "@/lib/import-records";
 import type { PublishModuleSlug } from "@/lib/publishing";
 import {
   cityDisplayName,
@@ -22,8 +24,65 @@ type ModuleOption = {
   subtypes: string[];
 };
 
+type ImportFeedback = {
+  success?: boolean;
+  message?: string;
+  error?: string;
+  imported?: number;
+  failed?: number;
+  warnings?: string[];
+  errors?: string[];
+};
+
+// 浏览器内存里解析，再分块上传；单文件上限只跟浏览器内存有关，几万行也够用。
+const IMPORT_FILE_SIZE_LIMIT = 20 * 1024 * 1024;
+
 const initialContentState: AdminContentState = {};
-const initialImportState: AdminImportState = {};
+
+function formatSize(size: number) {
+  if (size >= 1024 * 1024) return `${(size / (1024 * 1024)).toFixed(1)}MB`;
+  return `${Math.max(1, Math.round(size / 1024))}KB`;
+}
+
+async function parseImportFile(file: File): Promise<ImportEntry[]> {
+  const fileName = file.name.toLowerCase();
+
+  if (fileName.endsWith(".json")) {
+    const text = (await file.text()).replace(/^\uFEFF/, "");
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(text);
+    } catch {
+      throw new Error("JSON 文件格式错误，无法解析");
+    }
+    return jsonToEntries(parsed);
+  }
+
+  if (fileName.endsWith(".xlsx") || fileName.endsWith(".xls") || fileName.endsWith(".csv")) {
+    const XLSX = await import("xlsx");
+    const buffer = new Uint8Array(await file.arrayBuffer());
+    let workbook: import("xlsx").WorkBook;
+    try {
+      workbook = XLSX.read(buffer, { type: "array", cellDates: false });
+    } catch {
+      throw new Error("Excel 文件格式错误，无法解析");
+    }
+    for (const sheetName of workbook.SheetNames) {
+      const matrix = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {
+        header: 1,
+        defval: "",
+        raw: false,
+        blankrows: false,
+      }) as unknown[][];
+      const headerRowIndex = findHeaderRow(matrix);
+      if (headerRowIndex === -1) continue;
+      return matrixToEntries(matrix, headerRowIndex);
+    }
+    throw new Error("未找到可导入的数据表：表头需要包含「标题」，以及「正文 / 摘要 / 模块」中的至少一列");
+  }
+
+  throw new Error("仅支持 .xlsx、.xls、.csv、.json 文件");
+}
 
 export function AdminPublishForms({
   modules,
@@ -51,10 +110,92 @@ export function AdminPublishForms({
     createAdminContent,
     initialContentState,
   );
-  const [importState, importAction, importing] = useActionState(
-    bulkImportContent,
-    initialImportState,
-  );
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [importFile, setImportFile] = useState<{ name: string; size: number } | null>(null);
+  const [importing, setImporting] = useState(false);
+  const [importProgress, setImportProgress] = useState("");
+  const [importState, setImportState] = useState<ImportFeedback>({});
+
+  async function handleImportSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (importing) return;
+
+    const file = fileInputRef.current?.files?.[0] ?? null;
+    if (!file) {
+      setImportState({ error: "请选择要导入的 Excel / JSON 文件" });
+      return;
+    }
+    if (file.size === 0) {
+      setImportState({ error: "文件是空的，请重新选择" });
+      return;
+    }
+    if (file.size > IMPORT_FILE_SIZE_LIMIT) {
+      setImportState({
+        error: `文件 ${formatSize(file.size)} 超过 ${formatSize(IMPORT_FILE_SIZE_LIMIT)}，请拆分后再上传`,
+      });
+      return;
+    }
+
+    const defaultModule = String(new FormData(event.currentTarget).get("defaultModule") ?? "");
+    setImporting(true);
+    setImportState({});
+    setImportProgress("正在解析文件…");
+
+    try {
+      const entries = await parseImportFile(file);
+      if (entries.length === 0) {
+        setImportState({ error: "文件里没有可导入的数据行" });
+        return;
+      }
+
+      const errors: string[] = [];
+      const warnings: string[] = [];
+      let imported = 0;
+      let handled = 0;
+
+      for (let index = 0; index < entries.length; index += IMPORT_ROW_CHUNK) {
+        const chunk = entries.slice(index, index + IMPORT_ROW_CHUNK);
+        setImportProgress(`正在导入 ${handled}/${entries.length} 条…`);
+        const response = await fetch("/api/admin/content/import", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ fileName: file.name, defaultModule, entries: chunk }),
+        });
+        const data = (await response.json().catch(() => ({}))) as ImportFeedback;
+        if (!response.ok) {
+          setImportState({
+            error: data.error ?? `导入失败（${response.status}），请稍后重试`,
+            imported,
+            failed: errors.length,
+            errors: errors.slice(0, 20),
+            warnings: warnings.slice(0, 20),
+          });
+          return;
+        }
+        imported += data.imported ?? 0;
+        if (Array.isArray(data.errors)) errors.push(...data.errors);
+        if (Array.isArray(data.warnings)) warnings.push(...data.warnings);
+        handled += chunk.length;
+      }
+
+      setImportState({
+        success: true,
+        imported,
+        failed: errors.length,
+        errors: errors.slice(0, 20),
+        warnings: warnings.slice(0, 20),
+        message: `已导入并发布 ${imported} 条内容${errors.length > 0 ? `，跳过 ${errors.length} 条` : ""}。`,
+      });
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      setImportFile(null);
+    } catch (error) {
+      setImportState({ error: error instanceof Error ? error.message : "文件解析失败" });
+    } finally {
+      setImporting(false);
+      setImportProgress("");
+    }
+  }
 
   const fieldErrors = state.fieldErrors
     ? Object.values(state.fieldErrors).flat()
@@ -275,21 +416,30 @@ export function AdminPublishForms({
           <div>
             <span className="admin-eyebrow">BATCH</span>
             <h2>批量上传</h2>
-            <p>上传 Excel 或 JSON，逐行校验后使用 createMany 一次性写入。</p>
+            <p>上传 Excel、CSV 或 JSON，逐行校验后分块批量写入，行数不设上限。</p>
           </div>
-          <span className="admin-panel-badge">最多 500 行</span>
+          <span className="admin-panel-badge">不限行数</span>
         </header>
 
-        <form action={importAction} className="admin-form">
+        <form className="admin-form" onSubmit={handleImportSubmit}>
           <label className="admin-upload">
             <input
+              ref={fileInputRef}
               type="file"
               name="file"
-              accept=".xlsx,.xls,.json,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-              required
+              accept=".xlsx,.xls,.csv,.json,application/json,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+              onChange={(event) => {
+                const file = event.currentTarget.files?.[0];
+                setImportFile(file ? { name: file.name, size: file.size } : null);
+                setImportState({});
+              }}
             />
-            <strong>选择 Excel / JSON 文件</strong>
-            <span>支持 .xlsx、.xls、.json，单个文件不超过 8MB</span>
+            <strong>{importFile ? importFile.name : "选择 Excel / CSV / JSON 文件"}</strong>
+            <span>
+              {importFile
+                ? `${formatSize(importFile.size)} · 点击可重新选择`
+                : "支持 .xlsx、.xls、.csv、.json，单个文件不超过 20MB"}
+            </span>
           </label>
 
           <label className="admin-field">
@@ -317,8 +467,13 @@ export function AdminPublishForms({
               <code>{`{ "data": [...] }`}</code> 形式。表格中的审核状态列会被忽略，
               导入内容统一发布。
             </p>
+            <p>
+              文件在浏览器里解析后按 {IMPORT_ROW_CHUNK} 条一批上传，几万行也可以一次导完；
+              中途失败会显示已导入多少条，不会只留下一个空白的错误页。
+            </p>
           </div>
 
+          {importProgress && <p className="admin-feedback">{importProgress}</p>}
           {importState.error && (
             <p className="admin-feedback error">{importState.error}</p>
           )}
