@@ -54,7 +54,11 @@ const tabFilters: Record<string, { fields: string[]; forms: string[]; showDurati
 
 /* ---------- 组件 ---------- */
 
-export function ToolsBrowser({ tools }: { tools: ToolItem[] }) {
+export function ToolsBrowser({ tools, publishHref = "/publish/tools", readOnly = false }: {
+  tools: ToolItem[];
+  publishHref?: string;
+  readOnly?: boolean;
+}) {
   const [tab, setTab] = useState("全部");
   const [field, setField] = useState("全部");
   const [form, setForm] = useState("全部");
@@ -115,7 +119,7 @@ export function ToolsBrowser({ tools }: { tools: ToolItem[] }) {
         <div className="section-banner publish-section-banner">
           <div><div className="banner-title">公益能力资源</div><div className="banner-sub">分享课程、模板、报告与同行经验</div></div>
           <span style={{ flex: 1 }} />
-          <Link className="btn-primary" href="/publish/tools">＋ 我要发布</Link>
+          <Link className="btn-primary" href={publishHref}>＋ 我要发布</Link>
         </div>
         <TypeTabs
           tabs={toolTabsWithOther.map((t) => {
@@ -168,7 +172,7 @@ export function ToolsBrowser({ tools }: { tools: ToolItem[] }) {
           total={tools.length}
           unit="件能力工具"
           shown={filtered.length}
-          sorts={sorts}
+          sorts={readOnly ? sorts.slice(0, 1) : sorts}
           activeSort={sort}
           onSort={setSort}
         />
@@ -214,7 +218,7 @@ export function ToolsBrowser({ tools }: { tools: ToolItem[] }) {
                     </a>
                     {t.price ? (
                       <span className="tool-extra">{t.price}</span>
-                    ) : (
+                    ) : !readOnly && (
                       <button
                         type="button"
                         className={`tool-fav${favs.has(t.id) ? " active" : ""}`}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { filterGroups } from "@/lib/platform-config";
 import type { FundingItem } from "@/lib/platform-types";
@@ -15,6 +15,7 @@ import {
 // 截止天数按 Asia/Shanghai 的今天与 due 日期重新计算，不依赖抓取时生成的 dueDays。
 const shanghaiDate = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai" });
 const getShanghaiToday = () => shanghaiDate.format(new Date());
+const subscribeToDate = () => () => {};
 const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/;
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 
@@ -65,7 +66,11 @@ const kindTagClass: Record<string, string> = {
   物资: "tag-blue",
 };
 
-export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
+export function FundingBrowser({ fundings, publishHref = "/publish/funding", renderedOn }: {
+  fundings: FundingItem[];
+  publishHref?: string;
+  renderedOn?: string;
+}) {
   const [tab, setTab] = useState("全部");
   const [resourceType, setResourceType] = useState("全部");
   const [duration, setDuration] = useState("全部");
@@ -77,7 +82,7 @@ export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
   const selectedSupportType = tabToSupportType[tab];
   const uniqueFundings = useMemo(() => dedupeByTitleAndOrg(fundings), [fundings]);
 
-  const today = getShanghaiToday();
+  const today = useSyncExternalStore(subscribeToDate, getShanghaiToday, () => renderedOn ?? getShanghaiToday());
   const activeFundings = useMemo<FundingWithRemainingDays[]>(
     () =>
       uniqueFundings
@@ -283,7 +288,7 @@ export function FundingBrowser({ fundings }: { fundings: FundingItem[] }) {
       </div>
 
       <aside className="module-aside">
-        <Link className="publish-btn" href="/publish/funding">✏️ 发布资源</Link>
+        <Link className="publish-btn" href={publishHref}>✏️ 发布资源</Link>
         <div className="urgent-card">
           <h2 className="aside-title">🚨 7天内截止</h2>
           {urgentFundings.length > 0 ? (

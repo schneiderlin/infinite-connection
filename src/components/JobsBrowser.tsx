@@ -46,7 +46,7 @@ function createDefaultSubCategorySelection(): Record<string, string[]> {
   );
 }
 
-export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
+export function JobsBrowser({ jobs, publishHref = "/publish/jobs" }: { jobs: JobItem[]; publishHref?: string }) {
   const items = useMemo(() => dedupeByTitle(jobs), [jobs]);
   const [kind, setKind] = useState("全部");
   const [region, setRegion] = useState("全部");
@@ -151,7 +151,7 @@ export function JobsBrowser({ jobs }: { jobs: JobItem[] }) {
             <div className="banner-sub">全职 / 兼职 / 实习岗位</div>
           </div>
           <span style={{ flex: 1 }} />
-          <Link className="btn-primary" href="/publish/jobs">
+          <Link className="btn-primary" href={publishHref}>
             ＋ 发布招聘
           </Link>
         </div>

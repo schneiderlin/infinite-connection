@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "build:pages": "next build github-pages",
     "start": "next start",
     "lint": "eslint",
     "storage:cors": "node scripts/configure-storage-cors.mjs",
