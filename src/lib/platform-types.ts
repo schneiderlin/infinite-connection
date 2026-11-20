@@ -6,6 +6,7 @@ export type UpdateMedia = {
 
 export type UpdateItem = {
   id: string;
+  authorId: string;
   kind: "最新动态" | "项目主页" | "志愿活动" | "行业活动";
   posterType: "机构" | "个人";
   field: string;

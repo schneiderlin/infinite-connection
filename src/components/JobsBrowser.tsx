@@ -4,8 +4,9 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { cityDisplayName, getCities, provinceNames } from "@/lib/cn-divisions";
 import { filterGroups } from "@/lib/platform-config";
+import { jobSourceUrl } from "@/lib/job-source-display";
 import type { JobItem } from "@/lib/platform-types";
-import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
+import { FilterDropdown, FilterRow, SearchInput, EmptyState } from "./platform-ui";
 
 function dedupeByTitleAndOrg(items: JobItem[]): JobItem[] {
   const seen = new Set<string>();
@@ -48,7 +49,9 @@ function createDefaultSubCategorySelection(): Record<string, string[]> {
 }
 
 export function JobsBrowser({ jobs, publishHref = "/publish/jobs" }: { jobs: JobItem[]; publishHref?: string }) {
-  const items = useMemo(() => dedupeByTitleAndOrg(jobs), [jobs]);
+  const items = useMemo(() => dedupeByTitleAndOrg(jobs.map((job) => ({
+    ...job, url: job.url ? jobSourceUrl(job.url) : undefined,
+  }))), [jobs]);
   const [kind, setKind] = useState("全部");
   const [region, setRegion] = useState("全部");
   const [search, setSearch] = useState("");
@@ -279,63 +282,54 @@ export function JobsBrowser({ jobs, publishHref = "/publish/jobs" }: { jobs: Job
               label="职业分类"
               options={filterGroups.jobGroups}
               active={group}
-              onChange={(nextGroup) => {
-                if (nextGroup === "全部") {
-                  setGroup(nextGroup);
-                  setJobCategoryMenuOpen(false);
-                  return;
-                }
-
-                if (nextGroup === group) {
-                  setJobCategoryMenuOpen((open) => !open);
-                  return;
-                }
-
-                setGroup(nextGroup);
-                setJobCategoryMenuOpen(true);
-              }}
+              onChange={(nextGroup) => { setGroup(nextGroup); setJobCategoryMenuOpen(false); }}
+              renderOption={(option) => option === "全部" ? undefined : (
+                <FilterDropdown key={option} id="jobs-subcategories" label={option}
+                  active={group === option} open={group === option && jobCategoryMenuOpen}
+                  onClick={() => {
+                    setGroup(option);
+                    setJobCategoryMenuOpen(group !== option || !jobCategoryMenuOpen);
+                  }}>
+                  {group === option && jobCategoryMenuOpen && (
+                    <fieldset className="jobs-category-menu">
+                      <legend>{group} · 二级分类</legend>
+                      <label className="jobs-category-option jobs-category-select-all">
+                        <input
+                          type="checkbox"
+                          checked={allSubCategoriesSelected}
+                          aria-checked={activeSubCategories.length > 0 && !allSubCategoriesSelected ? "mixed" : allSubCategoriesSelected}
+                          onChange={(event) => {
+                            setSelectedSubCategories((current) => ({
+                              ...current,
+                              [group]: event.target.checked ? [...filterGroups.jobSubCategories[group]] : [],
+                            }));
+                          }}
+                        />
+                        <span>全部</span>
+                        <small>{activeSubCategories.length}/{filterGroups.jobSubCategories[group].length} 已选</small>
+                      </label>
+                      {filterGroups.jobSubCategories[group].map((category) => (
+                        <label key={category} className="jobs-category-option">
+                          <input
+                            type="checkbox"
+                            checked={activeSubCategories.includes(category)}
+                            onChange={(event) => {
+                              setSelectedSubCategories((current) => ({
+                                ...current,
+                                [group]: event.target.checked
+                                  ? [...(current[group] ?? []), category]
+                                  : (current[group] ?? []).filter((selected) => selected !== category),
+                              }));
+                            }}
+                          />
+                          <span>{category}</span>
+                        </label>
+                      ))}
+                    </fieldset>
+                  )}
+                </FilterDropdown>
+              )}
             />
-            {group !== "全部" && jobCategoryMenuOpen && filterGroups.jobSubCategories[group] && (
-              <fieldset className="jobs-category-menu">
-                <legend>{group} · 二级分类</legend>
-                <label className="jobs-category-option jobs-category-select-all">
-                  <input
-                    type="checkbox"
-                    checked={allSubCategoriesSelected}
-                    aria-checked={
-                      activeSubCategories.length > 0 && !allSubCategoriesSelected
-                        ? "mixed"
-                        : allSubCategoriesSelected
-                    }
-                    onChange={(event) => {
-                      setSelectedSubCategories((current) => ({
-                        ...current,
-                        [group]: event.target.checked ? [...filterGroups.jobSubCategories[group]] : [],
-                      }));
-                    }}
-                  />
-                  <span>全部</span>
-                  <small>{activeSubCategories.length}/{filterGroups.jobSubCategories[group].length} 已选</small>
-                </label>
-                {filterGroups.jobSubCategories[group].map((category) => (
-                  <label key={category} className="jobs-category-option">
-                    <input
-                      type="checkbox"
-                      checked={activeSubCategories.includes(category)}
-                      onChange={(event) => {
-                        setSelectedSubCategories((current) => ({
-                          ...current,
-                          [group]: event.target.checked
-                            ? [...(current[group] ?? []), category]
-                            : (current[group] ?? []).filter((selected) => selected !== category),
-                        }));
-                      }}
-                    />
-                    <span>{category}</span>
-                  </label>
-                ))}
-              </fieldset>
-            )}
             <FilterRow label="经验/职级" options={filterGroups.jobLevels} active={level} onChange={setLevel} />
             <div className="filter-row">
               <span className="filter-label">其他</span>

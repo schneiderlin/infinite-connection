@@ -6,6 +6,7 @@ import { useEffect, useState, useTransition } from "react";
 import { toggleLike } from "@/lib/actions/interactions";
 import { HelpContactButton } from "./HelpContactButton";
 import { formatCount } from "./platform-ui";
+import { CommentForm } from "./CommentForm";
 
 type Notice = {
   title: string;
@@ -51,6 +52,7 @@ export function ContentActions({
   className = "",
   showHelp = true,
   interactive = true,
+  commentAuthenticated,
 }: {
   contentId: string;
   title: string;
@@ -65,12 +67,15 @@ export function ContentActions({
   className?: string;
   showHelp?: boolean;
   interactive?: boolean;
+  commentAuthenticated?: boolean;
 }) {
   const router = useRouter();
   const [liked, setLiked] = useState(isLiked);
   const [likeCount, setLikeCount] = useState(likesCount);
   const [shared, setShared] = useState(false);
   const [notice, setNotice] = useState<Notice | null>(null);
+  const [commentOpen, setCommentOpen] = useState(false);
+  const [sentCommentCount, setSentCommentCount] = useState(0);
   const [pending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -150,7 +155,13 @@ export function ContentActions({
         >
           ↗ 分享 {formatCount(shares + (shared ? 1 : 0))}
         </button>
-        {interactive && (
+        {interactive && commentAuthenticated !== undefined && (
+          <button type="button" className="feed-action" aria-expanded={commentOpen}
+            onClick={() => setCommentOpen((open) => !open)}>
+            💬 评论 {formatCount(Math.max(commentsCount, sentCommentCount))}
+          </button>
+        )}
+        {interactive && commentAuthenticated === undefined && (
           <Link
             className="feed-action"
             href={`/updates/${contentId}#comments`}
@@ -178,6 +189,24 @@ export function ContentActions({
           />
         )}
       </div>
+
+      {commentOpen && (
+        <dialog className="modal comment-dialog" aria-label="发表评论"
+          ref={(dialog) => { if (dialog && !dialog.open) dialog.showModal(); }}
+          onClose={() => setCommentOpen(false)}>
+          <div className="modal-head">
+            <h2>发表评论</h2>
+            <form method="dialog">
+              <button type="submit" className="modal-close" aria-label="关闭">✕</button>
+            </form>
+          </div>
+          <CommentForm contentId={contentId} isAuthenticated={Boolean(commentAuthenticated)}
+            loginHref={buildLoginHref()} onSuccess={(count) => {
+              setSentCommentCount(count);
+              setCommentOpen(false);
+            }} />
+        </dialog>
+      )}
 
       {notice && (
         <div

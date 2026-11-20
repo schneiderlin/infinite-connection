@@ -32,6 +32,7 @@ import * as cheerio from "cheerio";
 import { b } from "../baml_client/index.ts";
 import { setLogLevel } from "@boundaryml/baml";
 import type { JobExtraction } from "../baml_client/types.ts";
+import { jobSourceUrl } from "../src/lib/job-source-display.ts";
 
 setLogLevel("ERROR");
 
@@ -187,6 +188,7 @@ function normalizeSalary(value: string | null | undefined): string {
 
 type Candidate = {
   title: string;
+  officialTitle?: string;
   orgHint: string;
   body: string;
   publishedDate: string;
@@ -230,6 +232,7 @@ async function scrapeCDB(): Promise<Candidate[]> {
     if (body.length < 120) continue;
     accepted.push({
       title: clean(row.title),
+      officialTitle: clean($(".position-name").first().text()) || clean(row.title),
       orgHint: clean(row.orgName ?? row.owner ?? ""),
       body,
       publishedDate: (row.updateTime || row.createTime || "").slice(0, 10),
@@ -530,6 +533,7 @@ async function scrapeMca(): Promise<Candidate[]> {
       orgHint: clean(info.partyName),
       body,
       publishedDate: String(info.createTime ?? "").slice(0, 10),
+      // Keep this identity stable for the snapshot ID; mapRecord emits the current public route.
       url: `${MCA_BASE}/zpxx/view/${info.id}`,
       sourceName: "民政部社会组织人才平台",
     });
@@ -557,14 +561,14 @@ function mapRecord(candidate: Candidate, extraction: JobExtraction, bodyHash: st
     role: SUBCATEGORY_ZH[extraction.sub_category] ?? "公益项目执行",
     publishedDays,
     time,
-    title: cleanJobTitle(extraction.title, candidate.title) || candidate.title,
+    title: candidate.officialTitle || cleanJobTitle(extraction.title, candidate.title) || candidate.title,
     summary: extraction.summary,
     org: clean(extraction.org) || candidate.orgHint || "机构未注明",
     location: normalizeLocation(extraction.location),
     salary: normalizeSalary(extraction.salary),
     due: extraction.deadline && /^\d{4}-\d{2}-\d{2}$/.test(extraction.deadline) ? extraction.deadline : "详见原帖",
     sourceName: candidate.sourceName,
-    url: candidate.url,
+    url: jobSourceUrl(candidate.url),
     bodyHash,
     extractionVersion: EXTRACTION_VERSION,
     extraction,
@@ -577,7 +581,7 @@ async function extractAll(candidates: Candidate[], previousByUrl: Map<string, An
   let extracted = 0;
   let rejected = 0;
 
-  const tasks = candidates.map((candidate) => ({ candidate, previous: previousByUrl.get(candidate.url) }));
+  const tasks = candidates.map((candidate) => ({ candidate, previous: previousByUrl.get(jobSourceUrl(candidate.url)) }));
   let cursor = 0;
   const worker = async () => {
     while (cursor < tasks.length) {
@@ -645,7 +649,7 @@ async function main() {
     console.log("未找到既有 jobs-scraped.json，将从空列表开始。");
   }
   const previousByUrl = new Map<string, AnyRecord>(
-    existing.filter((item) => item.url).map((item) => [item.url, item]),
+    existing.filter((item) => item.url).map((item) => [jobSourceUrl(item.url), item]),
   );
 
   const [cdb, one, mlzg, mohrss, board, relief, mca] = await Promise.all([

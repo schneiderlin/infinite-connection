@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { publicInterestIssues } from "@/lib/platform-config";
 import type { UpdateItem } from "@/lib/platform-types";
-import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
+import { FilterDropdown, FilterRow, SearchInput, EmptyState } from "./platform-ui";
 import { ContentActions } from "./ContentActions";
 
 const sorts = [
@@ -42,10 +42,14 @@ function avatarTone(org: string): string {
 
 export function UpdatesBrowser({
   items,
+  publisher,
+  isAuthenticated,
   fieldOptions: baseFieldOptions = [],
   regionOptions: baseRegionOptions = [],
 }: {
   items: UpdateItem[];
+  publisher?: string;
+  isAuthenticated: boolean;
   fieldOptions?: string[];
   regionOptions?: string[];
 }) {
@@ -123,6 +127,13 @@ export function UpdatesBrowser({
   return (
     <div className="module-body">
       <div className="module-main">
+        {publisher && (
+          <header className="pc-card feed-card">
+            <Link className="card-link" href="/updates">← 返回项目动态</Link>
+            <h1>{publisher}</h1>
+            <p>已发布的动态 · {items.length} 条</p>
+          </header>
+        )}
         <div className="filter-panel">
           <div className="pc-card filter-box">
             <FilterRow
@@ -130,36 +141,27 @@ export function UpdatesBrowser({
               options={fieldOptions}
               active={field}
               onChange={(nextField) => {
-                if (nextField === "全部") {
-                  setField(nextField);
-                  setIssue("全部");
-                  setIssueMenuOpen(false);
-                  return;
-                }
-                if (nextField === field) {
-                  setIssueMenuOpen((open) => !open);
-                  return;
-                }
                 setField(nextField);
                 setIssue("全部");
-                setIssueMenuOpen(true);
+                setIssueMenuOpen(false);
               }}
+              renderOption={(option) => !publicInterestIssues[option]?.length ? undefined : (
+                <FilterDropdown key={option} id="updates-issues" label={option}
+                  active={field === option} open={field === option && issueMenuOpen}
+                  onClick={() => {
+                    if (field !== option) setIssue("全部");
+                    setField(option);
+                    setIssueMenuOpen(field !== option || !issueMenuOpen);
+                  }}>
+                  {["全部", ...publicInterestIssues[option]].map((value) => (
+                    <button key={value} type="button" className={issue === value ? "selected" : ""}
+                      aria-pressed={issue === value} onClick={() => { setIssue(value); setIssueMenuOpen(false); }}>
+                      {value}
+                    </button>
+                  ))}
+                </FilterDropdown>
+              )}
             />
-            {field !== "全部" && issueMenuOpen && publicInterestIssues[field] && (
-              <fieldset className="updates-issue-menu">
-                <legend>{field} · 二级议题</legend>
-                {["全部", ...publicInterestIssues[field]].map((option) => (
-                  <button
-                    key={option}
-                    type="button"
-                    className={issue === option ? "selected" : ""}
-                    onClick={() => setIssue(option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </fieldset>
-            )}
           </div>
           <div className="pc-card filter-box">
             <FilterRow label="地域" options={regionOptions} active={region} onChange={setRegion} />
@@ -230,7 +232,7 @@ export function UpdatesBrowser({
                   </div>
                 </div>
 
-                <h3 className="card-title">{u.title}</h3>
+                <h3 className="card-title"><Link href={`/updates/${u.id}`}>{u.title}</Link></h3>
                 <p className="feed-content">
                   {u.content}
                   {(u.hashtags || []).map((h) => (
@@ -265,9 +267,11 @@ export function UpdatesBrowser({
                 <div className="card-meta feed-meta-row">
                   <span className="item">📍 {u.location}</span>
                   <span className="item">🕐 项目期：{u.period}</span>
-                  <Link href={`/updates/${u.id}`} className="card-link">
-                    进入项目主页 →
-                  </Link>
+                  {!publisher && (
+                    <Link href={`/updates?author=${encodeURIComponent(u.authorId)}`} className="card-link">
+                      进入主页 →
+                    </Link>
+                  )}
                 </div>
 
                 <ContentActions
@@ -278,6 +282,7 @@ export function UpdatesBrowser({
                   href={`/updates/${u.id}`}
                   likesCount={u.likes || 0}
                   commentsCount={u.comments || 0}
+                  commentAuthenticated={isAuthenticated}
                   shares={u.shares || 0}
                   helpsCount={u.helps || 0}
                   isLiked={u.isLiked || false}

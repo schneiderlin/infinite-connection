@@ -35,18 +35,20 @@ export function FilterRow({
   active,
   onChange,
   children,
+  renderOption,
 }: {
   label: string;
   options: string[];
   active: string;
   onChange: (option: string) => void;
   children?: ReactNode;
+  renderOption?: (option: string) => ReactNode;
 }) {
   return (
     <div className="filter-row">
       <span className="filter-label">{label}</span>
       <div className="filter-pills">
-        {options.map((o) => (
+        {options.map((o) => renderOption?.(o) ?? (
           <button
             key={o}
             type="button"
@@ -58,6 +60,30 @@ export function FilterRow({
         ))}
         {children}
       </div>
+    </div>
+  );
+}
+
+export function FilterDropdown({ id, label, active, open, onClick, children }: {
+  id: string;
+  label: string;
+  active: boolean;
+  open: boolean;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <div className="jobs-more-filter" onKeyDown={(event) => {
+      if (event.key === "Escape" && open) {
+        onClick();
+        event.currentTarget.querySelector("button")?.focus();
+      }
+    }}>
+      <button type="button" className={`jobs-more-category${active ? " selected" : ""}`}
+        aria-expanded={open} aria-controls={open ? id : undefined} onClick={onClick}>
+        {label} <b aria-hidden="true">⌄</b>
+      </button>
+      {open && <div id={id} className="jobs-more-menu" role="group" aria-label={label}>{children}</div>}
     </div>
   );
 }

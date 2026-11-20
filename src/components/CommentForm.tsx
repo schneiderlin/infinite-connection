@@ -9,10 +9,12 @@ export function CommentForm({
   contentId,
   isAuthenticated,
   loginHref,
+  onSuccess,
 }: {
   contentId: string;
   isAuthenticated: boolean;
   loginHref: string;
+  onSuccess?: (count: number) => void;
 }) {
   const router = useRouter();
   const [body, setBody] = useState("");
@@ -42,6 +44,7 @@ export function CommentForm({
       }
 
       setBody("");
+      onSuccess?.(result.count);
       router.refresh();
     });
   };
@@ -76,7 +79,7 @@ export function CommentForm({
           className="btn-primary"
           disabled={pending || body.trim().length === 0}
         >
-          {pending ? "发布中…" : "发表评论"}
+          {pending ? "发布中…" : onSuccess ? "发送" : "发表评论"}
         </button>
       </div>
       {error && (

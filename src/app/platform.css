@@ -298,46 +298,6 @@
   margin-left: auto;
 }
 
-.updates-issue-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin: 0 0 4px 44px;
-  padding: 12px;
-  border: 1px solid var(--pc-border);
-  border-radius: 12px;
-  background: var(--pc-bg);
-}
-
-.updates-issue-menu legend {
-  padding: 0 5px;
-  color: var(--pc-text-3);
-  font-size: 12px;
-}
-
-.updates-issue-menu button {
-  min-height: 36px;
-  padding: 7px 10px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: var(--pc-text-2);
-  cursor: pointer;
-  font-size: 13px;
-  text-align: left;
-}
-
-.updates-issue-menu button:hover {
-  background: var(--pc-card);
-  color: var(--pc-text);
-}
-
-.updates-issue-menu button.selected {
-  background: var(--pc-primary);
-  color: #fff;
-  font-weight: 600;
-}
-
 .jobs-search-bar {
   display: flex;
 }
@@ -520,12 +480,10 @@
 .jobs-category-menu {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin: 0 0 4px 44px;
-  padding: 12px;
-  border: 1px solid var(--pc-border);
-  border-radius: 12px;
-  background: var(--pc-bg);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
 }
 
 .jobs-category-menu legend {
@@ -629,7 +587,8 @@
   box-shadow: 0 12px 30px rgba(24, 48, 36, 0.14);
 }
 
-.jobs-more-filter:nth-child(2) .jobs-more-menu {
+.jobs-more-filters > .jobs-more-filter:nth-child(2) .jobs-more-menu,
+#jobs-subcategories {
   min-width: 230px;
 }
 
@@ -1229,12 +1188,12 @@
     margin-left: 0;
   }
 
-  .jobs-category-menu {
-    margin-left: 0;
+  .filter-pills:has(> .jobs-more-filter) {
+    position: relative;
   }
 
-  .updates-issue-menu {
-    margin-left: 0;
+  .filter-pills > .jobs-more-filter {
+    position: static;
   }
 }
 
@@ -2187,6 +2146,16 @@
 
 .share-notice-modal .btn-primary {
   width: 100%;
+}
+
+.comment-dialog {
+  width: min(520px, calc(100% - 32px));
+  margin: auto;
+  border: 0;
+}
+
+.comment-dialog::backdrop {
+  background: rgb(15 30 22 / 45%);
 }
 
 /* ---------- 项目动态详情 ---------- */

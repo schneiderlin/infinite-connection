@@ -7,6 +7,7 @@ import { provinceNames } from "@/lib/cn-divisions";
 import { publicInterestFields } from "@/lib/publishing";
 import { formatRelativeHours, hoursSince } from "@/lib/relative-time";
 import type { UpdateItem } from "@/lib/platform-types";
+import { notFound } from "next/navigation";
 import "../platform.css";
 
 // 列表数据来自数据库，禁用缓存以保证发布后立刻可见。
@@ -22,10 +23,12 @@ function readMetadata(value: unknown): Record<string, unknown> {
     : {};
 }
 
-export default async function UpdatesPage() {
+export default async function UpdatesPage({ searchParams }: { searchParams: Promise<{ author?: string | string[] }> }) {
+  const { author } = await searchParams;
+  if (author !== undefined && (typeof author !== "string" || !author)) notFound();
   const [contents, session] = await Promise.all([
     prisma.content.findMany({
-      where: { module: "UPDATE", status: "PUBLISHED" },
+      where: { module: "UPDATE", status: "PUBLISHED", ...(author ? { authorId: author } : {}) },
       include: {
         author: { include: { organization: true } },
         attachments: {
@@ -35,10 +38,11 @@ export default async function UpdatesPage() {
         },
       },
       orderBy: { publishedAt: "desc" },
-      take: 50,
+      take: author ? undefined : 50,
     }),
     auth(),
   ]);
+  if (author && contents.length === 0) notFound();
 
   const userId = session?.user?.id;
   const contentIds = contents.map((content) => content.id);
@@ -70,6 +74,7 @@ export default async function UpdatesPage() {
 
     return {
       id: content.id,
+      authorId: content.authorId,
       kind: "最新动态",
       posterType: content.author.accountType === "ORGANIZATION" ? "机构" : "个人",
       field: content.fields[0] ?? "其他",
@@ -78,7 +83,7 @@ export default async function UpdatesPage() {
       rating: 0,
       publishedHours,
       time: formatRelativeHours(publishedHours),
-      source: "来自 项目主页",
+      source: "来自 发布者主页",
       org: content.author.organization?.name ?? content.author.name ?? "公益伙伴",
       title: content.title,
       content: content.body,
@@ -103,6 +108,8 @@ export default async function UpdatesPage() {
       <SiteHeader active="updates" />
       <UpdatesBrowser
         items={items}
+        publisher={author ? items[0].org : undefined}
+        isAuthenticated={Boolean(userId)}
         fieldOptions={["全部", ...publicInterestFields]}
         regionOptions={["全国", ...provinceNames]}
       />
