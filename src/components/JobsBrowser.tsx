@@ -7,13 +7,14 @@ import { filterGroups } from "@/lib/platform-config";
 import type { JobItem } from "@/lib/platform-types";
 import { FilterRow, SearchInput, EmptyState } from "./platform-ui";
 
-function dedupeByTitle<T extends { title: string }>(items: T[]): T[] {
+function dedupeByTitleAndOrg(items: JobItem[]): JobItem[] {
   const seen = new Set<string>();
   return items.filter((item) => {
     const title = item.title.trim();
     if (!title) return true;
-    if (seen.has(title)) return false;
-    seen.add(title);
+    const key = JSON.stringify([title, item.org.trim()]);
+    if (seen.has(key)) return false;
+    seen.add(key);
     return true;
   });
 }
@@ -47,7 +48,7 @@ function createDefaultSubCategorySelection(): Record<string, string[]> {
 }
 
 export function JobsBrowser({ jobs, publishHref = "/publish/jobs" }: { jobs: JobItem[]; publishHref?: string }) {
-  const items = useMemo(() => dedupeByTitle(jobs), [jobs]);
+  const items = useMemo(() => dedupeByTitleAndOrg(jobs), [jobs]);
   const [kind, setKind] = useState("全部");
   const [region, setRegion] = useState("全部");
   const [search, setSearch] = useState("");
